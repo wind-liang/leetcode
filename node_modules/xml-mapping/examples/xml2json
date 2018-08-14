@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+
+// Usage :
+//
+//  cat ./sample01.xml | ./xml2json
+//
+var buffer = '';
+
+process.stdin.resume();
+process.stdin.setEncoding('utf8');
+
+process.stdin.on('data', function (chunk) {
+		buffer += chunk;
+});
+
+process.stdin.on('end', function () {
+		var XMLMapping = require('../lib/xml-mapping.js'), util = require('util');
+		process.stdout.write(util.inspect(XMLMapping.tojson(buffer), false, null, false));
+});

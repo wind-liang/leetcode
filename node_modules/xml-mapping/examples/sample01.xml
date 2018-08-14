@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:openSearch="http://a9.com/-/spec/opensearchrss/1.0/" xmlns:gd="http://schemas.google.com/g/2005" xmlns:gCal="http://schemas.google.com/gCal/2005">
+  <id>XXX</id>
+  <updated>2006-11-12T21:25:30.000Z</updated>
+  <title type="text">Google Developer Events</title>
+  <subtitle type="text">The calendar contains information about upcoming developer conferences at which Google will be speaking, along with other developer-related events.</subtitle>
+  <link rel="http://schemas.google.com/g/2005#feed" type="application/atom+xml" href="XXX"/>
+  <link rel="self" type="application/atom+xml" href="XXX"/>
+  <author>
+    <name>Google Developer Calendar</name>
+    <email>developer-calendar@google.com</email>
+  </author>
+  <generator version="1.0" uri="http://www.google.com/calendar">Google Calendar</generator>
+  <openSearch:startIndex>1</openSearch:startIndex>
+  <openSearch:itemsPerPage>25</openSearch:itemsPerPage>
+  <gCal:timezone value="America/Los_Angeles"/>
+  <entry>
+    <id>XXX</id>
+    <published>2006-11-12T21:25:30.000Z</published>
+    <updated>2006-11-12T21:25:30.000Z</updated>
+    <category scheme="XXX" term="XXX"/>
+    <category scheme="YYY" term="YYY"/>
+    <title type="text">WebmasterWorld PubCon 2006: Google Developer Tools in General</title>
+    <content type="text">Google is sponsoring at &lt;a href="http://www.pubcon.com/"&gt;WebmasterWorld PubCon 2006&lt;/a&gt;. Come and visit us at the booth or join us for an evening demo reception where we will be talking "5 ways to enhance your website with Google Code".  After all, it is Vegas, baby! See you soon.</content>
+    <link rel="alternate" type="text/html" href="XXX" title="alternate"/>
+    <link rel="self" type="application/atom+xml" href="XXX"/>
+    <author>
+      <name>Google Developer Calendar</name>
+      <email>developer-calendar@google.com</email>
+    </author>
+    <gCal:sendEventNotifications value="true"/>
+    <gd:comments>
+      <gd:feedLink href="XXX"/>
+    </gd:comments>
+    <gd:transparency value="XXX"/>
+    <gd:eventStatus value="XXX"/>
+    <gd:where valueString="3150 Paradise Road, Las Vegas, NV 89109"/>
+    <gd:when startTime="2006-11-15" endTime="2006-11-17">
+      <gd:reminder minutes="10"/>
+    </gd:when>
+  </entry>
+  <!--Etc.-->
+</feed>

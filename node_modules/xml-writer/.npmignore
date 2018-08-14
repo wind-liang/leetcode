@@ -1,0 +1,3 @@
+.git*
+*.sw?
+coverage

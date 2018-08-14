@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" version="2.0">
+  <channel>
+    <title>Web - WordPress.com Search</title>
+    <link>http://fr.search.wordpress.com/?q=Web</link>
+    <description>Web - WordPress.com Search</description>
+    <pubDate>Wed, 22 Feb 2012 13:32:27 +0000</pubDate>
+    <language>fr</language>
+    <image>
+      <url>http://s.wordpress.com/i/buttonw-com.png</url>
+      <width>224</width>
+      <height>58</height>
+      <title>WordPress.com</title>
+      <link>http://wordpress.com/</link>
+    </image>
+    <generator>http://search.wordpress.com/</generator>
+    <atom:link rel="self" type="application/rss+xml" href="http://fr.search.wordpress.com/?q=Web&amp;f=feed"/>
+    <atom:link rel="search" type="application/opensearchdescription+xml" href="http://en.search.wordpress.com/opensearch.xml" title="WordPress.com"/>
+    <opensearch:totalResults>175575</opensearch:totalResults>
+    <opensearch:startIndex>1</opensearch:startIndex>
+    <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+    <opensearch:Query role="request" searchTerms="Web"/>
+    <item>
+      <title><![CDATA[Web]]></title>
+      <link>http://zapistage.wordpress.com/2010/12/01/web/</link>
+      <pubDate>Wed, 01 Dec 2010 10:08:53 +0000</pubDate>
+      <dc:creator>zapithomas</dc:creator>
+      <guid isPermaLink="true">http://zapistage.wordpress.com/2010/12/01/web/</guid>
+      <description><![CDATA[Voilà la définition du web:
+				- Réseau informatique mondial constitué d&#039;un ensemble de réseaux nationaux, régionaux et privés qui sont reliés par le protocole de communication TCP/IP et qui [&#8230;]]]></description>
+      <source url="http://zapistage.wordpress.com/feed/">Un stage chez Zapilou</source>
+    </item>
+    <item>
+      <title><![CDATA[Conférence Paris-Web 2009]]></title>
+      <link>http://relationspresse.wordpress.com/2009/07/21/conference-paris-web-2009/</link>
+      <pubDate>Tue, 21 Jul 2009 09:58:13 +0000</pubDate>
+      <dc:creator>Pascal Gibert</dc:creator>
+      <guid isPermaLink="true">http://relationspresse.wordpress.com/2009/07/21/conference-paris-web-2009/</guid>
+      <description><![CDATA[
+
+				Communiqué de presse Conférence Paris-Web 2009
+				La quatrième conférence Paris-Web se déroulera les 8 et 9 octobre 2009 à Paris-La Défense. Les organisateurs de la quatrième conférence Paris-Web publient [&#8230;]]]></description>
+      <source url="http://relationspresse.wordpress.com/feed/">News Presse, Actualit&#xE9;s et Informations; Digital Citizen, Press News and Information</source>
+    </item>
+    <item>
+      <title><![CDATA[développement de sites web offshore]]></title>
+      <link>http://agenceweboffshore.wordpress.com/2009/04/30/developpement-de-sites-web-offshore/</link>
+      <pubDate>Thu, 30 Apr 2009 19:10:38 +0000</pubDate>
+      <dc:creator>thustetsuo</dc:creator>
+      <guid isPermaLink="true">http://agenceweboffshore.wordpress.com/2009/04/30/developpement-de-sites-web-offshore/</guid>
+      <description><![CDATA[Il ya beaucoup d&#039;agences web offshore de creation et conception du site Web des entreprises dans les pays d&#039;Europe orientale et d&#039;Asie du Sud-Est, la grande expérience dans [&#8230;]]]></description>
+      <source url="http://agenceweboffshore.wordpress.com/feed/">Agence offshore de sous-traitance web</source>
+    </item>
+    <item>
+      <title><![CDATA[Referencement de site web]]></title>
+      <link>http://netio.wordpress.com/2010/01/15/referencement-de-site-web/</link>
+      <pubDate>Fri, 15 Jan 2010 18:21:47 +0000</pubDate>
+      <dc:creator>netio</dc:creator>
+      <guid isPermaLink="true">http://netio.wordpress.com/2010/01/15/referencement-de-site-web/</guid>
+      <description><![CDATA[Le referencement d’un site web chez Netio
+				Le referencement de site web avec Netio c’est l’assurance que votre site web se trouve dans les premieres pages des moteurs de [&#8230;]]]></description>
+      <source url="http://netio.wordpress.com/feed/">Netio - CREATION SITE WEB</source>
+    </item>
+  </channel>
+</rss>

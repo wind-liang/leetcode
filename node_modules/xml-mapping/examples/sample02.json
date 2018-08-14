@@ -1,0 +1,75 @@
+{ rss: 
+   { 'xmlns:atom': 'http://www.w3.org/2005/Atom',
+     'xmlns:dc': 'http://purl.org/dc/elements/1.1/',
+     'xmlns:opensearch': 'http://a9.com/-/spec/opensearch/1.1/',
+     version: '2.0',
+     channel: 
+      { title: { '$t': 'Web - WordPress.com Search' },
+        link: { '$t': 'http://fr.search.wordpress.com/?q=Web' },
+        description: { '$t': 'Web - WordPress.com Search' },
+        pubDate: { '$t': 'Wed, 22 Feb 2012 13:32:27 +0000' },
+        language: { '$t': 'fr' },
+        image: 
+         { url: { '$t': 'http://s.wordpress.com/i/buttonw-com.png' },
+           width: { '$t': '224' },
+           height: { '$t': '58' },
+           title: { '$t': 'WordPress.com' },
+           link: { '$t': 'http://wordpress.com/' } },
+        generator: { '$t': 'http://search.wordpress.com/' },
+        'atom:link': 
+         [ { rel: 'self',
+             type: 'application/rss+xml',
+             href: 'http://fr.search.wordpress.com/?q=Web&f=feed' },
+           { rel: 'search',
+             type: 'application/opensearchdescription+xml',
+             href: 'http://en.search.wordpress.com/opensearch.xml',
+             title: 'WordPress.com' } ],
+        'opensearch:totalResults': { '$t': '175575' },
+        'opensearch:startIndex': { '$t': '1' },
+        'opensearch:itemsPerPage': { '$t': '10' },
+        'opensearch:Query': { role: 'request', searchTerms: 'Web' },
+        item: 
+         [ { title: { '$cd': 'Web' },
+             link: { '$t': 'http://zapistage.wordpress.com/2010/12/01/web/' },
+             pubDate: { '$t': 'Wed, 01 Dec 2010 10:08:53 +0000' },
+             'dc:creator': { '$t': 'zapithomas' },
+             guid: 
+              { isPermaLink: 'true',
+                '$t': 'http://zapistage.wordpress.com/2010/12/01/web/' },
+             description: { '$cd': 'Voilà la définition du web:\n\t\t\t\t- Réseau informatique mondial constitué d&#039;un ensemble de réseaux nationaux, régionaux et privés qui sont reliés par le protocole de communication TCP/IP et qui [&#8230;]' },
+             source: 
+              { url: 'http://zapistage.wordpress.com/feed/',
+                '$t': 'Un stage chez Zapilou' } },
+           { title: { '$cd': 'Conférence Paris-Web 2009' },
+             link: { '$t': 'http://relationspresse.wordpress.com/2009/07/21/conference-paris-web-2009/' },
+             pubDate: { '$t': 'Tue, 21 Jul 2009 09:58:13 +0000' },
+             'dc:creator': { '$t': 'Pascal Gibert' },
+             guid: 
+              { isPermaLink: 'true',
+                '$t': 'http://relationspresse.wordpress.com/2009/07/21/conference-paris-web-2009/' },
+             description: { '$cd': '\n\n\t\t\t\tCommuniqué de presse Conférence Paris-Web 2009\n\t\t\t\tLa quatrième conférence Paris-Web se déroulera les 8 et 9 octobre 2009 à Paris-La Défense. Les organisateurs de la quatrième conférence Paris-Web publient [&#8230;]' },
+             source: 
+              { url: 'http://relationspresse.wordpress.com/feed/',
+                '$t': 'News Presse, Actualités et Informations; Digital Citizen, Press News and Information' } },
+           { title: { '$cd': 'développement de sites web offshore' },
+             link: { '$t': 'http://agenceweboffshore.wordpress.com/2009/04/30/developpement-de-sites-web-offshore/' },
+             pubDate: { '$t': 'Thu, 30 Apr 2009 19:10:38 +0000' },
+             'dc:creator': { '$t': 'thustetsuo' },
+             guid: 
+              { isPermaLink: 'true',
+                '$t': 'http://agenceweboffshore.wordpress.com/2009/04/30/developpement-de-sites-web-offshore/' },
+             description: { '$cd': 'Il ya beaucoup d&#039;agences web offshore de creation et conception du site Web des entreprises dans les pays d&#039;Europe orientale et d&#039;Asie du Sud-Est, la grande expérience dans [&#8230;]' },
+             source: 
+              { url: 'http://agenceweboffshore.wordpress.com/feed/',
+                '$t': 'Agence offshore de sous-traitance web' } },
+           { title: { '$cd': 'Referencement de site web' },
+             link: { '$t': 'http://netio.wordpress.com/2010/01/15/referencement-de-site-web/' },
+             pubDate: { '$t': 'Fri, 15 Jan 2010 18:21:47 +0000' },
+             'dc:creator': { '$t': 'netio' },
+             guid: 
+              { isPermaLink: 'true',
+                '$t': 'http://netio.wordpress.com/2010/01/15/referencement-de-site-web/' },
+             description: { '$cd': 'Le referencement d’un site web chez Netio\n\t\t\t\tLe referencement de site web avec Netio c’est l’assurance que votre site web se trouve dans les premieres pages des moteurs de [&#8230;]' },
+             source: 
+              { url: 'http://netio.wordpress.com/feed/',
+                '$t': 'Netio - CREATION SITE WEB' } } ] } } }

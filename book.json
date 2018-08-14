@@ -1,0 +1,25 @@
+{
+        "title": "leetCode",
+        "author": "windliang",
+        "description": "leetCode",
+        "language" : "zh-hans",
+        "links": {
+            "sidebar": {
+                "Home": "http://windliang.cc"
+            },
+            "gitbook": true
+        },
+        "structure": {
+            "readme": "README.md",
+            "summary": "SUMMARY.md"
+
+        }, 
+        "plugins": ["mathjax" ],
+        "pluginsConfig": {
+             
+        },
+        "pdf": {
+            "fontSize": 16
+        },  
+        "gitbook" : "3.2.3"
+    }
