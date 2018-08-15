@@ -1,6 +1,6 @@
 ## 题目描述（简单难度）
 
-![](http://pbs6qfi7i.bkt.clouddn.com/7_rev.jpg)
+![](http://windliang.oss-cn-beijing.aliyuncs.com/7_rev.jpg)
 
 很简单，就是输入整数，输出它的倒置。
 
@@ -20,7 +20,7 @@ public int reverse(int x) {
 
 然后似乎不是那么理想。
 
-![](http://pbs6qfi7i.bkt.clouddn.com/7_1.jpg)
+![](http://windliang.oss-cn-beijing.aliyuncs.com/7_1.jpg)
 
 为什么呢？倒置过来不应该是 9646324351 吗。其实题目里讲了，int 的范围是 $$[-2^{31} ,2^{31}-1]$$ 也就是 $$[-2147483648,2147483647] $$ 。明显 9646324351 超出了范围，造成了溢出。所以我们需要在输出前，判断是否溢出。
 

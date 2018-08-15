@@ -1,10 +1,10 @@
 ## 题目描述（中等难度）
 
-![](http://pbs6qfi7i.bkt.clouddn.com/6_zig.jpg)
+![](http://windliang.oss-cn-beijing.aliyuncs.com/6_zig.jpg)
 
 就是给定一个字符串，然后按写竖着的 「z」的方式排列字符，就是下边的样子。
 
-![](http://pbs6qfi7i.bkt.clouddn.com/6_1.jpg)
+![](http://windliang.oss-cn-beijing.aliyuncs.com/6_1.jpg)
 
 然后按行的方式输出每个字符，第 0 行，第 1 行，第 2 行 ....
 
@@ -44,7 +44,7 @@
 
 找出按 Z 形排列后字符的规律，然后直接保存起来。
 
-![](http://pbs6qfi7i.bkt.clouddn.com/6_3.jpg)
+![](http://windliang.oss-cn-beijing.aliyuncs.com/6_3.jpg)
 
 我们可以看到，图形其实是有周期的，0，1，2 ... 7 总过 8 个，然后就又开始重复相同的路径。周期的计算就是 cycleLen = 2 × numRows - 2 = 2 × 5 - 2 = 8 个。
 

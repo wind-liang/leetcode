@@ -1,6 +1,6 @@
 ## 题目描述（中等难度）
 
-![](http://pbs6qfi7i.bkt.clouddn.com/TIM%E6%88%AA%E5%9B%BE20180714105005.jpg)
+![](http://windliang.oss-cn-beijing.aliyuncs.com/TIM%E6%88%AA%E5%9B%BE20180714105005.jpg)
 
 就是两个链表表示的数相加，这样就可以实现两个很大的数相加了，无需考虑数值 int ，float 的限制了。
 
@@ -10,7 +10,7 @@
 
 ## 图示
 
-![](http://pbs6qfi7i.bkt.clouddn.com/2_pic.jpg)
+![](http://windliang.oss-cn-beijing.aliyuncs.com/2_pic.jpg)
 
 链表最左边表示个位数，代表 342 + 465 =807 。
 
@@ -68,7 +68,7 @@ public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 
 ## 扩展
 
-![](http://pbs6qfi7i.bkt.clouddn.com/2_add.jpg)
+![](http://windliang.oss-cn-beijing.aliyuncs.com/2_add.jpg)
 
 如果链表存储的顺序反过来怎么办？
 
@@ -78,35 +78,35 @@ public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 
 首先看一下原链表。
 
-![](http://pbs6qfi7i.bkt.clouddn.com/l0.jpg)
+![](http://windliang.oss-cn-beijing.aliyuncs.com/l0.jpg)
 
 总共需要添加两个指针，pre  和 next。
 
 初始化 pre 指向 NULL 。
 
-![](http://pbs6qfi7i.bkt.clouddn.com/l00.jpg)
+![](http://windliang.oss-cn-beijing.aliyuncs.com/l00.jpg)
 
 然后就是迭代的步骤，总共四步，顺序一步都不能错。
 
 * next 指向 head 的 next ，防止原链表丢失
 
-  ![](http://pbs6qfi7i.bkt.clouddn.com/l1.jpg)
+  ![](http://windliang.oss-cn-beijing.aliyuncs.com/l1.jpg)
 
 * head 的 next 从原来链表脱离，指向 pre 。
 
-  ![](http://pbs6qfi7i.bkt.clouddn.com/l2.jpg)
+  ![](http://windliang.oss-cn-beijing.aliyuncs.com/l2.jpg)
 
 * pre 指向 head
 
-  ![](http://pbs6qfi7i.bkt.clouddn.com/l3.jpg)
+  ![](http://windliang.oss-cn-beijing.aliyuncs.com/l3.jpg)
 
 * head 指向 next
 
-  ![](http://pbs6qfi7i.bkt.clouddn.com/l4.jpg)
+  ![](http://windliang.oss-cn-beijing.aliyuncs.com/l4.jpg)
 
 一次迭代就完成了，如果再进行一次迭代就变成下边的样子。
 
-![](http://pbs6qfi7i.bkt.clouddn.com/l5.jpg)
+![](http://windliang.oss-cn-beijing.aliyuncs.com/l5.jpg)
 
 可以看到整个过程无非是把旧链表的 head 取下来，添加的新的链表上。代码怎么写呢？
 
@@ -119,7 +119,7 @@ head = next; // head 右移
 
 接下来就是停止条件了，我们再进行一次循环。
 
-![](http://pbs6qfi7i.bkt.clouddn.com/l6.jpg)
+![](http://windliang.oss-cn-beijing.aliyuncs.com/l6.jpg)
 
 可以发现当 head 或者 next  指向 null 的时候，我们就可以停止了。此时将 pre 返回，便是逆序了的链表了。
 
@@ -150,19 +150,19 @@ public ListNode reverseList(ListNode head){
 
   ​
 
-  ![](http://pbs6qfi7i.bkt.clouddn.com/ll0.jpg)
+  ![](http://windliang.oss-cn-beijing.aliyuncs.com/ll0.jpg)
 
   * head 结点拿出来
 
-    ![](http://pbs6qfi7i.bkt.clouddn.com/ll1.jpg)
+    ![](http://windliang.oss-cn-beijing.aliyuncs.com/ll1.jpg)
 
   * 剩余部分调用逆序函数 reverseListRecursion ，并得到了 newhead
 
-    ![](http://pbs6qfi7i.bkt.clouddn.com/ll2.jpg)
+    ![](http://windliang.oss-cn-beijing.aliyuncs.com/ll2.jpg)
 
   * 将 2 指向 1 ，1 指向 null，将 newhead 返回即可。
 
-    ![](http://pbs6qfi7i.bkt.clouddn.com/ll3.jpg)
+    ![](http://windliang.oss-cn-beijing.aliyuncs.com/ll3.jpg)
 
 * 找到递归出口
 

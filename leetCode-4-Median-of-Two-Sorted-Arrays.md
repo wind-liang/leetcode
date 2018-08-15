@@ -1,6 +1,6 @@
 ## 题目描述（困难难度）
 
-![](http://pbs6qfi7i.bkt.clouddn.com/3_median.jpg)
+![](http://windliang.oss-cn-beijing.aliyuncs.com/3_median.jpg)
 
 已知两个有序数组，找到两个数组合并后的中位数。
 
@@ -127,7 +127,7 @@ public double findMedianSortedArrays(int[] A, int[] B) {
 
 假设我们要找第 7 小的数字。
 
-![](http://pbs6qfi7i.bkt.clouddn.com/mid1.jpg)
+![](http://windliang.oss-cn-beijing.aliyuncs.com/mid1.jpg)
 
 我们比较两个数组的第 k / 2 个数字，如果 k 是奇数，向下取整。也就是比较第 3 个数字，上边数组中的 8 和 下边数组中的 3 ，如果哪个小，就表明该数组的前 k / 2 个数字都不是第 k 小数字，所以可以排除。也就是 1，2，3 这三个数字不可能是第 7 小的数字，我们可以把它排除掉。将 1389 和 45678910 两个数组作为新的数组进行比较。
 
@@ -137,15 +137,15 @@ A 数组中比 A [ k / 2 ] 小的数有 k / 2 - 1 个，B 数组中，B [ k / 2 
 
 橙色的部分表示已经去掉的数字。
 
-![](http://pbs6qfi7i.bkt.clouddn.com/mid2.jpg)
+![](http://windliang.oss-cn-beijing.aliyuncs.com/mid2.jpg)
 
 由于我们已经排除掉了 3 个数字，就是这 3 个数字一定在最前边，所以在两个新数组中，我们只需要找第 7 - 3 = 4 小的数字就可以了，也就是 k = 4 。此时两个数组，比较第 2 个数字，3  <  5，所以我们可以把小的那个数组中的 1 ，3 排除掉了。
 
-![](http://pbs6qfi7i.bkt.clouddn.com/mid3.jpg)
+![](http://windliang.oss-cn-beijing.aliyuncs.com/mid3.jpg)
 
 我们又排除掉 2 个数字，所以现在找第 4 - 2 = 2 小的数字就可以了。此时比较两个数组中的第 k / 2 = 1 个数，4 = 4 ，怎么办呢？由于两个数相等，所以我们无论去掉哪个数组中的都行，因为去掉 1 个总会保留 1 个的，所以没有影响。为了统一，我们就假设 4 > 4 吧，所以此时将下边的 4 去掉。
 
-![](http://pbs6qfi7i.bkt.clouddn.com/mid4.jpg)
+![](http://windliang.oss-cn-beijing.aliyuncs.com/mid4.jpg)
 
 由于又去掉 1 个数字，此时我们要找第 1 小的数字，所以只需判断两个数组中第一个数字哪个小就可以了，也就是 4 。
 
@@ -153,11 +153,11 @@ A 数组中比 A [ k / 2 ] 小的数有 k / 2 - 1 个，B 数组中，B [ k / 2 
 
 我们每次都是取 k / 2 的数进行比较，有时候可能会遇到数组长度小于 k / 2 的时候。
 
-![](http://pbs6qfi7i.bkt.clouddn.com/mid5.jpg)
+![](http://windliang.oss-cn-beijing.aliyuncs.com/mid5.jpg)
 
 此时 k / 2 等于 3 ，而上边的数组长度是 2 ，我们此时将箭头指向它的末尾就可以了。这样的话，由于 2 < 3 ，所以就会导致上边的数组 1，2 都被排除。造成下边的情况。
 
-![](http://pbs6qfi7i.bkt.clouddn.com/mid6.jpg)
+![](http://windliang.oss-cn-beijing.aliyuncs.com/mid6.jpg)
 
 由于 2 个元素被排除，所以此时 k = 5 ，又由于上边的数组已经空了，我们只需要返回下边的数组的第 5 个数字就可以了。
 
@@ -212,11 +212,11 @@ public double findMedianSortedArrays(int[] nums1, int[] nums2) {
 
 一个长度为 m 的数组，有 0 到 m 总共 m + 1 个位置可以切。
 
-![](http://pbs6qfi7i.bkt.clouddn.com/mid7.jpg)
+![](http://windliang.oss-cn-beijing.aliyuncs.com/mid7.jpg)
 
 我们把数组 A 和数组 B 分别在 i 和 j 进行切割。
 
-![](http://pbs6qfi7i.bkt.clouddn.com/mid8.jpg)
+![](http://windliang.oss-cn-beijing.aliyuncs.com/mid8.jpg)
 
 将 i 的左边和 j 的左边组合成「左半部分」，将 i 的右边和 j 的右边组合成「右半部分」。
 
@@ -261,14 +261,14 @@ $$m\leq n,i>0,j=(m+n+1)/2-i\leq (n+n+1)/2-i<(n+n+1)/2=n$$
 
 * B [ j - 1 ] > A [ i ]，并且为了不越界，要保证 j != 0，i != m
 
-  ![](http://pbs6qfi7i.bkt.clouddn.com/mid9.jpg)
+  ![](http://windliang.oss-cn-beijing.aliyuncs.com/mid9.jpg)
 
   此时很明显，我们需要增加 i ，为了数量的平衡还要减少  j ，幸运的是 j = ( m + n + 1) / 2 - i，i 增大，j 自然会减少。
 
 
 * A [ i - 1 ] > B [ j ] ，并且为了不越界，要保证 i != 0，j  !=  n 
 
-  ![](http://pbs6qfi7i.bkt.clouddn.com/mid10.jpg)
+  ![](http://windliang.oss-cn-beijing.aliyuncs.com/mid10.jpg)
 
   此时和上边的情况相反，我们要减少 i ，增大 j 。
 
@@ -276,14 +276,14 @@ $$m\leq n,i>0,j=(m+n+1)/2-i\leq (n+n+1)/2-i<(n+n+1)/2=n$$
 
 * 当 i = 0 , 或者 j = 0 ，也就是切在了最前边。
 
-  ![](http://pbs6qfi7i.bkt.clouddn.com/mid11.jpg)
+  ![](http://windliang.oss-cn-beijing.aliyuncs.com/mid11.jpg)
 
   此时左半部分当 j = 0 时，最大的值就是 A [ i - 1 ] ；当 i = 0 时 最大的值就是 B [ j - 1] 。右半部分最小值和之前一样。
 
 
 * 当 i = m 或者 j = n ，也就是切在了最后边。
 
-  ![](http://pbs6qfi7i.bkt.clouddn.com/mid12.jpg)
+  ![](http://windliang.oss-cn-beijing.aliyuncs.com/mid12.jpg)
 
   此时左半部分最大值和之前一样。右半部分当 j = n 时，最小值就是 A [ i ] ；当 i = m 时，最小值就是B [ j ] 。
 

@@ -1,6 +1,6 @@
 # 题目描述（中等难度）
 
-![](http://pbs6qfi7i.bkt.clouddn.com/8_atoi.png)
+![](http://windliang.oss-cn-beijing.aliyuncs.com/8_atoi.png)
 
 将一个字符串转为整型。
 

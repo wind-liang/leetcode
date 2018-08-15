@@ -1,6 +1,6 @@
 ## 题目描述（中等难度）
 
-![](http://pbs6qfi7i.bkt.clouddn.com/3_long.jpg)
+![](http://windliang.oss-cn-beijing.aliyuncs.com/3_long.jpg)
 
 给定一个字符串，找到没有重复字符的最长子串，返回它的长度。
 
@@ -55,7 +55,7 @@ j 取 4，判断字符串 str[0,4) 中有没有重复的字符。
 
 综上，其实整个关于 j 的循环我们完全可以去掉了，此时可以理解变成了一个「滑动窗口」。
 
-![](http://pbs6qfi7i.bkt.clouddn.com/slide.jpg)
+![](http://windliang.oss-cn-beijing.aliyuncs.com/slide.jpg)
 
 整体就是橘色窗口在依次向右移动。
 
@@ -89,11 +89,11 @@ public class Solution {
 
 继续优化，我们看上边的算法的一种情况。
 
-![](http://pbs6qfi7i.bkt.clouddn.com/slide11.jpg)
+![](http://windliang.oss-cn-beijing.aliyuncs.com/slide11.jpg)
 
 当 j 指向的 c 存在于前边的子串 abcd 中，此时 i 向前移到 b ,此时子串中仍然含有 c，还得继续移动，所以这里其实可以优化。我们可以一步到位，直接移动到子串 c 的位置的下一位！
 
-![](http://pbs6qfi7i.bkt.clouddn.com/slide22.jpg)
+![](http://windliang.oss-cn-beijing.aliyuncs.com/slide22.jpg)
 
 实现这样的话，我们将 set 改为 map ，将字符存为 key ，将对应的下标存到 value 里就实现了。
 

@@ -1,6 +1,6 @@
 ## 题目描述	（简单难度）
 
-![](http://pbs6qfi7i.bkt.clouddn.com/1_two_sum.jpg)
+![](http://windliang.oss-cn-beijing.aliyuncs.com/1_two_sum.jpg)
 
 给定一个数组和一个目标和，从数组中找两个数字相加等于目标和，输出这两个数字的下标。
 
