@@ -53,7 +53,7 @@ public boolean isSame(List<Integer> a, List<Integer> b) {
 }
 ```
 
-时间复杂度：n 表示 num 的个数，三个循环 O（n³），而 isInList 也需要 O（n），总共就是  $$O(n^4)$$，leetCode 复杂度到了  $$O(n^3)$$  一般就报超时错误了，所以算法还得优化。
+时间复杂度：n 表示 num 的个数，三个循环 O（n³），而 isInList 也需要 O（n），总共就是 $$O(n^4)$$，leetCode 复杂度到了  $$O(n^3)$$  一般就报超时错误了，所以算法还得优化。
 
 空间复杂度：最坏情况，即 O（N）, N 是指 n 个元素的排列组合个数，即  $$N=C^3_n$$，用来保存结果。
 
