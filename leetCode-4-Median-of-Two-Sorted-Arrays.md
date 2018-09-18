@@ -251,7 +251,7 @@ public double findMedianSortedArrays(int[] nums1, int[] nums2) {
 
 上边的第一个条件我们其实可以合并为 j = ( m + n + 1) / 2 - i，因为如果 m + n 是偶数，由于我们取的是 int 值，所以加 1 也不会影响结果。当然，由于 0 <=  i <= m ，为了保证 0 <= j <= n ，我们必须保证 m <= n 。
 
-$$m\leq n，i<m,j=(m+n+1)/2-i\geq(m+m+1)/2-i>(m+m+1)/2-m= 0$$
+$$m\leq n，i<m,j=(m+n+1)/2-i\geq(m+m+1)/2-i>(m+m+1)/2-m=0$$
 
 $$m\leq n,i>0,j=(m+n+1)/2-i\leq (n+n+1)/2-i<(n+n+1)/2=n$$
 
