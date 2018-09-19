@@ -14,7 +14,7 @@
             "summary": "SUMMARY.md"
 
         }, 
-        "plugins": ["mathjax","-livereload"],
+        "plugins": ["katex","-livereload"],
         "pluginsConfig": {
              
         },
