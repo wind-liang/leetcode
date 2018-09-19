@@ -1,0 +1,506 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1. Two Sum · leetCode</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="windliang">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="leetCode-2-Add-Two-Numbers.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://windliang.cc" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="leetCode-1-Two-Sum.html">
+            
+                <a href="leetCode-1-Two-Sum.html">
+            
+                    
+                    1. Two Sum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="leetCode-2-Add-Two-Numbers.html">
+            
+                <a href="leetCode-2-Add-Two-Numbers.html">
+            
+                    
+                    2. Add Two Numbers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="leetCode-3-Longest-Substring-Without-Repeating-Characters.html">
+            
+                <a href="leetCode-3-Longest-Substring-Without-Repeating-Characters.html">
+            
+                    
+                    3. Longest Substring Without Repeating Characters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="leetCode-4-Median-of-Two-Sorted-Arrays.html">
+            
+                <a href="leetCode-4-Median-of-Two-Sorted-Arrays.html">
+            
+                    
+                    4. Median of Two Sorted Arrays
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="leetCode-5-Longest-Palindromic-Substring.html">
+            
+                <a href="leetCode-5-Longest-Palindromic-Substring.html">
+            
+                    
+                    5. Longest Palindromic Substring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="leetCode-6-ZigZag-Conversion.html">
+            
+                <a href="leetCode-6-ZigZag-Conversion.html">
+            
+                    
+                    6. ZigZag Conversion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="leetCode-7-Reverse-Integer.html">
+            
+                <a href="leetCode-7-Reverse-Integer.html">
+            
+                    
+                    7. Reverse Integer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="leetCode-8-String-to-Integer.html">
+            
+                <a href="leetCode-8-String-to-Integer.html">
+            
+                    
+                    8. String to Integer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="leetCode-9-Palindrome-Number.html">
+            
+                <a href="leetCode-9-Palindrome-Number.html">
+            
+                    
+                    9. Palindrome Number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="leetCode-10-Regular-Expression-Matching.html">
+            
+                <a href="leetCode-10-Regular-Expression-Matching.html">
+            
+                    
+                    10. Regular Expression Matching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="leetCode-11-Container-With-Most-Water.html">
+            
+                <a href="leetCode-11-Container-With-Most-Water.html">
+            
+                    
+                    11. Container With Most Water
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="leetCode-12-Integer-to-Roman.html">
+            
+                <a href="leetCode-12-Integer-to-Roman.html">
+            
+                    
+                    12. Integer to Roman
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="leetCode-13-Roman-to-Integer.html">
+            
+                <a href="leetCode-13-Roman-to-Integer.html">
+            
+                    
+                    13. Roman to Integer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="leetCode-14-Longest-Common-Prefix.html">
+            
+                <a href="leetCode-14-Longest-Common-Prefix.html">
+            
+                    
+                    14. Longest Common Prefix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="leetCode-15-3Sum.html">
+            
+                <a href="leetCode-15-3Sum.html">
+            
+                    
+                    15. 3Sum
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >1. Two Sum</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;----&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;">&#x9898;&#x76EE;&#x63CF;&#x8FF0;    &#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;</h2>
+<p><img src="http://windliang.oss-cn-beijing.aliyuncs.com/1_two_sum.jpg" alt=""></p>
+<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x548C;&#x4E00;&#x4E2A;&#x76EE;&#x6807;&#x548C;&#xFF0C;&#x4ECE;&#x6570;&#x7EC4;&#x4E2D;&#x627E;&#x4E24;&#x4E2A;&#x6570;&#x5B57;&#x76F8;&#x52A0;&#x7B49;&#x4E8E;&#x76EE;&#x6807;&#x548C;&#xFF0C;&#x8F93;&#x51FA;&#x8FD9;&#x4E24;&#x4E2A;&#x6570;&#x5B57;&#x7684;&#x4E0B;&#x6807;&#x3002;</p>
+<h2 id="&#x89E3;&#x6CD5;&#x4E00;">&#x89E3;&#x6CD5;&#x4E00;</h2>
+<p>&#x7B80;&#x5355;&#x7C97;&#x66B4;&#x4E9B;&#xFF0C;&#x4E24;&#x91CD;&#x5FAA;&#x73AF;&#xFF0C;&#x904D;&#x5386;&#x6240;&#x6709;&#x60C5;&#x51B5;&#x770B;&#x76F8;&#x52A0;&#x662F;&#x5426;&#x7B49;&#x4E8E;&#x76EE;&#x6807;&#x548C;&#xFF0C;&#x5982;&#x679C;&#x7B26;&#x5408;&#x76F4;&#x63A5;&#x8F93;&#x51FA;&#x3002;</p>
+<pre><code class="lang-JAVA"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span>[] twoSum1(<span class="hljs-keyword">int</span>[] nums, <span class="hljs-keyword">int</span> target) {
+        <span class="hljs-keyword">int</span> []ans=<span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">2</span>];
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;nums.length;i++){
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=(i+<span class="hljs-number">1</span>);j&lt;nums.length;j++){
+                <span class="hljs-keyword">if</span>(nums[i]+nums[j]==target){
+                    ans[<span class="hljs-number">0</span>]=i;
+                    ans[<span class="hljs-number">1</span>]=j;
+                    <span class="hljs-keyword">return</span> ans;
+                }
+            }
+        }
+        <span class="hljs-keyword">return</span> ans;
+    }
+</code></pre>
+<p>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;&#x4E24;&#x5C42; for &#x5FAA;&#x73AF;&#xFF0C;O&#xFF08;n&#xB2;&#xFF09;</p>
+<p>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O&#xFF08;1&#xFF09;</p>
+<h2 id="&#x89E3;&#x6CD5;&#x4E8C;">&#x89E3;&#x6CD5;&#x4E8C;</h2>
+<p>&#x5728;&#x4E0A;&#x8FB9;&#x7684;&#x89E3;&#x6CD5;&#x4E2D;&#x770B;&#x4E0B;&#x7B2C;&#x4E8C;&#x4E2A; for &#x5FAA;&#x73AF;&#x6B65;&#x9AA4;&#x3002;</p>
+<pre><code class="lang-JAVA"><span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=(i+<span class="hljs-number">1</span>);j&lt;nums.length;j++){
+    <span class="hljs-keyword">if</span>(nums[i]+nums[j]==target){
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x6362;&#x4E2A;&#x7406;&#x89E3;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-JAVA"><span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=(i+<span class="hljs-number">1</span>);j&lt;nums.length;j++){ 
+    sub=target-nums[i]
+     <span class="hljs-keyword">if</span>(nums[j]==sub){
+</code></pre>
+<p>&#x7B2C;&#x4E8C;&#x5C42; for &#x5FAA;&#x73AF;&#x65E0;&#x975E;&#x662F;&#x904D;&#x5386;&#x6240;&#x6709;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x770B;&#x54EA;&#x4E2A;&#x5143;&#x7D20;&#x7B49;&#x4E8E; sub &#xFF0C;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A; O&#xFF08;n&#xFF09;&#x3002;</p>
+<p>&#x6709;&#x6CA1;&#x6709;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;&#xFF0C;&#x4E0D;&#x7528;&#x904D;&#x5386;&#x5C31;&#x53EF;&#x4EE5;&#x627E;&#x5230;&#x5143;&#x7D20;&#x91CC;&#x6709;&#x6CA1;&#x6709;&#x7B49;&#x4E8E; sub &#x7684;&#xFF1F;</p>
+<p>hash table &#xFF01;&#xFF01;&#xFF01;</p>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x628A;&#x6570;&#x7EC4;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x4FDD;&#x5B58;&#x4E3A; hash &#x7684; key&#xFF0C;&#x4E0B;&#x6807;&#x4FDD;&#x5B58;&#x4E3A; hash &#x7684; value &#x3002;</p>
+<p>&#x8FD9;&#x6837;&#x53EA;&#x9700;&#x5224;&#x65AD; sub &#x5728;&#x4E0D;&#x5728; hash &#x7684; key &#x91CC;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#xFF0C;&#x800C;&#x6B64;&#x65F6;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4EC5;&#x4E3A; O&#xFF08;1&#xFF09;&#xFF01;</p>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x5730;&#x65B9;&#x662F;&#xFF0C;&#x8FD8;&#x9700;&#x5224;&#x65AD;&#x627E;&#x5230;&#x7684;&#x5143;&#x7D20;&#x4E0D;&#x662F;&#x5F53;&#x524D;&#x5143;&#x7D20;&#xFF0C;&#x56E0;&#x4E3A;&#x9898;&#x76EE;&#x91CC;&#x8BB2;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x53EA;&#x80FD;&#x7528;&#x4E00;&#x6B21;&#x3002;</p>
+<pre><code class="lang-JAVA"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span>[] twoSum2(<span class="hljs-keyword">int</span>[] nums, <span class="hljs-keyword">int</span> target) {
+        Map&lt;Integer,Integer&gt; map=<span class="hljs-keyword">new</span> HashMap&lt;&gt;();
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;nums.length;i++){
+            map.put(nums[i],i);
+        }
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;nums.length;i++){
+            <span class="hljs-keyword">int</span> sub=target-nums[i];
+            <span class="hljs-keyword">if</span>(map.containsKey(sub)&amp;&amp;map.get(sub)!=i){
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[]{i,map.get(sub)};
+            }
+        }
+        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> IllegalArgumentException(<span class="hljs-string">&quot;No two sum solution&quot;</span>);
+    }
+</code></pre>
+<p>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;&#x6BD4;&#x89E3;&#x6CD5;&#x4E00;&#x5C11;&#x4E86;&#x4E00;&#x4E2A; for &#x5FAA;&#x73AF;&#xFF0C;&#x964D;&#x4E3A; O&#xFF08;n&#xFF09;</p>
+<p>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;&#x6240;&#x8C13;&#x7684;&#x7A7A;&#x95F4;&#x6362;&#x65F6;&#x95F4;&#xFF0C;&#x8FD9;&#x91CC;&#x5C31;&#x80FD;&#x4F53;&#x73B0;&#x51FA;&#x6765;&#xFF0C; &#x5F00;&#x8F9F;&#x4E86;&#x4E00;&#x4E2A; hash table &#xFF0C;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x53D8;&#x4E3A; O&#xFF08;n&#xFF09;</p>
+<h2 id="&#x89E3;&#x6CD5;&#x4E09;">&#x89E3;&#x6CD5;&#x4E09;</h2>
+<p>&#x770B;&#x89E3;&#x6CD5;&#x4E8C;&#x4E2D;&#xFF0C;&#x4E24;&#x4E2A; for &#x5FAA;&#x73AF;&#xFF0C;&#x4ED6;&#x4EEC;&#x957F;&#x7684;&#x4E00;&#x6837;&#xFF0C;&#x6211;&#x4EEC;&#x5F53;&#x7136;&#x53EF;&#x4EE5;&#x628A;&#x5B83;&#x5408;&#x8D77;&#x6765;&#x3002;&#x590D;&#x6742;&#x5EA6;&#x4E0A;&#x4E0D;&#x4F1A;&#x5E26;&#x6765;&#x4EC0;&#x4E48;&#x53D8;&#x5316;&#xFF0C;&#x53D8;&#x5316;&#x4EC5;&#x4EC5;&#x662F;&#x4E0D;&#x9700;&#x8981;&#x5224;&#x65AD;&#x662F;&#x4E0D;&#x662F;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x4E86;&#xFF0C;&#x56E0;&#x4E3A;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x8FD8;&#x6CA1;&#x6709;&#x6DFB;&#x52A0;&#x8FDB; hash &#x91CC;&#x3002;    </p>
+<pre><code class="lang-JAVA"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span>[] twoSum3(<span class="hljs-keyword">int</span>[] nums, <span class="hljs-keyword">int</span> target) {
+        Map&lt;Integer,Integer&gt; map=<span class="hljs-keyword">new</span> HashMap&lt;&gt;();
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;nums.length;i++){
+            <span class="hljs-keyword">int</span> sub=target-nums[i];
+            <span class="hljs-keyword">if</span>(map.containsKey(sub)){
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[]{i,map.get(sub)};
+        }
+        map.put(nums[i], i);
+    }
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> IllegalArgumentException(<span class="hljs-string">&quot;No two sum solution&quot;</span>);
+}
+</code></pre>
+<h2 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h2>
+<p>&#x9898;&#x76EE;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x6BD5;&#x7ADF;&#x66B4;&#x529B;&#x7684;&#x65B9;&#x6CD5;&#x4E5F;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;&#x3002;&#x552F;&#x4E00;&#x95EA;&#x4EAE;&#x7684;&#x70B9;&#x5C31;&#x662F;&#xFF0C;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4ECE; O&#xFF08;n&#xB2;&#xFF09;&#x964D;&#x4E3A; O&#xFF08;n&#xFF09; &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5BF9; hash &#x7684;&#x5E94;&#x7528;&#xFF0C;&#x6709;&#x773C;&#x524D;&#x4E00;&#x4EAE;&#x7684;&#x611F;&#x89C9;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="leetCode-2-Add-Two-Numbers.html" class="navigation navigation-next " aria-label="Next page: 2. Add Two Numbers">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"1. Two Sum","level":"1.2","depth":1,"next":{"title":"2. Add Two Numbers","level":"1.3","depth":1,"path":"leetCode-2-Add-Two-Numbers.md","ref":"leetCode-2-Add-Two-Numbers.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"windliang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetCode","language":"zh-hans","links":{"sidebar":{"Home":"http://windliang.cc"},"gitbook":true},"gitbook":"3.2.3","description":"leetCode"},"file":{"path":"leetCode-1-Two-Sum.md","mtime":"2018-09-19T07:31:21.056Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-19T07:37:58.220Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
