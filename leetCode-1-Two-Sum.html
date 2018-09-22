@@ -21,11 +21,23 @@
                 
             
                 
-                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
                 
             
                 
-                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-ad/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
                 
             
                 
@@ -53,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -66,6 +79,17 @@
     
     <link rel="prev" href="./" />
     
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"wind-liang","repo":"leetcode","type":"star","size":"small","count":true}]};
+    </script>
 
     </head>
     <body>
@@ -376,15 +400,15 @@
                     <div class="page-wrapper" tabindex="-1" role="main">
                         <div class="page-inner">
                             
-<div id="book-search-results">
+<div class="search-plus" id="book-search-results">
     <div class="search-noresults">
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;----&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;">&#x9898;&#x76EE;&#x63CF;&#x8FF0;    &#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;</h2>
+                                <h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;----&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;"><a name="&#x9898;&#x76EE;&#x63CF;&#x8FF0;----&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;----&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;    &#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;</h2>
 <p><img src="http://windliang.oss-cn-beijing.aliyuncs.com/1_two_sum.jpg" alt=""></p>
 <p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x548C;&#x4E00;&#x4E2A;&#x76EE;&#x6807;&#x548C;&#xFF0C;&#x4ECE;&#x6570;&#x7EC4;&#x4E2D;&#x627E;&#x4E24;&#x4E2A;&#x6570;&#x5B57;&#x76F8;&#x52A0;&#x7B49;&#x4E8E;&#x76EE;&#x6807;&#x548C;&#xFF0C;&#x8F93;&#x51FA;&#x8FD9;&#x4E24;&#x4E2A;&#x6570;&#x5B57;&#x7684;&#x4E0B;&#x6807;&#x3002;</p>
-<h2 id="&#x89E3;&#x6CD5;&#x4E00;">&#x89E3;&#x6CD5;&#x4E00;</h2>
+<h2 id="&#x89E3;&#x6CD5;&#x4E00;"><a name="&#x89E3;&#x6CD5;&#x4E00;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x6CD5;&#x4E00;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89E3;&#x6CD5;&#x4E00;</h2>
 <p>&#x7B80;&#x5355;&#x7C97;&#x66B4;&#x4E9B;&#xFF0C;&#x4E24;&#x91CD;&#x5FAA;&#x73AF;&#xFF0C;&#x904D;&#x5386;&#x6240;&#x6709;&#x60C5;&#x51B5;&#x770B;&#x76F8;&#x52A0;&#x662F;&#x5426;&#x7B49;&#x4E8E;&#x76EE;&#x6807;&#x548C;&#xFF0C;&#x5982;&#x679C;&#x7B26;&#x5408;&#x76F4;&#x63A5;&#x8F93;&#x51FA;&#x3002;</p>
 <pre><code class="lang-JAVA"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span>[] twoSum1(<span class="hljs-keyword">int</span>[] nums, <span class="hljs-keyword">int</span> target) {
         <span class="hljs-keyword">int</span> []ans=<span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">2</span>];
@@ -402,7 +426,7 @@
 </code></pre>
 <p>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;&#x4E24;&#x5C42; for &#x5FAA;&#x73AF;&#xFF0C;O&#xFF08;n&#xB2;&#xFF09;</p>
 <p>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O&#xFF08;1&#xFF09;</p>
-<h2 id="&#x89E3;&#x6CD5;&#x4E8C;">&#x89E3;&#x6CD5;&#x4E8C;</h2>
+<h2 id="&#x89E3;&#x6CD5;&#x4E8C;"><a name="&#x89E3;&#x6CD5;&#x4E8C;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x6CD5;&#x4E8C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89E3;&#x6CD5;&#x4E8C;</h2>
 <p>&#x5728;&#x4E0A;&#x8FB9;&#x7684;&#x89E3;&#x6CD5;&#x4E2D;&#x770B;&#x4E0B;&#x7B2C;&#x4E8C;&#x4E2A; for &#x5FAA;&#x73AF;&#x6B65;&#x9AA4;&#x3002;</p>
 <pre><code class="lang-JAVA"><span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=(i+<span class="hljs-number">1</span>);j&lt;nums.length;j++){
     <span class="hljs-keyword">if</span>(nums[i]+nums[j]==target){
@@ -434,7 +458,7 @@
 </code></pre>
 <p>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;&#x6BD4;&#x89E3;&#x6CD5;&#x4E00;&#x5C11;&#x4E86;&#x4E00;&#x4E2A; for &#x5FAA;&#x73AF;&#xFF0C;&#x964D;&#x4E3A; O&#xFF08;n&#xFF09;</p>
 <p>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;&#x6240;&#x8C13;&#x7684;&#x7A7A;&#x95F4;&#x6362;&#x65F6;&#x95F4;&#xFF0C;&#x8FD9;&#x91CC;&#x5C31;&#x80FD;&#x4F53;&#x73B0;&#x51FA;&#x6765;&#xFF0C; &#x5F00;&#x8F9F;&#x4E86;&#x4E00;&#x4E2A; hash table &#xFF0C;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x53D8;&#x4E3A; O&#xFF08;n&#xFF09;</p>
-<h2 id="&#x89E3;&#x6CD5;&#x4E09;">&#x89E3;&#x6CD5;&#x4E09;</h2>
+<h2 id="&#x89E3;&#x6CD5;&#x4E09;"><a name="&#x89E3;&#x6CD5;&#x4E09;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x6CD5;&#x4E09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89E3;&#x6CD5;&#x4E09;</h2>
 <p>&#x770B;&#x89E3;&#x6CD5;&#x4E8C;&#x4E2D;&#xFF0C;&#x4E24;&#x4E2A; for &#x5FAA;&#x73AF;&#xFF0C;&#x4ED6;&#x4EEC;&#x957F;&#x7684;&#x4E00;&#x6837;&#xFF0C;&#x6211;&#x4EEC;&#x5F53;&#x7136;&#x53EF;&#x4EE5;&#x628A;&#x5B83;&#x5408;&#x8D77;&#x6765;&#x3002;&#x590D;&#x6742;&#x5EA6;&#x4E0A;&#x4E0D;&#x4F1A;&#x5E26;&#x6765;&#x4EC0;&#x4E48;&#x53D8;&#x5316;&#xFF0C;&#x53D8;&#x5316;&#x4EC5;&#x4EC5;&#x662F;&#x4E0D;&#x9700;&#x8981;&#x5224;&#x65AD;&#x662F;&#x4E0D;&#x662F;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x4E86;&#xFF0C;&#x56E0;&#x4E3A;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x8FD8;&#x6CA1;&#x6709;&#x6DFB;&#x52A0;&#x8FDB; hash &#x91CC;&#x3002;    </p>
 <pre><code class="lang-JAVA"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span>[] twoSum3(<span class="hljs-keyword">int</span>[] nums, <span class="hljs-keyword">int</span> target) {
         Map&lt;Integer,Integer&gt; map=<span class="hljs-keyword">new</span> HashMap&lt;&gt;();
@@ -448,7 +472,7 @@
     <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> IllegalArgumentException(<span class="hljs-string">&quot;No two sum solution&quot;</span>);
 }
 </code></pre>
-<h2 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h2>
+<h2 id="&#x603B;&#x7ED3;"><a name="&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x603B;&#x7ED3;</h2>
 <p>&#x9898;&#x76EE;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x6BD5;&#x7ADF;&#x66B4;&#x529B;&#x7684;&#x65B9;&#x6CD5;&#x4E5F;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;&#x3002;&#x552F;&#x4E00;&#x95EA;&#x4EAE;&#x7684;&#x70B9;&#x5C31;&#x662F;&#xFF0C;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4ECE; O&#xFF08;n&#xB2;&#xFF09;&#x964D;&#x4E3A; O&#xFF08;n&#xFF09; &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5BF9; hash &#x7684;&#x5E94;&#x7528;&#xFF0C;&#x6709;&#x773C;&#x524D;&#x4E00;&#x4EAE;&#x7684;&#x611F;&#x89C9;&#x3002;</p>
 
                                 
@@ -493,7 +517,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"1. Two Sum","level":"1.2","depth":1,"next":{"title":"2. Add Two Numbers","level":"1.3","depth":1,"path":"leetCode-2-Add-Two-Numbers.md","ref":"leetCode-2-Add-Two-Numbers.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"windliang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetCode","language":"zh-hans","links":{"sidebar":{"Home":"http://windliang.cc"},"gitbook":true},"gitbook":"3.2.3","description":"leetCode"},"file":{"path":"leetCode-1-Two-Sum.md","mtime":"2018-09-20T15:24:43.014Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-21T16:46:50.955Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"1. Two Sum","level":"1.2","depth":1,"next":{"title":"2. Add Two Numbers","level":"1.3","depth":1,"path":"leetCode-2-Add-Two-Numbers.md","ref":"leetCode-2-Add-Two-Numbers.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr","-search","search-plus","ad"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ad":{"contentBottom":"%u003c%u0064%u0069%u0076%u0020%u0069%u0064%u003d%u0022%u0077%u0065%u0063%u0068%u0061%u0074%u005f%u0073%u0075%u0062%u0073%u0063%u0072%u0069%u0062%u0065%u0072%u0022%u0020%u0073%u0074%u0079%u006c%u0065%u003d%u0022%u0064%u0069%u0073%u0070%u006c%u0061%u0079%u003a%u0020%u0062%u006c%u006f%u0063%u006b%u003b%u0020%u0070%u0061%u0064%u0064%u0069%u006e%u0067%u003a%u0020%u0031%u0030%u0070%u0078%u0020%u0030%u003b%u0020%u006d%u0061%u0072%u0067%u0069%u006e%u003a%u0020%u0032%u0030%u0070%u0078%u0020%u0061%u0075%u0074%u006f%u003b%u0020%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0031%u0030%u0030%u0025%u003b%u0020%u0074%u0065%u0078%u0074%u002d%u0061%u006c%u0069%u0067%u006e%u003a%u0020%u0063%u0065%u006e%u0074%u0065%u0072%u0022%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0069%u006d%u0067%u0020%u0069%u0064%u003d%u0022%u0077%u0065%u0063%u0068%u0061%u0074%u005f%u0073%u0075%u0062%u0073%u0063%u0072%u0069%u0062%u0065%u0072%u005f%u0071%u0063%u006f%u0064%u0065%u0022%u0020%u0073%u0072%u0063%u003d%u0022%u0068%u0074%u0074%u0070%u0073%u003a%u002f%u002f%u0077%u0069%u006e%u0064%u006c%u0069%u0061%u006e%u0067%u002e%u006f%u0073%u0073%u002d%u0063%u006e%u002d%u0062%u0065%u0069%u006a%u0069%u006e%u0067%u002e%u0061%u006c%u0069%u0079%u0075%u006e%u0063%u0073%u002e%u0063%u006f%u006d%u002f%u0077%u0065%u0063%u0068%u0061%u0074%u002e%u006a%u0070%u0067%u0022%u0020%u0061%u006c%u0074%u003d%u0022%u0077%u0069%u006e%u0064%u006c%u0069%u0061%u006e%u0067%u0020%u0077%u0065%u0063%u0068%u0061%u0074%u0022%u0020%u0073%u0074%u0079%u006c%u0065%u003d%u0022%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0032%u0030%u0030%u0070%u0078%u003b%u0020%u006d%u0061%u0078%u002d%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0031%u0030%u0030%u0025%u003b%u0022%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0062%u0072%u003e%u0020%u0020%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0064%u0069%u0076%u003e%u6dfb%u52a0%u597d%u53cb%u4e00%u8d77%u8fdb%u6b65%u007e%u003c%u002f%u0064%u0069%u0076%u003e%u0020%u003c%u0062%u0072%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0064%u0069%u0076%u003e%u5982%u679c%u89c9%u5f97%u6709%u5e2e%u52a9%u7684%u8bdd%uff0c%u5230%u9875%u9762%u6700%u4e0a%u8fb9%u8bb0%u5f97%u7ed9%u4e00%u4e2a%u0020%u0073%u0074%u0061%u0072%u0020%u54e6%u0020%u005e%u0020%u005e%u003c%u002f%u0064%u0069%u0076%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u002f%u0064%u0069%u0076%u003e"},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"github-buttons":{"buttons":[{"user":"wind-liang","repo":"leetcode","type":"star","size":"small","count":true}]},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"windliang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetCode","language":"zh-hans","links":{"sidebar":{"Home":"http://windliang.cc"},"gitbook":true},"gitbook":"3.2.3","description":"leetCode"},"file":{"path":"leetCode-1-Two-Sum.md","mtime":"2018-09-21T16:50:46.772Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-22T16:58:20.602Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -503,23 +527,27 @@
     <script src="gitbook/theme.js"></script>
     
         
-        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
         
     
         
-        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
         
     
         
-        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        <script src="gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
         
     
         
-        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
         
     
         
-        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-ad/plugin.js"></script>
         
     
         

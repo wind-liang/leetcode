@@ -21,11 +21,23 @@
                 
             
                 
-                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
                 
             
                 
-                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-ad/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
                 
             
                 
@@ -53,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -66,6 +79,17 @@
     
     <link rel="prev" href="leetCode-4-Median-of-Two-Sorted-Arrays.html" />
     
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"wind-liang","repo":"leetcode","type":"star","size":"small","count":true}]};
+    </script>
 
     </head>
     <body>
@@ -376,15 +400,15 @@
                     <div class="page-wrapper" tabindex="-1" role="main">
                         <div class="page-inner">
                             
-<div id="book-search-results">
+<div class="search-plus" id="book-search-results">
     <div class="search-noresults">
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;">&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;</h2>
+                                <h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><a name="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;</h2>
 <p><img src="http://windliang.oss-cn-beijing.aliyuncs.com/5_palindromic.jpg" alt=""></p>
 <p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x8F93;&#x51FA;&#x6700;&#x957F;&#x7684;&#x56DE;&#x6587;&#x5B50;&#x4E32;&#x3002;&#x56DE;&#x6587;&#x4E32;&#x6307;&#x7684;&#x662F;&#x6B63;&#x7684;&#x8BFB;&#x548C;&#x53CD;&#x7684;&#x8BFB;&#x662F;&#x4E00;&#x6837;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4F8B;&#x5982; &quot;aba&quot;&#xFF0C;&quot;ccbbcc&quot;&#x3002;</p>
-<h2 id="&#x89E3;&#x6CD5;&#x4E00;-&#x66B4;&#x529B;&#x7834;&#x89E3;">&#x89E3;&#x6CD5;&#x4E00; &#x66B4;&#x529B;&#x7834;&#x89E3;</h2>
+<h2 id="&#x89E3;&#x6CD5;&#x4E00;-&#x66B4;&#x529B;&#x7834;&#x89E3;"><a name="&#x89E3;&#x6CD5;&#x4E00;-&#x66B4;&#x529B;&#x7834;&#x89E3;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x6CD5;&#x4E00;-&#x66B4;&#x529B;&#x7834;&#x89E3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89E3;&#x6CD5;&#x4E00; &#x66B4;&#x529B;&#x7834;&#x89E3;</h2>
 <p>&#x66B4;&#x529B;&#x6C42;&#x89E3;&#xFF0C;&#x5217;&#x4E3E;&#x6240;&#x6709;&#x7684;&#x5B50;&#x4E32;&#xFF0C;&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x56DE;&#x6587;&#x4E32;&#xFF0C;&#x4FDD;&#x5B58;&#x6700;&#x957F;&#x7684;&#x56DE;&#x6587;&#x4E32;&#x3002;</p>
 <pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isPalindromic</span><span class="hljs-params">(String s)</span> </span>{
         <span class="hljs-keyword">int</span> len = s.length();
@@ -414,7 +438,7 @@
 </code></pre>
 <p>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;&#x4E24;&#x5C42; for &#x5FAA;&#x73AF; O&#xFF08;n&#xB2;&#xFF09;&#xFF0C;for &#x5FAA;&#x73AF;&#x91CC;&#x8FB9;&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x56DE;&#x6587;&#xFF0C;O&#xFF08;n&#xFF09;&#xFF0C;&#x6240;&#x4EE5;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A; O&#xFF08;n&#xB3;&#xFF09;&#x3002;</p>
 <p>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O&#xFF08;1&#xFF09;&#xFF0C;&#x5E38;&#x6570;&#x4E2A;&#x53D8;&#x91CF;&#x3002;</p>
-<h2 id="&#x89E3;&#x6CD5;&#x4E8C;-&#x6700;&#x957F;&#x516C;&#x5171;&#x5B50;&#x4E32;">&#x89E3;&#x6CD5;&#x4E8C; &#x6700;&#x957F;&#x516C;&#x5171;&#x5B50;&#x4E32;</h2>
+<h2 id="&#x89E3;&#x6CD5;&#x4E8C;-&#x6700;&#x957F;&#x516C;&#x5171;&#x5B50;&#x4E32;"><a name="&#x89E3;&#x6CD5;&#x4E8C;-&#x6700;&#x957F;&#x516C;&#x5171;&#x5B50;&#x4E32;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x6CD5;&#x4E8C;-&#x6700;&#x957F;&#x516C;&#x5171;&#x5B50;&#x4E32;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89E3;&#x6CD5;&#x4E8C; &#x6700;&#x957F;&#x516C;&#x5171;&#x5B50;&#x4E32;</h2>
 <p>&#x6839;&#x636E;&#x56DE;&#x6587;&#x4E32;&#x7684;&#x5B9A;&#x4E49;&#xFF0C;&#x6B63;&#x7740;&#x548C;&#x53CD;&#x7740;&#x8BFB;&#x4E00;&#x6837;&#xFF0C;&#x90A3;&#x6211;&#x4EEC;&#x662F;&#x4E0D;&#x662F;&#x628A;&#x539F;&#x6765;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x5012;&#x7F6E;&#x4E86;&#xFF0C;&#x7136;&#x540E;&#x627E;&#x6700;&#x957F;&#x7684;&#x516C;&#x5171;&#x5B50;&#x4E32;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;&#x4F8B;&#x5982;&#xFF0C;S = &quot; caba&quot;&#xFF0C;S&apos; = &quot; abac&quot;&#xFF0C;&#x6700;&#x957F;&#x516C;&#x5171;&#x5B50;&#x4E32;&#x662F; &quot;aba&quot;&#xFF0C;&#x6240;&#x4EE5;&#x539F;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x6700;&#x957F;&#x56DE;&#x6587;&#x4E32;&#x5C31;&#x662F; &quot;aba&quot;&#x3002;</p>
 <p>&#x5173;&#x4E8E;&#x6C42;&#x6700;&#x957F;&#x516C;&#x5171;&#x5B50;&#x4E32;&#xFF08;&#x4E0D;&#x662F;&#x516C;&#x5171;&#x5B50;&#x5E8F;&#x5217;&#xFF09;&#xFF0C;&#x6709;&#x5F88;&#x591A;&#x65B9;&#x6CD5;&#xFF0C;&#x8FD9;&#x91CC;&#x7528;&#x52A8;&#x6001;&#x89C4;&#x5212;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x5148;&#x9605;&#x8BFB;&#x4E0B;&#x8FB9;&#x7684;&#x94FE;&#x63A5;&#x3002;</p>
 <p><a href="https://blog.csdn.net/u010397369/article/details/38979077" target="_blank">https://blog.csdn.net/u010397369/article/details/38979077</a></p>
@@ -535,7 +559,7 @@
 </code></pre>
 <p>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O&#xFF08;n&#xB2;&#xFF09;&#x3002;</p>
 <p>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;&#x964D;&#x4E3A; O&#xFF08;n&#xFF09;&#x3002;</p>
-<h2 id="&#x89E3;&#x6CD5;&#x4E09;-&#x66B4;&#x529B;&#x7834;&#x89E3;&#x4F18;&#x5316;">&#x89E3;&#x6CD5;&#x4E09; &#x66B4;&#x529B;&#x7834;&#x89E3;&#x4F18;&#x5316;</h2>
+<h2 id="&#x89E3;&#x6CD5;&#x4E09;-&#x66B4;&#x529B;&#x7834;&#x89E3;&#x4F18;&#x5316;"><a name="&#x89E3;&#x6CD5;&#x4E09;-&#x66B4;&#x529B;&#x7834;&#x89E3;&#x4F18;&#x5316;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x6CD5;&#x4E09;-&#x66B4;&#x529B;&#x7834;&#x89E3;&#x4F18;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89E3;&#x6CD5;&#x4E09; &#x66B4;&#x529B;&#x7834;&#x89E3;&#x4F18;&#x5316;</h2>
 <p>&#x89E3;&#x6CD5;&#x4E00;&#x7684;&#x66B4;&#x529B;&#x89E3;&#x6CD5;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x592A;&#x9AD8;&#xFF0C;&#x5728; leetCode &#x4E0A;&#x5E76;&#x4E0D;&#x80FD; AC &#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8003;&#x8651;&#xFF0C;&#x53BB;&#x6389;&#x4E00;&#x4E9B;&#x66B4;&#x529B;&#x89E3;&#x6CD5;&#x4E2D;&#x91CD;&#x590D;&#x7684;&#x5224;&#x65AD;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x57FA;&#x4E8E;&#x4E0B;&#x8FB9;&#x7684;&#x53D1;&#x73B0;&#xFF0C;&#x8FDB;&#x884C;&#x6539;&#x8FDB;&#x3002;</p>
 <p>&#x9996;&#x5148;&#x5B9A;&#x4E49; P&#xFF08;i&#xFF0C;j&#xFF09;&#x3002;</p>
 <p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mo>(</mo><mi>i</mi><mo separator="true">,</mo><mi>j</mi><mo>)</mo><mo>=</mo><mrow><mo fence="true">{</mo><mtable><mtr><mtd><mrow><mi>t</mi><mi>r</mi><mi>u</mi><mi>e</mi></mrow></mtd><mtd><mrow><mtext><mi mathvariant="normal">s</mi><mi mathvariant="normal">[</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">,</mi><mi mathvariant="normal">j</mi><mi mathvariant="normal">]</mi><mi mathvariant="normal">&#x662F;</mi><mi mathvariant="normal">&#x56DE;</mi><mi mathvariant="normal">&#x6587;</mi><mi mathvariant="normal">&#x4E32;</mi></mtext></mrow></mtd></mtr><mtr><mtd><mrow></mrow></mtd></mtr><mtr><mtd><mrow><mi>f</mi><mi>a</mi><mi>l</mi><mi>s</mi><mi>e</mi></mrow></mtd><mtd><mrow><mtext><mi mathvariant="normal">s</mi><mi mathvariant="normal">[</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">,</mi><mi mathvariant="normal">j</mi><mi mathvariant="normal">]</mi><mi mathvariant="normal">&#x4E0D;</mi><mi mathvariant="normal">&#x662F;</mi><mi mathvariant="normal">&#x56DE;</mi><mi mathvariant="normal">&#x6587;</mi><mi mathvariant="normal">&#x4E32;</mi></mtext></mrow></mtd></mtr></mtable></mrow></mrow><annotation encoding="application/x-tex">P(i,j)=\begin{cases}true&amp; \text{s[i,j]&#x662F;&#x56DE;&#x6587;&#x4E32;} \\\\false&amp; \text{s[i,j]&#x4E0D;&#x662F;&#x56DE;&#x6587;&#x4E32;}\end{cases}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:2.41em;"></span><span class="strut bottom" style="height:4.32em;vertical-align:-1.9100000000000001em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathit">i</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.05724em;">j</span><span class="mclose">)</span><span class="mrel">=</span><span class="minner textstyle uncramped"><span class="mopen style-wrap reset-textstyle textstyle uncramped"><span class="delimsizing mult"><span class="vlist"><span style="top:0.9500099999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="delimsizinginner delim-size4"><span>&#x23A9;</span></span></span><span style="top:0.9500099999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="delimsizinginner delim-size4"><span>&#x23AA;</span></span></span><span style="top:-0.000010000000000287557em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="delimsizinginner delim-size4"><span>&#x23A8;</span></span></span><span style="top:-1.1500100000000002em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="delimsizinginner delim-size4"><span>&#x23AA;</span></span></span><span style="top:-1.4500200000000003em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="delimsizinginner delim-size4"><span>&#x23A7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord"><span class="mtable"><span class="col-align-l"><span class="vlist"><span style="top:-1.4020000000000001em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle uncramped"><span class="mord mathit">t</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit">u</span><span class="mord mathit">e</span></span></span><span style="top:0.0379999999999997em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle uncramped"></span></span><span style="top:1.4779999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle uncramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mord mathit">a</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">s</span><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="arraycolsep" style="width:1em;"></span><span class="col-align-l"><span class="vlist"><span style="top:-1.4020000000000001em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle uncramped"><span class="mord text textstyle uncramped"><span class="mord mathrm">s[i,j]</span><span class="mord mathrm cjk_fallback">&#x662F;&#x56DE;&#x6587;&#x4E32;</span></span></span></span><span style="top:1.4780000000000002em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle uncramped"><span class="mord text textstyle uncramped"><span class="mord mathrm">s[i,j]</span><span class="mord mathrm cjk_fallback">&#x4E0D;&#x662F;&#x56DE;&#x6587;&#x4E32;</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span></span></span></span></p>
@@ -613,7 +637,7 @@
 </code></pre>
 <p>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;&#x4E0D;&#x53D8;&#xFF0C;O&#xFF08;n&#xB2;&#xFF09;&#x3002;</p>
 <p>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;&#x964D;&#x4E3A; O&#xFF08;n ) &#x3002;</p>
-<h2 id="&#x89E3;&#x6CD5;&#x56DB;-&#x6269;&#x5C55;&#x4E2D;&#x5FC3;">&#x89E3;&#x6CD5;&#x56DB; &#x6269;&#x5C55;&#x4E2D;&#x5FC3;</h2>
+<h2 id="&#x89E3;&#x6CD5;&#x56DB;-&#x6269;&#x5C55;&#x4E2D;&#x5FC3;"><a name="&#x89E3;&#x6CD5;&#x56DB;-&#x6269;&#x5C55;&#x4E2D;&#x5FC3;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x6CD5;&#x56DB;-&#x6269;&#x5C55;&#x4E2D;&#x5FC3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89E3;&#x6CD5;&#x56DB; &#x6269;&#x5C55;&#x4E2D;&#x5FC3;</h2>
 <p>&#x6211;&#x4EEC;&#x77E5;&#x9053;&#x56DE;&#x6587;&#x4E32;&#x4E00;&#x5B9A;&#x662F;&#x5BF9;&#x79F0;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6BCF;&#x6B21;&#x5FAA;&#x73AF;&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x4E2D;&#x5FC3;&#xFF0C;&#x8FDB;&#x884C;&#x5DE6;&#x53F3;&#x6269;&#x5C55;&#xFF0C;&#x5224;&#x65AD;&#x5DE6;&#x53F3;&#x5B57;&#x7B26;&#x662F;&#x5426;&#x76F8;&#x7B49;&#x5373;&#x53EF;&#x3002;</p>
 <p><img src="http://windliang.oss-cn-beijing.aliyuncs.com/5_6.jpg" alt=""></p>
 <p>&#x7531;&#x4E8E;&#x5B58;&#x5728;&#x5947;&#x6570;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x548C;&#x5076;&#x6570;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4ECE;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x5F00;&#x59CB;&#x6269;&#x5C55;&#xFF0C;&#x6216;&#x8005;&#x4ECE;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E4B;&#x95F4;&#x5F00;&#x59CB;&#x6269;&#x5C55;&#xFF0C;&#x6240;&#x4EE5;&#x603B;&#x5171;&#x6709; n + n - 1 &#x4E2A;&#x4E2D;&#x5FC3;&#x3002;</p>
@@ -643,7 +667,7 @@
 </code></pre>
 <p>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O&#xFF08;n&#xB2;&#xFF09;&#x3002;</p>
 <p>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O&#xFF08;1&#xFF09;&#x3002;</p>
-<h2 id="&#x89E3;&#x6CD5;&#x4E94;-manachers-algorithm-&#x9A6C;&#x62C9;&#x8F66;&#x7B97;&#x6CD5;&#x3002;">&#x89E3;&#x6CD5;&#x4E94; Manacher&apos;s Algorithm &#x9A6C;&#x62C9;&#x8F66;&#x7B97;&#x6CD5;&#x3002;</h2>
+<h2 id="&#x89E3;&#x6CD5;&#x4E94;-manachers-algorithm-&#x9A6C;&#x62C9;&#x8F66;&#x7B97;&#x6CD5;&#x3002;"><a name="&#x89E3;&#x6CD5;&#x4E94;-manachers-algorithm-&#x9A6C;&#x62C9;&#x8F66;&#x7B97;&#x6CD5;&#x3002;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x6CD5;&#x4E94;-manachers-algorithm-&#x9A6C;&#x62C9;&#x8F66;&#x7B97;&#x6CD5;&#x3002;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89E3;&#x6CD5;&#x4E94; Manacher&apos;s Algorithm &#x9A6C;&#x62C9;&#x8F66;&#x7B97;&#x6CD5;&#x3002;</h2>
 <blockquote>
 <p>&#x9A6C;&#x62C9;&#x8F66;&#x7B97;&#x6CD5; Manacher&#x2018;s Algorithm &#x662F;&#x7528;&#x6765;&#x67E5;&#x627E;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x6700;&#x957F;&#x56DE;&#x6587;&#x5B50;&#x4E32;&#x7684;&#x7EBF;&#x6027;&#x65B9;&#x6CD5;&#xFF0C;&#x7531;&#x4E00;&#x4E2A;&#x53EB;Manacher&#x7684;&#x4EBA;&#x5728;1975&#x5E74;&#x53D1;&#x660E;&#x7684;&#xFF0C;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x7684;&#x6700;&#x5927;&#x8D21;&#x732E;&#x662F;&#x5728;&#x4E8E;&#x5C06;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x63D0;&#x5347;&#x5230;&#x4E86;&#x7EBF;&#x6027;&#x3002;</p>
 </blockquote>
@@ -664,13 +688,13 @@
 <p><img src="http://windliang.oss-cn-beijing.aliyuncs.com/5_9.jpg" alt=""></p>
 <p>&#x6211;&#x4EEC;&#x73B0;&#x5728;&#x8981;&#x6C42; P [ i ] &#x5982;&#x679C;&#x662F;&#x89E3;&#x6CD5;&#x56DB;&#xFF0C;&#x90A3;&#x5C31;&#x5411;&#x4E24;&#x8FB9;&#x6269;&#x5C55;&#x5C31;&#x884C;&#x4E86;&#x3002;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x5176;&#x5B9E;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x56DE;&#x6587;&#x4E32; C &#x7684;&#x5BF9;&#x79F0;&#x6027;&#x3002;i &#x5173;&#x4E8E; C &#x7684;&#x5BF9;&#x79F0;&#x70B9;&#x662F; i_mirror &#xFF0C;P [ mirror ] = 3&#xFF0C;&#x6240;&#x4EE5; P [ i ] &#x4E5F;&#x7B49;&#x4E8E; 3 &#x3002;</p>
 <p>&#x6709;&#x4E09;&#x79CD;&#x60C5;&#x51B5;&#x5C06;&#x4F1A;&#x9020;&#x6210;&#x76F4;&#x63A5;&#x8D4B;&#x503C;&#x4E3A; P [ mirror ] &#x662F;&#x4E0D;&#x6B63;&#x786E;&#x7684;&#x3002;</p>
-<h3 id="&#x8D85;&#x51FA;&#x4E86;-r">&#x8D85;&#x51FA;&#x4E86; R</h3>
+<h3 id="&#x8D85;&#x51FA;&#x4E86;-r"><a name="&#x8D85;&#x51FA;&#x4E86;-r" class="anchor-navigation-ex-anchor" href="#&#x8D85;&#x51FA;&#x4E86;-r"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8D85;&#x51FA;&#x4E86; R</h3>
 <p><img src="http://windliang.oss-cn-beijing.aliyuncs.com/5_10.jpg" alt=""></p>
 <p>&#x5F53;&#x6211;&#x4EEC;&#x8981;&#x6C42; P[i] &#x7684;&#x65F6;&#x5019;&#xFF0C;P [ mirror ] = 7&#xFF0C;&#x800C;&#x6B64;&#x65F6; P [ i ] &#x5E76;&#x4E0D;&#x7B49;&#x4E8E; 7 &#xFF0C;&#x4E3A;&#x4EC0;&#x4E48;&#x5462;&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x4ECE; i &#x5F00;&#x59CB;&#x5F80;&#x540E;&#x6570; 7 &#x4E2A;&#xFF0C;&#x7B49;&#x4E8E; 22 &#xFF0C;&#x5DF2;&#x7ECF;&#x8D85;&#x8FC7;&#x4E86;&#x6700;&#x53F3;&#x7684; R &#xFF0C;&#x6B64;&#x65F6;&#x4E0D;&#x80FD;&#x5229;&#x7528;&#x5BF9;&#x79F0;&#x6027;&#x4E86;&#xFF0C;&#x4F46;&#x6211;&#x4EEC;&#x4E00;&#x5B9A;&#x53EF;&#x4EE5;&#x6269;&#x5C55;&#x5230; R &#x7684;&#xFF0C;&#x6240;&#x4EE5; P [i] &#x81F3;&#x5C11;&#x7B49;&#x4E8E; R - i = 20 - 15 = 5&#xFF0C;&#x4F1A;&#x4E0D;&#x4F1A;&#x66F4;&#x5927;&#x5462;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x6BD4;&#x8F83; T[R+1] &#x548C; T[R+1]&#x5173;&#x4E8E; i &#x7684;&#x5BF9;&#x79F0;&#x70B9;&#x5C31;&#x884C;&#x4E86;&#xFF0C;&#x50CF;&#x89E3;&#x6CD5;&#x56DB;&#x4E00;&#x6837;&#x4E00;&#x4E2A;&#x4E2A;&#x6269;&#x5C55;&#x3002;</p>
-<h3 id="p--mirror--&#x9047;&#x5230;&#x4E86;&#x5DE6;&#x8FB9;&#x754C;">P [ mirror ] &#x9047;&#x5230;&#x4E86;&#x5DE6;&#x8FB9;&#x754C;</h3>
+<h3 id="p--mirror--&#x9047;&#x5230;&#x4E86;&#x5DE6;&#x8FB9;&#x754C;"><a name="p--mirror--&#x9047;&#x5230;&#x4E86;&#x5DE6;&#x8FB9;&#x754C;" class="anchor-navigation-ex-anchor" href="#p--mirror--&#x9047;&#x5230;&#x4E86;&#x5DE6;&#x8FB9;&#x754C;"><i class="fa fa-link" aria-hidden="true"></i></a>P [ mirror ] &#x9047;&#x5230;&#x4E86;&#x5DE6;&#x8FB9;&#x754C;</h3>
 <p><img src="http://windliang.oss-cn-beijing.aliyuncs.com/5_12.jpg" alt=""></p>
 <p>&#x6B64;&#x65F6; P [ i ] &#x8D4B;&#x503C;&#x6210; 1 &#x662F;&#x4E0D;&#x6B63;&#x786E;&#x7684;&#xFF0C;&#x51FA;&#x73B0;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x7684;&#x539F;&#x56E0;&#x662F;  P [ i_mirror ] &#x5728;&#x6269;&#x5C55;&#x7684;&#x65F6;&#x5019;&#x9996;&#x5148;&#x662F; &quot;#&quot; == &quot;#&quot; &#xFF0C;&#x4E4B;&#x540E;&#x9047;&#x5230;&#x4E86; &quot;^&quot;&#x548C;&#x53E6;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x6BD4;&#x8F83;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5230;&#x4E86;&#x8FB9;&#x754C;&#xFF0C;&#x624D;&#x7EC8;&#x6B62;&#x5FAA;&#x73AF;&#x7684;&#x3002;&#x800C; P [ i ] &#x5E76;&#x6CA1;&#x6709;&#x9047;&#x5230;&#x8FB9;&#x754C;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x63A5;&#x7740;&#x6269;&#x5C55;&#xFF0C;&#x5C31;&#x50CF;&#x4E4B;&#x524D;&#x4E00;&#x6837;&#x3002;</p>
-<h3 id="i-&#x7B49;&#x4E8E;&#x4E86;-r">i &#x7B49;&#x4E8E;&#x4E86; R</h3>
+<h3 id="i-&#x7B49;&#x4E8E;&#x4E86;-r"><a name="i-&#x7B49;&#x4E8E;&#x4E86;-r" class="anchor-navigation-ex-anchor" href="#i-&#x7B49;&#x4E8E;&#x4E86;-r"><i class="fa fa-link" aria-hidden="true"></i></a>i &#x7B49;&#x4E8E;&#x4E86; R</h3>
 <p>&#x6B64;&#x65F6;&#x6211;&#x4EEC;&#x5148;&#x628A; P [ i ] &#x8D4B;&#x503C;&#x4E3A; 0 &#xFF0C;&#x7136;&#x540E;&#x4E00;&#x6B65;&#x4E00;&#x6B65;&#x6269;&#x5C55;&#x5C31;&#x884C;&#x4E86;&#x3002;</p>
 <p>&#x5C31;&#x8FD9;&#x6837;&#x4E00;&#x6B65;&#x4E00;&#x6B65;&#x7684;&#x6C42;&#x51FA;&#x6BCF;&#x4E2A; P [ i ]&#xFF0C;&#x5F53;&#x6C42;&#x51FA;&#x7684; P [ i ] &#x7684;&#x53F3;&#x8FB9;&#x754C;&#x5927;&#x4E8E;&#x5F53;&#x524D;&#x7684; R &#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x9700;&#x8981;&#x66F4;&#x65B0; C &#x548C; R &#x4E3A;&#x5F53;&#x524D;&#x7684;&#x56DE;&#x6587;&#x4E32;&#x4E86;&#x3002;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x5FC5;&#x987B;&#x4FDD;&#x8BC1; i &#x5728; R &#x91CC;&#x9762;&#xFF0C;&#x6240;&#x4EE5;&#x4E00;&#x65E6;&#x6709;&#x66F4;&#x53F3;&#x8FB9;&#x7684; R &#x5C31;&#x8981;&#x66F4;&#x65B0; R&#x3002;</p>
 <p><img src="http://windliang.oss-cn-beijing.aliyuncs.com/5_12.jpg" alt=""></p>
@@ -729,7 +753,7 @@
 </code></pre>
 <p>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;for &#x5FAA;&#x73AF;&#x91CC;&#x8FB9;&#x5957;&#x4E86;&#x4E00;&#x5C42; while &#x5FAA;&#x73AF;&#xFF0C;&#x96BE;&#x9053;&#x4E0D;&#x662F; O ( n&#xB2; )&#xFF0C;&#x4E0D;&#xFF01;&#x5176;&#x5B9E;&#x662F; O&#xFF08;n&#xFF09;&#x3002;&#x6211;&#x4EEC;&#x60F3;&#x8C61;&#x4E00;&#x4E0B;&#x6574;&#x4E2A;&#x8FC7;&#x7A0B;&#xFF0C;&#x9996;&#x5148;&#x5916;&#x5C42;&#x6709;&#x4E00;&#x4E2A; for &#x5FAA;&#x73AF;&#xFF0C;&#x6240;&#x4EE5;&#x6BCF;&#x4E2A;&#x5B57;&#x7B26;&#x4F1A;&#x904D;&#x5386;&#x4E00;&#x6B21;&#xFF0C;&#x800C;&#x5F53;&#x6211;&#x4EEC;&#x6269;&#x5C55;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6BCF;&#x6B21;&#x90FD;&#x662F;&#x4ECE; R + 1 &#x5F00;&#x59CB;&#x6269;&#x5C55;&#xFF0C;&#x4E4B;&#x540E;&#x53C8;&#x4F1A;&#x66F4;&#x65B0; R &#x3002;&#x6240;&#x4EE5;&#x4E00;&#x4E9B;&#x5B57;&#x7B26;&#x4F1A;&#x904D;&#x5386;&#x4E24;&#x6B21;&#xFF0C;&#x4F46;&#x6B64;&#x65F6;&#x8FD9;&#x4E9B;&#x5B57;&#x7B26;&#x53D8;&#x5230; R &#x7684;&#x5DE6;&#x8FB9;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x4F1A;&#x904D;&#x5386;&#x7B2C;&#x4E09;&#x6B21;&#x4E86;&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x6BCF;&#x6B21;&#x4ECE; R &#x7684;&#x53F3;&#x8FB9;&#x5F00;&#x59CB;&#x6269;&#x5C55;&#x3002;&#x7EFC;&#x4E0A;&#xFF0C;&#x6BCF;&#x4E2A;&#x5B57;&#x7B26;&#x5176;&#x5B9E;&#x6700;&#x591A;&#x904D;&#x5386; 2 &#x6B21;&#xFF0C;&#x6240;&#x4EE5;&#x4F9D;&#x65E7;&#x662F;&#x7EBF;&#x6027;&#x7684;&#xFF0C;&#x5F53;&#x7136;&#x5982;&#x679C;&#x5B57;&#x7B26;&#x4E32;&#x6210;&#x4E3A; len &#xFF0C;&#x8FD9;&#x91CC;&#x7684; n &#x5176;&#x5B9E;&#x662F; 2 * len + 3 &#x3002;&#x6240;&#x4EE5;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x662F; O&#xFF08;n&#xFF09;&#x3002;</p>
 <p>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O&#xFF08;n&#xFF09;&#x3002;</p>
-<h2 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h2>
+<h2 id="&#x603B;&#x7ED3;"><a name="&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x603B;&#x7ED3;</h2>
 <p>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4ECE;&#x4E09;&#x6B21;&#x65B9;&#x964D;&#x5230;&#x4E86;&#x4E00;&#x6B21;&#xFF0C;&#x7F8E;&#x5999;&#xFF01;&#x8FD9;&#x91CC;&#x4E24;&#x6B21;&#x7528;&#x5230;&#x4E86;&#x52A8;&#x6001;&#x89C4;&#x5212;&#x53BB;&#x6C42;&#x89E3;&#xFF0C;&#x521D;&#x6B65;&#x8BA4;&#x8BC6;&#x4E86;&#x52A8;&#x6001;&#x89C4;&#x5212;&#xFF0C;&#x5C31;&#x662F;&#x5C06;&#x4E4B;&#x524D;&#x6C42;&#x7684;&#x503C;&#x4FDD;&#x5B58;&#x8D77;&#x6765;&#xFF0C;&#x65B9;&#x4FBF;&#x540E;&#x8FB9;&#x7684;&#x8BA1;&#x7B97;&#xFF0C;&#x4F7F;&#x5F97;&#x4E00;&#x4E9B;&#x591A;&#x4F59;&#x7684;&#x8BA1;&#x7B97;&#x6D88;&#x5931;&#x4E86;&#x3002;&#x5E76;&#x4E14;&#x5728;&#x52A8;&#x6001;&#x89C4;&#x5212;&#x4E2D;&#xFF0C;&#x901A;&#x8FC7;&#x89C2;&#x5BDF;&#x6570;&#x7EC4;&#x7684;&#x5229;&#x7528;&#x60C5;&#x51B5;&#xFF0C;&#x4ECE;&#x800C;&#x964D;&#x4F4E;&#x4E86;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x3002;&#x800C; Manacher &#x7B97;&#x6CD5;&#x5BF9;&#x56DE;&#x6587;&#x4E32;&#x5BF9;&#x79F0;&#x6027;&#x7684;&#x5145;&#x5206;&#x5229;&#x7528;&#xFF0C;&#x4E0D;&#x5F97;&#x4E0D;&#x8BA9;&#x4EBA;&#x53F9;&#x670D;&#xFF0C;&#x81EA;&#x5DF1;&#x52A0;&#x6CB9;&#x5566;&#xFF01;</p>
 
                                 
@@ -774,7 +798,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"5. Longest Palindromic Substring","level":"1.6","depth":1,"next":{"title":"6. ZigZag Conversion","level":"1.7","depth":1,"path":"leetCode-6-ZigZag-Conversion.md","ref":"leetCode-6-ZigZag-Conversion.md","articles":[]},"previous":{"title":"4. Median of Two Sorted Arrays","level":"1.5","depth":1,"path":"leetCode-4-Median-of-Two-Sorted-Arrays.md","ref":"leetCode-4-Median-of-Two-Sorted-Arrays.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"windliang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetCode","language":"zh-hans","links":{"sidebar":{"Home":"http://windliang.cc"},"gitbook":true},"gitbook":"3.2.3","description":"leetCode"},"file":{"path":"leetCode-5-Longest-Palindromic-Substring.md","mtime":"2018-09-20T15:24:43.026Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-21T16:46:50.955Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"5. Longest Palindromic Substring","level":"1.6","depth":1,"next":{"title":"6. ZigZag Conversion","level":"1.7","depth":1,"path":"leetCode-6-ZigZag-Conversion.md","ref":"leetCode-6-ZigZag-Conversion.md","articles":[]},"previous":{"title":"4. Median of Two Sorted Arrays","level":"1.5","depth":1,"path":"leetCode-4-Median-of-Two-Sorted-Arrays.md","ref":"leetCode-4-Median-of-Two-Sorted-Arrays.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr","-search","search-plus","ad"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ad":{"contentBottom":"%u003c%u0064%u0069%u0076%u0020%u0069%u0064%u003d%u0022%u0077%u0065%u0063%u0068%u0061%u0074%u005f%u0073%u0075%u0062%u0073%u0063%u0072%u0069%u0062%u0065%u0072%u0022%u0020%u0073%u0074%u0079%u006c%u0065%u003d%u0022%u0064%u0069%u0073%u0070%u006c%u0061%u0079%u003a%u0020%u0062%u006c%u006f%u0063%u006b%u003b%u0020%u0070%u0061%u0064%u0064%u0069%u006e%u0067%u003a%u0020%u0031%u0030%u0070%u0078%u0020%u0030%u003b%u0020%u006d%u0061%u0072%u0067%u0069%u006e%u003a%u0020%u0032%u0030%u0070%u0078%u0020%u0061%u0075%u0074%u006f%u003b%u0020%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0031%u0030%u0030%u0025%u003b%u0020%u0074%u0065%u0078%u0074%u002d%u0061%u006c%u0069%u0067%u006e%u003a%u0020%u0063%u0065%u006e%u0074%u0065%u0072%u0022%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0069%u006d%u0067%u0020%u0069%u0064%u003d%u0022%u0077%u0065%u0063%u0068%u0061%u0074%u005f%u0073%u0075%u0062%u0073%u0063%u0072%u0069%u0062%u0065%u0072%u005f%u0071%u0063%u006f%u0064%u0065%u0022%u0020%u0073%u0072%u0063%u003d%u0022%u0068%u0074%u0074%u0070%u0073%u003a%u002f%u002f%u0077%u0069%u006e%u0064%u006c%u0069%u0061%u006e%u0067%u002e%u006f%u0073%u0073%u002d%u0063%u006e%u002d%u0062%u0065%u0069%u006a%u0069%u006e%u0067%u002e%u0061%u006c%u0069%u0079%u0075%u006e%u0063%u0073%u002e%u0063%u006f%u006d%u002f%u0077%u0065%u0063%u0068%u0061%u0074%u002e%u006a%u0070%u0067%u0022%u0020%u0061%u006c%u0074%u003d%u0022%u0077%u0069%u006e%u0064%u006c%u0069%u0061%u006e%u0067%u0020%u0077%u0065%u0063%u0068%u0061%u0074%u0022%u0020%u0073%u0074%u0079%u006c%u0065%u003d%u0022%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0032%u0030%u0030%u0070%u0078%u003b%u0020%u006d%u0061%u0078%u002d%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0031%u0030%u0030%u0025%u003b%u0022%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0062%u0072%u003e%u0020%u0020%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0064%u0069%u0076%u003e%u6dfb%u52a0%u597d%u53cb%u4e00%u8d77%u8fdb%u6b65%u007e%u003c%u002f%u0064%u0069%u0076%u003e%u0020%u003c%u0062%u0072%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0064%u0069%u0076%u003e%u5982%u679c%u89c9%u5f97%u6709%u5e2e%u52a9%u7684%u8bdd%uff0c%u5230%u9875%u9762%u6700%u4e0a%u8fb9%u8bb0%u5f97%u7ed9%u4e00%u4e2a%u0020%u0073%u0074%u0061%u0072%u0020%u54e6%u0020%u005e%u0020%u005e%u003c%u002f%u0064%u0069%u0076%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u002f%u0064%u0069%u0076%u003e"},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"github-buttons":{"buttons":[{"user":"wind-liang","repo":"leetcode","type":"star","size":"small","count":true}]},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"windliang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetCode","language":"zh-hans","links":{"sidebar":{"Home":"http://windliang.cc"},"gitbook":true},"gitbook":"3.2.3","description":"leetCode"},"file":{"path":"leetCode-5-Longest-Palindromic-Substring.md","mtime":"2018-09-21T16:50:46.783Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-22T16:58:20.602Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -784,23 +808,27 @@
     <script src="gitbook/theme.js"></script>
     
         
-        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
         
     
         
-        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
         
     
         
-        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        <script src="gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
         
     
         
-        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
         
     
         
-        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-ad/plugin.js"></script>
         
     
         
