@@ -4,7 +4,7 @@
 
 和[3Sum](https://leetcode.windliang.cc/leetCode-15-3Sum.html)类似，只不过是找四个数，使得和为 target，并且不能有重复的序列。
 
-如果之前没有做过[3Sum](https://leetcode.windliang.cc/leetCode-15-3Sum.html)可以先看看，自己再上边的基础上加了一个循环而已。
+如果之前没有做过[3Sum](https://leetcode.windliang.cc/leetCode-15-3Sum.html)可以先看看，自己在上边的基础上加了一个循环而已。
 
 ```java
 public List<List<Integer>> fourSum(int[] num, int target) {
