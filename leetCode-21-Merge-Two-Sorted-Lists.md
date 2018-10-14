@@ -24,20 +24,11 @@ public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         }
     }
     if(l1==null){
-        while(l2!=null){
-            h.next=l2;
-            l2=l2.next;
-            h=h.next;
-        }
+        h.next=l2;
     }
     if(l2==null){
-        while(l1!=null){
-            h.next=l1;
-            l1=l1.next;
-            h=h.next;
-        }
-    }
-    h.next=null;
+        h.next=l1;
+    } 
     return ans.next;
 }
 ```
