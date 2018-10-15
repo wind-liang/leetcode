@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>20. Valid Parentheses · leetCode</title>
+        <title>24. Swap Nodes in Pairs · leetCode</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -74,10 +74,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="leetCode-21-Merge-Two-Sorted-Lists.html" />
+    <link rel="next" href="leetCode-79-Word-Search.html" />
     
     
-    <link rel="prev" href="leetCode-19-Remov-Nth-Node-From-End-of-List.html" />
+    <link rel="prev" href="leetCode-23-Merge-k-Sorted-Lists.html" />
     
 
     <style>
@@ -386,7 +386,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.21" data-path="leetCode-20-Valid Parentheses.html">
+        <li class="chapter " data-level="1.21" data-path="leetCode-20-Valid Parentheses.html">
             
                 <a href="leetCode-20-Valid Parentheses.html">
             
@@ -438,7 +438,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.25" data-path="leetCode-24-Swap-Nodes-in-Pairs.html">
+        <li class="chapter active" data-level="1.25" data-path="leetCode-24-Swap-Nodes-in-Pairs.html">
             
                 <a href="leetCode-24-Swap-Nodes-in-Pairs.html">
             
@@ -494,7 +494,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >20. Valid Parentheses</a>
+        <a href="." >24. Swap Nodes in Pairs</a>
     </h1>
 </div>
 
@@ -509,65 +509,52 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;"><b> </b>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x603B;"><b> </b>&#x603B;</a></li></ul></div><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;"><a name="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;</h1>
-<p><img src="https://windliang.oss-cn-beijing.aliyuncs.com/20.png" alt=""></p>
-<p>&#x62EC;&#x53F7;&#x5339;&#x914D;&#x95EE;&#x9898;&#x3002;</p>
-<p>&#x5982;&#x679C;&#x53EA;&#x6709;&#x4E00;&#x79CD;&#x62EC;&#x53F7;&#xFF0C;&#x6211;&#x4EEC;&#x5B8C;&#x5168;&#x53EF;&#x4EE5;&#x7528;&#x4E00;&#x4E2A;&#x8BA1;&#x6570;&#x5668; count &#xFF0C;&#x904D;&#x5386;&#x6574;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x9047;&#x5230;&#x5DE6;&#x62EC;&#x53F7;&#x52A0; 1 &#xFF0C;&#x9047;&#x5230;&#x53F3;&#x62EC;&#x53F7;&#x51CF; 1&#xFF0C;&#x904D;&#x5386;&#x7ED3;&#x675F;&#x540E;&#xFF0C;&#x5982;&#x679C; count &#x7B49;&#x4E8E; 0 &#xFF0C;&#x5219;&#x8868;&#x793A;&#x5168;&#x90E8;&#x5339;&#x914D;&#x3002;&#x4F46;&#x5982;&#x679C;&#x6709;&#x591A;&#x79CD;&#x62EC;&#x53F7;&#xFF0C;&#x50CF;  ( [ ) ] &#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x5B83;&#x4F9D;&#x65E7;&#x4F1A;&#x5F97;&#x5230; 0&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7528;&#x5176;&#x4ED6;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
-<p>&#x6808;&#xFF01;</p>
-<p>&#x904D;&#x5386;&#x6574;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x9047;&#x5230;&#x5DE6;&#x62EC;&#x53F7;&#x5C31;&#x5165;&#x6808;&#xFF0C;&#x7136;&#x540E;&#x9047;&#x5230;&#x548C;&#x6808;&#x9876;&#x5BF9;&#x5E94;&#x7684;&#x53F3;&#x62EC;&#x53F7;&#x5C31;&#x51FA;&#x6808;&#xFF0C;&#x904D;&#x5386;&#x7ED3;&#x675F;&#x540E;&#xFF0C;&#x5982;&#x679C;&#x6808;&#x4E3A;&#x7A7A;&#xFF0C;&#x5C31;&#x8868;&#x793A;&#x5168;&#x90E8;&#x5339;&#x914D;&#x3002;</p>
-<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isValid</span><span class="hljs-params">(String s)</span> </span>{
-    Stack&lt;Character&gt;  brackets  = <span class="hljs-keyword">new</span> Stack&lt;Character&gt;(); 
-    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; s.length();i++){
-        <span class="hljs-keyword">char</span> c = s.charAt(i);
-        <span class="hljs-keyword">switch</span>(c){
-            <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;(&apos;</span>:
-            <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;[&apos;</span>:
-            <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;{&apos;</span>:
-                brackets.push(c); 
-                <span class="hljs-keyword">break</span>;
-            <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;)&apos;</span>:
-                <span class="hljs-keyword">if</span>(!brackets.empty()){
-                    <span class="hljs-keyword">if</span>(brackets.peek()== <span class="hljs-string">&apos;(&apos;</span>){
-                        brackets.pop();
-                    }<span class="hljs-keyword">else</span>{
-                        <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
-                    }
-                }<span class="hljs-keyword">else</span>{
-                    <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
-                }
-                <span class="hljs-keyword">break</span>;
-            <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;]&apos;</span>:
-                <span class="hljs-keyword">if</span>(!brackets.empty()){
-                    <span class="hljs-keyword">if</span>(brackets.peek()==<span class="hljs-string">&apos;[&apos;</span>){
-                        brackets.pop();
-                    }<span class="hljs-keyword">else</span>{
-                        <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
-                    }
-                }<span class="hljs-keyword">else</span>{
-                    <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
-                }
-                <span class="hljs-keyword">break</span>;
-            <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;}&apos;</span>:
-                <span class="hljs-keyword">if</span>(!brackets.empty()){
-                    <span class="hljs-keyword">if</span>(brackets.peek()==<span class="hljs-string">&apos;{&apos;</span>){
-                        brackets.pop();
-                    }<span class="hljs-keyword">else</span>{
-                        <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
-                    }
-                }<span class="hljs-keyword">else</span>{
-                    <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
-                }
-
-        }
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><b> </b>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x89E3;&#x6CD5;&#x4E00;-&#x8FED;&#x4EE3;"><b> </b>&#x89E3;&#x6CD5;&#x4E00; &#x8FED;&#x4EE3;</a></li><li><span class="title-icon "></span><a href="#&#x89E3;&#x6CD5;&#x4E8C;-&#x9012;&#x5F52;"><b> </b>&#x89E3;&#x6CD5;&#x4E8C; &#x9012;&#x5F52;</a></li><li><span class="title-icon "></span><a href="#&#x603B;"><b> </b>&#x603B;</a></li></ul></div><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><a name="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;</h1>
+<p><img src="https://windliang.oss-cn-beijing.aliyuncs.com/24.jpg" alt=""></p>
+<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x94FE;&#x8868;&#xFF0C;&#x7136;&#x540E;&#x4E24;&#x4E24;&#x4EA4;&#x6362;&#x94FE;&#x8868;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</p>
+<h1 id="&#x89E3;&#x6CD5;&#x4E00;-&#x8FED;&#x4EE3;"><a name="&#x89E3;&#x6CD5;&#x4E00;-&#x8FED;&#x4EE3;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x6CD5;&#x4E00;-&#x8FED;&#x4EE3;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x89E3;&#x6CD5;&#x4E00; &#x8FED;&#x4EE3;</h1>
+<p>&#x9996;&#x5148;&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x5355;&#x72EC;&#x8BA8;&#x8BBA;&#x5934;&#x7ED3;&#x70B9;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x4E00;&#x822C;&#x5148;&#x7533;&#x8BF7;&#x4E00;&#x4E2A;&#x7A7A;&#x7ED3;&#x70B9;&#x6307;&#x5411;&#x5934;&#x7ED3;&#x70B9;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x7528;&#x4E00;&#x4E2A;&#x6307;&#x9488;&#x6765;&#x904D;&#x5386;&#x6574;&#x4E2A;&#x94FE;&#x8868;&#x3002;</p>
+<p>&#x5148;&#x6765;&#x770B;&#x4E00;&#x4E0B;&#x56FE;&#x793A;&#xFF1A;</p>
+<p><img src="https://windliang.oss-cn-beijing.aliyuncs.com/24_2.jpg" alt=""></p>
+<p><img src="https://windliang.oss-cn-beijing.aliyuncs.com/24_3.jpg" alt=""></p>
+<p><img src="https://windliang.oss-cn-beijing.aliyuncs.com/24_4.jpg" alt=""></p>
+<p><img src="https://windliang.oss-cn-beijing.aliyuncs.com/24_5.jpg" alt=""></p>
+<p><img src="https://windliang.oss-cn-beijing.aliyuncs.com/24_6.jpg" alt=""></p>
+<p>point &#x662F;&#x4E24;&#x4E2A;&#x8981;&#x4EA4;&#x6362;&#x7ED3;&#x70B9;&#x524D;&#x8FB9;&#x7684;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> ListNode <span class="hljs-title">swapPairs</span><span class="hljs-params">(ListNode head)</span> </span>{
+    ListNode dummy = <span class="hljs-keyword">new</span> ListNode(<span class="hljs-number">0</span>);
+    dummy.next = head;
+    ListNode point = dummy;
+    <span class="hljs-keyword">while</span> (point.next != <span class="hljs-keyword">null</span> &amp;&amp; point.next.next != <span class="hljs-keyword">null</span>) { 
+        ListNode swap1 = point.next;
+        ListNode swap2 = point.next.next;
+        point.next = swap2;
+        swap1.next = swap2.next;
+        swap2.next = swap1;
+        point = swap1;
     }
-
-    <span class="hljs-keyword">return</span> brackets.empty();
+    <span class="hljs-keyword">return</span> dummy.next;
 }
 </code></pre>
 <p>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O&#xFF08;n&#xFF09;&#x3002;</p>
-<p>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O&#xFF08;n&#xFF09;&#x3002;</p>
+<p>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O&#xFF08;1&#xFF09;&#x3002;</p>
+<h1 id="&#x89E3;&#x6CD5;&#x4E8C;-&#x9012;&#x5F52;"><a name="&#x89E3;&#x6CD5;&#x4E8C;-&#x9012;&#x5F52;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x6CD5;&#x4E8C;-&#x9012;&#x5F52;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x89E3;&#x6CD5;&#x4E8C; &#x9012;&#x5F52;</h1>
+<p>&#x53C2;&#x8003;<a href="https://leetcode.com/problems/swap-nodes-in-pairs/discuss/11030/My-accepted-java-code.-used-recursion." target="_blank">&#x8FD9;&#x91CC;</a>&#x3002;</p>
+<p>&#x81EA;&#x5DF1;&#x753B;&#x4E86;&#x4E2A;&#x53C2;&#x8003;&#x56FE;&#x3002;</p>
+<p><img src="https://windliang.oss-cn-beijing.aliyuncs.com/24_7.jpg" alt=""></p>
+<p><img src="https://windliang.oss-cn-beijing.aliyuncs.com/24_8.jpg" alt=""></p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> ListNode <span class="hljs-title">swapPairs</span><span class="hljs-params">(ListNode head)</span> </span>{
+    <span class="hljs-keyword">if</span> ((head == <span class="hljs-keyword">null</span>)||(head.next == <span class="hljs-keyword">null</span>))
+        <span class="hljs-keyword">return</span> head;
+    ListNode n = head.next;
+    head.next = swapPairs(head.next.next);
+    n.next = head;
+    <span class="hljs-keyword">return</span> n;
+}
+</code></pre>
+<p> &#x9012;&#x5F52;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x7559;&#x5751;&#x3002;</p>
 <h1 id="&#x603B;"><a name="&#x603B;" class="anchor-navigation-ex-anchor" href="#&#x603B;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x603B;</h1>
-<p>&#x5982;&#x679C;&#x5B66;&#x8FC7;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x4E00;&#x5B9A;&#x5199;&#x8FC7;&#x8BA1;&#x7B97;&#x5668;&#xFF0C;&#x62EC;&#x53F7;&#x5339;&#x914D;&#x95EE;&#x9898;&#x4E00;&#x5B9A;&#x9047;&#x5230;&#x8FC7;&#x7684;&#x3002;</p>
+<p>&#x81EA;&#x5DF1;&#x5F00;&#x59CB;&#x6CA1;&#x6709;&#x60F3;&#x51FA;&#x9012;&#x5F52;&#x7684;&#x7B97;&#x6CD5;&#xFF0C;&#x6BCF;&#x6B21;&#x90FD;&#x4F1A;&#x88AB;&#x9012;&#x5F52;&#x7684;&#x7B80;&#x6D01;&#x5438;&#x5F15;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x611F;&#x89C9;&#x94FE;&#x8868;&#x7684;&#x4E00;&#x4E9B;&#x9898;&#xFF0C;&#x53EA;&#x8981;&#x753B;&#x56FE;&#x6253;&#x6253;&#x8349;&#x7A3F;&#xFF0C;&#x641E;&#x6E05;&#x6307;&#x5411;&#x5173;&#x7CFB;&#xFF0C;&#x4E00;&#x822C;&#x4E0D;&#x96BE;&#x3002;</p>
 
                                 
                                 </section>
@@ -595,12 +582,12 @@
 
             
                 
-                <a href="leetCode-19-Remov-Nth-Node-From-End-of-List.html" class="navigation navigation-prev " aria-label="Previous page: 19. Remove Nth Node From End of List">
+                <a href="leetCode-23-Merge-k-Sorted-Lists.html" class="navigation navigation-prev " aria-label="Previous page: 23. Merge k Sorted Lists">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="leetCode-21-Merge-Two-Sorted-Lists.html" class="navigation navigation-next " aria-label="Next page: 21. Merge Two Sorted Lists">
+                <a href="leetCode-79-Word-Search.html" class="navigation navigation-next " aria-label="Next page: 79. Word Search">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -611,7 +598,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"20. Valid Parentheses","level":"1.21","depth":1,"next":{"title":"21. Merge Two Sorted Lists","level":"1.22","depth":1,"path":"leetCode-21-Merge-Two-Sorted-Lists.md","ref":"leetCode-21-Merge-Two-Sorted-Lists.md","articles":[]},"previous":{"title":"19. Remove Nth Node From End of List","level":"1.20","depth":1,"path":"leetCode-19-Remov-Nth-Node-From-End-of-List.md","ref":"leetCode-19-Remov-Nth-Node-From-End-of-List.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr","-search","search-plus","ad"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ad":{"contentBottom":"%u003c%u0064%u0069%u0076%u0020%u0069%u0064%u003d%u0022%u0077%u0065%u0063%u0068%u0061%u0074%u005f%u0073%u0075%u0062%u0073%u0063%u0072%u0069%u0062%u0065%u0072%u0022%u0020%u0073%u0074%u0079%u006c%u0065%u003d%u0022%u0064%u0069%u0073%u0070%u006c%u0061%u0079%u003a%u0020%u0062%u006c%u006f%u0063%u006b%u003b%u0020%u0070%u0061%u0064%u0064%u0069%u006e%u0067%u003a%u0020%u0031%u0030%u0070%u0078%u0020%u0030%u003b%u0020%u006d%u0061%u0072%u0067%u0069%u006e%u003a%u0020%u0032%u0030%u0070%u0078%u0020%u0061%u0075%u0074%u006f%u003b%u0020%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0031%u0030%u0030%u0025%u003b%u0020%u0074%u0065%u0078%u0074%u002d%u0061%u006c%u0069%u0067%u006e%u003a%u0020%u0063%u0065%u006e%u0074%u0065%u0072%u0022%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0069%u006d%u0067%u0020%u0069%u0064%u003d%u0022%u0077%u0065%u0063%u0068%u0061%u0074%u005f%u0073%u0075%u0062%u0073%u0063%u0072%u0069%u0062%u0065%u0072%u005f%u0071%u0063%u006f%u0064%u0065%u0022%u0020%u0073%u0072%u0063%u003d%u0022%u0068%u0074%u0074%u0070%u0073%u003a%u002f%u002f%u0077%u0069%u006e%u0064%u006c%u0069%u0061%u006e%u0067%u002e%u006f%u0073%u0073%u002d%u0063%u006e%u002d%u0062%u0065%u0069%u006a%u0069%u006e%u0067%u002e%u0061%u006c%u0069%u0079%u0075%u006e%u0063%u0073%u002e%u0063%u006f%u006d%u002f%u0077%u0065%u0063%u0068%u0061%u0074%u002e%u006a%u0070%u0067%u0022%u0020%u0061%u006c%u0074%u003d%u0022%u0077%u0069%u006e%u0064%u006c%u0069%u0061%u006e%u0067%u0020%u0077%u0065%u0063%u0068%u0061%u0074%u0022%u0020%u0073%u0074%u0079%u006c%u0065%u003d%u0022%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0032%u0030%u0030%u0070%u0078%u003b%u0020%u006d%u0061%u0078%u002d%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0031%u0030%u0030%u0025%u003b%u0022%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0062%u0072%u003e%u0020%u0020%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0064%u0069%u0076%u003e%u6dfb%u52a0%u597d%u53cb%u4e00%u8d77%u8fdb%u6b65%u007e%u003c%u002f%u0064%u0069%u0076%u003e%u0020%u003c%u0062%u0072%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0064%u0069%u0076%u003e%u5982%u679c%u89c9%u5f97%u6709%u5e2e%u52a9%u7684%u8bdd%uff0c%u5230%u9875%u9762%u6700%u4e0a%u8fb9%u8bb0%u5f97%u7ed9%u4e00%u4e2a%u0020%u0073%u0074%u0061%u0072%u0020%u54e6%u0020%u005e%u0020%u005e%u003c%u002f%u0064%u0069%u0076%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u002f%u0064%u0069%u0076%u003e"},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"github-buttons":{"buttons":[{"user":"wind-liang","repo":"leetcode","type":"star","size":"small","count":true}]},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"windliang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetCode","language":"zh-hans","links":{"sidebar":{"Home":"http://windliang.cc"},"gitbook":true},"gitbook":"3.2.3","description":"leetCode"},"file":{"path":"leetCode-20-Valid Parentheses.md","mtime":"2018-10-15T09:13:06.160Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-15T09:13:20.262Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"24. Swap Nodes in Pairs","level":"1.25","depth":1,"next":{"title":"79. Word Search","level":"1.26","depth":1,"path":"leetCode-79-Word-Search.md","ref":"leetCode-79-Word-Search.md","articles":[]},"previous":{"title":"23. Merge k Sorted Lists","level":"1.24","depth":1,"path":"leetCode-23-Merge-k-Sorted-Lists.md","ref":"leetCode-23-Merge-k-Sorted-Lists.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr","-search","search-plus","ad"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ad":{"contentBottom":"%u003c%u0064%u0069%u0076%u0020%u0069%u0064%u003d%u0022%u0077%u0065%u0063%u0068%u0061%u0074%u005f%u0073%u0075%u0062%u0073%u0063%u0072%u0069%u0062%u0065%u0072%u0022%u0020%u0073%u0074%u0079%u006c%u0065%u003d%u0022%u0064%u0069%u0073%u0070%u006c%u0061%u0079%u003a%u0020%u0062%u006c%u006f%u0063%u006b%u003b%u0020%u0070%u0061%u0064%u0064%u0069%u006e%u0067%u003a%u0020%u0031%u0030%u0070%u0078%u0020%u0030%u003b%u0020%u006d%u0061%u0072%u0067%u0069%u006e%u003a%u0020%u0032%u0030%u0070%u0078%u0020%u0061%u0075%u0074%u006f%u003b%u0020%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0031%u0030%u0030%u0025%u003b%u0020%u0074%u0065%u0078%u0074%u002d%u0061%u006c%u0069%u0067%u006e%u003a%u0020%u0063%u0065%u006e%u0074%u0065%u0072%u0022%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0069%u006d%u0067%u0020%u0069%u0064%u003d%u0022%u0077%u0065%u0063%u0068%u0061%u0074%u005f%u0073%u0075%u0062%u0073%u0063%u0072%u0069%u0062%u0065%u0072%u005f%u0071%u0063%u006f%u0064%u0065%u0022%u0020%u0073%u0072%u0063%u003d%u0022%u0068%u0074%u0074%u0070%u0073%u003a%u002f%u002f%u0077%u0069%u006e%u0064%u006c%u0069%u0061%u006e%u0067%u002e%u006f%u0073%u0073%u002d%u0063%u006e%u002d%u0062%u0065%u0069%u006a%u0069%u006e%u0067%u002e%u0061%u006c%u0069%u0079%u0075%u006e%u0063%u0073%u002e%u0063%u006f%u006d%u002f%u0077%u0065%u0063%u0068%u0061%u0074%u002e%u006a%u0070%u0067%u0022%u0020%u0061%u006c%u0074%u003d%u0022%u0077%u0069%u006e%u0064%u006c%u0069%u0061%u006e%u0067%u0020%u0077%u0065%u0063%u0068%u0061%u0074%u0022%u0020%u0073%u0074%u0079%u006c%u0065%u003d%u0022%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0032%u0030%u0030%u0070%u0078%u003b%u0020%u006d%u0061%u0078%u002d%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0031%u0030%u0030%u0025%u003b%u0022%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0062%u0072%u003e%u0020%u0020%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0064%u0069%u0076%u003e%u6dfb%u52a0%u597d%u53cb%u4e00%u8d77%u8fdb%u6b65%u007e%u003c%u002f%u0064%u0069%u0076%u003e%u0020%u003c%u0062%u0072%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0064%u0069%u0076%u003e%u5982%u679c%u89c9%u5f97%u6709%u5e2e%u52a9%u7684%u8bdd%uff0c%u5230%u9875%u9762%u6700%u4e0a%u8fb9%u8bb0%u5f97%u7ed9%u4e00%u4e2a%u0020%u0073%u0074%u0061%u0072%u0020%u54e6%u0020%u005e%u0020%u005e%u003c%u002f%u0064%u0069%u0076%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u002f%u0064%u0069%u0076%u003e"},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"github-buttons":{"buttons":[{"user":"wind-liang","repo":"leetcode","type":"star","size":"small","count":true}]},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"windliang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetCode","language":"zh-hans","links":{"sidebar":{"Home":"http://windliang.cc"},"gitbook":true},"gitbook":"3.2.3","description":"leetCode"},"file":{"path":"leetCode-24-Swap-Nodes-in-Pairs.md","mtime":"2018-10-15T09:13:06.211Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-15T09:13:20.262Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
