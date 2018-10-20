@@ -26,4 +26,5 @@
 * [23. Merge k Sorted Lists](leetCode-23-Merge-k-Sorted-Lists.md)
 * [24. Swap Nodes in Pairs](leetCode-24-Swap-Nodes-in-Pairs.md)
 * [25. Reverse Nodes in k-Group](leetCode-25-Reverse-Nodes-in-k-Group.md)
+* [26. Remove Duplicates from Sorted Array](leetCode-26-Remove-Duplicates-from-Sorted-Array.md)
 * [79. Word Search](leetCode-79-Word-Search.md)
