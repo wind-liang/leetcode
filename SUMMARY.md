@@ -31,4 +31,5 @@
 * [28. Implement strStr()](leetCode-28-Implement-strStr.md)
 * [29. Divide Two Integers](leetCode-29-Divide-Two-Integers.md)
 * [30. Substring with Concatenation of All Words](leetCode-30-Substring-with-Concatenation-of-All-Words.md)
+* [31. Next Permutation](leetCode-31-Next-Permutation.md)
 * [79. Word Search](leetCode-79-Word-Search.md)
