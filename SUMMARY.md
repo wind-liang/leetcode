@@ -32,4 +32,5 @@
 * [29. Divide Two Integers](leetCode-29-Divide-Two-Integers.md)
 * [30. Substring with Concatenation of All Words](leetCode-30-Substring-with-Concatenation-of-All-Words.md)
 * [31. Next Permutation](leetCode-31-Next-Permutation.md)
+* [32. Longest Valid Parentheses](leetCode-32-Longest-Valid-Parentheses.md)
 * [79. Word Search](leetCode-79-Word-Search.md)
