@@ -14,7 +14,7 @@
             "summary": "SUMMARY.md"
 
         }, 
-        "plugins": ["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr", "-search", "search-plus","ad"],
+        "plugins": ["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr", "-search", "search-plus","ad","-livereload"],
         "pluginsConfig": {
             "github-buttons": {
                     "buttons": [{
