@@ -34,4 +34,5 @@
 * [31. Next Permutation](leetCode-31-Next-Permutation.md)
 * [32. Longest Valid Parentheses](leetCode-32-Longest-Valid-Parentheses.md)
 * [33. Search in Rotated Sorted Array](leetCode-33-Search-in-Rotated-Sorted-Array.md)
+* [34. Find First and Last Position of Element in Sorted Array](leetCode-34-Find-First-and-Last-Position-of-Element-in-Sorted-Array.md)
 * [79. Word Search](leetCode-79-Word-Search.md)
