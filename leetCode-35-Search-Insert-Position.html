@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>28. Implement strStr() · leetCode</title>
+        <title>35. Search Insert Position · leetCode</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -74,10 +74,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="leetCode-29-Divide-Two-Integers.html" />
+    <link rel="next" href="leetCode-79-Word-Search.html" />
     
     
-    <link rel="prev" href="leetCode-27-Remove-Element.html" />
+    <link rel="prev" href="leetCode-34-Find-First-and-Last-Position-of-Element-in-Sorted-Array.html" />
     
 
     <style>
@@ -490,7 +490,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.29" data-path="leetCode-28-Implement-strStr.html">
+        <li class="chapter " data-level="1.29" data-path="leetCode-28-Implement-strStr.html">
             
                 <a href="leetCode-28-Implement-strStr.html">
             
@@ -581,7 +581,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.36" data-path="leetCode-35-Search-Insert-Position.html">
+        <li class="chapter active" data-level="1.36" data-path="leetCode-35-Search-Insert-Position.html">
             
                 <a href="leetCode-35-Search-Insert-Position.html">
             
@@ -637,7 +637,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >28. Implement strStr()</a>
+        <a href="." >35. Search Insert Position</a>
     </h1>
 </div>
 
@@ -653,48 +653,96 @@
                                 <section class="normal markdown-section">
                                 
                                 <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;"><b> </b>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x603B;"><b> </b>&#x603B;</a></li></ul></div><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;"><a name="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;</h1>
-<p><img src="https://windliang.oss-cn-beijing.aliyuncs.com/28.jpg" alt=""></p>
-<p>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32; needle &#x5728;&#x53E6;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32; haystack &#x4E2D;&#x5F00;&#x59CB;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x5B58;&#x5728;&#x5C31;&#x8FD4;&#x56DE; -1 &#xFF0C;&#x5982;&#x679C; needle &#x957F;&#x5EA6;&#x662F; 0 &#xFF0C;&#x5C31;&#x8FD4;&#x56DE; 0 &#x3002;</p>
-<p>&#x5C31;&#x662F;&#x4E00;&#x4E00;&#x6BD4;&#x8F83;&#x5C31;&#x597D;&#xFF0C;&#x770B;&#x4E0B;&#x4EE3;&#x7801;&#x5427;&#x3002;</p>
-<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">strStr</span><span class="hljs-params">(String haystack, String needle)</span> </span>{
-    <span class="hljs-keyword">if</span> (needle.length() == <span class="hljs-number">0</span>) {
+<p><img src="https://windliang.oss-cn-beijing.aliyuncs.com/35.jpg" alt=""></p>
+<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x6709;&#x5E8F;&#x6570;&#x7EC4;&#xFF0C;&#x4F9D;&#x65E7;&#x662F;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#xFF0C;&#x4E0D;&#x540C;&#x4E4B;&#x5904;&#x662F;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x627E;&#x5230;&#x6307;&#x5B9A;&#x6570;&#x5B57;&#xFF0C;&#x9700;&#x8981;&#x8FD4;&#x56DE;&#x8FD9;&#x4E2A;&#x6570;&#x5B57;&#x5E94;&#x8BE5;&#x63D2;&#x5165;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</p>
+<p>&#x8FD9;&#x9053;&#x9898;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x5728;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#xFF0C;&#x53EA;&#x8981;&#x60F3;&#x6E05;&#x695A;&#x8FD4;&#x56DE;&#x5565;&#x5C31;&#x591F;&#x4E86;&#x3002;&#x60F3;&#x7684;&#x8BDD;&#xFF0C;&#x5C31;&#x8003;&#x8651;&#x6700;&#x7B80;&#x5355;&#x7684;&#x60C5;&#x51B5;&#x5982;&#x679C;&#x6570;&#x7EC4;&#x53EA;&#x5269;&#x4E0B;  2 5&#xFF0C;target &#x662F; 1, 3, 6 &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6B64;&#x65F6;&#x6211;&#x4EEC;&#x5E94;&#x8BE5;&#x8FD4;&#x56DE;&#x4EC0;&#x4E48;&#x5C31;&#x884C;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">searchInsert</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums, <span class="hljs-keyword">int</span> target)</span> </span>{
+    <span class="hljs-keyword">int</span> start = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">int</span> end = nums.length - <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">if</span> (nums.length == <span class="hljs-number">0</span>) {
         <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
     }
-    <span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>;
-    <span class="hljs-comment">//&#x904D;&#x5386;&#x6BCF;&#x4E2A;&#x5B57;&#x7B26;</span>
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; haystack.length(); i++) {
-        <span class="hljs-comment">//&#x76F8;&#x7B49;&#x7684;&#x8BDD;&#x8BA1;&#x6570;&#x52A0; 1 </span>
-        <span class="hljs-keyword">if</span> (haystack.charAt(i) == needle.charAt(j)) {
-            j++;
-            <span class="hljs-comment">//&#x957F;&#x5EA6;&#x591F;&#x4E86;&#x5C31;&#x8FD4;&#x56DE;</span>
-            <span class="hljs-keyword">if</span> (j == needle.length()) {
-                <span class="hljs-keyword">return</span> i - j + <span class="hljs-number">1</span>;
-            }
-            <span class="hljs-comment">// &#x4E0D;&#x76F8;&#x7B49;&#x7684;&#x8BDD; j &#x6E05;&#x96F6;&#xFF0C;</span>
-            <span class="hljs-comment">// &#x5E76;&#x4E14; i &#x56DE;&#x5230;&#x6700;&#x521D;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x4E4B;&#x540E;&#x5C31;&#x8FDB;&#x5165; for &#x5FAA;&#x73AF;&#x4E2D;&#x7684; i++&#xFF0C;&#x4ECE;&#x4E0B;&#x4E2A;&#x4F4D;&#x7F6E;&#x7EE7;&#x7EED;&#x5224;&#x65AD;</span>
+    <span class="hljs-keyword">while</span> (start &lt; end) {
+        <span class="hljs-keyword">int</span> mid = (start + end) / <span class="hljs-number">2</span>;
+        <span class="hljs-keyword">if</span> (target == nums[mid]) {
+            <span class="hljs-keyword">return</span> mid;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (target &lt; nums[mid]) {
+            end = mid;
         } <span class="hljs-keyword">else</span> {
-            i = i - j;
-            j = <span class="hljs-number">0</span>;
+            start = mid + <span class="hljs-number">1</span>;
         }
     }
-    <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
-}
-</code></pre>
-<p>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;&#x5047;&#x8BBE; haystack &#x548C; needle &#x7684;&#x957F;&#x5EA6;&#x5206;&#x522B;&#x662F; n &#x548C; k&#xFF0C;&#x5BF9;&#x4E8E;&#x6BCF;&#x4E00;&#x4E2A; i &#xFF0C;&#x6211;&#x4EEC;&#x6700;&#x591A;&#x6267;&#x884C; k - 1 &#x6B21;&#xFF0C;&#x603B;&#x5171;&#x4F1A;&#x6709; n &#x4E2A; i &#xFF0C;&#x6240;&#x4EE5;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x662F; O&#xFF08;kn&#xFF09;&#x3002;</p>
-<p>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O&#xFF08;1&#xFF09;&#x3002;</p>
-<p>&#x6211;&#x4EEC;&#x518D;&#x770B;&#x4E0B;&#x522B;&#x4EBA;&#x7684;<a href="https://leetcode.com/problems/implement-strstr/discuss/12807/Elegant-Java-solution" target="_blank">&#x4EE3;&#x7801;</a>&#xFF0C;&#x7528;&#x4E24;&#x4E2A; for &#x5FAA;&#x73AF;&#x3002;&#x4F46;&#x672C;&#x8D28;&#x5176;&#x5B9E;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x4F46;&#x53EF;&#x80FD;&#x4F1A;&#x66F4;&#x597D;&#x7406;&#x89E3;&#x4E9B;&#x5427;&#x3002;</p>
-<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">strStr</span><span class="hljs-params">(String haystack, String needle)</span> </span>{
-  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; ; i++) {
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; ; j++) {
-      <span class="hljs-keyword">if</span> (j == needle.length()) <span class="hljs-keyword">return</span> i;
-      <span class="hljs-keyword">if</span> (i + j == haystack.length()) <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
-      <span class="hljs-keyword">if</span> (needle.charAt(j) != haystack.charAt(i + j)) <span class="hljs-keyword">break</span>;
+    <span class="hljs-comment">//&#x76EE;&#x6807;&#x503C;&#x5728;&#x4E0D;&#x5728;&#x5F53;&#x524D;&#x505C;&#x7684;&#x4F4D;&#x7F6E;&#x7684;&#x524D;&#x8FB9;&#x8FD8;&#x662F;&#x540E;&#x8FB9;</span>
+    <span class="hljs-keyword">if</span>(target&gt;nums[start]){
+        <span class="hljs-keyword">return</span> start + <span class="hljs-number">1</span>;
     }
-  }
+    <span class="hljs-comment">//&#x5982;&#x679C;&#x5C0F;&#x4E8E;&#x7684;&#x8BDD;&#xFF0C;&#x5C31;&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x4F4D;&#x7F6E;&#xFF0C;&#x8DD1;&#x6B65;&#x8D85;&#x8FC7;&#x7B2C;&#x4E8C;&#x540D;&#x8FD8;&#x662F;&#x7B2C;&#x4E8C;&#x540D;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x7528;&#x51CF; 1&#x3002;</span>
+    <span class="hljs-keyword">else</span>{
+        <span class="hljs-keyword">return</span> start;
+    }
 }
 </code></pre>
+<p>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O&#xFF08;log&#xFF08;n&#xFF09;&#xFF09;&#x3002;</p>
+<p>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O&#xFF08;1&#xFF09;&#x3002;</p>
+<p>&#x8FD9;&#x9053;&#x9898;&#x4E0D;&#x96BE;&#xFF0C;&#x4F46;&#x662F;&#x5BF9;&#x4E8E;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x53C8;&#x6709;&#x4E86;&#x4E00;&#x4E9B;&#x65B0;&#x8BA4;&#x8BC6;&#x3002;</p>
+<p>&#x9996;&#x5148;&#xFF0C;&#x4E00;&#x5B9A;&#x8981;&#x6CE8;&#x610F;&#xFF0C;&#x6570;&#x7EC4;&#x5269;&#x4E0B;&#x5076;&#x6570;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E2D;&#x70B9;&#x53D6;&#x7684;&#x662F;&#x5DE6;&#x7AEF;&#x70B9;&#x3002;&#x4F8B;&#x5982; 1 2 3 4&#xFF0C;&#x4E2D;&#x70B9;&#x53D6;&#x7684;&#x662F; 2&#x3002;&#x6B63;&#x56E0;&#x4E3A;&#x5982;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x66F4;&#x65B0; start &#x7684;&#x65F6;&#x5019;&#x4E0D;&#x662F;&#x76F4;&#x63A5;&#x53D6; mid &#xFF0C;&#x800C;&#x662F; mid + 1&#x3002;&#x56E0;&#x4E3A;&#x5269;&#x4E0B;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x65F6;&#x5019;&#xFF0C;mid &#x548C; start &#x662F;&#x76F8;&#x540C;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x8FDB;&#x884C;&#x52A0; 1 &#x4F1A;&#x9677;&#x5165;&#x6B7B;&#x5FAA;&#x73AF;&#x3002;</p>
+<p>&#x7136;&#x540E;&#x4E0A;&#x8FB9;&#x7684;&#x7B97;&#x6CD5;&#xFF0C;&#x8FD4;&#x56DE;&#x6700;&#x7EC8;&#x503C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x8FDB;&#x884C;&#x4E86;&#x4E00;&#x4E2A; if &#x7684;&#x5224;&#x65AD;&#xFF0C;&#x90A3;&#x4E48;&#x80FD;&#x4E0D;&#x80FD;&#x907F;&#x514D;&#x5462;&#x3002;</p>
+<ul>
+<li><p>&#x7B2C;&#x4E00;&#x79CD;&#x601D;&#x8DEF;&#xFF0C;&#x53C2;&#x8003;<a href="https://leetcode.com/problems/search-insert-position/discuss/15080/My-8-line-Java-solution" target="_blank">&#x8FD9;&#x91CC;</a>&#x3002;</p>
+<p>&#x9996;&#x5148;&#x4E3A;&#x4E86;&#x8BA9; start &#x5728;&#x5FAA;&#x73AF;&#x7684;&#x65F6;&#x5019;&#x591A;&#x52A0; 1&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x5FAA;&#x73AF;&#x7684; start &lt; end &#x6539;&#x4E3A; start &lt;= end&#x3002;</p>
+<p>&#x8FD9;&#x6837;&#x5C31;&#x4F1A;&#x51FA;&#x73B0;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x5F53; start  == end&#xFF0C;&#x6B64;&#x65F6; mid &#x4E0D;&#x4EC5;&#x7B49;&#x4E8E;&#x4E86; start &#x8FD8;&#x4F1A;&#x7B49;&#x4E8E; end&#xFF0C;&#x6240;&#x4EE5;&#x4E4B;&#x524D;&#x66F4;&#x65B0; end &#x662F;&#x76F4;&#x63A5;&#x8D4B; mid&#xFF0C;&#x73B0;&#x5728;&#x9700;&#x8981;&#x6539;&#x6210; end = mid - 1&#xFF0C;&#x9632;&#x6B62;&#x6B7B;&#x5FAA;&#x73AF;&#x3002;&#x8FD9;&#x6837;&#x5C31;&#x8FBE;&#x5230;&#x4E86;&#x76EE;&#x6807;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">searchInsert</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums, <span class="hljs-keyword">int</span> target)</span> </span>{
+    <span class="hljs-keyword">int</span> start = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">int</span> end = nums.length - <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">if</span> (nums.length == <span class="hljs-number">0</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+    }
+    <span class="hljs-keyword">while</span> (start &lt;= end) {
+        <span class="hljs-keyword">int</span> mid = (start + end) / <span class="hljs-number">2</span>;
+        <span class="hljs-keyword">if</span> (target == nums[mid]) {
+            <span class="hljs-keyword">return</span> mid;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (target &lt; nums[mid]) {
+            end = mid - <span class="hljs-number">1</span>;
+        } <span class="hljs-keyword">else</span> {
+            start = mid + <span class="hljs-number">1</span>;
+        }
+    }
+
+    <span class="hljs-keyword">return</span> start;
+
+}
+</code></pre>
+</li>
+</ul>
+<ul>
+<li><p>&#x7B2C;&#x4E8C;&#x79CD;&#x601D;&#x8DEF;&#xFF0C;&#x53C2;&#x8003;<a href="https://leetcode.com/problems/search-insert-position/discuss/15110/Very-concise-and-efficient-solution-in-Java" target="_blank">&#x8FD9;&#x91CC;</a>&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x5F00;&#x59CB;&#x66F4;&#x65B0; start &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x662F; mid + 1&#xFF0C;&#x5982;&#x679C;&#x5269;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x4F8B;&#x5982; 2 4&#xFF0C;target = 6 &#x7684;&#x8BDD;&#xFF0C;&#x6B64;&#x65F6; mid = 0&#xFF0C;start = mid + 1 = 1&#xFF0C;&#x6211;&#x4EEC;&#x8FD4;&#x56DE; start + 1 = 2&#x3002;&#x5982;&#x679C; mid &#x662F;&#x53F3;&#x7AEF;&#x70B9;&#xFF0C;&#x90A3;&#x4E48; mid = 1&#xFF0C;start = mid + 1 = 2&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8FD4;&#x56DE; start &#x4E86;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x5728;&#x8FD4;&#x56DE;&#x7684;&#x65F6;&#x5019;&#x52A0; 1 &#x4E86;&#x3002;</p>
+<p>&#x600E;&#x4E48;&#x505A;&#x5230;&#x5462;&#xFF1F;&#x6700;&#x6700;&#x5F00;&#x59CB;&#x7684;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x53D6; end &#x7684;&#x65F6;&#x5019;&#x662F; end = nums.length - 1&#x3002;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x6539;&#x6210; end = nums.length&#xFF0C;&#x8FD9;&#x6837;&#x6BCF;&#x6B21;&#x53D6;&#x5143;&#x7D20;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5982;&#x679C;&#x548C;&#x4E4B;&#x524D;&#x5BF9;&#x6BD4;&#xFF0C;&#x53D6;&#x5230;&#x7684;&#x5C31;&#x662F;&#x53F3;&#x7AEF;&#x70B9;&#x4E86;&#x3002;&#x8FD9;&#x6837;&#x7684;&#x8BDD;&#xFF0C;&#x6700;&#x540E;&#x8FD4;&#x56DE;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x4E0D;&#x9700;&#x8981;&#x591A;&#x52A0; 1 &#x4E86;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">searchInsert</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums, <span class="hljs-keyword">int</span> target)</span> </span>{
+    <span class="hljs-keyword">int</span> start = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">int</span> end = nums.length;
+    <span class="hljs-keyword">if</span> (nums.length == <span class="hljs-number">0</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+    }
+    <span class="hljs-keyword">while</span> (start &lt; end) {
+        <span class="hljs-keyword">int</span> mid = (start + end) / <span class="hljs-number">2</span>;
+        <span class="hljs-keyword">if</span> (target == nums[mid]) {
+            <span class="hljs-keyword">return</span> mid;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (target &lt; nums[mid]) {
+            end = mid;
+        } <span class="hljs-keyword">else</span> {
+            start = mid + <span class="hljs-number">1</span>;
+        }
+    }
+
+    <span class="hljs-keyword">return</span> start;
+
+}
+</code></pre>
+</li>
+</ul>
 <h1 id="&#x603B;"><a name="&#x603B;" class="anchor-navigation-ex-anchor" href="#&#x603B;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x603B;</h1>
-<p>&#x603B;&#x7684;&#x6765;&#x8BF4;&#xFF0C;&#x8FD8;&#x662F;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#x7684;&#xFF0C;&#x5C31;&#x662F;&#x7B80;&#x5355;&#x7684;&#x904D;&#x5386;&#x5C31;&#x5B9E;&#x73B0;&#x4E86;&#x3002;</p>
+<p>&#x867D;&#x7136;&#x9898;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x4F46;&#x5BF9;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x6709;&#x4E86;&#x66F4;&#x591A;&#x7684;&#x7406;&#x89E3;&#x3002;</p>
 
                                 
                                 </section>
@@ -722,12 +770,12 @@
 
             
                 
-                <a href="leetCode-27-Remove-Element.html" class="navigation navigation-prev " aria-label="Previous page: 27. Remove Element">
+                <a href="leetCode-34-Find-First-and-Last-Position-of-Element-in-Sorted-Array.html" class="navigation navigation-prev " aria-label="Previous page: 34. Find First and Last Position of Element in Sorted Array">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="leetCode-29-Divide-Two-Integers.html" class="navigation navigation-next " aria-label="Next page: 29. Divide Two Integers">
+                <a href="leetCode-79-Word-Search.html" class="navigation navigation-next " aria-label="Next page: 79. Word Search">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -738,7 +786,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"28. Implement strStr()","level":"1.29","depth":1,"next":{"title":"29. Divide Two Integers","level":"1.30","depth":1,"path":"leetCode-29-Divide-Two-Integers.md","ref":"leetCode-29-Divide-Two-Integers.md","articles":[]},"previous":{"title":"27. Remove Element","level":"1.28","depth":1,"path":"leetCode-27-Remove-Element.md","ref":"leetCode-27-Remove-Element.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr","-search","search-plus","ad","-livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ad":{"contentBottom":"%u003c%u0064%u0069%u0076%u0020%u0069%u0064%u003d%u0022%u0077%u0065%u0063%u0068%u0061%u0074%u005f%u0073%u0075%u0062%u0073%u0063%u0072%u0069%u0062%u0065%u0072%u0022%u0020%u0073%u0074%u0079%u006c%u0065%u003d%u0022%u0064%u0069%u0073%u0070%u006c%u0061%u0079%u003a%u0020%u0062%u006c%u006f%u0063%u006b%u003b%u0020%u0070%u0061%u0064%u0064%u0069%u006e%u0067%u003a%u0020%u0031%u0030%u0070%u0078%u0020%u0030%u003b%u0020%u006d%u0061%u0072%u0067%u0069%u006e%u003a%u0020%u0032%u0030%u0070%u0078%u0020%u0061%u0075%u0074%u006f%u003b%u0020%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0031%u0030%u0030%u0025%u003b%u0020%u0074%u0065%u0078%u0074%u002d%u0061%u006c%u0069%u0067%u006e%u003a%u0020%u0063%u0065%u006e%u0074%u0065%u0072%u0022%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0069%u006d%u0067%u0020%u0069%u0064%u003d%u0022%u0077%u0065%u0063%u0068%u0061%u0074%u005f%u0073%u0075%u0062%u0073%u0063%u0072%u0069%u0062%u0065%u0072%u005f%u0071%u0063%u006f%u0064%u0065%u0022%u0020%u0073%u0072%u0063%u003d%u0022%u0068%u0074%u0074%u0070%u0073%u003a%u002f%u002f%u0077%u0069%u006e%u0064%u006c%u0069%u0061%u006e%u0067%u002e%u006f%u0073%u0073%u002d%u0063%u006e%u002d%u0062%u0065%u0069%u006a%u0069%u006e%u0067%u002e%u0061%u006c%u0069%u0079%u0075%u006e%u0063%u0073%u002e%u0063%u006f%u006d%u002f%u0077%u0065%u0063%u0068%u0061%u0074%u002e%u006a%u0070%u0067%u0022%u0020%u0061%u006c%u0074%u003d%u0022%u0077%u0069%u006e%u0064%u006c%u0069%u0061%u006e%u0067%u0020%u0077%u0065%u0063%u0068%u0061%u0074%u0022%u0020%u0073%u0074%u0079%u006c%u0065%u003d%u0022%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0032%u0030%u0030%u0070%u0078%u003b%u0020%u006d%u0061%u0078%u002d%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0031%u0030%u0030%u0025%u003b%u0022%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0062%u0072%u003e%u0020%u0020%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0064%u0069%u0076%u003e%u6dfb%u52a0%u597d%u53cb%u4e00%u8d77%u8fdb%u6b65%u007e%u003c%u002f%u0064%u0069%u0076%u003e%u0020%u003c%u0062%u0072%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0064%u0069%u0076%u003e%u5982%u679c%u89c9%u5f97%u6709%u5e2e%u52a9%u7684%u8bdd%uff0c%u5230%u9875%u9762%u6700%u4e0a%u8fb9%u8bb0%u5f97%u7ed9%u4e00%u4e2a%u0020%u0073%u0074%u0061%u0072%u0020%u54e6%u0020%u005e%u0020%u005e%u003c%u002f%u0064%u0069%u0076%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u002f%u0064%u0069%u0076%u003e"},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"github-buttons":{"buttons":[{"user":"wind-liang","repo":"leetcode","type":"star","size":"small","count":true}]},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"windliang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetCode","language":"zh-hans","links":{"sidebar":{"Home":"http://windliang.cc"},"gitbook":true},"gitbook":"3.2.3","description":"leetCode"},"file":{"path":"leetCode-28-Implement-strStr.md","mtime":"2019-01-07T12:56:56.886Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-07T15:20:08.267Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"35. Search Insert Position","level":"1.36","depth":1,"next":{"title":"79. Word Search","level":"1.37","depth":1,"path":"leetCode-79-Word-Search.md","ref":"leetCode-79-Word-Search.md","articles":[]},"previous":{"title":"34. Find First and Last Position of Element in Sorted Array","level":"1.35","depth":1,"path":"leetCode-34-Find-First-and-Last-Position-of-Element-in-Sorted-Array.md","ref":"leetCode-34-Find-First-and-Last-Position-of-Element-in-Sorted-Array.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr","-search","search-plus","ad","-livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ad":{"contentBottom":"%u003c%u0064%u0069%u0076%u0020%u0069%u0064%u003d%u0022%u0077%u0065%u0063%u0068%u0061%u0074%u005f%u0073%u0075%u0062%u0073%u0063%u0072%u0069%u0062%u0065%u0072%u0022%u0020%u0073%u0074%u0079%u006c%u0065%u003d%u0022%u0064%u0069%u0073%u0070%u006c%u0061%u0079%u003a%u0020%u0062%u006c%u006f%u0063%u006b%u003b%u0020%u0070%u0061%u0064%u0064%u0069%u006e%u0067%u003a%u0020%u0031%u0030%u0070%u0078%u0020%u0030%u003b%u0020%u006d%u0061%u0072%u0067%u0069%u006e%u003a%u0020%u0032%u0030%u0070%u0078%u0020%u0061%u0075%u0074%u006f%u003b%u0020%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0031%u0030%u0030%u0025%u003b%u0020%u0074%u0065%u0078%u0074%u002d%u0061%u006c%u0069%u0067%u006e%u003a%u0020%u0063%u0065%u006e%u0074%u0065%u0072%u0022%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0069%u006d%u0067%u0020%u0069%u0064%u003d%u0022%u0077%u0065%u0063%u0068%u0061%u0074%u005f%u0073%u0075%u0062%u0073%u0063%u0072%u0069%u0062%u0065%u0072%u005f%u0071%u0063%u006f%u0064%u0065%u0022%u0020%u0073%u0072%u0063%u003d%u0022%u0068%u0074%u0074%u0070%u0073%u003a%u002f%u002f%u0077%u0069%u006e%u0064%u006c%u0069%u0061%u006e%u0067%u002e%u006f%u0073%u0073%u002d%u0063%u006e%u002d%u0062%u0065%u0069%u006a%u0069%u006e%u0067%u002e%u0061%u006c%u0069%u0079%u0075%u006e%u0063%u0073%u002e%u0063%u006f%u006d%u002f%u0077%u0065%u0063%u0068%u0061%u0074%u002e%u006a%u0070%u0067%u0022%u0020%u0061%u006c%u0074%u003d%u0022%u0077%u0069%u006e%u0064%u006c%u0069%u0061%u006e%u0067%u0020%u0077%u0065%u0063%u0068%u0061%u0074%u0022%u0020%u0073%u0074%u0079%u006c%u0065%u003d%u0022%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0032%u0030%u0030%u0070%u0078%u003b%u0020%u006d%u0061%u0078%u002d%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0031%u0030%u0030%u0025%u003b%u0022%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0062%u0072%u003e%u0020%u0020%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0064%u0069%u0076%u003e%u6dfb%u52a0%u597d%u53cb%u4e00%u8d77%u8fdb%u6b65%u007e%u003c%u002f%u0064%u0069%u0076%u003e%u0020%u003c%u0062%u0072%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0064%u0069%u0076%u003e%u5982%u679c%u89c9%u5f97%u6709%u5e2e%u52a9%u7684%u8bdd%uff0c%u5230%u9875%u9762%u6700%u4e0a%u8fb9%u8bb0%u5f97%u7ed9%u4e00%u4e2a%u0020%u0073%u0074%u0061%u0072%u0020%u54e6%u0020%u005e%u0020%u005e%u003c%u002f%u0064%u0069%u0076%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u002f%u0064%u0069%u0076%u003e"},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"github-buttons":{"buttons":[{"user":"wind-liang","repo":"leetcode","type":"star","size":"small","count":true}]},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"windliang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetCode","language":"zh-hans","links":{"sidebar":{"Home":"http://windliang.cc"},"gitbook":true},"gitbook":"3.2.3","description":"leetCode"},"file":{"path":"leetCode-35-Search-Insert-Position.md","mtime":"2019-01-07T15:16:47.045Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-07T15:20:08.267Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
