@@ -36,4 +36,5 @@
 * [33. Search in Rotated Sorted Array](leetCode-33-Search-in-Rotated-Sorted-Array.md)
 * [34. Find First and Last Position of Element in Sorted Array](leetCode-34-Find-First-and-Last-Position-of-Element-in-Sorted-Array.md)
 * [35. Search Insert Position](leetCode-35-Search-Insert-Position.md)
+* [36. Valid Sudoku](leetCode-36-Valid-Sudoku.md)
 * [79. Word Search](leetCode-79-Word-Search.md)
