@@ -74,7 +74,7 @@ private int getRepeatNum(String string) {
 既然有递归，那就一定可以写出它的迭代形式。
 
 ```java
-public String countAndSay2(int n) {
+public String countAndSay(int n) {
     String res = "1";
     //从第一行开始，一行一行产生
     while (n > 1) {
