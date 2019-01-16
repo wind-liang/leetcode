@@ -39,4 +39,5 @@
 * [36. Valid Sudoku](leetCode-36-Valid-Sudoku.md)
 * [37. Sudoku Solver](leetCode-37-Sudoku-Solver.md)
 * [38. Count and Say](leetCode-38-Count-and-Say.md)
+* [39. Combination Sum](leetCode-39-Combination-Sum.md)
 * [79. Word Search](leetCode-79-Word-Search.md)
