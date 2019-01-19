@@ -167,6 +167,79 @@ private List<List<Integer>> removeDuplicate(List<List<Integer>> list) {
 
 空间复杂度：
 
+还有另一种思路可以解决重复的问题。
+
+之前对于 nums = [ 2, 3, 6, 7 ] , target = 7 ，我们用了两层 for 循环，分别对 opt 和 nums 进行遍历。
+
+我们先求 opt [ 0 ]，通过遍历 nums [ 0 ]， nums [ 1 ]， nums [ 2 ]， nums [ 3 ]
+
+然后再求 opt [ 1 ]，通过遍历 nums [ 0 ]， nums [ 1 ]， nums [ 2 ]， nums [ 3 ]
+
+然后再求 opt [ 2 ]，通过遍历 nums [ 0 ]， nums [ 1 ]， nums [ 2 ]， nums [ 3 ]
+
+...
+
+最后再求 opt [ 7 ]，通过遍历 nums [ 0 ]， nums [ 1 ]， nums [ 2 ]， nums [ 3 ]。
+
+求 opt [ 5 ] 的时候，出现了 [ 2 3 ]，[ 3 2 ] 这样重复的情况。
+
+我们可以把两个 for 循环的遍历颠倒一下，外层遍历 nums，内层遍历 opt。
+
+考虑 nums [ 0 ]，求出 opt [ 0 ]，求出 opt [ 1 ]，求出 opt [ 2 ]，求出 opt [ 3 ] ... 求出 opt [ 7 ]。
+
+考虑 nums [ 1 ]，求出 opt [ 0 ]，求出 opt [ 1 ]，求出 opt [ 2 ]，求出 opt [ 3 ] ... 求出 opt [ 7 ]。
+
+考虑 nums [ 2 ]，求出 opt [ 0 ]，求出 opt [ 1 ]，求出 opt [ 2 ]，求出 opt [ 3 ] ... 求出 opt [ 7 ]。
+
+考虑 nums [ 3 ]，求出 opt [ 0 ]，求出 opt [ 1 ]，求出 opt [ 2 ]，求出 opt [ 3 ] ... 求出 opt [ 7 ]。
+
+这样的话，每次循环会更新一次  opt [ 7 ]，最后次更新的 opt [ 7 ] 就是我们想要的了。
+
+这样之前的问题，求 opt [ 5 ] 的时候，出现了 [ 2 3 ]，[ 3 2 ] 这样重复的情况就不会出现了，因为当考虑 nums [ 2 ] 的时候，opt [ 3 ] 里边还没有加入 [ 3 ] 。
+
+思路就是上边说的了，但是写代码的时候遇到不少坑，大家也可以先尝试写一下。
+
+```java
+public List<List<Integer>> combinationSum(int[] nums, int target) {
+    List<List<List<Integer>>> ans = new ArrayList<>();
+    Arrays.sort(nums);
+    if (nums[0] > target) {
+        return new ArrayList<List<Integer>>();
+    }
+    // 先初始化 ans[0] 到 ans[target]，因为每次循环是更新 ans,会用到 ans.get() 函数，如果不初始化会报错
+    for (int i = 0; i <= target; i++) {
+        List<List<Integer>> ans_i = new ArrayList<List<Integer>>();
+        ans.add(i, ans_i);
+    }
+
+    for (int i = 0; i < nums.length; i++) {
+        for (int sum = nums[i]; sum <= target; sum++) {
+            List<List<Integer>> ans_sum = ans.get(sum);
+            List<List<Integer>> ans_sub = ans.get(sum - nums[i]);
+            //刚开始 ans_sub 的大小是 0，所以单独考虑一下这种情况
+            if (sum == nums[i]) {
+                ArrayList<Integer> temp = new ArrayList<Integer>();
+                temp.add(nums[i]);
+                ans_sum.add(temp);
+
+            }
+            //如果 ans.get(sum - nums[i])大小不等于 0，就可以按之前的想法更新了。
+            //每个 ans_sub[j] 都加上 nums[i]
+            if (ans_sub.size() > 0) {
+                for (int j = 0; j < ans_sub.size(); j++) {
+                    ArrayList<Integer> temp = new ArrayList<Integer>(ans_sub.get(j));
+                    temp.add(nums[i]);
+                    ans_sum.add(temp);
+                }
+            }
+        }
+    }
+    return ans.get(target);
+}
+```
+
+
+
 # 总
 
 对回溯法又有了更深的了解，一般的架构就是一个大的 for 循环，然后先 add，接着利用递归进行向前遍历，然后再 remove ，继续循环。而解法二的动态规划就是一定要找到递进的规则，开始的时候就想偏了，导致迟迟想不出来。
