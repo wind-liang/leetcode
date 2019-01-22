@@ -41,4 +41,5 @@
 * [38. Count and Say](leetCode-38-Count-and-Say.md)
 * [39. Combination Sum](leetCode-39-Combination-Sum.md)
 * [40. Combination Sum II](leetCode-40-Combination-Sum-II.md)
+* [41. First Missing Positive](leetCode-41-First-Missing-Positive.md)
 * [79. Word Search](leetCode-79-Word-Search.md)
