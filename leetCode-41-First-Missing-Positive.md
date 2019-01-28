@@ -166,7 +166,8 @@ private int positiveNumber(int[] nums) {
                 break;
             }
         }
-    }*/
+    }
+    return n;*/
 
     //解法二 用一个指针 p ，保证 p 之前的都是正数。遍历 nums，每遇到一个正数就把它交换到 p 指针的位置，并且 p 指针后移
     int n = nums.length;
