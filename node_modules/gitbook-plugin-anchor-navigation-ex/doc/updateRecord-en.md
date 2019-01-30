@@ -1,4 +1,9 @@
 # Update record
+## v 1.0.14 - 2019-01-16
+- [#38](https://github.com/zq99299/gitbook-plugin-anchor-navigation-ex/pull/38) Merge this pr to add the following functions
+- fix bug : When the h1, h2, and h3 in md are in an abnormal order, the toc is missing. After the repair, the toc display will not be missed. It can be seen that the title is abnormal. V1.0.14+
+- fix bug : In the previous fix bug, the serial number display in the case of showLevel was not taken into account.
+
 ## v 1.0.12 - 2018-09-17
 - [#36](https://github.com/zq99299/gitbook-plugin-anchor-navigation-ex/pull/36) Merge this pr to add the following functions
 - config.float.floatIcon ，You can configure the float navigation float icon style  V1.0.12+

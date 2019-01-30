@@ -1,4 +1,9 @@
 # Update record
+## v 1.0.13 - 2019-01-16
+- [#38](https://github.com/zq99299/gitbook-plugin-anchor-navigation-ex/pull/38) 合并该 pr，增加以下功能
+- fix bug : 当 md 中 h1,h2,h3 非正常顺序的时候导致 toc 缺失，修复后 toc 展示不会漏掉，可以看出来该标题是不正常的 V1.0.14+
+- fix bug : 在上一条 fix bug 中，没有考虑到 showLevel 情况下的序号显示
+
 ## v 1.0.12 - 2018-09-17
 - [#36](https://github.com/zq99299/gitbook-plugin-anchor-navigation-ex/pull/36) 合并该 pr，增加以下功能
 - config.float.floatIcon 可以配置浮动导航的悬浮图标样式  V1.0.12+

@@ -1,0 +1,11 @@
+{% extends template.self %}
+
+{% block head %}
+    {% if config.pluginsConfig.meta.name and config.pluginsConfig.meta.content %}
+    <meta name="{{ config.pluginsConfig.meta.name }}" content="{{ config.pluginsConfig.meta.content }}">
+    {% endif %}
+    {% for datum in config.pluginsConfig.meta.data %}
+    <meta {% for key, value in datum %} {{ key }}="{{ value }}" {% endfor %}>
+    {% endfor %}
+    {{ super() }}
+{% endblock %}
