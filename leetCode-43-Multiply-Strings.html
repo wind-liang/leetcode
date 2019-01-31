@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>38. Count and Say · leetCode</title>
+        <title>43. Multiply Strings · leetCode</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -79,10 +79,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="leetCode-39-Combination-Sum.html" />
     
-    
-    <link rel="prev" href="leetCode-37-Sudoku-Solver.html" />
+    <link rel="prev" href="leetCode-42-Trapping-Rain-Water.html" />
     
 
 
@@ -626,7 +624,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.39" data-path="leetCode-38-Count-and-Say.html">
+        <li class="chapter " data-level="1.39" data-path="leetCode-38-Count-and-Say.html">
             
                 <a href="leetCode-38-Count-and-Say.html">
             
@@ -691,7 +689,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.44" data-path="leetCode-43-Multiply-Strings.html">
+        <li class="chapter active" data-level="1.44" data-path="leetCode-43-Multiply-Strings.html">
             
                 <a href="leetCode-43-Multiply-Strings.html">
             
@@ -734,7 +732,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >38. Count and Say</a>
+        <a href="." >43. Multiply Strings</a>
     </h1>
 </div>
 
@@ -749,97 +747,109 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;"><b> </b>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x89E3;&#x6CD5;&#x4E00;-&#x9012;&#x5F52;"><b> </b>&#x89E3;&#x6CD5;&#x4E00; &#x9012;&#x5F52;</a></li><li><span class="title-icon "></span><a href="#&#x89E3;&#x6CD5;&#x4E8C;-&#x8FED;&#x4EE3;"><b> </b>&#x89E3;&#x6CD5;&#x4E8C; &#x8FED;&#x4EE3;</a></li><li><span class="title-icon "></span><a href="#&#x603B;"><b> </b>&#x603B;</a></li></ul></div><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;"><a name="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;</h1>
-<p><img src="https://windliang.oss-cn-beijing.aliyuncs.com/38.jpg" alt=""></p>
-<p>&#x96BE;&#x5728;&#x4E86;&#x9898;&#x76EE;&#x662F;&#x4EC0;&#x4E48;&#x610F;&#x601D;&#x5462;&#xFF1F;</p>
-<p>&#x521D;&#x59CB;&#x503C;&#x7B2C;&#x4E00;&#x884C;&#x662F; 1&#x3002;</p>
-<p>&#x7B2C;&#x4E8C;&#x884C;&#x8BFB;&#x7B2C;&#x4E00;&#x884C;&#xFF0C;1 &#x4E2A; 1&#xFF0C;&#x53BB;&#x6389;&#x4E2A;&#x5B57;&#xFF0C;&#x6240;&#x4EE5;&#x7B2C;&#x4E8C;&#x884C;&#x5C31;&#x662F; 11&#x3002;</p>
-<p>&#x7B2C;&#x4E09;&#x884C;&#x8BFB;&#x7B2C;&#x4E8C;&#x884C;&#xFF0C;2 &#x4E2A; 1&#xFF0C;&#x53BB;&#x6389;&#x4E2A;&#x5B57;&#xFF0C;&#x6240;&#x4EE5;&#x7B2C;&#x4E09;&#x884C;&#x5C31;&#x662F; 21&#x3002;</p>
-<p>&#x7B2C;&#x56DB;&#x884C;&#x8BFB;&#x7B2C;&#x4E09;&#x884C;&#xFF0C;1 &#x4E2A; 2&#xFF0C;1 &#x4E2A; 1&#xFF0C;&#x53BB;&#x6389;&#x6240;&#x6709;&#x4E2A;&#x5B57;&#xFF0C;&#x6240;&#x4EE5;&#x7B2C;&#x56DB;&#x884C;&#x5C31;&#x662F; 1211&#x3002;</p>
-<p>&#x7B2C;&#x4E94;&#x884C;&#x8BFB;&#x7B2C;&#x56DB;&#x884C;&#xFF0C;1 &#x4E2A; 1&#xFF0C;1 &#x4E2A; 2&#xFF0C;2 &#x4E2A; 1&#xFF0C;&#x53BB;&#x6389;&#x6240;&#x6709;&#x4E2A;&#x5B57;&#xFF0C;&#x6240;&#x4EE5;&#x7B2C;&#x4E94;&#x822A;&#x5C31;&#x662F; 111221&#x3002;</p>
-<p>&#x7B2C;&#x516D;&#x884C;&#x8BFB;&#x7B2C;&#x4E94;&#x884C;&#xFF0C;3 &#x4E2A; 1&#xFF0C;2 &#x4E2A; 2&#xFF0C;1 &#x4E2A; 1&#xFF0C;&#x53BB;&#x6389;&#x6240;&#x4EE5;&#x4E2A;&#x5B57;&#xFF0C;&#x6240;&#x4EE5;&#x7B2C;&#x516D;&#x884C;&#x5C31;&#x662F; 312211&#x3002;</p>
-<p>&#x7136;&#x540E;&#x9898;&#x76EE;&#x8981;&#x6C42;&#x8F93;&#x5165; 1 - 30 &#x7684;&#x4EFB;&#x610F;&#x884C;&#x6570;&#xFF0C;&#x8F93;&#x51FA;&#x8BE5;&#x884C;&#x662F;&#x5565;&#x3002;</p>
-<h1 id="&#x89E3;&#x6CD5;&#x4E00;-&#x9012;&#x5F52;"><a name="&#x89E3;&#x6CD5;&#x4E00;-&#x9012;&#x5F52;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x6CD5;&#x4E00;-&#x9012;&#x5F52;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x89E3;&#x6CD5;&#x4E00; &#x9012;&#x5F52;</h1>
-<p>&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#x6765;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x8981;&#x77E5;&#x9053;&#x4E86; n - 1 &#x884C;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5199;&#x51FA;&#x7B2C; n &#x884C;&#x4E86;&#xFF0C;&#x9996;&#x5148;&#x60F3;&#x5230;&#x7684;&#x5C31;&#x662F;&#x9012;&#x5F52;&#x3002;</p>
-<p>&#x7B2C;&#x4E94;&#x884C;&#x662F; 111221&#xFF0C;&#x6C42;&#x7B2C;&#x516D;&#x884C;&#x7684;&#x8BDD;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x77E5;&#x9053;&#x6BCF;&#x4E2A;&#x5B57;&#x7B26;&#x91CD;&#x590D;&#x7684;&#x6B21;&#x6570;&#x52A0;&#x4E0A;&#x5F53;&#x524D;&#x5B57;&#x7B26;&#x5C31;&#x884C;&#x5566;&#x3002;    </p>
-<p>1 &#x91CD;&#x590D; 3 &#x6B21;&#xFF0C;&#x5C31;&#x662F; 31&#xFF0C;2 &#x91CD;&#x590D; 2 &#x6B21;&#x5C31;&#x662F; 22&#xFF0C;1 &#x91CD;&#x590D; 1 &#x6B21; &#x5C31;&#x662F; 11&#xFF0C;&#x6240;&#x4EE5;&#x6700;&#x7EC8;&#x7ED3;&#x679C;&#x5C31;&#x662F; 312211&#x3002;</p>
-<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">countAndSay</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>{
-    <span class="hljs-comment">//&#x7B2C;&#x4E00;&#x884C;&#x5C31;&#x76F4;&#x63A5;&#x8F93;&#x51FA;</span>
-    <span class="hljs-keyword">if</span> (n == <span class="hljs-number">1</span>) {
-        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;1&quot;</span>;
-    }
-    <span class="hljs-comment">//&#x5F97;&#x5230;&#x4E0A;&#x4E00;&#x884C;&#x7684;&#x5B57;&#x7B26;&#x4E32;</span>
-    String last = countAndSay(n - <span class="hljs-number">1</span>);
-    <span class="hljs-comment">//&#x8F93;&#x51FA;&#x5F53;&#x524D;&#x884C;&#x7684;&#x5B57;&#x7B26;&#x4E32;</span>
-    <span class="hljs-keyword">return</span> getNextString(last);
-
-}
-
-<span class="hljs-function"><span class="hljs-keyword">private</span> String <span class="hljs-title">getNextString</span><span class="hljs-params">(String last)</span> </span>{
-    <span class="hljs-comment">//&#x957F;&#x5EA6;&#x4E3A; 0 &#x5C31;&#x8FD4;&#x56DE;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;</span>
-    <span class="hljs-keyword">if</span> (last.length() == <span class="hljs-number">0</span>) {
-        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&quot;</span>;
-    }
-    <span class="hljs-comment">//&#x5F97;&#x5230;&#x7B2C; 1 &#x4E2A;&#x5B57;&#x7B26;&#x91CD;&#x590D;&#x7684;&#x6B21;&#x6570;</span>
-    <span class="hljs-keyword">int</span> num = getRepeatNum(last);
-    <span class="hljs-comment">// &#x6B21;&#x6570; + &#x5F53;&#x524D;&#x5B57;&#x7B26; + &#x5176;&#x4F59;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x60C5;&#x51B5;</span>
-    <span class="hljs-keyword">return</span> num + <span class="hljs-string">&quot;&quot;</span> + last.charAt(<span class="hljs-number">0</span>) + getNextString(last.substring(num));
-}
-
-<span class="hljs-comment">//&#x5F97;&#x5230;&#x5B57;&#x7B26; string[0] &#x7684;&#x91CD;&#x590D;&#x4E2A;&#x6570;&#xFF0C;&#x4F8B;&#x5982; &quot;111221&quot; &#x8FD4;&#x56DE; 3</span>
-<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getRepeatNum</span><span class="hljs-params">(String string)</span> </span>{
-    <span class="hljs-keyword">int</span> count = <span class="hljs-number">1</span>;
-    <span class="hljs-keyword">char</span> same = string.charAt(<span class="hljs-number">0</span>);
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; string.length(); i++) {
-        <span class="hljs-keyword">if</span> (same == string.charAt(i)) {
-            count++;
-        } <span class="hljs-keyword">else</span> {
-            <span class="hljs-keyword">break</span>;
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><b> </b>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x89E3;&#x6CD5;&#x4E00;"><b> </b>&#x89E3;&#x6CD5;&#x4E00;</a></li><li><span class="title-icon "></span><a href="#&#x89E3;&#x6CD5;&#x4E8C;"><b> </b>&#x89E3;&#x6CD5;&#x4E8C;</a></li><li><span class="title-icon "></span><a href="#&#x603B;"><b> </b>&#x603B;</a></li></ul></div><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><a name="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;</h1>
+<p><img src="https://windliang.oss-cn-beijing.aliyuncs.com/43.jpg" alt=""></p>
+<p>&#x5C31;&#x662F;&#x4E24;&#x4E2A;&#x6570;&#x76F8;&#x4E58;&#xFF0C;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#x6570;&#x5B57;&#x5F88;&#x5927;&#x5F88;&#x5927;&#xFF0C;&#x90FD;&#x662F;&#x7528; String &#x5B58;&#x50A8;&#x7684;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x4F20;&#x8BF4;&#x4E2D;&#x7684;&#x5927;&#x6570;&#x76F8;&#x4E58;&#x3002;</p>
+<h1 id="&#x89E3;&#x6CD5;&#x4E00;"><a name="&#x89E3;&#x6CD5;&#x4E00;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x6CD5;&#x4E00;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x89E3;&#x6CD5;&#x4E00;</h1>
+<p>&#x6211;&#x4EEC;&#x5C31;&#x6A21;&#x4EFF;&#x6211;&#x4EEC;&#x5728;&#x7EB8;&#x4E0A;&#x505A;&#x4E58;&#x6CD5;&#x7684;&#x8FC7;&#x7A0B;&#x5199;&#x51FA;&#x4E00;&#x4E2A;&#x7B97;&#x6CD5;&#x3002;</p>
+<p><img src="https://windliang.oss-cn-beijing.aliyuncs.com/43_2.jpg" alt=""></p>
+<p>&#x4E2A;&#x4F4D;&#x4E58;&#x4E2A;&#x4F4D;&#xFF0C;&#x5F97;&#x51FA;&#x4E00;&#x4E2A;&#x6570;&#xFF0C;&#x7136;&#x540E;&#x4E2A;&#x4F4D;&#x4E58;&#x5341;&#x4F4D;&#xFF0C;&#x5168;&#x90E8;&#x4E58;&#x5B8C;&#x4EE5;&#x540E;&#xFF0C;&#x5C31;&#x518D;&#x7528;&#x5341;&#x4F4D;&#x4E58;&#x4EE5;&#x5404;&#x4E2A;&#x4F4D;&#x3002;&#x7136;&#x540E;&#x767E;&#x4F4D;&#x4E58;&#x4EE5;&#x5404;&#x4E2A;&#x4F4D;&#xFF0C;&#x6700;&#x540E;&#x5C06;&#x6BCF;&#x6B21;&#x5F97;&#x51FA;&#x7684;&#x6570;&#x76F8;&#x52A0;&#x3002;&#x5341;&#x4F4D;&#x7684;&#x7ED3;&#x679C;&#x8981;&#x8865; 1 &#x4E2A; 0 &#xFF0C;&#x767E;&#x4F4D;&#x7684;&#x7ED3;&#x679C;&#x8981;&#x8865;&#x4E24;&#x4E2A; 0 &#x3002;&#x76F8;&#x52A0;&#x7684;&#x8BDD;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7528;&#x4E4B;&#x524D;&#x7684;<a href="https://leetcode.windliang.cc/leetCode-2-Add-Two-Numbers.html" target="_blank">&#x5927;&#x6570;&#x76F8;&#x52A0;</a>&#x3002;&#x76F4;&#x63A5;&#x770B;&#x4EE3;&#x7801;&#x5427;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">multiply</span><span class="hljs-params">(String num1, String num2)</span> </span>{
+    <span class="hljs-keyword">if</span> (num1.equals(<span class="hljs-string">&quot;0&quot;</span>) || num2.equals(<span class="hljs-string">&quot;0&quot;</span>)) {
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;0&quot;</span>;
+    }  
+    String ans = <span class="hljs-string">&quot;0&quot;</span>;
+    <span class="hljs-keyword">int</span> index = <span class="hljs-number">0</span>; <span class="hljs-comment">//&#x8BB0;&#x5F55;&#x5F53;&#x524D;&#x662F;&#x54EA;&#x4E00;&#x4F4D;&#xFF0C;&#x4FBF;&#x4E8E;&#x540E;&#x8FB9;&#x8865; 0 </span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = num2.length() - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) {
+        <span class="hljs-keyword">int</span> carry = <span class="hljs-number">0</span>; <span class="hljs-comment">//&#x4FDD;&#x5B58;&#x8FDB;&#x4F4D;</span>
+        String ans_part = <span class="hljs-string">&quot;&quot;</span>; <span class="hljs-comment">//&#x76F4;&#x63A5;&#x7528;&#x5B57;&#x7B26;&#x4E32;&#x4FDD;&#x5B58;&#x6BCF;&#x4F4D;&#x4E58;&#x51FA;&#x6765;&#x7684;&#x6570;</span>
+        <span class="hljs-keyword">int</span> m = num2.charAt(i) - <span class="hljs-string">&apos;0&apos;</span>;
+        <span class="hljs-comment">//&#x4E58;&#x4E0A;&#x6BCF;&#x4E00;&#x4F4D;</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = num1.length() - <span class="hljs-number">1</span>; j &gt;= <span class="hljs-number">0</span>; j--) {
+            <span class="hljs-keyword">int</span> n = num1.charAt(j) - <span class="hljs-string">&apos;0&apos;</span>;
+            <span class="hljs-keyword">int</span> mul = m * n + carry; 
+            ans_part = mul % <span class="hljs-number">10</span> + <span class="hljs-string">&quot;&quot;</span> + ans_part;
+            carry = mul / <span class="hljs-number">10</span>;
         }
+        <span class="hljs-keyword">if</span> (carry &gt; <span class="hljs-number">0</span>) {
+            ans_part = carry + <span class="hljs-string">&quot;&quot;</span> + ans_part;
+        }
+        <span class="hljs-comment">//&#x8865; 0 </span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> k = <span class="hljs-number">0</span>; k &lt; index; k++) {
+            ans_part = ans_part + <span class="hljs-string">&quot;0&quot;</span>;
+        }
+        index++;
+        <span class="hljs-comment">//&#x548C;&#x4E4B;&#x524D;&#x7684;&#x7ED3;&#x679C;&#x76F8;&#x52A0;</span>
+        ans = sumString(ans, ans_part);
     }
-    <span class="hljs-keyword">return</span> count;
+    <span class="hljs-keyword">return</span> ans;
+}
+<span class="hljs-comment">//&#x5927;&#x6570;&#x76F8;&#x52A0;</span>
+<span class="hljs-function"><span class="hljs-keyword">private</span> String <span class="hljs-title">sumString</span><span class="hljs-params">(String num1, String num2)</span> </span>{
+    <span class="hljs-keyword">int</span> carry = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">int</span> num1_index = num1.length() - <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">int</span> num2_index = num2.length() - <span class="hljs-number">1</span>;
+    String ans = <span class="hljs-string">&quot;&quot;</span>;
+    <span class="hljs-keyword">while</span> (num1_index &gt;= <span class="hljs-number">0</span> || num2_index &gt;= <span class="hljs-number">0</span>) {
+        <span class="hljs-keyword">int</span> n1 = num1_index &gt;= <span class="hljs-number">0</span> ? num1.charAt(num1_index) - <span class="hljs-string">&apos;0&apos;</span> : <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">int</span> n2 = num2_index &gt;= <span class="hljs-number">0</span> ? num2.charAt(num2_index) - <span class="hljs-string">&apos;0&apos;</span> : <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">int</span> sum = n1 + n2 + carry;
+        carry = sum / <span class="hljs-number">10</span>;
+        ans = sum % <span class="hljs-number">10</span> + <span class="hljs-string">&quot;&quot;</span> + ans;
+        num1_index--;
+        num2_index--;
+    }
+    <span class="hljs-keyword">if</span> (carry &gt; <span class="hljs-number">0</span>) {
+        ans = carry + <span class="hljs-string">&quot;&quot;</span> + ans;
+    }
+    <span class="hljs-keyword">return</span> ans;
 }
 </code></pre>
-<p>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</p>
+<p>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O&#xFF08;m * n&#xFF09;&#x3002;m&#xFF0C;n &#x662F;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x957F;&#x5EA6;&#x3002;</p>
 <p>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O&#xFF08;1&#xFF09;&#x3002;</p>
-<h1 id="&#x89E3;&#x6CD5;&#x4E8C;-&#x8FED;&#x4EE3;"><a name="&#x89E3;&#x6CD5;&#x4E8C;-&#x8FED;&#x4EE3;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x6CD5;&#x4E8C;-&#x8FED;&#x4EE3;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x89E3;&#x6CD5;&#x4E8C; &#x8FED;&#x4EE3;</h1>
-<p>&#x65E2;&#x7136;&#x6709;&#x9012;&#x5F52;&#xFF0C;&#x90A3;&#x5C31;&#x4E00;&#x5B9A;&#x53EF;&#x4EE5;&#x5199;&#x51FA;&#x5B83;&#x7684;&#x8FED;&#x4EE3;&#x5F62;&#x5F0F;&#x3002;</p>
-<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">countAndSay</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>{
-    String res = <span class="hljs-string">&quot;1&quot;</span>;
-    <span class="hljs-comment">//&#x4ECE;&#x7B2C;&#x4E00;&#x884C;&#x5F00;&#x59CB;&#xFF0C;&#x4E00;&#x884C;&#x4E00;&#x884C;&#x4EA7;&#x751F;</span>
-    <span class="hljs-keyword">while</span> (n &gt; <span class="hljs-number">1</span>) {
-        String temp = <span class="hljs-string">&quot;&quot;</span>;
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; res.length(); i++) {
-            <span class="hljs-keyword">int</span> num = getRepeatNum(res.substring(i));
-            temp = temp + num + <span class="hljs-string">&quot;&quot;</span> + res.charAt(i);
-            <span class="hljs-comment">//&#x8DF3;&#x8FC7;&#x91CD;&#x590D;&#x7684;&#x5B57;&#x7B26;</span>
-            i = i + num - <span class="hljs-number">1</span>;
-        }
-        n--;
-        <span class="hljs-comment">//&#x66F4;&#x65B0;</span>
-        res = temp;
+<h1 id="&#x89E3;&#x6CD5;&#x4E8C;"><a name="&#x89E3;&#x6CD5;&#x4E8C;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x6CD5;&#x4E8C;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x89E3;&#x6CD5;&#x4E8C;</h1>
+<p>&#x53C2;&#x8003;<a href="https://leetcode.com/problems/multiply-strings/discuss/17605/Easiest-JAVA-Solution-with-Graph-Explanation" target="_blank">&#x8FD9;&#x91CC;</a>&#x3002;</p>
+<p>&#x4E0A;&#x8FB9;&#x7684;&#x89E3;&#x6CD5;&#x975E;&#x5E38;&#x7B80;&#x5355;&#x7C97;&#x66B4;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x591F;&#x4F18;&#x96C5;&#x3002;&#x6211;&#x4EEC;&#x770B;&#x4E00;&#x4E0B;&#x4ECE;&#x672A;&#x89C1;&#x8FC7;&#x7684;&#x4E00;&#x79CD;&#x7AD6;&#x5F0F;&#x8BA1;&#x7B97;&#x3002;</p>
+<p><img src="https://windliang.oss-cn-beijing.aliyuncs.com/43_3.jpg" alt=""></p>
+<p>&#x6211;&#x4EEC;&#x628A;&#x8FDB;&#x4F4D;&#x5148;&#x4E0D;&#x7B97;&#xFF0C;&#x5199;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x4F4D;&#x7F6E;&#x3002;&#x6700;&#x540E;&#x518D;&#x7EDF;&#x4E00;&#x66F4;&#x65B0; pos &#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4F4D;&#x3002;</p>
+<p>&#x800C;&#x5BF9;&#x4E8E;&#x8FD0;&#x7B97;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x7ED3;&#x679C;&#xFF0C;&#x53EF;&#x4EE5;&#x89C2;&#x5BDF;&#x51FA;&#x4E00;&#x4E2A;&#x7ED3;&#x8BBA;&#x3002;</p>
+<p>num1 &#x7684;&#x7B2C; i &#x4F4D;&#x4E58;&#x4E0A; num2 &#x7684;&#x7B2C; j &#x4F4D;&#xFF0C;&#x7ED3;&#x679C;&#x4F1A;&#x5206;&#x522B;&#x5BF9;&#x5E94; pos &#x7684;&#x7B2C; i + j &#x4F4D;&#x548C;&#x7B2C; i + j + 1 &#x4F4D;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#x56FE;&#x4E2D;&#x7684;&#x7EA2;&#x8272;&#x90E8;&#x5206;&#xFF0C;num1 &#x7684;&#x7B2C; 1 &#x4F4D;&#x4E58;&#x4E0A; num2 &#x7684;&#x7B2C; 0 &#x4F4D;&#xFF0C;&#x7ED3;&#x679C;&#x5C31;&#x5BF9;&#x5E94; pos &#x7684;&#x7B2C; 1 + 0 = 1 &#x548C; 1 + 0 + 1 = 2 &#x4F4D;&#x3002;</p>
+<p>&#x6709;&#x4E86;&#x8FD9;&#x4E00;&#x70B9;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x904D;&#x5386;&#x6C42;&#x51FA;&#x6BCF;&#x4E00;&#x4E2A;&#x7ED3;&#x679C;&#xFF0C;&#x7136;&#x540E;&#x66F4;&#x65B0; pos &#x4E0A;&#x7684;&#x503C;&#x5C31;&#x591F;&#x4E86;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">multiply</span><span class="hljs-params">(String num1, String num2)</span> </span>{
+    <span class="hljs-keyword">if</span> (num1.equals(<span class="hljs-string">&quot;0&quot;</span>) || num2.equals(<span class="hljs-string">&quot;0&quot;</span>)) {
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;0&quot;</span>;
     }
-    <span class="hljs-keyword">return</span> res;
-
-}
-<span class="hljs-comment">//&#x5F97;&#x5230;&#x5B57;&#x7B26; string[0] &#x7684;&#x91CD;&#x590D;&#x4E2A;&#x6570;&#xFF0C;&#x4F8B;&#x5982; &quot;111221&quot; &#x8FD4;&#x56DE; 3</span>
-<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getRepeatNum</span><span class="hljs-params">(String string)</span> </span>{
-    <span class="hljs-keyword">int</span> count = <span class="hljs-number">1</span>;
-    <span class="hljs-keyword">char</span> same = string.charAt(<span class="hljs-number">0</span>);
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; string.length(); i++) {
-        <span class="hljs-keyword">if</span> (same == string.charAt(i)) {
-            count++;
-        } <span class="hljs-keyword">else</span> {
-            <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">int</span> n1 = num1.length();
+    <span class="hljs-keyword">int</span> n2 = num2.length();
+    <span class="hljs-keyword">int</span>[] pos = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n1 + n2]; <span class="hljs-comment">//&#x4FDD;&#x5B58;&#x6700;&#x540E;&#x7684;&#x7ED3;&#x679C;</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = n1 - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) {
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = n2 - <span class="hljs-number">1</span>; j &gt;= <span class="hljs-number">0</span>; j--) {
+            <span class="hljs-comment">//&#x76F8;&#x4E58;&#x7684;&#x7ED3;&#x679C;</span>
+            <span class="hljs-keyword">int</span> mul = (num1.charAt(i) - <span class="hljs-string">&apos;0&apos;</span>) * (num2.charAt(j) - <span class="hljs-string">&apos;0&apos;</span>);
+            <span class="hljs-comment">//&#x52A0;&#x4E0A; pos[i+j+1] &#x4E4B;&#x524D;&#x5DF2;&#x7ECF;&#x7D2F;&#x52A0;&#x7684;&#x7ED3;&#x679C;</span>
+            <span class="hljs-keyword">int</span> sum = mul + pos[i + j + <span class="hljs-number">1</span>];
+            <span class="hljs-comment">//&#x66F4;&#x65B0; pos[i + j]</span>
+            pos[i + j] += sum / <span class="hljs-number">10</span>;
+            <span class="hljs-comment">//&#x66F4;&#x65B0; pos[i + j + 1]</span>
+            pos[i + j + <span class="hljs-number">1</span>] = sum % <span class="hljs-number">10</span>;
         }
     }
-    <span class="hljs-keyword">return</span> count;
+    StringBuilder sb = <span class="hljs-keyword">new</span> StringBuilder();
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; pos.length; i++) {
+        <span class="hljs-comment">//&#x5224;&#x65AD;&#x6700;&#x9AD8;&#x4F4D;&#x662F;&#x4E0D;&#x662F; 0 </span>
+        <span class="hljs-keyword">if</span> (i == <span class="hljs-number">0</span> &amp;&amp; pos[i] == <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">continue</span>;
+        }
+        sb.append(pos[i]);
+    }
+    <span class="hljs-keyword">return</span> sb.toString();
 }
 </code></pre>
-<p>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</p>
-<p>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O&#xFF08;1&#xFF09;&#x3002;</p>
+<p>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O&#xFF08;m * n&#xFF09;&#x3002;m&#xFF0C;n &#x662F;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x957F;&#x5EA6;&#x3002;</p>
+<p>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O&#xFF08;m + n&#xFF09;&#x3002;m&#xFF0C;n &#x662F;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x957F;&#x5EA6;&#x3002;</p>
 <h1 id="&#x603B;"><a name="&#x603B;" class="anchor-navigation-ex-anchor" href="#&#x603B;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x603B;</h1>
-<p>&#x9012;&#x5F52;&#x91CC;&#x8FB9;&#x53C8;&#x7528;&#x4E86;&#x4E00;&#x4E2A;&#x9012;&#x5F52;&#xFF0C;&#x6211;&#x89C9;&#x5F97;&#x8FD9;&#x70B9;&#x6709;&#x70B9;&#x610F;&#x601D;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x6309;&#x666E;&#x901A;&#x7684;&#x601D;&#x8DEF;&#x5199;&#xFF0C;&#x8FD9;&#x9053;&#x9898;&#x4E5F;&#x4E0D;&#x96BE;&#x3002;&#x65B0;&#x7684;&#x7AD6;&#x5F0F;&#x7684;&#x8BA1;&#x7B97;&#xFF0C;&#x8BA9;&#x4EBA;&#x773C;&#x524D;&#x4E00;&#x4EAE;&#xFF0C;&#x4EE3;&#x7801;&#x4F18;&#x96C5;&#x4E86;&#x5F88;&#x591A;&#x3002;</p>
 
                                 
                                 </section>
@@ -867,14 +877,10 @@
 
             
                 
-                <a href="leetCode-37-Sudoku-Solver.html" class="navigation navigation-prev " aria-label="Previous page: 37. Sudoku Solver">
+                <a href="leetCode-42-Trapping-Rain-Water.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 42. Trapping Rain Water">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="leetCode-39-Combination-Sum.html" class="navigation navigation-next " aria-label="Next page: 39. Combination Sum">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -883,7 +889,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"38. Count and Say","level":"1.39","depth":1,"next":{"title":"39. Combination Sum","level":"1.40","depth":1,"path":"leetCode-39-Combination-Sum.md","ref":"leetCode-39-Combination-Sum.md","articles":[]},"previous":{"title":"37. Sudoku Solver","level":"1.38","depth":1,"path":"leetCode-37-Sudoku-Solver.md","ref":"leetCode-37-Sudoku-Solver.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr","-search","search-plus","ad","-livereload","meta"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ad":{"contentBottom":"%u003c%u0064%u0069%u0076%u0020%u0069%u0064%u003d%u0022%u0077%u0065%u0063%u0068%u0061%u0074%u005f%u0073%u0075%u0062%u0073%u0063%u0072%u0069%u0062%u0065%u0072%u0022%u0020%u0073%u0074%u0079%u006c%u0065%u003d%u0022%u0064%u0069%u0073%u0070%u006c%u0061%u0079%u003a%u0020%u0062%u006c%u006f%u0063%u006b%u003b%u0020%u0070%u0061%u0064%u0064%u0069%u006e%u0067%u003a%u0020%u0031%u0030%u0070%u0078%u0020%u0030%u003b%u0020%u006d%u0061%u0072%u0067%u0069%u006e%u003a%u0020%u0032%u0030%u0070%u0078%u0020%u0061%u0075%u0074%u006f%u003b%u0020%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0031%u0030%u0030%u0025%u003b%u0020%u0074%u0065%u0078%u0074%u002d%u0061%u006c%u0069%u0067%u006e%u003a%u0020%u0063%u0065%u006e%u0074%u0065%u0072%u0022%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0069%u006d%u0067%u0020%u0069%u0064%u003d%u0022%u0077%u0065%u0063%u0068%u0061%u0074%u005f%u0073%u0075%u0062%u0073%u0063%u0072%u0069%u0062%u0065%u0072%u005f%u0071%u0063%u006f%u0064%u0065%u0022%u0020%u0073%u0072%u0063%u003d%u0022%u0068%u0074%u0074%u0070%u0073%u003a%u002f%u002f%u0077%u0069%u006e%u0064%u006c%u0069%u0061%u006e%u0067%u002e%u006f%u0073%u0073%u002d%u0063%u006e%u002d%u0062%u0065%u0069%u006a%u0069%u006e%u0067%u002e%u0061%u006c%u0069%u0079%u0075%u006e%u0063%u0073%u002e%u0063%u006f%u006d%u002f%u0077%u0065%u0063%u0068%u0061%u0074%u002e%u006a%u0070%u0067%u0022%u0020%u0061%u006c%u0074%u003d%u0022%u0077%u0069%u006e%u0064%u006c%u0069%u0061%u006e%u0067%u0020%u0077%u0065%u0063%u0068%u0061%u0074%u0022%u0020%u0073%u0074%u0079%u006c%u0065%u003d%u0022%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0032%u0030%u0030%u0070%u0078%u003b%u0020%u006d%u0061%u0078%u002d%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0031%u0030%u0030%u0025%u003b%u0022%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0062%u0072%u003e%u0020%u0020%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0064%u0069%u0076%u003e%u6dfb%u52a0%u597d%u53cb%u4e00%u8d77%u8fdb%u6b65%u007e%u003c%u002f%u0064%u0069%u0076%u003e%u0020%u003c%u0062%u0072%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0064%u0069%u0076%u003e%u5982%u679c%u89c9%u5f97%u6709%u5e2e%u52a9%u7684%u8bdd%uff0c%u5230%u9875%u9762%u6700%u4e0a%u8fb9%u8bb0%u5f97%u7ed9%u4e00%u4e2a%u0020%u0073%u0074%u0061%u0072%u0020%u54e6%u0020%u005e%u0020%u005e%u003c%u002f%u0064%u0069%u0076%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u002f%u0064%u0069%u0076%u003e"},"meta":{"content":"lzwmbdfIJy","data":[],"name":"baidu-site-verification"},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"github-buttons":{"buttons":[{"user":"wind-liang","repo":"leetcode","type":"star","size":"small","count":true}]},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"windliang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetCode","language":"zh-hans","links":{"sidebar":{"Home":"http://windliang.cc"},"gitbook":true},"gitbook":"3.2.3","description":"leetCode"},"file":{"path":"leetCode-38-Count-and-Say.md","mtime":"2019-01-30T06:27:20.887Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-31T08:56:35.842Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"43. Multiply Strings","level":"1.44","depth":1,"previous":{"title":"42. Trapping Rain Water","level":"1.43","depth":1,"path":"leetCode-42-Trapping-Rain-Water.md","ref":"leetCode-42-Trapping-Rain-Water.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr","-search","search-plus","ad","-livereload","meta"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ad":{"contentBottom":"%u003c%u0064%u0069%u0076%u0020%u0069%u0064%u003d%u0022%u0077%u0065%u0063%u0068%u0061%u0074%u005f%u0073%u0075%u0062%u0073%u0063%u0072%u0069%u0062%u0065%u0072%u0022%u0020%u0073%u0074%u0079%u006c%u0065%u003d%u0022%u0064%u0069%u0073%u0070%u006c%u0061%u0079%u003a%u0020%u0062%u006c%u006f%u0063%u006b%u003b%u0020%u0070%u0061%u0064%u0064%u0069%u006e%u0067%u003a%u0020%u0031%u0030%u0070%u0078%u0020%u0030%u003b%u0020%u006d%u0061%u0072%u0067%u0069%u006e%u003a%u0020%u0032%u0030%u0070%u0078%u0020%u0061%u0075%u0074%u006f%u003b%u0020%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0031%u0030%u0030%u0025%u003b%u0020%u0074%u0065%u0078%u0074%u002d%u0061%u006c%u0069%u0067%u006e%u003a%u0020%u0063%u0065%u006e%u0074%u0065%u0072%u0022%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0069%u006d%u0067%u0020%u0069%u0064%u003d%u0022%u0077%u0065%u0063%u0068%u0061%u0074%u005f%u0073%u0075%u0062%u0073%u0063%u0072%u0069%u0062%u0065%u0072%u005f%u0071%u0063%u006f%u0064%u0065%u0022%u0020%u0073%u0072%u0063%u003d%u0022%u0068%u0074%u0074%u0070%u0073%u003a%u002f%u002f%u0077%u0069%u006e%u0064%u006c%u0069%u0061%u006e%u0067%u002e%u006f%u0073%u0073%u002d%u0063%u006e%u002d%u0062%u0065%u0069%u006a%u0069%u006e%u0067%u002e%u0061%u006c%u0069%u0079%u0075%u006e%u0063%u0073%u002e%u0063%u006f%u006d%u002f%u0077%u0065%u0063%u0068%u0061%u0074%u002e%u006a%u0070%u0067%u0022%u0020%u0061%u006c%u0074%u003d%u0022%u0077%u0069%u006e%u0064%u006c%u0069%u0061%u006e%u0067%u0020%u0077%u0065%u0063%u0068%u0061%u0074%u0022%u0020%u0073%u0074%u0079%u006c%u0065%u003d%u0022%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0032%u0030%u0030%u0070%u0078%u003b%u0020%u006d%u0061%u0078%u002d%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0031%u0030%u0030%u0025%u003b%u0022%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0062%u0072%u003e%u0020%u0020%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0064%u0069%u0076%u003e%u6dfb%u52a0%u597d%u53cb%u4e00%u8d77%u8fdb%u6b65%u007e%u003c%u002f%u0064%u0069%u0076%u003e%u0020%u003c%u0062%u0072%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0064%u0069%u0076%u003e%u5982%u679c%u89c9%u5f97%u6709%u5e2e%u52a9%u7684%u8bdd%uff0c%u5230%u9875%u9762%u6700%u4e0a%u8fb9%u8bb0%u5f97%u7ed9%u4e00%u4e2a%u0020%u0073%u0074%u0061%u0072%u0020%u54e6%u0020%u005e%u0020%u005e%u003c%u002f%u0064%u0069%u0076%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u002f%u0064%u0069%u0076%u003e"},"meta":{"content":"lzwmbdfIJy","data":[],"name":"baidu-site-verification"},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"github-buttons":{"buttons":[{"user":"wind-liang","repo":"leetcode","type":"star","size":"small","count":true}]},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"windliang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetCode","language":"zh-hans","links":{"sidebar":{"Home":"http://windliang.cc"},"gitbook":true},"gitbook":"3.2.3","description":"leetCode"},"file":{"path":"leetCode-43-Multiply-Strings.md","mtime":"2019-01-31T08:56:29.031Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-31T08:56:35.842Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
