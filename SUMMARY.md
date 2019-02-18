@@ -45,3 +45,4 @@
 * [42. Trapping Rain Water](leetCode-42-Trapping-Rain-Water.md)
 * [43. Multiply Strings](leetCode-43-Multiply-Strings.md)
 * [44. Wildcard Matching](leetCode-44-Wildcard-Matching.md)
+* [45. Jump Game II](leetCode-45-Jump-Game-II.md)
