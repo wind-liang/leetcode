@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>44. Wildcard Matching · leetCode</title>
+        <title>48. Rotate Image · leetCode</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -79,10 +79,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="leetCode-45-Jump-Game-II.html" />
     
-    
-    <link rel="prev" href="leetCode-43-Multiply-Strings.html" />
+    <link rel="prev" href="leetCode-47-Permutations-II.html" />
     
 
 
@@ -704,7 +702,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.45" data-path="leetCode-44-Wildcard-Matching.html">
+        <li class="chapter " data-level="1.45" data-path="leetCode-44-Wildcard-Matching.html">
             
                 <a href="leetCode-44-Wildcard-Matching.html">
             
@@ -756,7 +754,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.49" data-path="leetCode-48-Rotate-Image.html">
+        <li class="chapter active" data-level="1.49" data-path="leetCode-48-Rotate-Image.html">
             
                 <a href="leetCode-48-Rotate-Image.html">
             
@@ -799,7 +797,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >44. Wildcard Matching</a>
+        <a href="." >48. Rotate Image</a>
     </h1>
 </div>
 
@@ -814,111 +812,58 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x56F0;&#x96BE;&#x96BE;&#x5EA6;&#xFF09;"><b> </b>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x56F0;&#x96BE;&#x96BE;&#x5EA6;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x89E3;&#x6CD5;&#x4E00;-&#x52A8;&#x6001;&#x89C4;&#x5212;"><b> </b>&#x89E3;&#x6CD5;&#x4E00; &#x52A8;&#x6001;&#x89C4;&#x5212;</a></li><li><span class="title-icon "></span><a href="#&#x89E3;&#x6CD5;&#x4E8C;-&#x8FED;&#x4EE3;"><b> </b>&#x89E3;&#x6CD5;&#x4E8C; &#x8FED;&#x4EE3;</a></li><li><span class="title-icon "></span><a href="#&#x9012;&#x5F52;"><b> </b>&#x9012;&#x5F52;</a></li><li><span class="title-icon "></span><a href="#&#x603B;"><b> </b>&#x603B;</a></li></ul></div><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x56F0;&#x96BE;&#x96BE;&#x5EA6;&#xFF09;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x56F0;&#x96BE;&#x96BE;&#x5EA6;&#xFF09;"><a name="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x56F0;&#x96BE;&#x96BE;&#x5EA6;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x56F0;&#x96BE;&#x96BE;&#x5EA6;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x56F0;&#x96BE;&#x96BE;&#x5EA6;&#xFF09;</h1>
-<p><img src="https://windliang.oss-cn-beijing.aliyuncs.com/44.png" alt=""></p>
-<p>&#x5B57;&#x7B26;&#x4E32;&#x5339;&#x914D;&#xFF0C;? &#x5339;&#x914D;&#x5355;&#x4E2A;&#x4EFB;&#x610F;&#x5B57;&#x7B26;&#xFF0C;* &#x5339;&#x914D;&#x4EFB;&#x610F;&#x957F;&#x5EA6;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5305;&#x62EC;&#x7A7A;&#x4E32;&#x3002;&#x548C;<a href="https://leetcode.windliang.cc/leetCode-10-Regular-Expression-Matching.html" target="_blank">&#x7B2C; 10 &#x9898;</a>&#x6709;&#x4E9B;&#x7C7B;&#x4F3C;&#x3002;</p>
-<h1 id="&#x89E3;&#x6CD5;&#x4E00;-&#x52A8;&#x6001;&#x89C4;&#x5212;"><a name="&#x89E3;&#x6CD5;&#x4E00;-&#x52A8;&#x6001;&#x89C4;&#x5212;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x6CD5;&#x4E00;-&#x52A8;&#x6001;&#x89C4;&#x5212;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x89E3;&#x6CD5;&#x4E00; &#x52A8;&#x6001;&#x89C4;&#x5212;</h1>
-<p>&#x76F4;&#x63A5;&#x6309;&#x7167;&#x4E4B;&#x524D;<a href="https://leetcode.windliang.cc/leetCode-10-Regular-Expression-Matching.html" target="_blank">&#x7B2C; 10 &#x9898;</a>&#xFF0C;&#x4FEE;&#x6539;&#x4E00;&#x4E0B;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;</p>
-<p>&#x540C;&#x6837;&#x662F;&#x7528; dp[i][j] &#x8868;&#x793A;&#x6240;&#x6709;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x7136;&#x540E;&#x4E00;&#x5C42;&#x4E00;&#x5C42;&#x7684;&#x6839;&#x636E;&#x9012;&#x63A8;&#x5173;&#x7CFB;&#x6C42;&#x51FA;&#x6765;&#x3002;</p>
-<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isMatch</span><span class="hljs-params">(String text, String pattern)</span> </span>{
-        <span class="hljs-comment">// &#x591A;&#x4E00;&#x7EF4;&#x7684;&#x7A7A;&#x95F4;&#xFF0C;&#x56E0;&#x4E3A;&#x6C42; dp[len - 1][j] &#x7684;&#x65F6;&#x5019;&#x9700;&#x8981;&#x77E5;&#x9053; dp[len][j] &#x7684;&#x60C5;&#x51B5;&#xFF0C;</span>
-        <span class="hljs-comment">// &#x591A;&#x4E00;&#x7EF4;&#x7684;&#x8BDD;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x628A; &#x5BF9; dp[len - 1][j] &#x4E5F;&#x5199;&#x8FDB;&#x5FAA;&#x73AF;&#x4E86;</span>
-        <span class="hljs-keyword">boolean</span>[][] dp = <span class="hljs-keyword">new</span> <span class="hljs-keyword">boolean</span>[text.length() + <span class="hljs-number">1</span>][pattern.length() + <span class="hljs-number">1</span>];
-        <span class="hljs-comment">// dp[len][len] &#x4EE3;&#x8868;&#x4E24;&#x4E2A;&#x7A7A;&#x4E32;&#x662F;&#x5426;&#x5339;&#x914D;&#x4E86;&#xFF0C;&quot;&quot; &#x548C; &quot;&quot; &#xFF0C;&#x5F53;&#x7136;&#x662F; true &#x4E86;&#x3002;</span>
-        dp[text.length()][pattern.length()] = <span class="hljs-keyword">true</span>;
-
-        <span class="hljs-comment">// &#x4ECE; len &#x5F00;&#x59CB;&#x51CF;&#x5C11;</span>
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = text.length(); i &gt;= <span class="hljs-number">0</span>; i--) {
-            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = pattern.length(); j &gt;= <span class="hljs-number">0</span>; j--) {
-                <span class="hljs-comment">// dp[text.length()][pattern.length()] &#x5DF2;&#x7ECF;&#x8FDB;&#x884C;&#x4E86;&#x521D;&#x59CB;&#x5316;</span>
-                <span class="hljs-keyword">if</span> (i == text.length() &amp;&amp; j == pattern.length())
-                    <span class="hljs-keyword">continue</span>;
-                <span class="hljs-comment">//&#x76F8;&#x6BD4;&#x4E4B;&#x524D;&#x589E;&#x52A0;&#x4E86;&#x5224;&#x65AD;&#x662F;&#x5426;&#x7B49;&#x4E8E; * </span>
-                <span class="hljs-keyword">boolean</span> first_match = (i &lt; text.length() &amp;&amp; j &lt; pattern.length() &amp;&amp; (pattern.charAt(j) == text.charAt(i) || pattern.charAt(j) == <span class="hljs-string">&apos;?&apos;</span> || pattern.charAt(j) == <span class="hljs-string">&apos;*&apos;</span>));
-                <span class="hljs-keyword">if</span> (j &lt; pattern.length() &amp;&amp; pattern.charAt(j) == <span class="hljs-string">&apos;*&apos;</span>) {
-                    <span class="hljs-comment">//&#x5C06; * &#x8DF3;&#x8FC7; &#x548C;&#x5C06;&#x5B57;&#x7B26;&#x5339;&#x914D;&#x4E00;&#x4E2A;&#x5E76;&#x4E14; pattern &#x4E0D;&#x53D8;&#x4E24;&#x79CD;&#x60C5;&#x51B5;</span>
-                    dp[i][j] = dp[i][j + <span class="hljs-number">1</span>] || first_match &amp;&amp; dp[i + <span class="hljs-number">1</span>][j];
-                } <span class="hljs-keyword">else</span> {
-                    dp[i][j] = first_match &amp;&amp; dp[i + <span class="hljs-number">1</span>][j + <span class="hljs-number">1</span>];
-                }
-            }
-        }
-        <span class="hljs-keyword">return</span> dp[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>];
-    }
-</code></pre>
-<p>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;text &#x957F;&#x5EA6;&#x662F; T&#xFF0C;pattern &#x957F;&#x5EA6;&#x662F; P&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x662F; O&#xFF08;TP&#xFF09;&#x3002;</p>
-<p>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O&#xFF08;TP&#xFF09;&#x3002;</p>
-<p>&#x540C;&#x6837;&#x7684;&#xFF0C;&#x548C;<a href="https://leetcode.windliang.cc/leetCode-10-Regular-Expression-Matching.html" target="_blank">&#x7B2C;10&#x9898;</a>&#x4E00;&#x6837;&#xFF0C;&#x53EF;&#x4EE5;&#x4F18;&#x5316;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x3002;</p>
-<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isMatch</span><span class="hljs-params">(String text, String pattern)</span> </span>{
-    <span class="hljs-comment">// &#x591A;&#x4E00;&#x7EF4;&#x7684;&#x7A7A;&#x95F4;&#xFF0C;&#x56E0;&#x4E3A;&#x6C42; dp[len - 1][j] &#x7684;&#x65F6;&#x5019;&#x9700;&#x8981;&#x77E5;&#x9053; dp[len][j] &#x7684;&#x60C5;&#x51B5;&#xFF0C;</span>
-    <span class="hljs-comment">// &#x591A;&#x4E00;&#x7EF4;&#x7684;&#x8BDD;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x628A; &#x5BF9; dp[len - 1][j] &#x4E5F;&#x5199;&#x8FDB;&#x5FAA;&#x73AF;&#x4E86;</span>
-    <span class="hljs-keyword">boolean</span>[][] dp = <span class="hljs-keyword">new</span> <span class="hljs-keyword">boolean</span>[<span class="hljs-number">2</span>][pattern.length() + <span class="hljs-number">1</span>];
-    dp[text.length() % <span class="hljs-number">2</span>][pattern.length()] = <span class="hljs-keyword">true</span>;
-
-    <span class="hljs-comment">// &#x4ECE; len &#x5F00;&#x59CB;&#x51CF;&#x5C11;</span>
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = text.length(); i &gt;= <span class="hljs-number">0</span>; i--) {
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = pattern.length(); j &gt;= <span class="hljs-number">0</span>; j--) {
-            <span class="hljs-keyword">if</span> (i == text.length() &amp;&amp; j == pattern.length())
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><b> </b>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x89E3;&#x6CD5;&#x4E00;"><b> </b>&#x89E3;&#x6CD5;&#x4E00;</a></li><li><span class="title-icon "></span><a href="#&#x89E3;&#x6CD5;&#x4E8C;"><b> </b>&#x89E3;&#x6CD5;&#x4E8C;</a></li><li><span class="title-icon "></span><a href="#&#x603B;"><b> </b>&#x603B;</a></li></ul></div><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><a name="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;</h1>
+<p><img src="https://windliang.oss-cn-beijing.aliyuncs.com/48.jpg" alt=""></p>
+<p>&#x5C06;&#x4E00;&#x4E2A;&#x77E9;&#x9635;&#x987A;&#x65F6;&#x9488;&#x65CB;&#x8F6C; 90 &#x5EA6;&#xFF0C;&#x5E76;&#x4E14;&#x4E0D;&#x4F7F;&#x7528;&#x989D;&#x5916;&#x7684;&#x7A7A;&#x95F4;&#x3002;&#x5927;&#x6982;&#x5C5E;&#x4E8E;&#x627E;&#x89C4;&#x5F8B;&#x7684;&#x9898;&#xFF0C;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x4E00;&#x822C;&#x7684;&#x601D;&#x8DEF;&#xFF0C;&#x89C2;&#x5BDF;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;</p>
+<h1 id="&#x89E3;&#x6CD5;&#x4E00;"><a name="&#x89E3;&#x6CD5;&#x4E00;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x6CD5;&#x4E00;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x89E3;&#x6CD5;&#x4E00;</h1>
+<p>&#x53EF;&#x4EE5;&#x5148;&#x8F6C;&#x7F6E;&#xFF0C;&#x7136;&#x540E;&#x628A;&#x6BCF;&#x5217;&#x5BF9;&#x79F0;&#x4EA4;&#x6362;&#x4EA4;&#x6362;&#x4E00;&#x4E0B;&#x3002;</p>
+<p> <img src="https://windliang.oss-cn-beijing.aliyuncs.com/48_2.jpg" alt=""></p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">rotate</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] matrix)</span> </span>{
+    <span class="hljs-comment">//&#x4EE5;&#x5BF9;&#x89D2;&#x7EBF;&#x4E3A;&#x8F74;&#x4EA4;&#x6362;</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt;  matrix.length; i++) {
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt;=i; j++) {
+            <span class="hljs-keyword">if</span> (i == j) {
                 <span class="hljs-keyword">continue</span>;
-            <span class="hljs-keyword">boolean</span> first_match = (i &lt; text.length() &amp;&amp; j &lt; pattern.length() &amp;&amp; (pattern.charAt(j) == text.charAt(i)
-                                                                                 || pattern.charAt(j) == <span class="hljs-string">&apos;?&apos;</span> || pattern.charAt(j) == <span class="hljs-string">&apos;*&apos;</span>));
-            <span class="hljs-keyword">if</span> (j &lt; pattern.length() &amp;&amp; pattern.charAt(j) == <span class="hljs-string">&apos;*&apos;</span>) {
-                dp[i % <span class="hljs-number">2</span>][j] = dp[i % <span class="hljs-number">2</span>][j + <span class="hljs-number">1</span>] || first_match &amp;&amp; dp[(i + <span class="hljs-number">1</span>) % <span class="hljs-number">2</span>][j];
-            } <span class="hljs-keyword">else</span> {
-                dp[i % <span class="hljs-number">2</span>][j] = first_match &amp;&amp; dp[(i + <span class="hljs-number">1</span>) % <span class="hljs-number">2</span>][j + <span class="hljs-number">1</span>];
             }
+            <span class="hljs-keyword">int</span> temp = matrix[i][j];
+            matrix[i][j] = matrix[j][i];
+            matrix[j][i] = temp;
+        }
+    } 
+    <span class="hljs-comment">//&#x4EA4;&#x6362;&#x5217;</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>, j = matrix.length - <span class="hljs-number">1</span>; i &lt; matrix.length / <span class="hljs-number">2</span>; i++, j--) {
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> k = <span class="hljs-number">0</span>; k &lt; matrix.length; k++) {
+            <span class="hljs-keyword">int</span> temp = matrix[k][i];
+            matrix[k][i] = matrix[k][j];
+            matrix[k][j] = temp;
         }
     }
-    <span class="hljs-keyword">return</span> dp[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>];
+
 }
 </code></pre>
-<p>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;text &#x957F;&#x5EA6;&#x662F; T&#xFF0C;pattern &#x957F;&#x5EA6;&#x662F; P&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x662F; O&#xFF08;TP&#xFF09;&#x3002;</p>
-<p>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O&#xFF08;P&#xFF09;&#x3002;</p>
-<h1 id="&#x89E3;&#x6CD5;&#x4E8C;-&#x8FED;&#x4EE3;"><a name="&#x89E3;&#x6CD5;&#x4E8C;-&#x8FED;&#x4EE3;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x6CD5;&#x4E8C;-&#x8FED;&#x4EE3;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x89E3;&#x6CD5;&#x4E8C; &#x8FED;&#x4EE3;</h1>
-<p>&#x53C2;&#x8003;<a href="https://leetcode.com/problems/wildcard-matching/discuss/17810/Linear-runtime-and-constant-space-solution?orderBy=most_votes" target="_blank">&#x8FD9;&#x91CC;</a>&#xFF0C;&#x4E5F;&#x6BD4;&#x8F83;&#x597D;&#x7406;&#x89E3;&#xFF0C;&#x5229;&#x7528;&#x4E24;&#x4E2A;&#x6307;&#x9488;&#x8FDB;&#x884C;&#x904D;&#x5386;&#x3002;</p>
-<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">isMatch</span><span class="hljs-params">(String str, String pattern)</span> </span>{
-    <span class="hljs-keyword">int</span> s = <span class="hljs-number">0</span>, p = <span class="hljs-number">0</span>, match = <span class="hljs-number">0</span>, starIdx = -<span class="hljs-number">1</span>;     
-    <span class="hljs-comment">//&#x904D;&#x5386;&#x6574;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;</span>
-    <span class="hljs-keyword">while</span> (s &lt; str.length()){
-        <span class="hljs-comment">// &#x4E00;&#x5BF9;&#x4E00;&#x5339;&#x914D;&#xFF0C;&#x4E24;&#x6307;&#x9488;&#x540C;&#x65F6;&#x540E;&#x79FB;&#x3002;</span>
-        <span class="hljs-keyword">if</span> (p &lt; pattern.length()  &amp;&amp; (pattern.charAt(p) == <span class="hljs-string">&apos;?&apos;</span> || str.charAt(s) == pattern.charAt(p))){
-            s++;
-            p++;
-        }
-        <span class="hljs-comment">// &#x78B0;&#x5230; *&#xFF0C;&#x5047;&#x8BBE;&#x5B83;&#x5339;&#x914D;&#x7A7A;&#x4E32;&#xFF0C;&#x5E76;&#x4E14;&#x7528; startIdx &#x8BB0;&#x5F55; * &#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x8BB0;&#x5F55;&#x5F53;&#x524D;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;p &#x540E;&#x79FB;</span>
-        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (p &lt; pattern.length() &amp;&amp; pattern.charAt(p) == <span class="hljs-string">&apos;*&apos;</span>){
-            starIdx = p;
-            match = s;
-            p++;
-        }
-        <span class="hljs-comment">// &#x5F53;&#x524D;&#x5B57;&#x7B26;&#x4E0D;&#x5339;&#x914D;&#xFF0C;&#x5E76;&#x4E14;&#x4E5F;&#x6CA1;&#x6709; *&#xFF0C;&#x56DE;&#x9000;</span>
-        <span class="hljs-comment">// p &#x56DE;&#x5230; * &#x7684;&#x4E0B;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;</span>
-        <span class="hljs-comment">// match &#x66F4;&#x65B0;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;</span>
-        <span class="hljs-comment">// s &#x56DE;&#x5230;&#x66F4;&#x65B0;&#x540E;&#x7684; match </span>
-        <span class="hljs-comment">// &#x8FD9;&#x6B65;&#x4EE3;&#x8868;&#x7528; * &#x5339;&#x914D;&#x4E86;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;</span>
-        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (starIdx != -<span class="hljs-number">1</span>){
-            p = starIdx + <span class="hljs-number">1</span>;
-            match++;
-            s = match;
-        }
-        <span class="hljs-comment">//&#x5B57;&#x7B26;&#x4E0D;&#x5339;&#x914D;&#xFF0C;&#x4E5F;&#x6CA1;&#x6709; *&#xFF0C;&#x8FD4;&#x56DE; false</span>
-        <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
-    }
-
-    <span class="hljs-comment">//&#x5C06;&#x672B;&#x5C3E;&#x591A;&#x4F59;&#x7684; * &#x76F4;&#x63A5;&#x5339;&#x914D;&#x7A7A;&#x4E32; &#x4F8B;&#x5982; text = ab, pattern = a*******</span>
-    <span class="hljs-keyword">while</span> (p &lt; pattern.length() &amp;&amp; pattern.charAt(p) == <span class="hljs-string">&apos;*&apos;</span>)
-        p++;
-
-    <span class="hljs-keyword">return</span> p == pattern.length();
-}
-</code></pre>
-<p>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;&#x5982;&#x679C; str &#x957F;&#x5EA6;&#x662F; T&#xFF0C;pattern &#x957F;&#x5EA6;&#x662F; P&#xFF0C;&#x867D;&#x7136;&#x53EA;&#x6709;&#x4E00;&#x4E2A; while &#x5FAA;&#x73AF;&#xFF0C;&#x4F46;&#x662F; s &#x5E76;&#x4E0D;&#x662F;&#x6BCF;&#x6B21;&#x90FD;&#x52A0; 1&#xFF0C;&#x6240;&#x4EE5;&#x6700;&#x574F;&#x7684;&#x65F6;&#x5019;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4F1A;&#x8FBE;&#x5230; O&#xFF08;TP&#xFF09;&#xFF0C;&#x4F8B;&#x5982; str = &quot;bbbbbbbbbb&quot;&#xFF0C;pattern = &quot;*bbbb&quot;&#x3002;&#x6BCF;&#x6B21; pattern &#x5230;&#x6700;&#x540E;&#x65F6;&#xFF0C;&#x53C8;&#x4F1A;&#x91CD;&#x65B0;&#x5F00;&#x59CB;&#x5230;&#x5F00;&#x5934;&#x3002;</p>
+<p>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O&#xFF08;n&#xB2;&#xFF09;&#x3002;</p>
 <p>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O&#xFF08;1&#xFF09;&#x3002;</p>
-<h1 id="&#x9012;&#x5F52;"><a name="&#x9012;&#x5F52;" class="anchor-navigation-ex-anchor" href="#&#x9012;&#x5F52;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x9012;&#x5F52;</h1>
-<p>&#x5728;<a href="https://leetcode.windliang.cc/leetCode-10-Regular-Expression-Matching.html" target="_blank">&#x7B2C;10&#x9898;</a>&#x4E2D;&#x8FD8;&#x6709;&#x9012;&#x5F52;&#x7684;&#x89E3;&#x6CD5;&#xFF0C;&#x4F46;&#x8FD9;&#x9898;&#x4E2D;&#x5982;&#x679C;&#x6309;&#x7167;&#x7B2C; 10 &#x9898;&#x7684;&#x9012;&#x5F52;&#x7684;&#x601D;&#x8DEF;&#x53BB;&#x89E3;&#x51B3;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x8D85;&#x65F6;&#xFF0C;&#x76EE;&#x524D;&#x6CA1;&#x60F3;&#x5230;&#x600E;&#x4E48;&#x5728;&#x7B2C; 10 &#x9898;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x53BB;&#x6539;&#xFF0C;&#x6709;&#x597D;&#x7684;&#x60F3;&#x6CD5;&#x5927;&#x5BB6;&#x53EF;&#x4EE5;&#x548C;&#x6211;&#x4EA4;&#x6D41;&#x3002;</p>
-<p>&#x5982;&#x679C;&#x975E;&#x8981;&#x7528;&#x9012;&#x5F52;&#x7684;&#x8BDD;&#xFF0C;&#x53EF;&#x4EE5;&#x6309;&#x7167;&#x52A8;&#x6001;&#x89C4;&#x5212;&#x90A3;&#x4E2A;&#x601D;&#x8DEF;&#xFF0C;&#x5148;&#x538B;&#x6808;&#xFF0C;&#x7136;&#x540E;&#x51FA;&#x6808;&#x8FC7;&#x7A0B;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x52A8;&#x6001;&#x89C4;&#x5212;&#x90A3;&#x6837;&#x4E86;&#x3002;&#x6240;&#x4EE5;&#x5176;&#x5B9E;&#x4E0D;&#x5982;&#x76F4;&#x63A5;&#x52A8;&#x6001;&#x89C4;&#x5212;&#x3002;</p>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x5148;&#x4EE5;&#x6A2A;&#x5411;&#x7684;&#x4E2D;&#x8F74;&#x7EBF;&#x4E3A;&#x8F74;&#xFF0C;&#x5BF9;&#x79F0;&#x7684;&#x884C;&#x8FDB;&#x884C;&#x4EA4;&#x6362;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x4EE5;&#x5BF9;&#x89D2;&#x7EBF;&#x4EA4;&#x6362;&#x3002;</p>
+<h1 id="&#x89E3;&#x6CD5;&#x4E8C;"><a name="&#x89E3;&#x6CD5;&#x4E8C;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x6CD5;&#x4E8C;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x89E3;&#x6CD5;&#x4E8C;</h1>
+<p>&#x6211;&#x628A;&#x8FD9;&#x4E2A;<a href="https://leetcode.com/problems/rotate-image/discuss/18895/Clear-Java-solution" target="_blank">&#x94FE;&#x63A5;</a>&#x7684;&#x601D;&#x8DEF;&#x8D34;&#x8FC7;&#x6765;&#xFF0C;&#x91CC;&#x8FB9;&#x8BC4;&#x8BBA;&#x6709;&#x5F20;&#x56FE;&#x4E5F;&#x90FD;&#x987A;&#x9053;&#x8D34;&#x8FC7;&#x6765;&#x5427;&#xFF0C;&#x5199;&#x7684;&#x5F88;&#x597D;&#x3002;</p>
+<p><img src="https://windliang.oss-cn-beijing.aliyuncs.com/48_3.jpg" alt=""></p>
+<p>&#x4E00;&#x5708;&#x4E00;&#x5708;&#x7684;&#x5FAA;&#x73AF;&#x4EA4;&#x6362;&#xFF0C;&#x5F88;&#x5999;&#xFF01;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">rotate</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] matrix)</span> </span>{
+    <span class="hljs-keyword">int</span> n=matrix.length;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>; i&lt;n/<span class="hljs-number">2</span>; i++) 
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j=i; j&lt;n-i-<span class="hljs-number">1</span>; j++) {
+            <span class="hljs-keyword">int</span> tmp=matrix[i][j];
+            matrix[i][j]=matrix[n-j-<span class="hljs-number">1</span>][i];
+            matrix[n-j-<span class="hljs-number">1</span>][i]=matrix[n-i-<span class="hljs-number">1</span>][n-j-<span class="hljs-number">1</span>];
+            matrix[n-i-<span class="hljs-number">1</span>][n-j-<span class="hljs-number">1</span>]=matrix[j][n-i-<span class="hljs-number">1</span>];
+            matrix[j][n-i-<span class="hljs-number">1</span>]=tmp;
+        }
+}
+</code></pre>
+<p>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O&#xFF08;n&#xB2;&#xFF09;&#x3002;</p>
+<p>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O&#xFF08;1&#xFF09;&#x3002;</p>
 <h1 id="&#x603B;"><a name="&#x603B;" class="anchor-navigation-ex-anchor" href="#&#x603B;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x603B;</h1>
-<p>&#x52A8;&#x6001;&#x89C4;&#x5212;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x7406;&#x6E05;&#x9012;&#x63A8;&#x7684;&#x516C;&#x5F0F;&#x5C31;&#x53EF;&#x4EE5;&#x3002;&#x53E6;&#x5916;&#x8FED;&#x4EE3;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x4E5F;&#x8BA9;&#x4EBA;&#x773C;&#x524D;&#x4E00;&#x4EAE;&#x3002;</p>
+<p>&#x8FD9;&#x9053;&#x9898;&#x5C31;&#x662F;&#x5BF9;&#x9898;&#x76EE;&#x7684;&#x7279;&#x5F81;&#x8FDB;&#x884C;&#x89C2;&#x5BDF;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;</p>
 
                                 
                                 </section>
@@ -946,14 +891,10 @@
 
             
                 
-                <a href="leetCode-43-Multiply-Strings.html" class="navigation navigation-prev " aria-label="Previous page: 43. Multiply Strings">
+                <a href="leetCode-47-Permutations-II.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 47. Permutations II">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="leetCode-45-Jump-Game-II.html" class="navigation navigation-next " aria-label="Next page: 45. Jump Game II">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -962,7 +903,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"44. Wildcard Matching","level":"1.45","depth":1,"next":{"title":"45. Jump Game II","level":"1.46","depth":1,"path":"leetCode-45-Jump-Game-II.md","ref":"leetCode-45-Jump-Game-II.md","articles":[]},"previous":{"title":"43. Multiply Strings","level":"1.44","depth":1,"path":"leetCode-43-Multiply-Strings.md","ref":"leetCode-43-Multiply-Strings.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr","-search","search-plus","ad","-livereload","meta"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ad":{"contentBottom":"%u003c%u0064%u0069%u0076%u0020%u0069%u0064%u003d%u0022%u0077%u0065%u0063%u0068%u0061%u0074%u005f%u0073%u0075%u0062%u0073%u0063%u0072%u0069%u0062%u0065%u0072%u0022%u0020%u0073%u0074%u0079%u006c%u0065%u003d%u0022%u0064%u0069%u0073%u0070%u006c%u0061%u0079%u003a%u0020%u0062%u006c%u006f%u0063%u006b%u003b%u0020%u0070%u0061%u0064%u0064%u0069%u006e%u0067%u003a%u0020%u0031%u0030%u0070%u0078%u0020%u0030%u003b%u0020%u006d%u0061%u0072%u0067%u0069%u006e%u003a%u0020%u0032%u0030%u0070%u0078%u0020%u0061%u0075%u0074%u006f%u003b%u0020%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0031%u0030%u0030%u0025%u003b%u0020%u0074%u0065%u0078%u0074%u002d%u0061%u006c%u0069%u0067%u006e%u003a%u0020%u0063%u0065%u006e%u0074%u0065%u0072%u0022%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0069%u006d%u0067%u0020%u0069%u0064%u003d%u0022%u0077%u0065%u0063%u0068%u0061%u0074%u005f%u0073%u0075%u0062%u0073%u0063%u0072%u0069%u0062%u0065%u0072%u005f%u0071%u0063%u006f%u0064%u0065%u0022%u0020%u0073%u0072%u0063%u003d%u0022%u0068%u0074%u0074%u0070%u0073%u003a%u002f%u002f%u0077%u0069%u006e%u0064%u006c%u0069%u0061%u006e%u0067%u002e%u006f%u0073%u0073%u002d%u0063%u006e%u002d%u0062%u0065%u0069%u006a%u0069%u006e%u0067%u002e%u0061%u006c%u0069%u0079%u0075%u006e%u0063%u0073%u002e%u0063%u006f%u006d%u002f%u0077%u0065%u0063%u0068%u0061%u0074%u002e%u006a%u0070%u0067%u0022%u0020%u0061%u006c%u0074%u003d%u0022%u0077%u0069%u006e%u0064%u006c%u0069%u0061%u006e%u0067%u0020%u0077%u0065%u0063%u0068%u0061%u0074%u0022%u0020%u0073%u0074%u0079%u006c%u0065%u003d%u0022%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0032%u0030%u0030%u0070%u0078%u003b%u0020%u006d%u0061%u0078%u002d%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0031%u0030%u0030%u0025%u003b%u0022%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0062%u0072%u003e%u0020%u0020%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0064%u0069%u0076%u003e%u6dfb%u52a0%u597d%u53cb%u4e00%u8d77%u8fdb%u6b65%u007e%u003c%u002f%u0064%u0069%u0076%u003e%u0020%u003c%u0062%u0072%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0064%u0069%u0076%u003e%u5982%u679c%u89c9%u5f97%u6709%u5e2e%u52a9%u7684%u8bdd%uff0c%u5230%u9875%u9762%u6700%u4e0a%u8fb9%u8bb0%u5f97%u7ed9%u4e00%u4e2a%u0020%u0073%u0074%u0061%u0072%u0020%u54e6%u0020%u005e%u0020%u005e%u003c%u002f%u0064%u0069%u0076%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u002f%u0064%u0069%u0076%u003e"},"meta":{"content":"lzwmbdfIJy","data":[],"name":"baidu-site-verification"},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"github-buttons":{"buttons":[{"user":"wind-liang","repo":"leetcode","type":"star","size":"small","count":true}]},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"windliang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetCode","language":"zh-hans","links":{"sidebar":{"Home":"http://windliang.cc"},"gitbook":true},"gitbook":"3.2.3","description":"leetCode"},"file":{"path":"leetCode-44-Wildcard-Matching.md","mtime":"2019-03-06T15:51:34.691Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-07T13:18:14.031Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"48. Rotate Image","level":"1.49","depth":1,"previous":{"title":"47. Permutations II","level":"1.48","depth":1,"path":"leetCode-47-Permutations-II.md","ref":"leetCode-47-Permutations-II.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr","-search","search-plus","ad","-livereload","meta"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ad":{"contentBottom":"%u003c%u0064%u0069%u0076%u0020%u0069%u0064%u003d%u0022%u0077%u0065%u0063%u0068%u0061%u0074%u005f%u0073%u0075%u0062%u0073%u0063%u0072%u0069%u0062%u0065%u0072%u0022%u0020%u0073%u0074%u0079%u006c%u0065%u003d%u0022%u0064%u0069%u0073%u0070%u006c%u0061%u0079%u003a%u0020%u0062%u006c%u006f%u0063%u006b%u003b%u0020%u0070%u0061%u0064%u0064%u0069%u006e%u0067%u003a%u0020%u0031%u0030%u0070%u0078%u0020%u0030%u003b%u0020%u006d%u0061%u0072%u0067%u0069%u006e%u003a%u0020%u0032%u0030%u0070%u0078%u0020%u0061%u0075%u0074%u006f%u003b%u0020%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0031%u0030%u0030%u0025%u003b%u0020%u0074%u0065%u0078%u0074%u002d%u0061%u006c%u0069%u0067%u006e%u003a%u0020%u0063%u0065%u006e%u0074%u0065%u0072%u0022%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0069%u006d%u0067%u0020%u0069%u0064%u003d%u0022%u0077%u0065%u0063%u0068%u0061%u0074%u005f%u0073%u0075%u0062%u0073%u0063%u0072%u0069%u0062%u0065%u0072%u005f%u0071%u0063%u006f%u0064%u0065%u0022%u0020%u0073%u0072%u0063%u003d%u0022%u0068%u0074%u0074%u0070%u0073%u003a%u002f%u002f%u0077%u0069%u006e%u0064%u006c%u0069%u0061%u006e%u0067%u002e%u006f%u0073%u0073%u002d%u0063%u006e%u002d%u0062%u0065%u0069%u006a%u0069%u006e%u0067%u002e%u0061%u006c%u0069%u0079%u0075%u006e%u0063%u0073%u002e%u0063%u006f%u006d%u002f%u0077%u0065%u0063%u0068%u0061%u0074%u002e%u006a%u0070%u0067%u0022%u0020%u0061%u006c%u0074%u003d%u0022%u0077%u0069%u006e%u0064%u006c%u0069%u0061%u006e%u0067%u0020%u0077%u0065%u0063%u0068%u0061%u0074%u0022%u0020%u0073%u0074%u0079%u006c%u0065%u003d%u0022%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0032%u0030%u0030%u0070%u0078%u003b%u0020%u006d%u0061%u0078%u002d%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0031%u0030%u0030%u0025%u003b%u0022%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0062%u0072%u003e%u0020%u0020%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0064%u0069%u0076%u003e%u6dfb%u52a0%u597d%u53cb%u4e00%u8d77%u8fdb%u6b65%u007e%u003c%u002f%u0064%u0069%u0076%u003e%u0020%u003c%u0062%u0072%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0064%u0069%u0076%u003e%u5982%u679c%u89c9%u5f97%u6709%u5e2e%u52a9%u7684%u8bdd%uff0c%u5230%u9875%u9762%u6700%u4e0a%u8fb9%u8bb0%u5f97%u7ed9%u4e00%u4e2a%u0020%u0073%u0074%u0061%u0072%u0020%u54e6%u0020%u005e%u0020%u005e%u003c%u002f%u0064%u0069%u0076%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u002f%u0064%u0069%u0076%u003e"},"meta":{"content":"lzwmbdfIJy","data":[],"name":"baidu-site-verification"},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"github-buttons":{"buttons":[{"user":"wind-liang","repo":"leetcode","type":"star","size":"small","count":true}]},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"windliang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetCode","language":"zh-hans","links":{"sidebar":{"Home":"http://windliang.cc"},"gitbook":true},"gitbook":"3.2.3","description":"leetCode"},"file":{"path":"leetCode-48-Rotate-Image.md","mtime":"2019-03-07T13:15:36.739Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-07T13:18:14.031Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
