@@ -230,7 +230,7 @@ public double findMedianSortedArrays(int[] nums1, int[] nums2) {
 
       那么，中位数就可以表示如下
 
-      （左半部分最大值 + 右半部分最大值 ）/ 2 。
+      （左半部分最大值 + 右半部分最小值 ）/ 2 。
 
       （max ( A [ i - 1 ] , B [  j  - 1 ]）+ min ( A [ i ] , B [ j ]）） /  2
 

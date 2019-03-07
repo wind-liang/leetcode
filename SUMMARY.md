@@ -48,3 +48,4 @@
 * [45. Jump Game II](leetCode-45-Jump-Game-II.md)
 * [46. Permutations](leetCode-46-Permutations.md)
 * [47. Permutations II](leetCode-47-Permutations-II.md)
+* [48. Rotate Image](leetCode-48-Rotate-Image.md)
