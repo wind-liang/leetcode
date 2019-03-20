@@ -52,3 +52,4 @@
 * [49. Group Anagrams](leetCode-49-Group-Anagrams.md)
 * [50. Pow(x, n)](leetCode-50-Pow.md)
 * [51. N-Queens](leetCode-51-N-Queens.md)
+* [52. N-Queens II](leetCode-52-N-QueensII.md)
