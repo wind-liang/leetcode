@@ -55,3 +55,4 @@
 * [52. N-Queens II](leetCode-52-N-QueensII.md)
 * [53. Maximum Subarray](leetCode-53-Maximum-Subarray.md)
 * [54. Spiral Matrix](leetCode-54-Spiral-Matrix.md)
+* [55. Jump Game](leetCode-55-Jump-Game.md)
