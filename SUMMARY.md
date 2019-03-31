@@ -56,3 +56,4 @@
 * [53. Maximum Subarray](leetCode-53-Maximum-Subarray.md)
 * [54. Spiral Matrix](leetCode-54-Spiral-Matrix.md)
 * [55. Jump Game](leetCode-55-Jump-Game.md)
+* [56. Merge Intervals](leetCode-56-Merge-Intervals.md)
