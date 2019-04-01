@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>28. Implement strStr() · leetCode</title>
+        <title>57. Insert Interval · leetCode</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -79,10 +79,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="leetCode-29-Divide-Two-Integers.html" />
     
-    
-    <link rel="prev" href="leetCode-27-Remove-Element.html" />
+    <link rel="prev" href="leetCode-56-Merge-Intervals.html" />
     
 
 
@@ -496,7 +494,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.29" data-path="leetCode-28-Implement-strStr.html">
+        <li class="chapter " data-level="1.29" data-path="leetCode-28-Implement-strStr.html">
             
                 <a href="leetCode-28-Implement-strStr.html">
             
@@ -873,7 +871,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.58" data-path="leetCode-57-Insert-Interval.html">
+        <li class="chapter active" data-level="1.58" data-path="leetCode-57-Insert-Interval.html">
             
                 <a href="leetCode-57-Insert-Interval.html">
             
@@ -916,7 +914,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >28. Implement strStr()</a>
+        <a href="." >57. Insert Interval</a>
     </h1>
 </div>
 
@@ -931,49 +929,191 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;"><b> </b>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x603B;"><b> </b>&#x603B;</a></li></ul></div><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;"><a name="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;</h1>
-<p><img src="https://windliang.oss-cn-beijing.aliyuncs.com/28.jpg" alt=""></p>
-<p>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32; needle &#x5728;&#x53E6;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32; haystack &#x4E2D;&#x5F00;&#x59CB;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x5B58;&#x5728;&#x5C31;&#x8FD4;&#x56DE; -1 &#xFF0C;&#x5982;&#x679C; needle &#x957F;&#x5EA6;&#x662F; 0 &#xFF0C;&#x5C31;&#x8FD4;&#x56DE; 0 &#x3002;</p>
-<p>&#x5C31;&#x662F;&#x4E00;&#x4E00;&#x6BD4;&#x8F83;&#x5C31;&#x597D;&#xFF0C;&#x770B;&#x4E0B;&#x4EE3;&#x7801;&#x5427;&#x3002;</p>
-<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">strStr</span><span class="hljs-params">(String haystack, String needle)</span> </span>{
-    <span class="hljs-keyword">if</span> (needle.length() == <span class="hljs-number">0</span>) {
-        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-    }
-    <span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>;
-    <span class="hljs-comment">//&#x904D;&#x5386;&#x6BCF;&#x4E2A;&#x5B57;&#x7B26;</span>
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; haystack.length(); i++) {
-        <span class="hljs-comment">//&#x76F8;&#x7B49;&#x7684;&#x8BDD;&#x8BA1;&#x6570;&#x52A0; 1 </span>
-        <span class="hljs-keyword">if</span> (haystack.charAt(i) == needle.charAt(j)) {
-            j++;
-            <span class="hljs-comment">//&#x957F;&#x5EA6;&#x591F;&#x4E86;&#x5C31;&#x8FD4;&#x56DE;</span>
-            <span class="hljs-keyword">if</span> (j == needle.length()) {
-                <span class="hljs-keyword">return</span> i - j + <span class="hljs-number">1</span>;
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x56F0;&#x96BE;&#x96BE;&#x5EA6;&#xFF09;"><b> </b>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x56F0;&#x96BE;&#x96BE;&#x5EA6;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x89E3;&#x6CD5;&#x4E00;"><b> </b>&#x89E3;&#x6CD5;&#x4E00;</a></li><li><span class="title-icon "></span><a href="#&#x89E3;&#x6CD5;&#x4E8C;"><b> </b>&#x89E3;&#x6CD5;&#x4E8C;</a></li><li><span class="title-icon "></span><a href="#&#x603B;"><b> </b>&#x603B;</a></li></ul></div><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x56F0;&#x96BE;&#x96BE;&#x5EA6;&#xFF09;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x56F0;&#x96BE;&#x96BE;&#x5EA6;&#xFF09;"><a name="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x56F0;&#x96BE;&#x96BE;&#x5EA6;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x56F0;&#x96BE;&#x96BE;&#x5EA6;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x56F0;&#x96BE;&#x96BE;&#x5EA6;&#xFF09;</h1>
+<p><img src="https://windliang.oss-cn-beijing.aliyuncs.com/57.jpg" alt=""></p>
+<p>&#x548C;<a href="https://leetcode.windliang.cc/leetCode-56-Merge-Intervals.html" target="_blank">&#x4E0A;&#x4E00;&#x9053;</a>&#x53EF;&#x4EE5;&#x8BF4;&#x662F;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#x8FD9;&#x4E2A;&#x662F;&#x7ED9;&#x4E00;&#x4E2A;&#x5DF2;&#x7ECF;&#x5408;&#x5E76;&#x597D;&#x7684;&#x5217;&#x8868;&#xFF0C;&#x7136;&#x540E;&#x7ED9;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x8282;&#x70B9;&#x4F9D;&#x636E;&#x89C4;&#x5219;&#x52A0;&#x5165;&#x5230;&#x5408;&#x5E76;&#x597D;&#x7684;&#x5217;&#x8868;&#x3002;</p>
+<h1 id="&#x89E3;&#x6CD5;&#x4E00;"><a name="&#x89E3;&#x6CD5;&#x4E00;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x6CD5;&#x4E00;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x89E3;&#x6CD5;&#x4E00;</h1>
+<p>&#x5BF9;&#x5E94; <a href="https://leetcode.windliang.cc/leetCode-56-Merge-Intervals.html" target="_blank">56 &#x9898;</a>&#x7684;&#x89E3;&#x6CD5;&#x4E00;&#xFF0C;&#x6CA1;&#x770B;&#x7684;&#x8BDD;&#xFF0C;&#x53EF;&#x4EE5;&#x5148;&#x8FC7;&#x53BB;&#x770B;&#x4E00;&#x4E0B;&#x3002;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x89E3;&#x6CD5;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x5B50;&#x95EE;&#x9898;&#xFF0C;&#x6240;&#x4EE5;&#x76F4;&#x63A5;&#x52A0;&#x8FC7;&#x6765;&#x5C31;&#x884C;&#x4E86;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;Interval&gt; <span class="hljs-title">insert</span><span class="hljs-params">(List&lt;Interval&gt; intervals, Interval newInterval)</span> </span>{ 
+            Interval start = <span class="hljs-keyword">null</span>;
+            Interval end = <span class="hljs-keyword">null</span>;
+            <span class="hljs-keyword">int</span> i_start = newInterval.start;
+            <span class="hljs-keyword">int</span> i_end =newInterval.end;
+            <span class="hljs-keyword">int</span> size = intervals.size();
+            List&lt;Interval&gt; in = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;(); 
+            <span class="hljs-comment">//&#x904D;&#x5386;&#x5408;&#x5E76;&#x597D;&#x7684;&#x5217;&#x8868;</span>
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; size; j++) {
+                <span class="hljs-keyword">if</span> (i_start &gt;= intervals.get(j).start &amp;&amp; i_start &lt;= intervals.get(j).end) {
+                    start = intervals.get(j);
+                }
+                <span class="hljs-keyword">if</span> (i_end &gt;= intervals.get(j).start &amp;&amp; i_end &lt;= intervals.get(j).end) {
+                    end = intervals.get(j);
+                }
+                <span class="hljs-keyword">if</span> (i_start &lt; intervals.get(j).start &amp;&amp; i_end &gt;intervals.get(j).end) {
+                    in.add(intervals.get(j));
+                } 
+
             }
-            <span class="hljs-comment">// &#x4E0D;&#x76F8;&#x7B49;&#x7684;&#x8BDD; j &#x6E05;&#x96F6;&#xFF0C;</span>
-            <span class="hljs-comment">// &#x5E76;&#x4E14; i &#x56DE;&#x5230;&#x6700;&#x521D;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x4E4B;&#x540E;&#x5C31;&#x8FDB;&#x5165; for &#x5FAA;&#x73AF;&#x4E2D;&#x7684; i++&#xFF0C;&#x4ECE;&#x4E0B;&#x4E2A;&#x4F4D;&#x7F6E;&#x7EE7;&#x7EED;&#x5224;&#x65AD;</span>
+            <span class="hljs-keyword">if</span> (in.size() != <span class="hljs-number">0</span>) { 
+                <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> index = <span class="hljs-number">0</span>; index &lt; in.size(); index++) {
+                    intervals.remove(in.get(index));
+                } 
+            }
+            Interval interval = <span class="hljs-keyword">null</span>;
+            <span class="hljs-comment">//&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x751F;&#x6210;&#x65B0;&#x7684;&#x8282;&#x70B9;</span>
+            <span class="hljs-keyword">if</span> (equals(start, end)) {
+                <span class="hljs-keyword">int</span> s = start == <span class="hljs-keyword">null</span> ? i_start : start.start;
+                <span class="hljs-keyword">int</span> e = end == <span class="hljs-keyword">null</span> ? i_end : end.end;
+                interval = <span class="hljs-keyword">new</span> Interval(s, e); 
+            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (start!= <span class="hljs-keyword">null</span> &amp;&amp; end!=<span class="hljs-keyword">null</span>) {
+                interval = <span class="hljs-keyword">new</span> Interval(start.start, end.end); 
+            }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (start == <span class="hljs-keyword">null</span>) {
+                interval = <span class="hljs-keyword">new</span> Interval(i_start, i_end); 
+            }
+            <span class="hljs-keyword">if</span> (start != <span class="hljs-keyword">null</span>) {
+                intervals.remove(start);
+            }
+            <span class="hljs-keyword">if</span> (end != <span class="hljs-keyword">null</span>) {
+                intervals.remove(end);
+            }
+           <span class="hljs-comment">//&#x4E0D;&#x540C;&#x4E4B;&#x5904;&#x662F;&#x751F;&#x6210;&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x8981;&#x904D;&#x5386;&#x539F;&#x8282;&#x70B9;&#xFF0C;&#x6839;&#x636E; start &#x63D2;&#x5165;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x867D;&#x7136;&#x9898;&#x76EE;&#x6CA1;&#x8BF4;&#xFF0C;&#x4F46;&#x8FD9;&#x91CC;&#x5982;&#x679C;&#x4E0D;&#x6309;&#x987A;&#x5E8F;&#x63D2;&#x5165;&#x7684;&#x8BDD;&#xFF0C;leetcode &#x8FC7;&#x4E0D;&#x4E86;&#x3002;</span>
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i&lt;intervals.size();i++){
+                <span class="hljs-keyword">if</span>(intervals.get(i).start&gt;interval.start){
+                    intervals.add(i,interval);
+                    <span class="hljs-keyword">return</span> intervals;
+                }
+            }
+            intervals.add(interval);
+            <span class="hljs-keyword">return</span> intervals;
+        }
+<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">equals</span><span class="hljs-params">(Interval start, Interval end)</span> </span>{ 
+    <span class="hljs-keyword">if</span> (start == <span class="hljs-keyword">null</span> &amp;&amp; end == <span class="hljs-keyword">null</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+    }
+    <span class="hljs-keyword">if</span> (start == <span class="hljs-keyword">null</span> || end == <span class="hljs-keyword">null</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+    }
+    <span class="hljs-keyword">if</span> (start.start == end.start &amp;&amp; start.end == end.end) {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+}
+</code></pre>
+<p>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O&#xFF08;n&#xFF09;&#x3002;</p>
+<p>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A; O&#xFF08;n&#xFF09;&#xFF0C; &#x91CC;&#x8FB9;&#x7684; in &#x53D8;&#x91CF;&#x7528;&#x6765;&#x5B58;&#x50A8;&#x56CA;&#x62EC;&#x7684;&#x8282;&#x70B9;&#x65F6;&#x5019;&#x8017;&#x8D39;&#x7684;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x5176;&#x5B9E;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x8FED;&#x4EE3;&#x5668;&#xFF0C;&#x4E00;&#x8FB9;&#x904D;&#x5386;&#xFF0C;&#x4E00;&#x8FB9;&#x5220;&#x9664;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x4E0D;&#x9700;&#x8981; in &#x53D8;&#x91CF;&#x4E86;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;Interval&gt; <span class="hljs-title">insert</span><span class="hljs-params">(List&lt;Interval&gt; intervals, Interval newInterval)</span> </span>{
+        Interval start = <span class="hljs-keyword">null</span>;
+        Interval end = <span class="hljs-keyword">null</span>;
+        <span class="hljs-keyword">int</span> i_start = newInterval.start;
+        <span class="hljs-keyword">int</span> i_end = newInterval.end;  
+        <span class="hljs-comment">//&#x5229;&#x7528;&#x8FED;&#x4EE3;&#x5668;&#x904D;&#x5386;</span>
+        <span class="hljs-keyword">for</span> (Iterator&lt;Interval&gt; it = intervals.iterator(); it.hasNext();) {
+            Interval inter = it.next();
+            <span class="hljs-keyword">if</span> (i_start &gt;= inter.start &amp;&amp; i_start &lt;= inter.end) {
+                start = inter;
+            }
+            <span class="hljs-keyword">if</span> (i_end &gt;= inter.start &amp;&amp; i_end &lt;= inter.end) {
+                end = inter;
+            }
+            <span class="hljs-keyword">if</span> (i_start &lt; inter.start &amp;&amp; i_end &gt; inter.end) {
+
+                it.remove();
+            }
+        }
+        Interval interval = <span class="hljs-keyword">null</span>;
+        <span class="hljs-keyword">if</span> (equals(start, end)) {
+            <span class="hljs-keyword">int</span> s = start == <span class="hljs-keyword">null</span> ? i_start : start.start;
+            <span class="hljs-keyword">int</span> e = end == <span class="hljs-keyword">null</span> ? i_end : end.end;
+            interval = <span class="hljs-keyword">new</span> Interval(s, e);
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (start != <span class="hljs-keyword">null</span> &amp;&amp; end != <span class="hljs-keyword">null</span>) {
+            interval = <span class="hljs-keyword">new</span> Interval(start.start, end.end);
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (start == <span class="hljs-keyword">null</span>) {
+            interval = <span class="hljs-keyword">new</span> Interval(i_start, i_end);
+        }
+        <span class="hljs-keyword">if</span> (start != <span class="hljs-keyword">null</span>) {
+            intervals.remove(start);
+        }
+        <span class="hljs-keyword">if</span> (end != <span class="hljs-keyword">null</span>) {
+            intervals.remove(end);
+        }
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; intervals.size(); i++) {
+            <span class="hljs-keyword">if</span> (intervals.get(i).start &gt; interval.start) {
+                intervals.add(i, interval);
+                <span class="hljs-keyword">return</span> intervals;
+            }
+        }
+        intervals.add(interval);
+        <span class="hljs-keyword">return</span> intervals; 
+    }
+
+<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">equals</span><span class="hljs-params">(Interval start, Interval end)</span> </span>{ 
+    <span class="hljs-keyword">if</span> (start == <span class="hljs-keyword">null</span> &amp;&amp; end == <span class="hljs-keyword">null</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+    }
+    <span class="hljs-keyword">if</span> (start == <span class="hljs-keyword">null</span> || end == <span class="hljs-keyword">null</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+    }
+    <span class="hljs-keyword">if</span> (start.start == end.start &amp;&amp; start.end == end.end) {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+}
+</code></pre>
+<p>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O&#xFF08;n&#xFF09;&#x3002;</p>
+<p>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A; O&#xFF08;1&#xFF09;&#x3002; </p>
+<h1 id="&#x89E3;&#x6CD5;&#x4E8C;"><a name="&#x89E3;&#x6CD5;&#x4E8C;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x6CD5;&#x4E8C;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x89E3;&#x6CD5;&#x4E8C;</h1>
+<p>&#x5BF9;&#x5E94; <a href="https://leetcode.windliang.cc/leetCode-56-Merge-Intervals.html" target="_blank">56 &#x9898;</a>&#x7684;&#x89E3;&#x6CD5;&#x4E8C;&#xFF0C;&#x8003;&#x8651;&#x5230;&#x5B83;&#x7ED9;&#x5B9A;&#x7684;&#x5408;&#x5E76;&#x7684;&#x5217;&#x8868;&#x662F;&#x6709;&#x5E8F;&#x7684;&#xFF0C;&#x548C;&#x89E3;&#x6CD5;&#x4E8C;&#x662F;&#x4E00;&#x4E2A;&#x601D;&#x60F3;&#x3002;&#x53EA;&#x4E0D;&#x8FC7;&#x8FD9;&#x91CC;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x4ECE;&#x672B;&#x5C3E;&#x6DFB;&#x52A0;&#xFF0C;&#x800C;&#x662F;&#x6839;&#x636E;&#x65B0;&#x8282;&#x70B9;&#x7684; start &#x6765;&#x627E;&#x5230;&#x5B83;&#x5E94;&#x8BE5;&#x5728;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x5229;&#x7528;&#x4E4B;&#x524D;&#x7684;&#x60F3;&#x6CD5;&#x5C31;&#x591F;&#x4E86;&#x3002;</p>
+<p>&#x8FD9;&#x91CC;&#x628A; leetcode &#x91CC;&#x7684;&#x4E24;&#x79CD;&#x5199;&#x6CD5;&#xFF0C;&#x8D34;&#x8FC7;&#x6765;&#xFF0C;&#x5927;&#x5BB6;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x4E00;&#x4E0B;&#x3002;</p>
+<p><a href="https://leetcode.com/problems/insert-interval/discuss/21602/Short-and-straight-forward-Java-solution" target="_blank">&#x7B2C;&#x4E00;&#x79CD;</a>&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;Interval&gt; <span class="hljs-title">insert</span><span class="hljs-params">(List&lt;Interval&gt; intervals, Interval newInterval)</span> </span>{
+    List&lt;Interval&gt; result = <span class="hljs-keyword">new</span> LinkedList&lt;&gt;();
+    <span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;
+    <span class="hljs-comment">// &#x5C06;&#x65B0;&#x8282;&#x70B9;&#x4E4B;&#x524D;&#x7684;&#x8282;&#x70B9;&#x52A0;&#x5230;&#x7ED3;&#x679C;&#x4E2D;</span>
+    <span class="hljs-keyword">while</span> (i &lt; intervals.size() &amp;&amp; intervals.get(i).end &lt; newInterval.start)
+        result.add(intervals.get(i++));
+    <span class="hljs-comment">// &#x548C;&#x65B0;&#x8282;&#x70B9;&#x5224;&#x65AD;&#x662F;&#x5426;&#x91CD;&#x53E0;&#xFF0C;&#x66F4;&#x65B0;&#x65B0;&#x8282;&#x70B9;</span>
+    <span class="hljs-keyword">while</span> (i &lt; intervals.size() &amp;&amp; intervals.get(i).start &lt;= newInterval.end) {
+        newInterval = <span class="hljs-keyword">new</span> Interval( 
+                Math.min(newInterval.start, intervals.get(i).start),
+                Math.max(newInterval.end, intervals.get(i).end));
+        i++;
+    }
+    <span class="hljs-comment">//&#x5C06;&#x65B0;&#x8282;&#x70B9;&#x52A0;&#x5165;</span>
+    result.add(newInterval); 
+    <span class="hljs-comment">///&#x5269;&#x4E0B;&#x7684;&#x5168;&#x90E8;&#x52A0;&#x8FDB;&#x6765;</span>
+    <span class="hljs-keyword">while</span> (i &lt; intervals.size()) result.add(intervals.get(i++)); 
+    <span class="hljs-keyword">return</span> result;
+}
+</code></pre>
+<p><a href="https://leetcode.com/problems/insert-interval/discuss/21600/Short-java-code" target="_blank">&#x7B2C;&#x4E8C;&#x79CD;</a>&#x3002;&#x548C;&#x4E4B;&#x524D;&#x662F;&#x4E00;&#x6837;&#x7684;&#x601D;&#x60F3;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#x66F4;&#x52A0;&#x7684;&#x7B80;&#x6D01;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x4E00;&#x4E0B;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;Interval&gt; <span class="hljs-title">insert</span><span class="hljs-params">(List&lt;Interval&gt; intervals, Interval newInterval)</span> </span>{
+    List&lt;Interval&gt; result = <span class="hljs-keyword">new</span> ArrayList&lt;Interval&gt;();
+    <span class="hljs-keyword">for</span> (Interval i : intervals) {
+        <span class="hljs-comment">//&#x65B0;&#x52A0;&#x7684;&#x5165;&#x7684;&#x8282;&#x70B9;&#x5728;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x540E;&#x8FB9;</span>
+        <span class="hljs-keyword">if</span> (newInterval == <span class="hljs-keyword">null</span> || i.end &lt; newInterval.start)
+            result.add(i);
+        <span class="hljs-comment">//&#x65B0;&#x52A0;&#x5165;&#x7684;&#x8282;&#x70B9;&#x5728;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x524D;&#x8FB9;</span>
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (i.start &gt; newInterval.end) {
+            result.add(newInterval);
+            result.add(i);
+            newInterval = <span class="hljs-keyword">null</span>;
+        <span class="hljs-comment">//&#x65B0;&#x52A0;&#x5165;&#x7684;&#x8282;&#x70B9;&#x548C;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x6709;&#x91CD;&#x5408;&#xFF0C;&#x66F4;&#x65B0;&#x8282;&#x70B9;</span>
         } <span class="hljs-keyword">else</span> {
-            i = i - j;
-            j = <span class="hljs-number">0</span>;
+            newInterval.start = Math.min(newInterval.start, i.start);
+            newInterval.end = Math.max(newInterval.end, i.end);
         }
     }
-    <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+    <span class="hljs-keyword">if</span> (newInterval != <span class="hljs-keyword">null</span>)
+        result.add(newInterval);
+    <span class="hljs-keyword">return</span> result;
 }
 </code></pre>
-<p>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;&#x5047;&#x8BBE; haystack &#x548C; needle &#x7684;&#x957F;&#x5EA6;&#x5206;&#x522B;&#x662F; n &#x548C; k&#xFF0C;&#x5BF9;&#x4E8E;&#x6BCF;&#x4E00;&#x4E2A; i &#xFF0C;&#x6211;&#x4EEC;&#x6700;&#x591A;&#x6267;&#x884C; k - 1 &#x6B21;&#xFF0C;&#x603B;&#x5171;&#x4F1A;&#x6709; n &#x4E2A; i &#xFF0C;&#x6240;&#x4EE5;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x662F; O&#xFF08;kn&#xFF09;&#x3002;</p>
-<p>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O&#xFF08;1&#xFF09;&#x3002;</p>
-<p>&#x6211;&#x4EEC;&#x518D;&#x770B;&#x4E0B;&#x522B;&#x4EBA;&#x7684;<a href="https://leetcode.com/problems/implement-strstr/discuss/12807/Elegant-Java-solution" target="_blank">&#x4EE3;&#x7801;</a>&#xFF0C;&#x7528;&#x4E24;&#x4E2A; for &#x5FAA;&#x73AF;&#x3002;&#x4F46;&#x672C;&#x8D28;&#x5176;&#x5B9E;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x4F46;&#x53EF;&#x80FD;&#x4F1A;&#x66F4;&#x597D;&#x7406;&#x89E3;&#x4E9B;&#x5427;&#x3002;</p>
-<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">strStr</span><span class="hljs-params">(String haystack, String needle)</span> </span>{
-  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; ; i++) {
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; ; j++) {
-      <span class="hljs-keyword">if</span> (j == needle.length()) <span class="hljs-keyword">return</span> i;
-      <span class="hljs-keyword">if</span> (i + j == haystack.length()) <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
-      <span class="hljs-keyword">if</span> (needle.charAt(j) != haystack.charAt(i + j)) <span class="hljs-keyword">break</span>;
-    }
-  }
-}
-</code></pre>
+<p>&#x603B;&#x7684;&#x6765;&#x8BF4;&#xFF0C;&#x4E0A;&#x8FB9;&#x4E24;&#x4E2A;&#x5199;&#x6CD5;&#x672C;&#x8D28;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x5C31;&#x662F;&#x4F9D;&#x636E;&#x4ED6;&#x4EEC;&#x662F;&#x6709;&#x5E8F;&#x7684;&#xFF0C;&#x5148;&#x628A;&#x65B0;&#x8282;&#x70B9;&#x524D;&#x8FB9;&#x7684;&#x8282;&#x70B9;&#x52A0;&#x5165;&#xFF0C;&#x7136;&#x540E;&#x5F00;&#x59CB;&#x5224;&#x65AD;&#x662F;&#x5426;&#x91CD;&#x5408;&#xFF0C;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x52A0;&#x5165;&#x540E;&#xFF0C;&#x628A;&#x540E;&#x8FB9;&#x7684;&#x52A0;&#x5165;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;</p>
+<p>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O&#xFF08;n&#xFF09;&#x3002;</p>
+<p>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O&#xFF08;n&#xFF09;&#xFF0C;&#x5B58;&#x50A8;&#x6700;&#x540E;&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
 <h1 id="&#x603B;"><a name="&#x603B;" class="anchor-navigation-ex-anchor" href="#&#x603B;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x603B;</h1>
-<p>&#x603B;&#x7684;&#x6765;&#x8BF4;&#xFF0C;&#x8FD8;&#x662F;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#x7684;&#xFF0C;&#x5C31;&#x662F;&#x7B80;&#x5355;&#x7684;&#x904D;&#x5386;&#x5C31;&#x5B9E;&#x73B0;&#x4E86;&#x3002;</p>
+<p>&#x603B;&#x7684;&#x6765;&#x8BF4;&#xFF0C;&#x8FD9;&#x9053;&#x9898;&#x53EF;&#x4EE5;&#x770B;&#x505A;&#x4E0A;&#x9053;&#x9898;&#x7684;&#x4E00;&#x4E9B;&#x53D8;&#x5F62;&#xFF0C;&#x672C;&#x8D28;&#x4E0A;&#x662F;&#x4E00;&#x6837;&#x7684;&#x3002;&#x7531;&#x4E8E;&#x7528; for &#x5FAA;&#x73AF;&#x4E0D;&#x80FD;&#x4E00;&#x8FB9;&#x904D;&#x5386;&#x5217;&#x8868;&#xFF0C;&#x4E00;&#x8FB9;&#x5220;&#x9664;&#x67D0;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x6240;&#x4EE5;&#x5229;&#x7528;&#x8FED;&#x4EE3;&#x5668;&#x5B9E;&#x73B0;&#x8FB9;&#x904D;&#x5386;&#xFF0C;&#x8FB9;&#x5220;&#x9664;&#xFF0C;&#x81EA;&#x5DF1;&#x4E5F;&#x662F;&#x7B2C;&#x4E00;&#x6B21;&#x7528;&#x3002;&#x6B64;&#x5916;&#xFF0C;&#x89E3;&#x6CD5;&#x4E00;&#x66F4;&#x52A0;&#x901A;&#x7528;&#x4E9B;&#xFF0C;&#x5B83;&#x4E0D;&#x8981;&#x6C42;&#x7ED9;&#x5B9A;&#x7684;&#x5217;&#x8868;&#x6709;&#x5E8F;&#x3002;</p>
 
                                 
                                 </section>
@@ -1001,14 +1141,10 @@
 
             
                 
-                <a href="leetCode-27-Remove-Element.html" class="navigation navigation-prev " aria-label="Previous page: 27. Remove Element">
+                <a href="leetCode-56-Merge-Intervals.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 56. Merge Intervals">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="leetCode-29-Divide-Two-Integers.html" class="navigation navigation-next " aria-label="Next page: 29. Divide Two Integers">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -1017,7 +1153,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"28. Implement strStr()","level":"1.29","depth":1,"next":{"title":"29. Divide Two Integers","level":"1.30","depth":1,"path":"leetCode-29-Divide-Two-Integers.md","ref":"leetCode-29-Divide-Two-Integers.md","articles":[]},"previous":{"title":"27. Remove Element","level":"1.28","depth":1,"path":"leetCode-27-Remove-Element.md","ref":"leetCode-27-Remove-Element.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr","-search","search-plus","ad","-livereload","meta"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ad":{"contentBottom":"%u003c%u0064%u0069%u0076%u0020%u0069%u0064%u003d%u0022%u0077%u0065%u0063%u0068%u0061%u0074%u005f%u0073%u0075%u0062%u0073%u0063%u0072%u0069%u0062%u0065%u0072%u0022%u0020%u0073%u0074%u0079%u006c%u0065%u003d%u0022%u0064%u0069%u0073%u0070%u006c%u0061%u0079%u003a%u0020%u0062%u006c%u006f%u0063%u006b%u003b%u0020%u0070%u0061%u0064%u0064%u0069%u006e%u0067%u003a%u0020%u0031%u0030%u0070%u0078%u0020%u0030%u003b%u0020%u006d%u0061%u0072%u0067%u0069%u006e%u003a%u0020%u0032%u0030%u0070%u0078%u0020%u0061%u0075%u0074%u006f%u003b%u0020%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0031%u0030%u0030%u0025%u003b%u0020%u0074%u0065%u0078%u0074%u002d%u0061%u006c%u0069%u0067%u006e%u003a%u0020%u0063%u0065%u006e%u0074%u0065%u0072%u0022%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0069%u006d%u0067%u0020%u0069%u0064%u003d%u0022%u0077%u0065%u0063%u0068%u0061%u0074%u005f%u0073%u0075%u0062%u0073%u0063%u0072%u0069%u0062%u0065%u0072%u005f%u0071%u0063%u006f%u0064%u0065%u0022%u0020%u0073%u0072%u0063%u003d%u0022%u0068%u0074%u0074%u0070%u0073%u003a%u002f%u002f%u0077%u0069%u006e%u0064%u006c%u0069%u0061%u006e%u0067%u002e%u006f%u0073%u0073%u002d%u0063%u006e%u002d%u0062%u0065%u0069%u006a%u0069%u006e%u0067%u002e%u0061%u006c%u0069%u0079%u0075%u006e%u0063%u0073%u002e%u0063%u006f%u006d%u002f%u0077%u0065%u0063%u0068%u0061%u0074%u002e%u006a%u0070%u0067%u0022%u0020%u0061%u006c%u0074%u003d%u0022%u0077%u0069%u006e%u0064%u006c%u0069%u0061%u006e%u0067%u0020%u0077%u0065%u0063%u0068%u0061%u0074%u0022%u0020%u0073%u0074%u0079%u006c%u0065%u003d%u0022%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0032%u0030%u0030%u0070%u0078%u003b%u0020%u006d%u0061%u0078%u002d%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0031%u0030%u0030%u0025%u003b%u0022%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0062%u0072%u003e%u0020%u0020%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0064%u0069%u0076%u003e%u6dfb%u52a0%u597d%u53cb%u4e00%u8d77%u8fdb%u6b65%u007e%u003c%u002f%u0064%u0069%u0076%u003e%u0020%u003c%u0062%u0072%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0064%u0069%u0076%u003e%u5982%u679c%u89c9%u5f97%u6709%u5e2e%u52a9%u7684%u8bdd%uff0c%u5230%u9875%u9762%u6700%u4e0a%u8fb9%u8bb0%u5f97%u7ed9%u4e00%u4e2a%u0020%u0073%u0074%u0061%u0072%u0020%u54e6%u0020%u005e%u0020%u005e%u003c%u002f%u0064%u0069%u0076%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u002f%u0064%u0069%u0076%u003e"},"meta":{"content":"lzwmbdfIJy","data":[],"name":"baidu-site-verification"},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"github-buttons":{"buttons":[{"user":"wind-liang","repo":"leetcode","type":"star","size":"small","count":true}]},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"windliang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetCode","language":"zh-hans","links":{"sidebar":{"Home":"http://windliang.cc"},"gitbook":true},"gitbook":"3.2.3","description":"leetCode"},"file":{"path":"leetCode-28-Implement-strStr.md","mtime":"2019-03-31T09:40:38.199Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-01T16:13:24.613Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"57. Insert Interval","level":"1.58","depth":1,"previous":{"title":"56. Merge Intervals","level":"1.57","depth":1,"path":"leetCode-56-Merge-Intervals.md","ref":"leetCode-56-Merge-Intervals.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr","-search","search-plus","ad","-livereload","meta"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ad":{"contentBottom":"%u003c%u0064%u0069%u0076%u0020%u0069%u0064%u003d%u0022%u0077%u0065%u0063%u0068%u0061%u0074%u005f%u0073%u0075%u0062%u0073%u0063%u0072%u0069%u0062%u0065%u0072%u0022%u0020%u0073%u0074%u0079%u006c%u0065%u003d%u0022%u0064%u0069%u0073%u0070%u006c%u0061%u0079%u003a%u0020%u0062%u006c%u006f%u0063%u006b%u003b%u0020%u0070%u0061%u0064%u0064%u0069%u006e%u0067%u003a%u0020%u0031%u0030%u0070%u0078%u0020%u0030%u003b%u0020%u006d%u0061%u0072%u0067%u0069%u006e%u003a%u0020%u0032%u0030%u0070%u0078%u0020%u0061%u0075%u0074%u006f%u003b%u0020%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0031%u0030%u0030%u0025%u003b%u0020%u0074%u0065%u0078%u0074%u002d%u0061%u006c%u0069%u0067%u006e%u003a%u0020%u0063%u0065%u006e%u0074%u0065%u0072%u0022%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0069%u006d%u0067%u0020%u0069%u0064%u003d%u0022%u0077%u0065%u0063%u0068%u0061%u0074%u005f%u0073%u0075%u0062%u0073%u0063%u0072%u0069%u0062%u0065%u0072%u005f%u0071%u0063%u006f%u0064%u0065%u0022%u0020%u0073%u0072%u0063%u003d%u0022%u0068%u0074%u0074%u0070%u0073%u003a%u002f%u002f%u0077%u0069%u006e%u0064%u006c%u0069%u0061%u006e%u0067%u002e%u006f%u0073%u0073%u002d%u0063%u006e%u002d%u0062%u0065%u0069%u006a%u0069%u006e%u0067%u002e%u0061%u006c%u0069%u0079%u0075%u006e%u0063%u0073%u002e%u0063%u006f%u006d%u002f%u0077%u0065%u0063%u0068%u0061%u0074%u002e%u006a%u0070%u0067%u0022%u0020%u0061%u006c%u0074%u003d%u0022%u0077%u0069%u006e%u0064%u006c%u0069%u0061%u006e%u0067%u0020%u0077%u0065%u0063%u0068%u0061%u0074%u0022%u0020%u0073%u0074%u0079%u006c%u0065%u003d%u0022%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0032%u0030%u0030%u0070%u0078%u003b%u0020%u006d%u0061%u0078%u002d%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0031%u0030%u0030%u0025%u003b%u0022%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0062%u0072%u003e%u0020%u0020%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0064%u0069%u0076%u003e%u6dfb%u52a0%u597d%u53cb%u4e00%u8d77%u8fdb%u6b65%u007e%u003c%u002f%u0064%u0069%u0076%u003e%u0020%u003c%u0062%u0072%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0064%u0069%u0076%u003e%u5982%u679c%u89c9%u5f97%u6709%u5e2e%u52a9%u7684%u8bdd%uff0c%u5230%u9875%u9762%u6700%u4e0a%u8fb9%u8bb0%u5f97%u7ed9%u4e00%u4e2a%u0020%u0073%u0074%u0061%u0072%u0020%u54e6%u0020%u005e%u0020%u005e%u003c%u002f%u0064%u0069%u0076%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u002f%u0064%u0069%u0076%u003e"},"meta":{"content":"lzwmbdfIJy","data":[],"name":"baidu-site-verification"},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"github-buttons":{"buttons":[{"user":"wind-liang","repo":"leetcode","type":"star","size":"small","count":true}]},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"windliang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetCode","language":"zh-hans","links":{"sidebar":{"Home":"http://windliang.cc"},"gitbook":true},"gitbook":"3.2.3","description":"leetCode"},"file":{"path":"leetCode-57-Insert-Interval.md","mtime":"2019-04-01T16:13:13.112Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-01T16:13:24.613Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
