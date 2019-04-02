@@ -58,3 +58,4 @@
 * [55. Jump Game](leetCode-55-Jump-Game.md)
 * [56. Merge Intervals](leetCode-56-Merge-Intervals.md)
 * [57. Insert Interval](leetCode-57-Insert-Interval.md)
+* [58. Length of Last Word](leetCode-58-Length-of-Last-Word.md)
