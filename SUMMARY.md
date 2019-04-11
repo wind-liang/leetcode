@@ -60,3 +60,4 @@
 * [57. Insert Interval](leetCode-57-Insert-Interval.md)
 * [58. Length of Last Word](leetCode-58-Length-of-Last-Word.md)
 * [59. Spiral Matrix II](leetCode-59-Spiral-MatrixII.md)
+* [60. Permutation Sequence](leetCode-60-Permutation-Sequence.md)
