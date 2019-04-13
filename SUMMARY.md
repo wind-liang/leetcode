@@ -61,3 +61,4 @@
 * [58. Length of Last Word](leetCode-58-Length-of-Last-Word.md)
 * [59. Spiral Matrix II](leetCode-59-Spiral-MatrixII.md)
 * [60. Permutation Sequence](leetCode-60-Permutation-Sequence.md)
+* [61. Rotate List](leetCode-61-Rotate-List.md)
