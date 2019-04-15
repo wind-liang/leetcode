@@ -62,3 +62,4 @@
 * [59. Spiral Matrix II](leetCode-59-Spiral-MatrixII.md)
 * [60. Permutation Sequence](leetCode-60-Permutation-Sequence.md)
 * [61. Rotate List](leetCode-61-Rotate-List.md)
+* [62. Unique Paths](leetCode-62-Unique-Paths.md)
