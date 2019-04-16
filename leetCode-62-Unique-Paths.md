@@ -132,7 +132,7 @@ public int uniquePaths(int m, int n) {
 
 空间复杂度：O（m）。
 
-[这里](https://leetcode.com/problems/unique-paths/discuss/22954/C%2B%2B-DP)也有一个类似的想法。不过他是正向考虑的，和上边的想法刚好相反。如果把 dp \[ i \] [ j \] 表示为从点 （i，j）到点 ( m - 1，n - 1）的走法。
+[这里](https://leetcode.com/problems/unique-paths/discuss/22954/C%2B%2B-DP)也有一个类似的想法。不过他是正向考虑的，和上边的想法刚好相反。如果把 dp \[ i \] [ j \] 表示为从点 （0，0）到点 ( i，j）的走法。
 
 上边解法公式就是 dp \[ i \] [ j \] = dp \[ i + 1 \] [ j \] + dp \[ i \] [ j +1 \]。
 
@@ -184,7 +184,7 @@ R D R D R
 public int uniquePaths(int m, int n) {
     int N = n + m - 2; 
     int k = m - 1;  
-    double res = 1; 
+    long res = 1; 
     for (int i = 1; i <= k; i++)
         res = res * (N - k + i) / i;
     return (int) res; 
