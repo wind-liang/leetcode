@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>18. 4Sum · leetCode</title>
+        <title>63. Unique Paths II · leetCode</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -79,10 +79,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="leetCode-19-Remov-Nth-Node-From-End-of-List.html" />
     
-    
-    <link rel="prev" href="leetCode-17-Letter-Combinations-of-a-Phone-Number.html" />
+    <link rel="prev" href="leetCode-62-Unique-Paths.html" />
     
 
 
@@ -366,7 +364,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.19" data-path="leetCode-18-4Sum.html">
+        <li class="chapter " data-level="1.19" data-path="leetCode-18-4Sum.html">
             
                 <a href="leetCode-18-4Sum.html">
             
@@ -951,7 +949,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.64" data-path="leetCode-63-Unique-PathsII.html">
+        <li class="chapter active" data-level="1.64" data-path="leetCode-63-Unique-PathsII.html">
             
                 <a href="leetCode-63-Unique-PathsII.html">
             
@@ -994,7 +992,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >18. 4Sum</a>
+        <a href="." >63. Unique Paths II</a>
     </h1>
 </div>
 
@@ -1009,45 +1007,97 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><b> </b>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x603B;"><b> </b>&#x603B;</a></li></ul></div><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><a name="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;</h1>
-<p><img src="https://windliang.oss-cn-beijing.aliyuncs.com/18.jpg" alt=""></p>
-<p>&#x548C;<a href="https://leetcode.windliang.cc/leetCode-15-3Sum.html" target="_blank">3Sum</a>&#x7C7B;&#x4F3C;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#x662F;&#x627E;&#x56DB;&#x4E2A;&#x6570;&#xFF0C;&#x4F7F;&#x5F97;&#x548C;&#x4E3A; target&#xFF0C;&#x5E76;&#x4E14;&#x4E0D;&#x80FD;&#x6709;&#x91CD;&#x590D;&#x7684;&#x5E8F;&#x5217;&#x3002;</p>
-<p>&#x5982;&#x679C;&#x4E4B;&#x524D;&#x6CA1;&#x6709;&#x505A;&#x8FC7;<a href="https://leetcode.windliang.cc/leetCode-15-3Sum.html" target="_blank">3Sum</a>&#x53EF;&#x4EE5;&#x5148;&#x770B;&#x770B;&#xFF0C;&#x81EA;&#x5DF1;&#x5728;&#x4E0A;&#x8FB9;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x52A0;&#x4E86;&#x4E00;&#x4E2A;&#x5FAA;&#x73AF;&#x800C;&#x5DF2;&#x3002;</p>
-<pre><code class="lang-java"><span class="hljs-keyword">public</span> List&lt;List&lt;Integer&gt;&gt; fourSum(<span class="hljs-keyword">int</span>[] num, <span class="hljs-keyword">int</span> target) {
-    Arrays.sort(num);
-    List&lt;List&lt;Integer&gt;&gt; res = <span class="hljs-keyword">new</span> LinkedList&lt;&gt;();
-    <span class="hljs-comment">//&#x591A;&#x52A0;&#x4E86;&#x5C42;&#x5FAA;&#x73AF;</span>
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; num.length - <span class="hljs-number">3</span>; j++) {
-        <span class="hljs-comment">//&#x9632;&#x6B62;&#x91CD;&#x590D;&#x7684;</span>
-        <span class="hljs-keyword">if</span> (j == <span class="hljs-number">0</span> || (j &gt; <span class="hljs-number">0</span> &amp;&amp; num[j] != num[j - <span class="hljs-number">1</span>]))
-            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = j + <span class="hljs-number">1</span>; i &lt; num.length - <span class="hljs-number">2</span>; i++) {
-                <span class="hljs-comment">//&#x9632;&#x6B62;&#x91CD;&#x590D;&#x7684;&#xFF0C;&#x4E0D;&#x518D;&#x662F; i == 0 &#xFF0C;&#x56E0;&#x4E3A; i &#x4ECE; j + 1 &#x5F00;&#x59CB;</span>
-                <span class="hljs-keyword">if</span> (i == j + <span class="hljs-number">1</span> || num[i] != num[i - <span class="hljs-number">1</span>]) {
-                    <span class="hljs-keyword">int</span> lo = i + <span class="hljs-number">1</span>, hi = num.length - <span class="hljs-number">1</span>, sum = target - num[j] - num[i];
-                    <span class="hljs-keyword">while</span> (lo &lt; hi) {
-                        <span class="hljs-keyword">if</span> (num[lo] + num[hi] == sum) {
-                            res.add(Arrays.asList(num[j], num[i], num[lo], num[hi]));
-                            <span class="hljs-keyword">while</span> (lo &lt; hi &amp;&amp; num[lo] == num[lo + <span class="hljs-number">1</span>])
-                                lo++;
-                            <span class="hljs-keyword">while</span> (lo &lt; hi &amp;&amp; num[hi] == num[hi - <span class="hljs-number">1</span>])
-                                hi--;
-                            lo++;
-                            hi--;
-                        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (num[lo] + num[hi] &lt; sum)
-                            lo++;
-                        <span class="hljs-keyword">else</span>
-                            hi--;
-                    }
-                }
-            }
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><b> </b>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x89E3;&#x6CD5;&#x4E00;-&#x9012;&#x5F52;"><b> </b>&#x89E3;&#x6CD5;&#x4E00; &#x9012;&#x5F52;</a></li><li><span class="title-icon "></span><a href="#&#x89E3;&#x6CD5;&#x4E8C;-&#x52A8;&#x6001;&#x89C4;&#x5212;"><b> </b>&#x89E3;&#x6CD5;&#x4E8C; &#x52A8;&#x6001;&#x89C4;&#x5212;</a></li><li><span class="title-icon "></span><a href="#&#x603B;"><b> </b>&#x603B;</a></li></ul></div><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><a name="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;</h1>
+<p><img src="https://windliang.oss-cn-beijing.aliyuncs.com/63.jpg" alt=""></p>
+<p>&#x5BF9;<a href="https://leetcode.windliang.cc/leetCode-62-Unique-Paths.html" target="_blank">62&#x9898;</a>&#x7684;&#x53D8;&#x4F53;&#xFF0C;&#x589E;&#x52A0;&#x4E86;&#x4E00;&#x4E9B;&#x4E0D;&#x80FD;&#x8D70;&#x7684;&#x683C;&#x5B50;&#xFF0C;&#x7528; 1 &#x8868;&#x793A;&#x3002;&#x8FD8;&#x662F;&#x8F93;&#x51FA;&#x4ECE;&#x5DE6;&#x4E0A;&#x89D2;&#x5230;&#x53F3;&#x4E0B;&#x89D2;&#x603B;&#x5171;&#x6709;&#x591A;&#x5C11;&#x79CD;&#x8D70;&#x6CD5;&#x3002;</p>
+<p>&#x6CA1;&#x505A;&#x8FC7;<a href="https://leetcode.windliang.cc/leetCode-62-Unique-Paths.html" target="_blank">62&#x9898;</a>&#x7684;&#x8BDD;&#x53EF;&#x4EE5;&#x5148;&#x770B;&#x4E00;&#x4E0B;&#xFF0C;62 &#x9898;&#x603B;&#x7ED3;&#x7684;&#x5F88;&#x8BE6;&#x7EC6;&#x4E86;&#xFF0C;&#x6211;&#x76F4;&#x63A5;&#x5728; 62 &#x9898;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x6539;&#x4E86;&#x3002;</p>
+<h1 id="&#x89E3;&#x6CD5;&#x4E00;-&#x9012;&#x5F52;"><a name="&#x89E3;&#x6CD5;&#x4E00;-&#x9012;&#x5F52;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x6CD5;&#x4E00;-&#x9012;&#x5F52;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x89E3;&#x6CD5;&#x4E00; &#x9012;&#x5F52;</h1>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">uniquePathsWithObstacles</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] obstacleGrid)</span> </span>{
+    <span class="hljs-keyword">int</span> m = obstacleGrid.length;
+    <span class="hljs-keyword">int</span> n = obstacleGrid[<span class="hljs-number">0</span>].length;
+    HashMap&lt;String, Integer&gt; visited = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
+    <span class="hljs-comment">//&#x8D77;&#x70B9;&#x662F;&#x969C;&#x788D;&#xFF0C;&#x76F4;&#x63A5;&#x8FD4;&#x56DE; 0 </span>
+    <span class="hljs-keyword">if</span> (obstacleGrid[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>] == <span class="hljs-number">1</span>)
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">return</span> getAns(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, m - <span class="hljs-number">1</span>, n - <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, visited, obstacleGrid);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getAns</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y, <span class="hljs-keyword">int</span> m, <span class="hljs-keyword">int</span> n, <span class="hljs-keyword">int</span> num, HashMap&lt;String, Integer&gt; visited, <span class="hljs-keyword">int</span>[][] obstacleGrid)</span> </span>{
+    <span class="hljs-comment">// TODO Auto-generated method stub</span>
+    <span class="hljs-keyword">if</span> (x == m &amp;&amp; y == n) {
+        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
     }
-    <span class="hljs-keyword">return</span> res;
+    <span class="hljs-keyword">int</span> n1 = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">int</span> n2 = <span class="hljs-number">0</span>;
+    String key = x + <span class="hljs-number">1</span> + <span class="hljs-string">&quot;@&quot;</span> + y;
+    <span class="hljs-keyword">if</span> (!visited.containsKey(key)) {
+        <span class="hljs-comment">//&#x4E0E; 62 &#x9898;&#x4E0D;&#x540C;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x589E;&#x52A0;&#x4E86;&#x5224;&#x65AD;&#x662F;&#x5426;&#x662F;&#x969C;&#x788D;</span>
+        <span class="hljs-keyword">if</span> (x + <span class="hljs-number">1</span> &lt;= m &amp;&amp; obstacleGrid[x + <span class="hljs-number">1</span>][y] == <span class="hljs-number">0</span>) {
+            n1 = getAns(x + <span class="hljs-number">1</span>, y, m, n, num, visited, obstacleGrid);
+            visited.put(key, n1);
+        }
+    } <span class="hljs-keyword">else</span> {
+        n1 = visited.get(key);
+    }
+    key = x + <span class="hljs-string">&quot;@&quot;</span> + (y + <span class="hljs-number">1</span>);
+    <span class="hljs-keyword">if</span> (!visited.containsKey(key)) {
+        <span class="hljs-comment">//&#x4E0E; 62 &#x9898;&#x4E0D;&#x540C;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x589E;&#x52A0;&#x4E86;&#x5224;&#x65AD;&#x662F;&#x5426;&#x662F;&#x969C;&#x788D;</span>
+        <span class="hljs-keyword">if</span> (y + <span class="hljs-number">1</span> &lt;= n &amp;&amp; obstacleGrid[x][y + <span class="hljs-number">1</span>] == <span class="hljs-number">0</span>) {
+            n2 = getAns(x, y + <span class="hljs-number">1</span>, m, n, num, visited, obstacleGrid);
+            visited.put(key, n2);
+        }
+    } <span class="hljs-keyword">else</span> {
+        n2 = visited.get(key);
+    }
+    <span class="hljs-keyword">return</span> n1 + n2;
 }
 </code></pre>
-<p>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O&#xFF08;n&#xB3;&#xFF09;&#x3002;</p>
-<p>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O&#xFF08;N&#xFF09;&#xFF0C;&#x6700;&#x574F;&#x60C5;&#x51B5;&#xFF0C;&#x5373; N &#x662F;&#x6307; n &#x4E2A;&#x5143;&#x7D20;&#x7684;&#x6392;&#x5217;&#x7EC4;&#x5408;&#x4E2A;&#x6570;&#xFF0C;&#x5373;  <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>N</mi><mo>=</mo><msubsup><mi>C</mi><mi>n</mi><mn>4</mn></msubsup></mrow><annotation encoding="application/x-tex">N=C^4_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:1.061108em;vertical-align:-0.247em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10903em;">N</span><span class="mrel">=</span><span class="mord"><span class="mord mathit" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist"><span style="top:0.247em;margin-left:-0.07153em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">n</span></span></span><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">4</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>&#xFF0C;&#x7528;&#x6765;&#x4FDD;&#x5B58;&#x7ED3;&#x679C;&#x3002;</p>
+<p>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</p>
+<p>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</p>
+<h1 id="&#x89E3;&#x6CD5;&#x4E8C;-&#x52A8;&#x6001;&#x89C4;&#x5212;"><a name="&#x89E3;&#x6CD5;&#x4E8C;-&#x52A8;&#x6001;&#x89C4;&#x5212;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x6CD5;&#x4E8C;-&#x52A8;&#x6001;&#x89C4;&#x5212;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x89E3;&#x6CD5;&#x4E8C; &#x52A8;&#x6001;&#x89C4;&#x5212;</h1>
+<p>&#x5728;<a href="https://leetcode.windliang.cc/leetCode-62-Unique-Paths.html" target="_blank">62&#x9898;</a>&#x89E3;&#x6CD5;&#x4E8C;&#x6700;&#x540E;&#x4E2A;&#x60F3;&#x6CD5;&#x4E0A;&#x6539;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">uniquePathsWithObstacles</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] obstacleGrid)</span> </span>{
+    <span class="hljs-keyword">int</span> m = obstacleGrid.length;
+    <span class="hljs-keyword">int</span> n = obstacleGrid[<span class="hljs-number">0</span>].length;
+    <span class="hljs-comment">//&#x8D77;&#x70B9;&#x662F;&#x969C;&#x788D;&#xFF0C;&#x76F4;&#x63A5;&#x8FD4;&#x56DE; 0 </span>
+    <span class="hljs-keyword">if</span> (obstacleGrid[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>] == <span class="hljs-number">1</span>)
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">int</span>[] dp = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n];
+    <span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;
+    <span class="hljs-comment">//&#x521D;&#x59CB;&#x5316;&#x7B2C;&#x4E00;&#x884C;&#x548C; 62 &#x9898;&#x4E0D;&#x4E00;&#x6837;&#x4E86;</span>
+    <span class="hljs-comment">//&#x8FD9;&#x91CC;&#x7684;&#x8BDD;&#x4E0D;&#x662F;&#x5168;&#x90E8;&#x521D;&#x59CB;&#x5316; 1 &#x4E86;&#xFF0C;&#x56E0;&#x4E3A;&#x5982;&#x679C;&#x6709;&#x969C;&#x788D;&#x7684;&#x8BDD;&#x5F53;&#x524D;&#x5217;&#x548C;&#x540E;&#x8FB9;&#x7684;&#x5217;&#x5C31;&#x90FD;&#x8D70;&#x4E0D;&#x8FC7;&#x4E86;&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x4E3A; 0</span>
+    <span class="hljs-keyword">for</span> (; i &lt; n; i++) {
+        <span class="hljs-keyword">if</span> (obstacleGrid[<span class="hljs-number">0</span>][i] == <span class="hljs-number">1</span>) {
+            dp[i] = <span class="hljs-number">0</span>;
+            <span class="hljs-keyword">break</span>;
+        } <span class="hljs-keyword">else</span> {
+            dp[i] = <span class="hljs-number">1</span>;
+        }
+    }
+    <span class="hljs-comment">//&#x969C;&#x788D;&#x540E;&#x8FB9;&#x7684;&#x5217;&#x5168;&#x90E8;&#x521D;&#x59CB;&#x5316;&#x4E3A; 0</span>
+    <span class="hljs-keyword">for</span> (; i &lt; n; i++) {
+        dp[i] = <span class="hljs-number">0</span>;
+    }
+    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">1</span>; i &lt; m; i++) {
+        <span class="hljs-comment">//&#x8FD9;&#x91CC;&#x6539;&#x4E3A;&#x4ECE; 0 &#x5217;&#x5F00;&#x59CB;&#x4E86;&#xFF0C;&#x56E0;&#x4E3A; 62 &#x9898;&#x4E2D;&#x4ECE; 1 &#x5F00;&#x59CB;&#x662F;&#x56E0;&#x4E3A;&#x7B2C; 0 &#x5217;&#x6C38;&#x8FDC;&#x662F; 1 &#x4E0D;&#x9700;&#x8981;&#x66F4;&#x65B0;</span>
+        <span class="hljs-comment">//&#x8FD9;&#x91CC;&#x7684;&#x8BDD;&#xFF0C;&#x5982;&#x679C;&#x7B2C; 0 &#x5217;&#x662F;&#x969C;&#x788D;&#x7684;&#x8BDD;&#xFF0C;&#x9700;&#x8981;&#x66F4;&#x65B0;&#x4E3A; 0</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; n; j++) {
+            <span class="hljs-keyword">if</span> (obstacleGrid[i][j] == <span class="hljs-number">1</span>) {
+                dp[j] = <span class="hljs-number">0</span>;
+            } <span class="hljs-keyword">else</span> {
+                <span class="hljs-comment">//&#x7531;&#x4E8E;&#x4ECE;&#x7B2C; 0 &#x5217;&#x5F00;&#x59CB;&#x4E86;&#xFF0C;&#x66F4;&#x65B0;&#x516C;&#x5F0F;&#x6709; j - 1&#xFF0C;&#x6240;&#x4EE5; j = 0 &#x7684;&#x65F6;&#x5019;&#x4E0D;&#x66F4;&#x65B0;</span>
+                <span class="hljs-keyword">if</span> (j != <span class="hljs-number">0</span>)
+                    dp[j] = dp[j] + dp[j - <span class="hljs-number">1</span>];
+            }
+        }
+    }
+    <span class="hljs-keyword">return</span> dp[(n - <span class="hljs-number">1</span>)];
+}
+</code></pre>
+<p>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O&#xFF08;m * n&#xFF09;&#x3002;</p>
+<p>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O&#xFF08;n&#xFF09;&#x3002;</p>
 <h1 id="&#x603B;"><a name="&#x603B;" class="anchor-navigation-ex-anchor" href="#&#x603B;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x603B;</h1>
-<p>&#x5B8C;&#x5168;&#x662F;&#x6309;&#x7167; 3Sum &#x7684;&#x601D;&#x8DEF;&#x5199;&#x7684;&#xFF0C;&#x6BD4;&#x8F83;&#x597D;&#x7406;&#x89E3;&#x3002;</p>
+<p>&#x548C; 62 &#x9898;&#x6539;&#x52A8;&#x4E0D;&#x5927;&#xFF0C;&#x5C31;&#x662F;&#x5728;&#x969C;&#x788D;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x66F4;&#x65B0;&#x7684;&#x65F6;&#x5019;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x4E00;&#x4E0B;&#x3002;</p>
 
                                 
                                 </section>
@@ -1075,14 +1125,10 @@
 
             
                 
-                <a href="leetCode-17-Letter-Combinations-of-a-Phone-Number.html" class="navigation navigation-prev " aria-label="Previous page: 17. Letter Combinations of a Phone Number">
+                <a href="leetCode-62-Unique-Paths.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 62. Unique Paths">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="leetCode-19-Remov-Nth-Node-From-End-of-List.html" class="navigation navigation-next " aria-label="Next page: 19. Remove Nth Node From End of List">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -1091,7 +1137,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"18. 4Sum","level":"1.19","depth":1,"next":{"title":"19. Remove Nth Node From End of List","level":"1.20","depth":1,"path":"leetCode-19-Remov-Nth-Node-From-End-of-List.md","ref":"leetCode-19-Remov-Nth-Node-From-End-of-List.md","articles":[]},"previous":{"title":"17. Letter Combinations of a Phone Number","level":"1.18","depth":1,"path":"leetCode-17-Letter-Combinations-of-a-Phone-Number.md","ref":"leetCode-17-Letter-Combinations-of-a-Phone-Number.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr","-search","search-plus","ad","-livereload","meta"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ad":{"contentBottom":"%u003c%u0064%u0069%u0076%u0020%u0069%u0064%u003d%u0022%u0077%u0065%u0063%u0068%u0061%u0074%u005f%u0073%u0075%u0062%u0073%u0063%u0072%u0069%u0062%u0065%u0072%u0022%u0020%u0073%u0074%u0079%u006c%u0065%u003d%u0022%u0064%u0069%u0073%u0070%u006c%u0061%u0079%u003a%u0020%u0062%u006c%u006f%u0063%u006b%u003b%u0020%u0070%u0061%u0064%u0064%u0069%u006e%u0067%u003a%u0020%u0031%u0030%u0070%u0078%u0020%u0030%u003b%u0020%u006d%u0061%u0072%u0067%u0069%u006e%u003a%u0020%u0032%u0030%u0070%u0078%u0020%u0061%u0075%u0074%u006f%u003b%u0020%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0031%u0030%u0030%u0025%u003b%u0020%u0074%u0065%u0078%u0074%u002d%u0061%u006c%u0069%u0067%u006e%u003a%u0020%u0063%u0065%u006e%u0074%u0065%u0072%u0022%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0069%u006d%u0067%u0020%u0069%u0064%u003d%u0022%u0077%u0065%u0063%u0068%u0061%u0074%u005f%u0073%u0075%u0062%u0073%u0063%u0072%u0069%u0062%u0065%u0072%u005f%u0071%u0063%u006f%u0064%u0065%u0022%u0020%u0073%u0072%u0063%u003d%u0022%u0068%u0074%u0074%u0070%u0073%u003a%u002f%u002f%u0077%u0069%u006e%u0064%u006c%u0069%u0061%u006e%u0067%u002e%u006f%u0073%u0073%u002d%u0063%u006e%u002d%u0062%u0065%u0069%u006a%u0069%u006e%u0067%u002e%u0061%u006c%u0069%u0079%u0075%u006e%u0063%u0073%u002e%u0063%u006f%u006d%u002f%u0077%u0065%u0063%u0068%u0061%u0074%u002e%u006a%u0070%u0067%u0022%u0020%u0061%u006c%u0074%u003d%u0022%u0077%u0069%u006e%u0064%u006c%u0069%u0061%u006e%u0067%u0020%u0077%u0065%u0063%u0068%u0061%u0074%u0022%u0020%u0073%u0074%u0079%u006c%u0065%u003d%u0022%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0032%u0030%u0030%u0070%u0078%u003b%u0020%u006d%u0061%u0078%u002d%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0031%u0030%u0030%u0025%u003b%u0022%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0062%u0072%u003e%u0020%u0020%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0064%u0069%u0076%u003e%u6dfb%u52a0%u597d%u53cb%u4e00%u8d77%u8fdb%u6b65%u007e%u003c%u002f%u0064%u0069%u0076%u003e%u0020%u003c%u0062%u0072%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0064%u0069%u0076%u003e%u5982%u679c%u89c9%u5f97%u6709%u5e2e%u52a9%u7684%u8bdd%uff0c%u5230%u9875%u9762%u6700%u4e0a%u8fb9%u8bb0%u5f97%u7ed9%u4e00%u4e2a%u0020%u0073%u0074%u0061%u0072%u0020%u54e6%u0020%u005e%u0020%u005e%u003c%u002f%u0064%u0069%u0076%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u002f%u0064%u0069%u0076%u003e"},"meta":{"content":"lzwmbdfIJy","data":[],"name":"baidu-site-verification"},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"github-buttons":{"buttons":[{"user":"wind-liang","repo":"leetcode","type":"star","size":"small","count":true}]},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"windliang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetCode","language":"zh-hans","links":{"sidebar":{"Home":"http://windliang.cc"},"gitbook":true},"gitbook":"3.2.3","description":"leetCode"},"file":{"path":"leetCode-18-4Sum.md","mtime":"2019-04-15T15:27:05.918Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-16T15:31:50.459Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"63. Unique Paths II","level":"1.64","depth":1,"previous":{"title":"62. Unique Paths","level":"1.63","depth":1,"path":"leetCode-62-Unique-Paths.md","ref":"leetCode-62-Unique-Paths.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr","-search","search-plus","ad","-livereload","meta"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ad":{"contentBottom":"%u003c%u0064%u0069%u0076%u0020%u0069%u0064%u003d%u0022%u0077%u0065%u0063%u0068%u0061%u0074%u005f%u0073%u0075%u0062%u0073%u0063%u0072%u0069%u0062%u0065%u0072%u0022%u0020%u0073%u0074%u0079%u006c%u0065%u003d%u0022%u0064%u0069%u0073%u0070%u006c%u0061%u0079%u003a%u0020%u0062%u006c%u006f%u0063%u006b%u003b%u0020%u0070%u0061%u0064%u0064%u0069%u006e%u0067%u003a%u0020%u0031%u0030%u0070%u0078%u0020%u0030%u003b%u0020%u006d%u0061%u0072%u0067%u0069%u006e%u003a%u0020%u0032%u0030%u0070%u0078%u0020%u0061%u0075%u0074%u006f%u003b%u0020%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0031%u0030%u0030%u0025%u003b%u0020%u0074%u0065%u0078%u0074%u002d%u0061%u006c%u0069%u0067%u006e%u003a%u0020%u0063%u0065%u006e%u0074%u0065%u0072%u0022%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0069%u006d%u0067%u0020%u0069%u0064%u003d%u0022%u0077%u0065%u0063%u0068%u0061%u0074%u005f%u0073%u0075%u0062%u0073%u0063%u0072%u0069%u0062%u0065%u0072%u005f%u0071%u0063%u006f%u0064%u0065%u0022%u0020%u0073%u0072%u0063%u003d%u0022%u0068%u0074%u0074%u0070%u0073%u003a%u002f%u002f%u0077%u0069%u006e%u0064%u006c%u0069%u0061%u006e%u0067%u002e%u006f%u0073%u0073%u002d%u0063%u006e%u002d%u0062%u0065%u0069%u006a%u0069%u006e%u0067%u002e%u0061%u006c%u0069%u0079%u0075%u006e%u0063%u0073%u002e%u0063%u006f%u006d%u002f%u0077%u0065%u0063%u0068%u0061%u0074%u002e%u006a%u0070%u0067%u0022%u0020%u0061%u006c%u0074%u003d%u0022%u0077%u0069%u006e%u0064%u006c%u0069%u0061%u006e%u0067%u0020%u0077%u0065%u0063%u0068%u0061%u0074%u0022%u0020%u0073%u0074%u0079%u006c%u0065%u003d%u0022%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0032%u0030%u0030%u0070%u0078%u003b%u0020%u006d%u0061%u0078%u002d%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0031%u0030%u0030%u0025%u003b%u0022%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0062%u0072%u003e%u0020%u0020%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0064%u0069%u0076%u003e%u6dfb%u52a0%u597d%u53cb%u4e00%u8d77%u8fdb%u6b65%u007e%u003c%u002f%u0064%u0069%u0076%u003e%u0020%u003c%u0062%u0072%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0064%u0069%u0076%u003e%u5982%u679c%u89c9%u5f97%u6709%u5e2e%u52a9%u7684%u8bdd%uff0c%u5230%u9875%u9762%u6700%u4e0a%u8fb9%u8bb0%u5f97%u7ed9%u4e00%u4e2a%u0020%u0073%u0074%u0061%u0072%u0020%u54e6%u0020%u005e%u0020%u005e%u003c%u002f%u0064%u0069%u0076%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u002f%u0064%u0069%u0076%u003e"},"meta":{"content":"lzwmbdfIJy","data":[],"name":"baidu-site-verification"},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"github-buttons":{"buttons":[{"user":"wind-liang","repo":"leetcode","type":"star","size":"small","count":true}]},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"windliang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetCode","language":"zh-hans","links":{"sidebar":{"Home":"http://windliang.cc"},"gitbook":true},"gitbook":"3.2.3","description":"leetCode"},"file":{"path":"leetCode-63-Unique-PathsII.md","mtime":"2019-04-16T15:29:28.740Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-16T15:31:50.459Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
