@@ -30,8 +30,7 @@ private int getAns(int x, int y, int m, int n, int num, HashMap<String, Integer>
     if (!visited.containsKey(key)) {
         //与 62 题不同的地方，增加了判断是否是障碍
         if (x + 1 <= m && obstacleGrid[x + 1][y] == 0) {
-            n1 = getAns(x + 1, y, m, n, num, visited, obstacleGrid);
-            visited.put(key, n1);
+            n1 = getAns(x + 1, y, m, n, num, visited, obstacleGrid); 
         }
     } else {
         n1 = visited.get(key);
@@ -40,12 +39,14 @@ private int getAns(int x, int y, int m, int n, int num, HashMap<String, Integer>
     if (!visited.containsKey(key)) {
         //与 62 题不同的地方，增加了判断是否是障碍
         if (y + 1 <= n && obstacleGrid[x][y + 1] == 0) {
-            n2 = getAns(x, y + 1, m, n, num, visited, obstacleGrid);
-            visited.put(key, n2);
+            n2 = getAns(x, y + 1, m, n, num, visited, obstacleGrid); 
         }
     } else {
         n2 = visited.get(key);
     }
+    //将当前点加入 visited 中
+    key = x + "@" + y;
+    visited.put(key, n1+n2);
     return n1 + n2;
 }
 ```
