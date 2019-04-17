@@ -64,4 +64,4 @@
 * [61. Rotate List](leetCode-61-Rotate-List.md)
 * [62. Unique Paths](leetCode-62-Unique-Paths.md)
 * [63. Unique Paths II](leetCode-63-Unique-PathsII.md)
-* [64. Minimum Path Sum](leetCode-64-Minimum-Path-Sum.md)
+* [64. Minimum Path Sum](leetCode-64-Minimum-PathSum.md)
