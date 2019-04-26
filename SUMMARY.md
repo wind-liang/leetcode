@@ -66,3 +66,4 @@
 * [63. Unique Paths II](leetCode-63-Unique-PathsII.md)
 * [64. Minimum Path Sum](leetCode-64-Minimum-PathSum.md)
 * [65. Valid Number](leetCode-65-Valid-Number.md)
+* [66. Plus One](leetCode-66-Plus-One.md)
