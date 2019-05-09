@@ -40,10 +40,10 @@
                 "client": "ca-pub-1480477141602191",
                 "slot": "XXXXXXXXXX",
                 "format": "auto",
-                "location": ".page-inner section",
-                "style": "width: 100px;"
+                "element": ".page-inner section",
+                "position": "top"
             }
-        
+            
         },
         "pdf": {
             "fontSize": 16
