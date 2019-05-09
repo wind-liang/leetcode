@@ -69,3 +69,4 @@
 * [66. Plus One](leetCode-66-Plus-One.md)
 * [67. Add Binary](leetCode-67-Add Binary.md)
 * [68. Text Justification](leetCode-68-Text-Justification.md)
+* [69. Sqrt(x)](leetCode-69-Sqrt(x).md)
