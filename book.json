@@ -14,7 +14,7 @@
             "summary": "SUMMARY.md"
 
         }, 
-        "plugins": ["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr", "-search", "search-plus","ad","-livereload","meta"],
+        "plugins": ["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr", "-search", "search-plus","ad","-livereload","meta","adsense"],
         "pluginsConfig": {
             "github-buttons": {
                     "buttons": [{
@@ -35,7 +35,15 @@
             "meta": {
                 "name": "baidu-site-verification",
                 "content": "lzwmbdfIJy"
+            },
+            "adsense": {
+                "client": "ca-pub-1480477141602191",
+                "slot": "XXXXXXXXXX",
+                "format": "auto",
+                "location": ".page-inner section",
+                "style": "width: 100px;"
             }
+        
         },
         "pdf": {
             "fontSize": 16
