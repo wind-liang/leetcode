@@ -1,7 +1,7 @@
 {
-        "title": "leetCode",
+        "title": "leetcode",
         "author": "windliang",
-        "description": "leetCode",
+        "description": "leetcode",
         "language" : "zh-hans",
         "links": {
             "sidebar": {
@@ -14,7 +14,7 @@
             "summary": "SUMMARY.md"
 
         }, 
-        "plugins": ["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr", "-search", "search-plus","ad","-livereload","meta"],
+        "plugins": ["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr", "-search", "search-plus","ad","-livereload","meta","sitemap-general"],
         "pluginsConfig": {
             "github-buttons": {
                     "buttons": [{
@@ -43,6 +43,9 @@
                         "content": "qwgHd8kl7vEvBa4OR81jLieQG9UKcY2r8ocztMhzA8o"
                     }
                 ]
+            },
+            "sitemap-general": {
+                "prefix": "http://leetcode.wang"
             }
             
         },
