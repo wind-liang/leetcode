@@ -165,7 +165,7 @@ public ListNode mergeKLists(ListNode[] lists) {
 	}
 ```
 
-时间复杂度：while 循环依旧取决于最长的链表长度 n，while 循环里边，如果有 k 个链表，入队出队都需要 log（k），除此之外还有初始化队列的时间复杂度 O（k）。所以时间复杂度是 O（min（k，nlog（k）））。
+时间复杂度：假如总共有 N 个节点，每个节点入队出队都需要 log（k），所有时间复杂度是 O（N log（k））。
 
 空间复杂度：优先队列需要 O（k）的复杂度。
 
