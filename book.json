@@ -14,7 +14,7 @@
             "summary": "SUMMARY.md"
 
         }, 
-        "plugins": ["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr", "-search", "search-plus","ad","-livereload","meta","sitemap-general"],
+        "plugins": ["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr", "-search", "search-plus","ad","-livereload","meta","sitemap"],
         "pluginsConfig": {
             "github-buttons": {
                     "buttons": [{
@@ -44,8 +44,8 @@
                     }
                 ]
             },
-            "sitemap-general": {
-                "prefix": "http://leetcode.wang"
+            "sitemap": {
+                "hostname": "http://leetcode.wang/"
             }
             
         },
