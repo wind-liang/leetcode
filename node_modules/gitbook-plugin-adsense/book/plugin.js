@@ -21,6 +21,5 @@ require(['gitbook'], function (gitbook) {
 
   // I insert ad again when switching pages
   gitbook.events.bind('page.change', function () {
-    insert();
   });
 });
