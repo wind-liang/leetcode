@@ -136,9 +136,43 @@ public boolean canJump(int[] nums) {
 }
 ```
 
+但这样时间复杂度没有提高， 在 @Zhengwen 的提醒下，可以用下边的方法。
+
+我们判断 0 前边的元素能否跳过 0 ，不需要每次都向前查找，我们只需要用一个变量保存当前能跳的最远的距离，然后判断最远距离和当前 0 的位置就可以了。
+
+```java
+public boolean canJump(int[] nums) {
+    int max = 0;
+    for (int i = 0; i < nums.length - 1; i++) {
+        if (nums[i] == 0 && i >= max) {
+            return false;
+        }
+        max = Math.max(max, nums[i] + i);
+    }
+    return true;
+}
+```
+
 时间复杂度：O（n）。
 
 空间复杂度：O（1）。
+
+参考[这里](<https://leetcode.com/problems/jump-game/discuss/20917/Linear-and-simple-solution-in-C%2B%2B>)，我们甚至不需要考虑 0 的位置，只需要判断最大距离有没有超过当前的 i 。
+
+```java
+public boolean canJump(int[] nums) {
+    int max = 0; 
+    for (int i = 0; i < nums.length; i++) {
+        if (i > max) {
+            return false;
+        }
+        max = Math.max(max, nums[i] + i);
+    }
+    return true;
+}
+```
+
+
 
 # 总
 
