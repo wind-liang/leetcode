@@ -71,3 +71,4 @@
 * [68. Text Justification](leetCode-68-Text-Justification.md)
 * [69. Sqrt x](leetCode-69-Sqrtx.md)
 * [70. Climbing Stairs](leetCode-70-Climbing-Stairs.md)
+* [71. Simplify Path](leetCode-71-Simplify-Path.md)
