@@ -114,10 +114,10 @@ private int climbStairsN(int n, int[] memo) {
 当然递归可以解决，我们可以直接迭代，省去递归压栈的过程。初始值 f ( 1 ) 和 f ( 2 )，然后可以求出 f ( 3 )，然后求出 f ( 4 )  ...  直到 f ( n )，一个循环就够了。其实就是动态规划的思想了。
 
 ```java
-public int climbStairs3(int n) {
+public int climbStairs(int n) {
     int n1 = 1;
     int n2 = 2;
-    if (n1 == 1) {
+    if (n == 1) {
         return n1;
     }
     if (n == 2) {
