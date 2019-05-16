@@ -72,3 +72,4 @@
 * [69. Sqrt x](leetCode-69-Sqrtx.md)
 * [70. Climbing Stairs](leetCode-70-Climbing-Stairs.md)
 * [71. Simplify Path](leetCode-71-Simplify-Path.md)
+* [72. Edit Distance](leetCode-72-Edit-Distance.md)
