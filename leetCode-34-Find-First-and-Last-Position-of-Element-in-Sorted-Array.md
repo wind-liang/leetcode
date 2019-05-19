@@ -220,6 +220,61 @@ public int[] searchRange(int[] nums, int target) {
 
 空间复杂度：O（1）。
 
+@JZW 的提醒下，上边的虽然能 AC，但是如果要找的数字刚好就是 Integer.MIN_VALUE 的话，就会出现错误。可以修改一下。
+
+主要是这两句，除了小于 n，还判断了当前是不是在两端。
+
+```java
+if (target > n || mid == 0) {
+if (target < n || mid == nums.length - 1) {
+```
+
+```java
+public int[] searchRange(int[] nums, int target) {
+    int start = 0;
+    int end = nums.length - 1;
+    int[] ans = { -1, -1 };
+    if (nums.length == 0) {
+        return ans;
+    }
+    while (start <= end) {
+        int mid = (start + end) / 2;
+        if (target == nums[mid]) {
+            int n = mid > 0 ? nums[mid - 1] : Integer.MIN_VALUE;
+            if (target > n || mid == 0) {
+                ans[0] = mid;
+                break;
+            }
+            end = mid - 1;
+        } else if (target < nums[mid]) {
+            end = mid - 1;
+        } else {
+            start = mid + 1;
+        }
+    }
+    start = 0;
+    end = nums.length - 1;
+    while (start <= end) {
+        int mid = (start + end) / 2;
+        if (target == nums[mid]) {
+            int n = mid < nums.length - 1 ? nums[mid + 1] : Integer.MAX_VALUE;
+            if (target < n || mid == nums.length - 1) {
+                ans[1] = mid;
+                break;
+            }
+            start = mid + 1;
+        } else if (target < nums[mid]) {
+            end = mid - 1;
+        } else {
+            start = mid + 1;
+        }
+    }
+    return ans;
+}
+```
+
+
+
 # 总
 
 总体来说，这道题并不难，本质就是对二分查找的修改，以便满足我们的需求。
