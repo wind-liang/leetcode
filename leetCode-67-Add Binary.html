@@ -1,0 +1,1310 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>67. Add Binary · leetcode</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="windliang">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-ad/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta  name="baidu-site-verification"  content="iFzduP9Qsi" >
+    
+    <meta  name="google-site-verification"  content="qwgHd8kl7vEvBa4OR81jLieQG9UKcY2r8ocztMhzA8o" >
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="leetCode-68-Text-Justification.html" />
+    
+    
+    <link rel="prev" href="leetCode-66-Plus-One.html" />
+    
+
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"wind-liang","repo":"leetcode","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://windliang.cc" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="leetCode-1-Two-Sum.html">
+            
+                <a href="leetCode-1-Two-Sum.html">
+            
+                    
+                    1. Two Sum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="leetCode-2-Add-Two-Numbers.html">
+            
+                <a href="leetCode-2-Add-Two-Numbers.html">
+            
+                    
+                    2. Add Two Numbers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="leetCode-3-Longest-Substring-Without-Repeating-Characters.html">
+            
+                <a href="leetCode-3-Longest-Substring-Without-Repeating-Characters.html">
+            
+                    
+                    3. Longest Substring Without Repeating Characters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="leetCode-4-Median-of-Two-Sorted-Arrays.html">
+            
+                <a href="leetCode-4-Median-of-Two-Sorted-Arrays.html">
+            
+                    
+                    4. Median of Two Sorted Arrays
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="leetCode-5-Longest-Palindromic-Substring.html">
+            
+                <a href="leetCode-5-Longest-Palindromic-Substring.html">
+            
+                    
+                    5. Longest Palindromic Substring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="leetCode-6-ZigZag-Conversion.html">
+            
+                <a href="leetCode-6-ZigZag-Conversion.html">
+            
+                    
+                    6. ZigZag Conversion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="leetCode-7-Reverse-Integer.html">
+            
+                <a href="leetCode-7-Reverse-Integer.html">
+            
+                    
+                    7. Reverse Integer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="leetCode-8-String-to-Integer.html">
+            
+                <a href="leetCode-8-String-to-Integer.html">
+            
+                    
+                    8. String to Integer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="leetCode-9-Palindrome-Number.html">
+            
+                <a href="leetCode-9-Palindrome-Number.html">
+            
+                    
+                    9. Palindrome Number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="leetCode-10-Regular-Expression-Matching.html">
+            
+                <a href="leetCode-10-Regular-Expression-Matching.html">
+            
+                    
+                    10. Regular Expression Matching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="leetCode-11-Container-With-Most-Water.html">
+            
+                <a href="leetCode-11-Container-With-Most-Water.html">
+            
+                    
+                    11. Container With Most Water
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="leetCode-12-Integer-to-Roman.html">
+            
+                <a href="leetCode-12-Integer-to-Roman.html">
+            
+                    
+                    12. Integer to Roman
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="leetCode-13-Roman-to-Integer.html">
+            
+                <a href="leetCode-13-Roman-to-Integer.html">
+            
+                    
+                    13. Roman to Integer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="leetCode-14-Longest-Common-Prefix.html">
+            
+                <a href="leetCode-14-Longest-Common-Prefix.html">
+            
+                    
+                    14. Longest Common Prefix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="leetCode-15-3Sum.html">
+            
+                <a href="leetCode-15-3Sum.html">
+            
+                    
+                    15. 3Sum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="leetCode-16-3Sum-Closest.html">
+            
+                <a href="leetCode-16-3Sum-Closest.html">
+            
+                    
+                    16. 3Sum Closest
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="leetCode-17-Letter-Combinations-of-a-Phone-Number.html">
+            
+                <a href="leetCode-17-Letter-Combinations-of-a-Phone-Number.html">
+            
+                    
+                    17. Letter Combinations of a Phone Number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="leetCode-18-4Sum.html">
+            
+                <a href="leetCode-18-4Sum.html">
+            
+                    
+                    18. 4Sum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="leetCode-19-Remov-Nth-Node-From-End-of-List.html">
+            
+                <a href="leetCode-19-Remov-Nth-Node-From-End-of-List.html">
+            
+                    
+                    19. Remove Nth Node From End of List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="leetCode-20-Valid Parentheses.html">
+            
+                <a href="leetCode-20-Valid Parentheses.html">
+            
+                    
+                    20. Valid Parentheses
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="leetCode-21-Merge-Two-Sorted-Lists.html">
+            
+                <a href="leetCode-21-Merge-Two-Sorted-Lists.html">
+            
+                    
+                    21. Merge Two Sorted Lists
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="leetCode-22-Generate-Parentheses.html">
+            
+                <a href="leetCode-22-Generate-Parentheses.html">
+            
+                    
+                    22. Generate Parentheses
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="leetCode-23-Merge-k-Sorted-Lists.html">
+            
+                <a href="leetCode-23-Merge-k-Sorted-Lists.html">
+            
+                    
+                    23. Merge k Sorted Lists
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="leetCode-24-Swap-Nodes-in-Pairs.html">
+            
+                <a href="leetCode-24-Swap-Nodes-in-Pairs.html">
+            
+                    
+                    24. Swap Nodes in Pairs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="leetCode-25-Reverse-Nodes-in-k-Group.html">
+            
+                <a href="leetCode-25-Reverse-Nodes-in-k-Group.html">
+            
+                    
+                    25. Reverse Nodes in k-Group
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="leetCode-26-Remove-Duplicates-from-Sorted-Array.html">
+            
+                <a href="leetCode-26-Remove-Duplicates-from-Sorted-Array.html">
+            
+                    
+                    26. Remove Duplicates from Sorted Array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="leetCode-27-Remove-Element.html">
+            
+                <a href="leetCode-27-Remove-Element.html">
+            
+                    
+                    27. Remove Element
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" data-path="leetCode-28-Implement-strStr.html">
+            
+                <a href="leetCode-28-Implement-strStr.html">
+            
+                    
+                    28. Implement strStr()
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="leetCode-29-Divide-Two-Integers.html">
+            
+                <a href="leetCode-29-Divide-Two-Integers.html">
+            
+                    
+                    29. Divide Two Integers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" data-path="leetCode-30-Substring-with-Concatenation-of-All-Words.html">
+            
+                <a href="leetCode-30-Substring-with-Concatenation-of-All-Words.html">
+            
+                    
+                    30. Substring with Concatenation of All Words
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32" data-path="leetCode-31-Next-Permutation.html">
+            
+                <a href="leetCode-31-Next-Permutation.html">
+            
+                    
+                    31. Next Permutation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33" data-path="leetCode-32-Longest-Valid-Parentheses.html">
+            
+                <a href="leetCode-32-Longest-Valid-Parentheses.html">
+            
+                    
+                    32. Longest Valid Parentheses
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.34" data-path="leetCode-33-Search-in-Rotated-Sorted-Array.html">
+            
+                <a href="leetCode-33-Search-in-Rotated-Sorted-Array.html">
+            
+                    
+                    33. Search in Rotated Sorted Array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.35" data-path="leetCode-34-Find-First-and-Last-Position-of-Element-in-Sorted-Array.html">
+            
+                <a href="leetCode-34-Find-First-and-Last-Position-of-Element-in-Sorted-Array.html">
+            
+                    
+                    34. Find First and Last Position of Element in Sorted Array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.36" data-path="leetCode-35-Search-Insert-Position.html">
+            
+                <a href="leetCode-35-Search-Insert-Position.html">
+            
+                    
+                    35. Search Insert Position
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.37" data-path="leetCode-36-Valid-Sudoku.html">
+            
+                <a href="leetCode-36-Valid-Sudoku.html">
+            
+                    
+                    36. Valid Sudoku
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38" data-path="leetCode-37-Sudoku-Solver.html">
+            
+                <a href="leetCode-37-Sudoku-Solver.html">
+            
+                    
+                    37. Sudoku Solver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.39" data-path="leetCode-38-Count-and-Say.html">
+            
+                <a href="leetCode-38-Count-and-Say.html">
+            
+                    
+                    38. Count and Say
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.40" data-path="leetCode-39-Combination-Sum.html">
+            
+                <a href="leetCode-39-Combination-Sum.html">
+            
+                    
+                    39. Combination Sum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.41" data-path="leetCode-40-Combination-Sum-II.html">
+            
+                <a href="leetCode-40-Combination-Sum-II.html">
+            
+                    
+                    40. Combination Sum II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.42" data-path="leetCode-41-First-Missing-Positive.html">
+            
+                <a href="leetCode-41-First-Missing-Positive.html">
+            
+                    
+                    41. First Missing Positive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.43" data-path="leetCode-42-Trapping-Rain-Water.html">
+            
+                <a href="leetCode-42-Trapping-Rain-Water.html">
+            
+                    
+                    42. Trapping Rain Water
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.44" data-path="leetCode-43-Multiply-Strings.html">
+            
+                <a href="leetCode-43-Multiply-Strings.html">
+            
+                    
+                    43. Multiply Strings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.45" data-path="leetCode-44-Wildcard-Matching.html">
+            
+                <a href="leetCode-44-Wildcard-Matching.html">
+            
+                    
+                    44. Wildcard Matching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.46" data-path="leetCode-45-Jump-Game-II.html">
+            
+                <a href="leetCode-45-Jump-Game-II.html">
+            
+                    
+                    45. Jump Game II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.47" data-path="leetCode-46-Permutations.html">
+            
+                <a href="leetCode-46-Permutations.html">
+            
+                    
+                    46. Permutations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.48" data-path="leetCode-47-Permutations-II.html">
+            
+                <a href="leetCode-47-Permutations-II.html">
+            
+                    
+                    47. Permutations II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.49" data-path="leetCode-48-Rotate-Image.html">
+            
+                <a href="leetCode-48-Rotate-Image.html">
+            
+                    
+                    48. Rotate Image
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.50" data-path="leetCode-49-Group-Anagrams.html">
+            
+                <a href="leetCode-49-Group-Anagrams.html">
+            
+                    
+                    49. Group Anagrams
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.51" data-path="leetCode-50-Pow.html">
+            
+                <a href="leetCode-50-Pow.html">
+            
+                    
+                    50. Pow(x, n)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.52" data-path="leetCode-51-N-Queens.html">
+            
+                <a href="leetCode-51-N-Queens.html">
+            
+                    
+                    51. N-Queens
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.53" data-path="leetCode-52-N-QueensII.html">
+            
+                <a href="leetCode-52-N-QueensII.html">
+            
+                    
+                    52. N-Queens II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.54" data-path="leetCode-53-Maximum-Subarray.html">
+            
+                <a href="leetCode-53-Maximum-Subarray.html">
+            
+                    
+                    53. Maximum Subarray
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.55" data-path="leetCode-54-Spiral-Matrix.html">
+            
+                <a href="leetCode-54-Spiral-Matrix.html">
+            
+                    
+                    54. Spiral Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.56" data-path="leetCode-55-Jump-Game.html">
+            
+                <a href="leetCode-55-Jump-Game.html">
+            
+                    
+                    55. Jump Game
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.57" data-path="leetCode-56-Merge-Intervals.html">
+            
+                <a href="leetCode-56-Merge-Intervals.html">
+            
+                    
+                    56. Merge Intervals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.58" data-path="leetCode-57-Insert-Interval.html">
+            
+                <a href="leetCode-57-Insert-Interval.html">
+            
+                    
+                    57. Insert Interval
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.59" data-path="leetCode-58-Length-of-Last-Word.html">
+            
+                <a href="leetCode-58-Length-of-Last-Word.html">
+            
+                    
+                    58. Length of Last Word
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.60" data-path="leetCode-59-Spiral-MatrixII.html">
+            
+                <a href="leetCode-59-Spiral-MatrixII.html">
+            
+                    
+                    59. Spiral Matrix II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.61" data-path="leetCode-60-Permutation-Sequence.html">
+            
+                <a href="leetCode-60-Permutation-Sequence.html">
+            
+                    
+                    60. Permutation Sequence
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.62" data-path="leetCode-61-Rotate-List.html">
+            
+                <a href="leetCode-61-Rotate-List.html">
+            
+                    
+                    61. Rotate List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.63" data-path="leetCode-62-Unique-Paths.html">
+            
+                <a href="leetCode-62-Unique-Paths.html">
+            
+                    
+                    62. Unique Paths
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.64" data-path="leetCode-63-Unique-PathsII.html">
+            
+                <a href="leetCode-63-Unique-PathsII.html">
+            
+                    
+                    63. Unique Paths II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.65" data-path="leetCode-64-Minimum-PathSum.html">
+            
+                <a href="leetCode-64-Minimum-PathSum.html">
+            
+                    
+                    64. Minimum Path Sum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.66" data-path="leetCode-65-Valid-Number.html">
+            
+                <a href="leetCode-65-Valid-Number.html">
+            
+                    
+                    65. Valid Number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.67" data-path="leetCode-66-Plus-One.html">
+            
+                <a href="leetCode-66-Plus-One.html">
+            
+                    
+                    66. Plus One
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.68" data-path="leetCode-67-Add Binary.html">
+            
+                <a href="leetCode-67-Add Binary.html">
+            
+                    
+                    67. Add Binary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.69" data-path="leetCode-68-Text-Justification.html">
+            
+                <a href="leetCode-68-Text-Justification.html">
+            
+                    
+                    68. Text Justification
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.70" data-path="leetCode-69-Sqrtx.html">
+            
+                <a href="leetCode-69-Sqrtx.html">
+            
+                    
+                    69. Sqrt x
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.71" data-path="leetCode-70-Climbing-Stairs.html">
+            
+                <a href="leetCode-70-Climbing-Stairs.html">
+            
+                    
+                    70. Climbing Stairs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.72" data-path="leetCode-71-Simplify-Path.html">
+            
+                <a href="leetCode-71-Simplify-Path.html">
+            
+                    
+                    71. Simplify Path
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.73" data-path="leetCode-72-Edit-Distance.html">
+            
+                <a href="leetCode-72-Edit-Distance.html">
+            
+                    
+                    72. Edit Distance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.74" data-path="leetcode-73-Set-Matrix-Zeroes.html">
+            
+                <a href="leetcode-73-Set-Matrix-Zeroes.html">
+            
+                    
+                    73. Set Matrix Zeroes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >67. Add Binary</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;"><b> </b>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x89E3;&#x6CD5;&#x4E00;"><b> </b>&#x89E3;&#x6CD5;&#x4E00;</a></li><li><span class="title-icon "></span><a href="#&#x603B;"><b> </b>&#x603B;</a></li></ul></div><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;"><a name="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;</h1>
+<p><img src="https://windliang.oss-cn-beijing.aliyuncs.com/67.jpg" alt=""></p>
+<p>&#x4E24;&#x4E2A;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x76F8;&#x52A0;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF0C;&#x8981;&#x6CE8;&#x610F;&#x5230;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x6700;&#x4F4E;&#x4F4D;&#x4EE3;&#x8868;&#x7740;&#x6570;&#x5B57;&#x7684;&#x6700;&#x9AD8;&#x4F4D;&#x3002;&#x4F8B;&#x5982; &quot;100&quot; &#x6700;&#x9AD8;&#x4F4D;&#xFF08;&#x5341;&#x8FDB;&#x5236;&#x4E2D;&#x7684;&#x767E;&#x4F4D;&#x7684;&#x4F4D;&#x7F6E;&#xFF09;&#x662F; 1&#xFF0C;&#x4F46;&#x662F;&#x5BF9;&#x5E94;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x4E0B;&#x6807;&#x662F; 0&#x3002;</p>
+<h1 id="&#x89E3;&#x6CD5;&#x4E00;"><a name="&#x89E3;&#x6CD5;&#x4E00;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x6CD5;&#x4E00;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x89E3;&#x6CD5;&#x4E00;</h1>
+<p>&#x5F00;&#x59CB;&#x7684;&#x65F6;&#x5019;&#x4EE5;&#x4E3A;&#x4F1A;&#x6709;&#x4EC0;&#x4E48;&#x7279;&#x6B8A;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x7136;&#x540E;&#x60F3;&#x7740;&#x4E0D;&#x7BA1;&#x4E86;&#xFF0C;&#x5148;&#x6309;<a href="https://leetcode.windliang.cc/leetCode-2-Add-Two-Numbers.html" target="_blank">&#x7B2C;&#x4E8C;&#x9898;</a>&#x4E24;&#x4E2A;&#x5341;&#x8FDB;&#x5236;&#x6570;&#x76F8;&#x52A0;&#x7684;&#x60F3;&#x6CD5;&#x5199;&#x5427;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">addBinary</span><span class="hljs-params">(String a, String b)</span> </span>{
+    StringBuilder ans = <span class="hljs-keyword">new</span> StringBuilder();
+    <span class="hljs-keyword">int</span> i = a.length() - <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">int</span> j = b.length() - <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">int</span> carry = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">while</span> (i &gt;= <span class="hljs-number">0</span> || j &gt;= <span class="hljs-number">0</span>) {
+        <span class="hljs-keyword">int</span> num1 = i &gt;= <span class="hljs-number">0</span> ? a.charAt(i) - <span class="hljs-number">48</span> : <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">int</span> num2 = j &gt;= <span class="hljs-number">0</span> ? b.charAt(j) - <span class="hljs-number">48</span> : <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">int</span> sum = num1 + num2 + carry;
+        carry = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">if</span> (sum &gt;= <span class="hljs-number">2</span>) {
+            sum = sum % <span class="hljs-number">2</span>;
+            carry = <span class="hljs-number">1</span>;
+        }
+        ans.insert(<span class="hljs-number">0</span>, sum);
+        i--;
+        j--;
+
+    }
+    <span class="hljs-keyword">if</span> (carry == <span class="hljs-number">1</span>) {
+        ans.insert(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>);
+    }
+    <span class="hljs-keyword">return</span> ans.toString();
+}
+</code></pre>
+<p>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O&#xFF08;max &#xFF08;m&#xFF0C;n&#xFF09;&#xFF09;&#x3002;m &#x548C; n &#x5206;&#x522B;&#x662F;&#x5B57;&#x7B26;&#x4E32; a &#x548C; b &#x7684;&#x957F;&#x5EA6;&#x3002;</p>
+<p>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O&#xFF08;1&#xFF09;&#x3002;</p>
+<p>&#x7136;&#x540E;&#x5199;&#x5B8C;&#x4EE5;&#x540E;&#xFF0C;&#x5728; Discuss &#x91CC;&#x901B;&#x4E86;&#x901B;&#xFF0C;&#x627E;&#x627E;&#x5176;&#x4ED6;&#x7684;&#x89E3;&#x6CD5;&#x3002;&#x53D1;&#x73B0;&#x57FA;&#x672C;&#x90FD;&#x662F;&#x8FD9;&#x4E2A;&#x601D;&#x8DEF;&#xFF0C;&#x4F46;&#x662F;&#x5947;&#x602A;&#x7684;&#x662F;&#x6211;&#x7684;&#x89E3;&#x6CD5;&#xFF0C;&#x65F6;&#x95F4;&#x4E0A;&#x53EA;&#x8D85;&#x8FC7;&#x4E86; 60% &#x7684;&#x4EBA;&#x3002;&#x7136;&#x540E;&#xFF0C;&#x70B9;&#x5F00;&#x4E86;&#x8D85;&#x8FC7; 100% &#x7684;&#x4EBA;&#x7684;&#x89E3;&#x6CD5;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">addBinary2</span><span class="hljs-params">(String a, String b)</span> </span>{
+    <span class="hljs-keyword">char</span>[] charsA = a.toCharArray(), charsB = b.toCharArray();
+    <span class="hljs-keyword">char</span>[] sum = <span class="hljs-keyword">new</span> <span class="hljs-keyword">char</span>[Math.max(a.length(), b.length()) + <span class="hljs-number">1</span>];
+    <span class="hljs-keyword">int</span> carry = <span class="hljs-number">0</span>, index = sum.length - <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = charsA.length - <span class="hljs-number">1</span>, j = charsB.length - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span> || j &gt;= <span class="hljs-number">0</span>; i--, j--)         {
+        <span class="hljs-keyword">int</span> aNum = i &lt; <span class="hljs-number">0</span> ? <span class="hljs-number">0</span> : charsA[i] - <span class="hljs-string">&apos;0&apos;</span>;
+        <span class="hljs-keyword">int</span> bNum     = j &lt; <span class="hljs-number">0</span> ? <span class="hljs-number">0</span> : charsB[j] - <span class="hljs-string">&apos;0&apos;</span>;
+
+        <span class="hljs-keyword">int</span> s = aNum + bNum + carry;
+        sum[index--] = (<span class="hljs-keyword">char</span>) (s % <span class="hljs-number">2</span> + <span class="hljs-string">&apos;0&apos;</span>);
+        carry = s / <span class="hljs-number">2</span>;
+    }
+    sum[index] = (<span class="hljs-keyword">char</span>) (<span class="hljs-string">&apos;0&apos;</span> + carry);
+    <span class="hljs-keyword">return</span> carry == <span class="hljs-number">0</span> ? <span class="hljs-keyword">new</span> String(sum, <span class="hljs-number">1</span>, sum.length - <span class="hljs-number">1</span>) : <span class="hljs-keyword">new</span> String(sum);
+}
+</code></pre>
+<p>&#x548C;&#x6211;&#x7684;&#x601D;&#x8DEF;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x533A;&#x522B;&#x5728;&#x4E8E;&#x5B83;&#x63D0;&#x524D;&#x7533;&#x8BF7;&#x4E86; sum &#x7684;&#x7A7A;&#x95F4;&#xFF0C;&#x7136;&#x540E;&#x76F4;&#x63A5; index &#x4ECE;&#x6700;&#x540E;&#x5411; 0 &#x4F9D;&#x6B21;&#x8D4B;&#x503C;&#x3002;</p>
+<p>&#x56E0;&#x4E3A; String .charAt ( 0 ) &#x4EE3;&#x8868;&#x7684;&#x662F;&#x6570;&#x5B57;&#x7684;&#x6700;&#x9AD8;&#x4F4D;&#xFF0C;&#x800C;&#x6211;&#x4EEC;&#x8BA1;&#x7B97;&#x662F;&#x4ECE;&#x6700;&#x4F4E;&#x4F4D;&#x5F00;&#x59CB;&#x7684;&#xFF0C;&#x4E5F;&#x5C31;&#x662F; lenght - 1&#x5F00;&#x59CB;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x4E4B;&#x524D;&#x7684;&#x7B97;&#x6CD5;&#x4E2D;&#x6BCF;&#x6B21;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x7ED3;&#x679C;&#x6211;&#x4EEC;&#x7528;&#x7684;&#x662F;  ans.insert(0, sum) &#xFF0C;&#x5728; 0 &#x4F4D;&#x7F6E;&#x63D2;&#x5165;&#x65B0;&#x7684;&#x6570;&#x3002;&#x6211;&#x731C;&#x6D4B;&#x662F;&#x8FD9;&#x91CC;&#x8017;&#x8D39;&#x4E86;&#x5F88;&#x591A;&#x65F6;&#x95F4;&#xFF0C;&#x56E0;&#x4E3A;&#x63D2;&#x5165;&#x7684;&#x8BDD;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x6570;&#x7EC4;&#x7684;&#x540E;&#x79FB;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x5982;&#x679C;&#x628A; insert &#x6362;&#x6210; append &#xFF0C;&#x7136;&#x540E;&#x518D;&#x6700;&#x540E;&#x7684;&#x7ED3;&#x679C;&#x4E2D;&#x518D;&#x5012;&#x7F6E;&#xFF0C;&#x5C31;&#x4F1A;&#x5FEB;&#x4E00;&#x4E9B;&#x4E86;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> String3 <span class="hljs-title">addBinary</span><span class="hljs-params">(String a, String b)</span> </span>{
+    StringBuilder ans = <span class="hljs-keyword">new</span> StringBuilder();
+    <span class="hljs-keyword">int</span> i = a.length() - <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">int</span> j = b.length() - <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">int</span> carry = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">while</span> (i &gt;= <span class="hljs-number">0</span> || j &gt;= <span class="hljs-number">0</span>) {
+        <span class="hljs-keyword">int</span> num1 = i &gt;= <span class="hljs-number">0</span> ? a.charAt(i) - <span class="hljs-number">48</span> : <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">int</span> num2 = j &gt;= <span class="hljs-number">0</span> ? b.charAt(j) - <span class="hljs-number">48</span> : <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">int</span> sum = num1 + num2 + carry;
+        carry = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">if</span> (sum &gt;= <span class="hljs-number">2</span>) {
+            sum = sum % <span class="hljs-number">2</span>;
+            carry = <span class="hljs-number">1</span>;
+        }
+        ans.append(sum);
+        i--;
+        j--;
+
+    }
+    <span class="hljs-keyword">if</span> (carry == <span class="hljs-number">1</span>) {
+        ans.append(<span class="hljs-number">1</span>);
+    }
+    <span class="hljs-keyword">return</span> ans.reverse().toString();
+}
+</code></pre>
+<h1 id="&#x603B;"><a name="&#x603B;" class="anchor-navigation-ex-anchor" href="#&#x603B;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x603B;</h1>
+<p>&#x8FD9;&#x91CC;&#x770B;&#x51FA;&#x6765;&#x591A;&#x6B21; insert &#x4F1A;&#x5F88;&#x8017;&#x8D39;&#x65F6;&#x95F4;&#xFF0C;&#x4E0D;&#x5982;&#x6700;&#x540E;&#x76F4;&#x63A5; reverse&#x3002;&#x53E6;&#x5916;&#x63D0;&#x524D;&#x7533;&#x8BF7;&#x7A7A;&#x95F4;&#xFF0C;&#x76F4;&#x63A5;&#x6839;&#x636E;&#x4E0B;&#x6807;&#x8D4B;&#x503C;&#xFF0C;&#x7701;&#x53BB;&#x4E86;&#x5012;&#x7F6E;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x5F88; cool&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="leetCode-66-Plus-One.html" class="navigation navigation-prev " aria-label="Previous page: 66. Plus One">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="leetCode-68-Text-Justification.html" class="navigation navigation-next " aria-label="Next page: 68. Text Justification">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"67. Add Binary","level":"1.68","depth":1,"next":{"title":"68. Text Justification","level":"1.69","depth":1,"path":"leetCode-68-Text-Justification.md","ref":"leetCode-68-Text-Justification.md","articles":[]},"previous":{"title":"66. Plus One","level":"1.67","depth":1,"path":"leetCode-66-Plus-One.md","ref":"leetCode-66-Plus-One.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr","-search","search-plus","ad","-livereload","meta"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ad":{"contentBottom":"%u003c%u0064%u0069%u0076%u0020%u0069%u0064%u003d%u0022%u0077%u0065%u0063%u0068%u0061%u0074%u005f%u0073%u0075%u0062%u0073%u0063%u0072%u0069%u0062%u0065%u0072%u0022%u0020%u0073%u0074%u0079%u006c%u0065%u003d%u0022%u0064%u0069%u0073%u0070%u006c%u0061%u0079%u003a%u0020%u0062%u006c%u006f%u0063%u006b%u003b%u0020%u0070%u0061%u0064%u0064%u0069%u006e%u0067%u003a%u0020%u0031%u0030%u0070%u0078%u0020%u0030%u003b%u0020%u006d%u0061%u0072%u0067%u0069%u006e%u003a%u0020%u0032%u0030%u0070%u0078%u0020%u0061%u0075%u0074%u006f%u003b%u0020%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0031%u0030%u0030%u0025%u003b%u0020%u0074%u0065%u0078%u0074%u002d%u0061%u006c%u0069%u0067%u006e%u003a%u0020%u0063%u0065%u006e%u0074%u0065%u0072%u0022%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0069%u006d%u0067%u0020%u0069%u0064%u003d%u0022%u0077%u0065%u0063%u0068%u0061%u0074%u005f%u0073%u0075%u0062%u0073%u0063%u0072%u0069%u0062%u0065%u0072%u005f%u0071%u0063%u006f%u0064%u0065%u0022%u0020%u0073%u0072%u0063%u003d%u0022%u0068%u0074%u0074%u0070%u0073%u003a%u002f%u002f%u0077%u0069%u006e%u0064%u006c%u0069%u0061%u006e%u0067%u002e%u006f%u0073%u0073%u002d%u0063%u006e%u002d%u0062%u0065%u0069%u006a%u0069%u006e%u0067%u002e%u0061%u006c%u0069%u0079%u0075%u006e%u0063%u0073%u002e%u0063%u006f%u006d%u002f%u0077%u0065%u0063%u0068%u0061%u0074%u002e%u006a%u0070%u0067%u0022%u0020%u0061%u006c%u0074%u003d%u0022%u0077%u0069%u006e%u0064%u006c%u0069%u0061%u006e%u0067%u0020%u0077%u0065%u0063%u0068%u0061%u0074%u0022%u0020%u0073%u0074%u0079%u006c%u0065%u003d%u0022%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0032%u0030%u0030%u0070%u0078%u003b%u0020%u006d%u0061%u0078%u002d%u0077%u0069%u0064%u0074%u0068%u003a%u0020%u0031%u0030%u0030%u0025%u003b%u0022%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0062%u0072%u003e%u0020%u0020%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0064%u0069%u0076%u003e%u6dfb%u52a0%u597d%u53cb%u4e00%u8d77%u8fdb%u6b65%u007e%u003c%u002f%u0064%u0069%u0076%u003e%u0020%u003c%u0062%u0072%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u0064%u0069%u0076%u003e%u5982%u679c%u89c9%u5f97%u6709%u5e2e%u52a9%u7684%u8bdd%uff0c%u5230%u9875%u9762%u6700%u4e0a%u8fb9%u8bb0%u5f97%u7ed9%u4e00%u4e2a%u0020%u0073%u0074%u0061%u0072%u0020%u54e6%u0020%u005e%u0020%u005e%u003c%u002f%u0064%u0069%u0076%u003e%u000a%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u0020%u003c%u002f%u0064%u0069%u0076%u003e"},"meta":{"content":"","data":[{"name":"baidu-site-verification","content":"iFzduP9Qsi"},{"name":"google-site-verification","content":"qwgHd8kl7vEvBa4OR81jLieQG9UKcY2r8ocztMhzA8o"}],"name":""},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"github-buttons":{"buttons":[{"user":"wind-liang","repo":"leetcode","type":"star","size":"small","count":true}]},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"windliang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetcode","language":"zh-hans","links":{"sidebar":{"Home":"http://windliang.cc"},"gitbook":true},"gitbook":"3.2.3","description":"leetcode"},"file":{"path":"leetCode-67-Add Binary.md","mtime":"2019-05-22T14:51:35.614Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-22T14:51:48.350Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-ad/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
