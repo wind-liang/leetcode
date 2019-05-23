@@ -73,4 +73,5 @@
 * [70. Climbing Stairs](leetCode-70-Climbing-Stairs.md)
 * [71. Simplify Path](leetCode-71-Simplify-Path.md)
 * [72. Edit Distance](leetCode-72-Edit-Distance.md) 
-* [73. Set Matrix Zeroes](leetcode-73-Set-Matrix-Zeroes.md)   
+* [73. Set Matrix Zeroes](leetcode-73-Set-Matrix-Zeroes.md)
+* [74. Search a 2D Matrix](leetCode-74-Search-a-2D-Matrix.md)   
