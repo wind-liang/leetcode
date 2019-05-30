@@ -212,7 +212,34 @@ for (List<Integer> list: dp[i - 1][j - 1]) {
 } 
 ```
 
-就是 List 用的 Linked，而不是 Array，看起来没什么大问题，在 leetcode 上竟然报了超时。原因大概是 JAVA 里链表的 add 操作没有优化？每次都需要从链表头遍历？所以刷题的时候还是优先用 ArrayList 吧。
+就是 List 用的 Linked，而不是 Array，看起来没什么大问题，在 leetcode 上竟然报了超时。看了下 java 的源码。
+
+```java
+//ArrayList
+public boolean add(E e) {
+    ensureCapacityInternal(size + 1);  // Increments modCount!!
+    elementData[size++] = e;
+    return true;
+}
+//LinkedList
+public boolean add(E e) {
+    linkLast(e);
+    return true;
+}
+void linkLast(E e) {
+    final Node<E> l = last;
+    final Node<E> newNode = new Node<>(l, e, null);
+    last = newNode;
+    if (l == null)
+        first = newNode;
+    else
+        l.next = newNode;
+    size++;
+    modCount++;
+}
+```
+
+猜测原因可能是因为 linked 每次 add 的时候，都需要 new 一个节点对象，而我们进行了很多次 add，所以这里造成了时间的耗费，导致了超时。所以刷题的时候还是优先用 ArrayList 吧。
 
 接下来就是动态规划的常规操作了，空间复杂度的优化，我们注意到更新 dp [ i \] \[ \* \] 的时候，只用到dp [ i - 1 \] \[  \* \] 的情况，所以我们可以只用一个一维数组就够了。和[72题](<https://leetcode.windliang.cc/leetCode-72-Edit-Distance.html>)解法二，以及[5题](<https://leetcode.windliang.cc/leetCode-5-Longest-Palindromic-Substring.html>)，[10题](<https://leetcode.windliang.cc/leetCode-10-Regular-Expression-Matching.html>)，[53题](<https://leetcode.windliang.cc/leetCode-53-Maximum-Subarray.html)等等优化思路一样，这里不详细说了。
 
