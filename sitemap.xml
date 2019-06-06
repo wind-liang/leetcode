@@ -2,18 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
  
  
-<url>
-  <loc>https://leetcode.wang/</loc>
-  <lastmod>2017-07-04T12:22:29.424Z</lastmod>
-</url>
-<url>
-  <loc>https://leetcode.wang/leetCode-1-Two-Sum.html</loc>
-  <lastmod>2017-07-04T12:22:29.424Z</lastmod>
-</url>
-<url>
-  <loc>https://leetcode.wang/leetCode-2-Add-Two-Numbers.html</loc>
-  <lastmod>2017-07-04T12:22:29.424Z</lastmod>
-</url> 
+    <url>
+      <loc>https://leetcode.wang/</loc>
+      <lastmod>2017-07-04T12:22:29.424Z</lastmod>
+    </url>
+    <url>
+      <loc>https://leetcode.wang/leetCode-1-Two-Sum.html</loc>
+      <lastmod>2017-07-04T12:22:29.424Z</lastmod>
+    </url>
+    <url>
+      <loc>https://leetcode.wang/leetCode-2-Add-Two-Numbers.html</loc>
+      <lastmod>2017-07-04T12:22:29.424Z</lastmod>
+    </url> 
 
 
 </urlset>
