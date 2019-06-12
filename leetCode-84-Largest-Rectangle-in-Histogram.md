@@ -302,7 +302,7 @@ for (int i = 1; i < heights.length; i++) {
 
 ![](https://windliang.oss-cn-beijing.aliyuncs.com/84_6.jpg)
 
-这样的话时间复杂度达到了O（n）？这里没有想到证明方法，待解决。
+这样的话时间复杂度达到了O（n）。证明的话可以结合解法五，我们寻找 leftLessMin 其实可以看做压栈出栈的过程，每个元素只会被访问两次。
 
 ```java
 int[] leftLessMin = new int[heights.length];
