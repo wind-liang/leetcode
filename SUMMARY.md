@@ -86,3 +86,4 @@
 * [83. Remove Duplicates from Sorted List](leetCode-83-Remove-Duplicates-from-Sorted-List.md)
 * [84. Largest Rectangle in Histogram](leetCode-84-Largest-Rectangle-in-Histogram.md)
 * [85. Maximal Rectangle](leetCode-85-Maximal-Rectangle.md)
+* [86. Partition List](leetCode-86-Partition-List.md)
