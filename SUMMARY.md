@@ -87,3 +87,4 @@
 * [84. Largest Rectangle in Histogram](leetCode-84-Largest-Rectangle-in-Histogram.md)
 * [85. Maximal Rectangle](leetCode-85-Maximal-Rectangle.md)
 * [86. Partition List](leetCode-86-Partition-List.md)
+* [87. Scramble String](leetCode-87-Scramble-String.md)
