@@ -88,3 +88,4 @@
 * [85. Maximal Rectangle](leetCode-85-Maximal-Rectangle.md)
 * [86. Partition List](leetCode-86-Partition-List.md)
 * [87. Scramble String](leetCode-87-Scramble-String.md)
+* [88. Merge Sorted Array](leetCode-88-Merge-Sorted-Array.md)
