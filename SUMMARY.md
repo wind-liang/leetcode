@@ -89,3 +89,4 @@
 * [86. Partition List](leetCode-86-Partition-List.md)
 * [87. Scramble String](leetCode-87-Scramble-String.md)
 * [88. Merge Sorted Array](leetCode-88-Merge-Sorted-Array.md)
+* [89. Gray Code](leetCode-89-Gray-Code.md)
