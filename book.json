@@ -1,8 +1,8 @@
 {
         "title": "leetcode",
         "author": "windliang",
-        "description": "leetcode",
-        "language" : "zh-hans",
+        "description": "leetcode刷题",
+        "language" : "zh-hans", 
         "links": {
             "sidebar": {
                 "Home": "http://windliang.cc"
