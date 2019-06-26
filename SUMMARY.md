@@ -94,3 +94,4 @@
 * [91. Decode Ways](leetcode-91-Decode-Ways.md)
 * [92. Reverse Linked List II](leetCode-92-Reverse-Linked-ListII.md)
 * [93. Restore IP Addresses](leetCode-93-Restore-IP-Addresses.md)
+* [94. Binary Tree Inorder Traversal](leetCode-94-Binary-Tree-Inorder-Traversal.md)
