@@ -108,13 +108,23 @@ public int trap(int[] height) {
     }
     return sum;
 }
+
+private int getMax(int[] height) {
+    int max = 0;
+    for (int i = 0; i < height.length; i++) {
+        if (height[i] > max) {
+            max = height[i];
+        }
+    }
+    return max;
+}
 ```
 
 时间复杂度：如果最大的数是 m，个数是 n，那么就是 O（m * n）。
 
 空间复杂度： O （1）。
 
-下边讲一下， leetcode [solution](https://leetcode.com/problems/trapping-rain-water/solution/) 提供的 4 个算法。
+经过他人提醒，这个解法现在 AC 不了了，会报超时，但还是放在这里吧。 下边讲一下， leetcode [solution](https://leetcode.com/problems/trapping-rain-water/solution/) 提供的 4 个算法。
 
 # 解法二 按列求
 

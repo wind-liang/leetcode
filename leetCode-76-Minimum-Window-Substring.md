@@ -132,13 +132,13 @@ private boolean match(Map<Character, Integer> map) {
 }
 ```
 
-时间复杂度：O（n），n 是 S 的长度。
+时间复杂度：O（nm），n 是 S 的长度，match 函数消耗 O（m）。
 
 空间复杂度：O（m），m 是 T 的长度。
 
 参考[这里](<https://leetcode.com/problems/minimum-window-substring/discuss/26835/Java-4ms-bit-97.6>)，由于字符串中只有字母，我们其实可以不用 hashmap，可以直接用一个 int 数组，字母的 ascii 码值作为下标，保存每个字母的次数。
 
-此外，判断当前窗口是否含有所有字母，我们除了可以判断所有字母的次数是否小于等于 0，还可以用一个计数变量 count，把 count 初始化为 t 的长度，然后每次找到一个满足条件的字母，count 就减 1，如果 count 等于了 0，就代表包含了所有字母。
+此外，判断当前窗口是否含有所有字母，我们除了可以判断所有字母的次数是否小于等于 0，还可以用一个计数变量 count，把 count 初始化为 t 的长度，然后每次找到一个满足条件的字母，count 就减 1，如果 count 等于了 0，就代表包含了所有字母。这样的话，可以把之前的 match(map) 优化到 O（1）。
 
 ```java
 public String minWindow(String s, String t) {
@@ -191,8 +191,6 @@ public String minWindow(String s, String t) {
     return s.substring(ans_left, ans_right + 1);
 }
 ```
-
-用数组改写以后时间复杂度没有变，但速度快了很多。
 
 # 总
 
