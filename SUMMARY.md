@@ -99,3 +99,4 @@
 * [96. Unique Binary Search Trees](leetCode-96-Unique-Binary-Search-Trees.md)
 * [97. Interleaving String](leetCode-97-Interleaving-String.md)
 * [98. Validate Binary Search Tree](leetCode-98-Validate-Binary-Search-Tree.md)
+* [99. Recover Binary Search Tree](leetcode-99-Recover-Binary-Search-Tree.md)
