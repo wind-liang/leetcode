@@ -12,7 +12,7 @@ QQ 648917857
 
 github 地址：https://github.com/wind-liang/leetcode 
 
-预览地址：http://leetcode.wang
+预览地址：https://leetcode.wang
 
 知乎开设了专栏，同步更新：[https://zhuanlan.zhihu.com/leetcode1024](https://zhuanlan.zhihu.com/leetcode1024)，关注后可以及时收到更新。
 
