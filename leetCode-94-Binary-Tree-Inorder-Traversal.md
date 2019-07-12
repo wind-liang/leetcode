@@ -174,7 +174,7 @@ cur  指向 null，结束遍历。
 **2.2** last.right 不为 null，说明之前已经访问过，第二次来到这里，表明当前子树遍历完成，保存 cur 的值，更新 cur = cur.right
 
 ```java
-public List<Integer> inorderTraversal3(TreeNode root) {
+public List<Integer> inorderTraversal(TreeNode root) {
     List<Integer> ans = new ArrayList<>();
     TreeNode cur = root;
     while (cur != null) {
