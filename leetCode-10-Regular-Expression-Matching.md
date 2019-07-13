@@ -146,7 +146,7 @@ public boolean isMatch(String text, String pattern) {
 
 时间复杂度：假设 text 的长度是 T，pattern 的长度是 P ，空间复杂度就是 O（TP）。
 
-空间复杂度：申请了 dp 空间，所以是 O（TP），因为每次循环我们只需要知道 i 和 i + 1 时候的情况，所以我们可以向 [第 5 题](http://leetcode.windliang.cc/leetCode-5-Longest-Palindromic-Substring.html) 一样进行优化。
+空间复杂度：申请了 dp 空间，所以是 O（TP），因为每次循环我们只需要知道 i 和 i + 1 时候的情况，所以我们可以向 [第 5 题](https://leetcode.windliang.cc/leetCode-5-Longest-Palindromic-Substring.html) 一样进行优化。
 
 ```java
 	public boolean isMatch(String text, String pattern) {

@@ -10,7 +10,7 @@
 
 # 解法二
 
-在[第 7 道题](http://leetcode.windliang.cc/leetCode-7-Reverse-Integer.html)我们写了倒置 int 的算法，这里当然可以用到了，只需要判断倒置前后相不相等就可以了。
+在[第 7 道题](https://leetcode.windliang.cc/leetCode-7-Reverse-Integer.html)我们写了倒置 int 的算法，这里当然可以用到了，只需要判断倒置前后相不相等就可以了。
 
 记不记得，当倒置后的数字超出 int 的范围时，我们返回的是 0 ，那么它一定不等于原数，此时一定返回 false 了，这正不正确呢？
 
