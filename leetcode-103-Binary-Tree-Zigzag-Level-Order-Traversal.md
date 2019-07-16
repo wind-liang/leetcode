@@ -118,6 +118,8 @@ public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
                 queue.offer(curNode.right);
             }
         }
+        //因为上边 queue.offer(curNode.left) 没有判断是否是 null
+        //所以要判断当前是否有元素
         if (subList.size() > 0) {
             ans.add(subList);
         }

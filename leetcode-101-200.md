@@ -6,3 +6,4 @@
 
 <a href="leetcode-103-Binary-Tree-Zigzag-Level-Order-Traversal.html">103. Binary Tree Zigzag Level Order Traversal</a>
 
+<a href="leetcode-104-Maximum-Depth-of-Binary-Tree.html">104. Maximum Depth of Binary Tree</a>
