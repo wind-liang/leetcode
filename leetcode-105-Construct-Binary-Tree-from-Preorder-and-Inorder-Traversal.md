@@ -85,7 +85,7 @@ private TreeNode buildTreeHelper(int[] preorder, int p_start, int p_end, int[] i
 上边的代码很好理解，但存在一个问题，在中序遍历中找到根节点的位置每次都得遍历中序遍历的数组去寻找，参考[这里](<https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/discuss/34538/My-Accepted-Java-Solution>) ，我们可以用一个`HashMap`把中序遍历数组的每个元素的值和下标存起来，这样寻找根节点的位置就可以直接得到了。
 
 ```java
-public TreeNode buildTree3(int[] preorder, int[] inorder) {
+public TreeNode buildTree(int[] preorder, int[] inorder) {
     HashMap<Integer, Integer> map = new HashMap<>();
     for (int i = 0; i < inorder.length; i++) {
         map.put(inorder[i], i);
@@ -277,7 +277,7 @@ inorder = [ 20, 9, 15, 3, 7 ]
 上边的分析就是迭代总体的思想，代码的话还有一些细节注意一下。用一个栈保存已经遍历的节点，用 curRoot 保存当前正在遍历的节点。
 
 ```java
-public TreeNode buildTree4(int[] preorder, int[] inorder) {
+public TreeNode buildTree(int[] preorder, int[] inorder) {
     if (preorder.length == 0) {
         return null;
     }
@@ -320,7 +320,7 @@ public TreeNode buildTree4(int[] preorder, int[] inorder) {
 
 # 总
 
-用常规的递归和 HashMap 做的话这道题是不难的，用 `stop` 变量省去 HashMap 的使用以及解法二的迭代可以了解一下吧，不是很容易想到。
+用常规的递归和 HashMap 做的话这道题是不难的，用 `stop` 变量省去 HashMap 的思想以及解法二的迭代可以了解一下吧，不是很容易想到。
 
 
 
