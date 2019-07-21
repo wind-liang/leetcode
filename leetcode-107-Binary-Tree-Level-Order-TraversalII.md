@@ -170,4 +170,4 @@ public List<List<Integer>> levelOrderBottom(TreeNode root) {
 
 # 总
 
-这道题依旧考层次遍历，只需要在  [102 题](<https://leetcode.wang/leetcode-102-Binary-Tree-Level-Order-Traversal.html>) 的基础上，找到 `level` 和 `index` 的对应关系即可。
+这道题依旧考层次遍历，只需要在  [102 题](<https://leetcode.wang/leetcode-102-Binary-Tree-Level-Order-Traversal.html>) 的基础上，找到 `level` 和 `index` 的对应关系即可。此外，因为我们在头部添加元素，所以用链表会好一些。如果数组的话，还得整体后移才能添加新的元素。
