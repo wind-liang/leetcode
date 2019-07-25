@@ -19,3 +19,5 @@
 <a href="leetcode-110-Balanced-Binary-Tree.html">110. Balanced Binary Tree</a>
 
 <a href="leetcode-111-Minimum-Depth-of-Binary-Tree.html">111. Minimum Depth of Binary Tree</a>
+
+<a href="leetcode-112-Path-Sum.html">112. Path Sum</a>
