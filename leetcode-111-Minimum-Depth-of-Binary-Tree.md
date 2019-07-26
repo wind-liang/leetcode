@@ -132,7 +132,6 @@ public int minDepth(TreeNode root) {
 ```java
 public int maxDepth(TreeNode root) {
     Queue<TreeNode> queue = new LinkedList<TreeNode>();
-    List<List<Integer>> ans = new LinkedList<List<Integer>>();
     if (root == null)
         return 0;
     queue.offer(root);
@@ -162,7 +161,6 @@ public int maxDepth(TreeNode root) {
 ```java
 public int minDepth(TreeNode root) {
     Queue<TreeNode> queue = new LinkedList<TreeNode>();
-    List<List<Integer>> ans = new LinkedList<List<Integer>>();
     if (root == null)
         return 0;
     queue.offer(root);

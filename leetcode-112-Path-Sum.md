@@ -218,8 +218,7 @@ public List<Integer> postorderTraversal(TreeNode root) {
 有了上边的后序遍历，对于这道题，代码就很好改了。
 
 ```java
-public boolean hasPathSum(TreeNode root, int sum) {
-    List<Integer> result = new LinkedList<>();
+public boolean hasPathSum(TreeNode root, int sum) { 
     Stack<TreeNode> toVisit = new Stack<>();
     TreeNode cur = root;
     TreeNode pre = null;
