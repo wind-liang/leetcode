@@ -211,6 +211,101 @@ public void flatten(TreeNode root) {
 }
 ```
 
+# 解法三
+
+解法二中提到如果用先序遍历的话，会丢失掉右孩子，除了用后序遍历，还有没有其他的方法避免这个问题。在`Discuss`又发现了一种解法，参考 [这里](<https://leetcode.com/problems/flatten-binary-tree-to-linked-list/discuss/36991/Accepted-simple-Java-solution-iterative>)。
+
+为了更好的控制算法，所以我们用先序遍历迭代的形式，正常的先序遍历代码如下，
+
+```java
+public static void preOrderStack(TreeNode root) {
+    if (root == null) { 
+        return;
+    }
+    Stack<TreeNode> s = new Stack<TreeNode>();
+    while (root != null || !s.isEmpty()) {
+        while (root != null) {
+            System.out.println(root.val);
+            s.push(root);
+            root = root.left;
+        }
+        root = s.pop();
+        root = root.right;
+    }
+}
+```
+
+还有一种特殊的先序遍历，提前将右孩子保存到栈中，我们利用这种遍历方式就可以防止右孩子的丢失了。由于栈是先进后出，所以我们先将右节点入栈。
+
+```java
+public static void preOrderStack(TreeNode root) {
+    if (root == null){
+        return;
+    }
+    Stack<TreeNode> s = new Stack<TreeNode>();
+    s.push(root);
+    while (!s.isEmpty()) {
+        TreeNode temp = s.pop();
+        System.out.println(temp.val);
+        if (temp.right != null){
+            s.push(temp.right);
+        }
+        if (temp.left != null){
+            s.push(temp.left);
+        }
+    }
+}
+```
+
+之前我们的思路如下：
+
+题目其实就是将二叉树通过右指针，组成一个链表。
+
+```java
+1 -> 2 -> 3 -> 4 -> 5 -> 6
+```
+
+我们知道题目给定的遍历顺序其实就是先序遍历的顺序，所以我们可以利用先序遍历的代码，每遍历一个节点，就将上一个节点的右指针更新为当前节点。
+
+先序遍历的顺序是`1 2 3 4 5 6`。
+
+遍历到`2`，把`1`的右指针指向`2`。`1 -> 2 3 4 5 6`。
+
+遍历到`3`，把`2`的右指针指向`3`。`1 -> 2 -> 3 4 5 6`。
+
+... ...
+
+因为我们用栈保存了右孩子，所以不需要担心右孩子丢失了。用一个`pre`变量保存上次遍历的节点。修改的代码如下：
+
+```java
+public void flatten(TreeNode root) { 
+    if (root == null){
+        return;
+    }
+    Stack<TreeNode> s = new Stack<TreeNode>();
+    s.push(root);
+    TreeNode pre = null;
+    while (!s.isEmpty()) {
+        TreeNode temp = s.pop(); 
+        /***********修改的地方*************/
+        if(pre!=null){
+            pre.right = temp;
+            pre.left = null;
+        }
+        /********************************/
+        if (temp.right != null){
+            s.push(temp.right);
+        }
+        if (temp.left != null){
+            s.push(temp.left);
+        } 
+        /***********修改的地方*************/
+        pre = temp;
+        /********************************/
+    }
+}
+```
+
 # 总
 
-其实两种解法就是从两种方向解决问题，解法一自顶向下，解法二自底向上。以前觉得后序遍历比较麻烦，没想到竟然连续遇到了后序遍历的应用。
+解法一和解法三可以看作自顶向下的解决问题，解法二可以看作自底向上。以前觉得后序遍历比较麻烦，没想到竟然连续遇到了后序遍历的应用。先序遍历的两种方式自己也是第一次意识到，之前都是用的第一种正常的方式。
