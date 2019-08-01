@@ -102,7 +102,7 @@ private int numDistinctHelper(String s, int s_start, String t, int t_start) {
 
 ![](https://windliang.oss-cn-beijing.aliyuncs.com/115_2.jpg)
 
-原因就是因为递归函数中，我们多次调用了递归函数，这会使得我们重复递归很多的过程，解决方案就很简单了，`Memoization ` 技术，把每次的结果利用一个`map`保存起来，再求之前，先看`map`中有没有，有的话直接拿出来就可以了。
+原因就是因为递归函数中，我们多次调用了递归函数，这会使得我们重复递归很多的过程，解决方案就很简单了，`Memoization ` 技术，把每次的结果利用一个`map`保存起来，在求之前，先看`map`中有没有，有的话直接拿出来就可以了。
 
 `map`的`key`的话就标识当前的递归，`s_start` 和 `t_start` 联合表示，利用字符串 `s_start + '@' + t_start`。
 
