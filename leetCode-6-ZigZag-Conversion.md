@@ -10,7 +10,7 @@
 
 ## 解法一 
 
-按照写 Z 的过程，遍历每个字符，然后将字符存到对应的行中。用 goningDown 保存当前的遍历方向，如果遍历到两端，就改变方向。
+按照写 Z 的过程，遍历每个字符，然后将字符存到对应的行中。用 goingDown 保存当前的遍历方向，如果遍历到两端，就改变方向。
 
 ```java
  public String convert(String s, int numRows) {
