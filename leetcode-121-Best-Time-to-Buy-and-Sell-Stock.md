@@ -95,9 +95,11 @@ public int maxProfit(int[] prices) {
 
 # 解法三
 
-参考 <a href = "<https://leetcode.com/problems/best-time-to-buy-and-sell-stock/discuss/39038/Kadane's-Algorithm-Since-no-one-has-mentioned-about-this-so-far-%3A)-(In-case-if-interviewer-twists-the-input)>">这里</a> ，一个很新的角度。
+参考下边的链接。
 
-先回忆一下 [53 题](<https://leetcode.wang/leetCode-53-Maximum-Subarray.html>)，求子序列最大的和。
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock/discuss/39038/Kadane's-Algorithm-Since-no-one-has-mentioned-about-this-so-far-%3A)-(In-case-if-interviewer-twists-the-input)
+
+一个很新的角度，先回忆一下 [53 题](<https://leetcode.wang/leetCode-53-Maximum-Subarray.html>)，求子序列最大的和。
 
 ![img](https://windliang.oss-cn-beijing.aliyuncs.com/53.jpg)
 
