@@ -51,3 +51,5 @@
 <a href="leetCode-126-Word-LadderII.html">126. Word Ladder II</a>
 
 <a href="leetCode-127-Word-Ladder.html">127. Word Ladder</a>
+
+<a href="leetcode-128-Longest-Consecutive-Sequence.html">128. Longest Consecutive Sequence</a>
