@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
+* [leetcode 100 斩！回顾](leetcode100斩回顾.md)
 * [1. Two Sum](leetCode-1-Two-Sum.md)
 * [2. Add Two Numbers](leetCode-2-Add-Two-Numbers.md)
 * [3. Longest Substring Without Repeating Characters](leetCode-3-Longest-Substring-Without-Repeating-Characters.md)
@@ -101,8 +102,7 @@
 * [98. Validate Binary Search Tree](leetCode-98-Validate-Binary-Search-Tree.md)
 * [99. Recover Binary Search Tree](leetcode-99-Recover-Binary-Search-Tree.md)
 * [100. Same Tree](leetcode-100-Same-Tree.md)
-* [leetcode 100 斩！回顾](leetcode100斩回顾.md)
-* [101 题到 128 题](leetcode-101-200.md)
+* [101 题到 129 题](leetcode-101-200.md)
     * [101. Symmetric Tree](leetcode-101-Symmetric-Tree.md)
     * [102. Binary Tree Level Order Traversal](leetcode-102-Binary-Tree-Level-Order-Traversal.md)
     * [103. Binary Tree Zigzag Level Order Traversal](leetcode-103-Binary-Tree-Zigzag-Level-Order-Traversal.md)
@@ -131,3 +131,4 @@
     * [126*. Word Ladder II](leetCode-126-Word-LadderII.md)
     * [127. Word Ladder](leetCode-127-Word-Ladder.md)
     * [128. Longest Consecutive Sequence](leetcode-128-Longest-Consecutive-Sequence.md)
+    * [129. Sum Root to Leaf Numbers](leetcode-129-Sum-Root-to-Leaf-Numbers.md)
