@@ -57,3 +57,5 @@
 <a href="leetcode-129-Sum-Root-to-Leaf-Numbers.html">129. Sum Root to Leaf Numbers</a>
 
 <a href="leetcode-130-Surrounded-Regions.html">130. Surrounded Regions</a>
+
+<a href="leetcode-131-Palindrome-Partitioning.html">131. Palindrome Partitioning</a>
