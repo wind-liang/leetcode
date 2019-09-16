@@ -67,3 +67,5 @@
 <a href="leetcode-134-Gas-Station.html">134. Gas Station</a>
 
 <a href="leetcode-135-Candy.html">135. Candy</a>
+
+<a href="leetcode-136-Single-Number.html">136. Single Number</a>
