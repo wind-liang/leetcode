@@ -34,9 +34,9 @@ public List<Integer> spiralOrder(int[][] matrix) {
 		//注意 y 方向写在前边，x 方向写在后边
         ans.add(matrix[start_y][start_x]);
         switch (direction) {
-            //当前向左
+            //当前向右
             case 0:
-                //继续向左是否到达边界
+                //继续向右是否到达边界
                 //到达边界就改变方向，并且更新上边界
                 if (start_x + 1 == right_border) {
                     direction = 1;

@@ -28,9 +28,9 @@ public int[][] generateMatrix(int n) {
         ans[start_y][start_x] = count;
         count++;
         switch (direction) {
-                // 当前向左
+                // 当前向右
             case 0:
-                // 继续向左是否到达边界
+                // 继续向右是否到达边界
                 // 到达边界就改变方向，并且更新上边界
                 if (start_x + 1 == right_border) {
                     direction = 1;
