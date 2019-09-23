@@ -2,7 +2,7 @@
 
 ![](https://windliang.oss-cn-beijing.aliyuncs.com/22.jpg)
 
-给一个数字 n ，返回所有合法的括号匹配，刚好和[20题](https://leetcode.windliang.cc/leetCode-21-Merge-Two-Sorted-Lists.html)相反。
+给一个数字 n ，返回所有合法的括号匹配，刚好和[20题](https://leetcode.wang/leetCode-20-Valid%20Parentheses.html)相反。
 
 自己没想出来，全部参考 LeetCode 给出的 [Solution](https://leetcode.com/problems/generate-parentheses/solution/)。
 
