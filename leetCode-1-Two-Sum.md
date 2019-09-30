@@ -9,19 +9,19 @@
 简单粗暴些，两重循环，遍历所有情况看相加是否等于目标和，如果符合直接输出。
 
 ``` JAVA
-public int[] twoSum1(int[] nums, int target) {
-		int []ans=new int[2];
-		for(int i=0;i<nums.length;i++){
-			for(int j=(i+1);j<nums.length;j++){
-				if(nums[i]+nums[j]==target){
-					ans[0]=i;
-					ans[1]=j;
-					return ans;
-				}
-			}
-		}
-		return ans;
+public int[] twoSum(int[] nums, int target) {
+    int []ans=new int[2];
+    for(int i=0;i<nums.length;i++){
+        for(int j=(i+1);j<nums.length;j++){
+            if(nums[i]+nums[j]==target){
+                ans[0]=i;
+                ans[1]=j;
+                return ans;
+            }
+        }
     }
+    return ans;
+}
 ```
 
 
@@ -59,19 +59,19 @@ hash table ！！！
 需要注意的地方是，还需判断找到的元素不是当前元素，因为题目里讲一个元素只能用一次。
 
 ``` JAVA
-public int[] twoSum2(int[] nums, int target) {
-		Map<Integer,Integer> map=new HashMap<>();
-		for(int i=0;i<nums.length;i++){
-			map.put(nums[i],i);
-		}
-		for(int i=0;i<nums.length;i++){
-			int sub=target-nums[i];
-			if(map.containsKey(sub)&&map.get(sub)!=i){
-				return new int[]{i,map.get(sub)};
-			}
-		}
-		throw new IllegalArgumentException("No two sum solution");
-	}
+public int[] twoSum(int[] nums, int target) {
+    Map<Integer,Integer> map=new HashMap<>();
+    for(int i=0;i<nums.length;i++){
+        map.put(nums[i],i);
+    }
+    for(int i=0;i<nums.length;i++){
+        int sub=target-nums[i];
+        if(map.containsKey(sub)&&map.get(sub)!=i){
+            return new int[]{i,map.get(sub)};
+        }
+    }
+    throw new IllegalArgumentException("No two sum solution");
+}
 ```
 
 时间复杂度：比解法一少了一个 for 循环，降为 O（n）
@@ -83,16 +83,16 @@ public int[] twoSum2(int[] nums, int target) {
 看解法二中，两个 for 循环，他们长的一样，我们当然可以把它合起来。复杂度上不会带来什么变化，变化仅仅是不需要判断是不是当前元素了，因为当前元素还没有添加进 hash 里。	
 
 ``` JAVA
-public int[] twoSum3(int[] nums, int target) {
-		Map<Integer,Integer> map=new HashMap<>();
-	    for(int i=0;i<nums.length;i++){
-		    int sub=target-nums[i];
-		    if(map.containsKey(sub)){
-			    return new int[]{i,map.get(sub)};
-		}
-		map.put(nums[i], i);
-	}
-	throw new IllegalArgumentException("No two sum solution");
+public int[] twoSum(int[] nums, int target) {
+    Map<Integer,Integer> map=new HashMap<>();
+    for(int i=0;i<nums.length;i++){
+        int sub=target-nums[i];
+        if(map.containsKey(sub)){
+            return new int[]{i,map.get(sub)};
+        }
+        map.put(nums[i], i);
+    }
+    throw new IllegalArgumentException("No two sum solution");
 }
 ```
 

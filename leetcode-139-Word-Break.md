@@ -95,7 +95,7 @@ private boolean wordBreakHelper(String s, List<String> wordDict, String temp) {
 
 发现上边的例子答案很明显是 `false`，因为 `s` 中的 `b` 字母在 `wordDict` 中并没有出现。
 
-所以我们可以实现遍历一遍 `s` 和 `wordDict` ，从而确定 `s` 中的字符是否在 `wordDict` 中存在，如果不存在可以提前返回 `false` 。
+所以我们可以先遍历一遍 `s` 和 `wordDict` ，从而确定 `s` 中的字符是否在 `wordDict` 中存在，如果不存在可以提前返回 `false` 。
 
 所以代码可以继续优化。
 
