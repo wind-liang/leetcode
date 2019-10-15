@@ -346,7 +346,7 @@ public List<Integer> postorderTraversal(TreeNode root) {
 
 所以我们可以用 `LinkedList` ， 这样倒置链表就只需要遍历一遍，也不需要额外的空间了。
 
-更近一步，我们在调用 `list.add` 的时候，其实可以之间 `list.addFirst` ，每次都插入到链表头，这样做的话，最后也不需要逆转链表了。
+更近一步，我们在调用 `list.add` 的时候，其实可以直接 `list.addFirst` ，每次都插入到链表头，这样做的话，最后也不需要逆转链表了。
 
 # 解法四 Morris Traversal
 
