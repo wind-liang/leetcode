@@ -102,7 +102,7 @@
 * [98. Validate Binary Search Tree](leetCode-98-Validate-Binary-Search-Tree.md)
 * [99. Recover Binary Search Tree](leetcode-99-Recover-Binary-Search-Tree.md)
 * [100. Same Tree](leetcode-100-Same-Tree.md)
-* [101 题到 152题](leetcode-101-200.md)
+* [101 题到 153题](leetcode-101-200.md)
     * [101. Symmetric Tree](leetcode-101-Symmetric-Tree.md)
     * [102. Binary Tree Level Order Traversal](leetcode-102-Binary-Tree-Level-Order-Traversal.md)
     * [103. Binary Tree Zigzag Level Order Traversal](leetcode-103-Binary-Tree-Zigzag-Level-Order-Traversal.md)
@@ -155,3 +155,4 @@
     * [150. Evaluate Reverse Polish Notation](leetcode-150-Evaluate-Reverse-Polish-Notation.md)
     * [151. Reverse Words in a String](leetcode-151-Reverse-Words-in-a-String.md)
     * [152. Maximum Product Subarray](leetcode-152-Maximum-Product-Subarray.md)
+    * [153. Find Minimum in Rotated Sorted Array](leetcode-153-Find-Minimum-in-Rotated-Sorted-Array.md)
