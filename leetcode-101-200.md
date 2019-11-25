@@ -125,3 +125,5 @@
 <a href="leetcode-169-Majority-Element.html">169. Majority Element</a>
 
 <a href="leetcode-171-Excel-Sheet-Column-Number.html">171. Excel Sheet Column Number</a>
+
+<a href="leetcode-172-Factorial-Trailing-Zeroes.html">172. Factorial Trailing Zeroes</a>
