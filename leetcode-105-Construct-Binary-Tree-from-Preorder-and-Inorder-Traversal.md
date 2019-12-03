@@ -24,7 +24,7 @@ inorder = [9,3,15,20,7]
 inorder [9]
 
 右子树
-inorder [12,20,7]
+inorder [15,20,7]
 
 把相应的前序遍历的数组也加进来
 左子树
@@ -33,7 +33,7 @@ inorder [9]
 
 右子树
 preorder[20 15 7] 
-inorder [12,20,7]
+inorder [15,20,7]
 
 现在我们只需要构造左子树和右子树即可，成功把大问题化成了小问题
 然后重复上边的步骤继续划分，直到 preorder 和 inorder 都为空，返回 null 即可
