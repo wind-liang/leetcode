@@ -149,7 +149,7 @@ public void flatten(TreeNode root) {
 
 而`6 5 4 3 2 1`的遍历顺序其实变形的后序遍历，遍历顺序是右子树->左子树->根节点。
 
-先回想一下后序遍历的代码
+先回想一下变形的后序遍历的代码
 
 ```java
 public void PrintBinaryTreeBacRecur(TreeNode<T> root){
