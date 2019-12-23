@@ -5,3 +5,5 @@
 <a href="leetcode-202-Happy-Number.html">202. Happy Number</a>
 
 <a href="leetcode-203-Remove-Linked-List-Elements.html">203. Remove Linked List Elements</a>
+
+<a href="leetcode-204-Count-Primes.html">204. Count Primes</a>

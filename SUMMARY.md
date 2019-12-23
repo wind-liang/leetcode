@@ -183,3 +183,4 @@
     * [201. Bitwise AND of Numbers Range](leetcode-201-Bitwise-AND-of-Numbers-Range.md)
     * [202. Happy Number](leetcode-202-Happy-Number.md)
     * [203. Remove Linked List Elements](leetcode-203-Remove-Linked-List-Elements.md)
+    * [204. Count Primes](leetcode-204-Count-Primes.md)
