@@ -184,3 +184,4 @@
     * [202. Happy Number](leetcode-202-Happy-Number.md)
     * [203. Remove Linked List Elements](leetcode-203-Remove-Linked-List-Elements.md)
     * [204. Count Primes](leetcode-204-Count-Primes.md)
+    * [205. Isomorphic Strings](leetcode-205-Isomorphic-Strings.md)
