@@ -9,3 +9,5 @@
 <a href="leetcode-204-Count-Primes.html">204. Count Primes</a>
 
 <a href="leetcode-205-Isomorphic-Strings.html">205. Isomorphic Strings</a>
+
+<a href="leetcode-206-Reverse-Linked-List.html">206. Reverse Linked List</a>
