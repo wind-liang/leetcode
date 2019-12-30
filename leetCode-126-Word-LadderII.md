@@ -453,7 +453,7 @@ private ArrayList<String> getNeighbors(String node, Set<String> dict) {
                 continue;
             char old_ch = chs[i];
             chs[i] = ch;
-             f (dict.contains(String.valueOf(chs))) {
+             if (dict.contains(String.valueOf(chs))) {
                 res.add(String.valueOf(chs));
             }
             chs[i] = old_ch;
