@@ -165,7 +165,7 @@ public int minSubArrayLen(int s, int[] nums) {
 
 比如求从第 `i` 个数字开始，总和大于等于 `s` 时的长度，我们只需要找从第 `i + 1` 个数字到第几个数字的和大于等于 `s - nums[i]` 即可。求 `i + 1` 到 `j` 的所有数字的和的话，前边已经说明过了，也就是 `sums[j] - sums[i]`。
 
- ```java
+```java
 public int minSubArrayLen(int s, int[] nums) {
     int n = nums.length;
     if (n == 0) {
@@ -188,7 +188,7 @@ public int minSubArrayLen(int s, int[] nums) {
     }
     return min == Integer.MAX_VALUE ? 0 : min;
 }
- ```
+```
 
 至于二分查找，我们只需要修改内层的 `for` 循环。对于 `sums[j] - sums[i] >= s2`，通过移项，也就是 `sums[j] >= s2 + sums[i] ` ，含义就是寻找一个 `sums[j]`，使得其刚好大于等于 `s2 + sums[i]`。因为 `sums` 是个有序数组，所有找 `sum[j]` 可以采取二分的方法。
 
