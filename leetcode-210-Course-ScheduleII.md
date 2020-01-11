@@ -33,7 +33,7 @@
 在这道题的话，改之前的代码也很简单，只需要把每次出队的元素保存起来即可。
 
 ```java
-public int[] findOrder2(int numCourses, int[][] prerequisites) {
+public int[] findOrder(int numCourses, int[][] prerequisites) {
     // 保存每个节点的先修课个数，也就是出度
     HashMap<Integer, Integer> outNum = new HashMap<>();
     // 保存以 key 为先修课的列表，也就是入度的节点
