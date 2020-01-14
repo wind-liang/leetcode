@@ -119,8 +119,8 @@ public int rob(int[] nums) {
         return nums[0];
     }
 
-    int pre = 0; //代替上边代码中的 nums[i - 2]
-    int cur = nums[0]; //代替上边代码中的 nums[i - 1] 和 nums[i]
+    int pre = 0; //代替上边代码中的 dp[i - 2]
+    int cur = nums[0]; //代替上边代码中的 dp[i - 1] 和 dp[i]
     for (int i = 2; i <= n; i++) {
         int temp = cur;
         cur = Math.max(pre + nums[i - 1], cur);
