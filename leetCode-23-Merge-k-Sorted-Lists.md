@@ -261,7 +261,7 @@ public ListNode mergeKLists(ListNode[] lists) {
 }
 ```
 
-时间复杂度：假设每个链表的长度都是 n ，那么时间复杂度就是$$O(\sum_{i=1}^{log_2k}n)=O(nlogk)$$。
+时间复杂度：假设每个链表的长度都是 `n` ，有 `k` 个链表，记总结点数是 `N = n * k`，那么时间复杂度就是$$O(\sum_{i=1}^{log_2k}N)=O(Nlogk)$$。
 
 空间复杂度：O（1）。
 

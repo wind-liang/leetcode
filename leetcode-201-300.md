@@ -25,3 +25,5 @@
 <a href="leetcode-212-Word-SearchII.html">212. Word Search II</a>
 
 <a href="leetcode-213-House-RobberII.html">213. House Robber II</a>
+
+<a href="leetcode-214-Shortest-Palindrome.html">214. Shortest Palindrome</a>

@@ -193,4 +193,5 @@
     * [211. Add and Search Word - Data structure design](leetcode-211-Add-And-Search-Word-Data-structure-design.md)
     * [212. Word Search II](leetcode-212-Word-SearchII.md)
     * [213. House Robber II](leetcode-213-House-RobberII.md)
+    * [214*. Shortest Palindrome](leetcode-214-Shortest-Palindrome.md)
     * [更多](more.md)
