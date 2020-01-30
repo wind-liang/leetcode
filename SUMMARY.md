@@ -196,4 +196,5 @@
     * [214*. Shortest Palindrome](leetcode-214-Shortest-Palindrome.md)
     * [215. Kth Largest Element in an Array](leetcode-215-Kth-Largest-Element-in-an-Array.md)
     * [216. Combination Sum III](leetcode-216-Combination-SumIII.md)
+    * [217. Contains Duplicate](leetcode-217-Contains-Duplicate.md)
     * [更多](more.md)
