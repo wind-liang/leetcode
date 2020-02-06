@@ -36,4 +36,6 @@
 
 <a href="leetcode-218-The-Skyline-Problem.html">218. The Skyline Problem</a>
 
-<a href="leetcode-219-ContainsDuplicateII.html">219. The Skyline Problem</a>
+<a href="leetcode-219-ContainsDuplicateII.html">219. Contains Duplicate II</a>
+
+<a href="leetcode-220-Contains-DuplicateIII.html">220. Contains Duplicate III</a>
