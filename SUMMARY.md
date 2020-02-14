@@ -205,4 +205,5 @@
     * [223. Rectangle Area](leetcode-223-Rectangle-Area.md)
     * [224*. Basic Calculator](leetcode-224-Basic-Calculator.md)
     * [225. Implement Stack using Queues](leetcode-225-Implement-Stack-using-Queues.md)
+    * [226. Invert Binary Tree](leetcode-226-Invert-Binary-Tree.md)
     * [更多](more.md)
