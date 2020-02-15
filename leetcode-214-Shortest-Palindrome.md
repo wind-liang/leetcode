@@ -459,6 +459,32 @@ public String shortestPalindrome(String s) {
 
 虽然这种方法 `AC` 了，但我觉得是侥幸的，我觉得即使每次取模，并不能保证不会出现 `hash` 冲突，只是当前的 `test case` 没有出现 `hash` 冲突。当然这是我的想法，并不是很确定，大家有其他想法欢迎和我交流。
 
+感谢 @[franklinqin0](https://www.zhihu.com/people/franklinqin7) 指出，上边确认当前是否是回文串的时候，我们调用了 `isPalindromic` ，但超时了，这里的话我们还可以和它的逆置字符串进行比较。
+
+```java
+public String shortestPalindrome(String s) {
+    int n = s.length(), pos = -1;
+    int b = 26; // 基数
+    int pow = 1; // 为了方便计算倒置字符串的 hash 值
+    char[] c = s.toCharArray();
+    String rev = new StringBuilder(s).reverse().toString();
+    int hash1 = 0, hash2 = 0;
+    for (int i = 0; i < n; i++, pow = pow * b) {
+        hash1 = hash1 * b + (c[i] - 'a' + 1);
+        // 倒置字符串的 hash 值, 新增的字符要放到最高位
+        hash2 = hash2 + (c[i] - 'a' + 1) * pow;
+        if (hash1 == hash2) {
+            if (s.substring(0, i + 1).equals(rev.substring(n - i - 1))) {
+                pos = i;
+            }
+        }
+    }
+    return new StringBuilder(s.substring(pos + 1)).reverse() + s;
+}
+```
+
+这样做的话就不会超时了，但如果分析时间复杂度的话其实是一样的，很神奇。
+
 # 解法五
 
 参考 [这里](https://leetcode.com/problems/shortest-palindrome/discuss/60113/Clean-KMP-solution-with-super-detailed-explanation)。
