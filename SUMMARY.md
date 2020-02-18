@@ -209,4 +209,5 @@
     * [227. Basic Calculator II](leetcode-227-Basic-CalculatorII.md)
     * [228. Summary Ranges](leetcode-228-Summary-Ranges.md)
     * [229. Majority Element II](leetcode-229-Majority-ElementII.md)
+    * [230. Kth Smallest Element in a BST](leetcode-230-Kth-Smallest-Element-in-a-BST.md)
     * [更多](more.md)

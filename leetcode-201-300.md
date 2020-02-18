@@ -57,3 +57,5 @@
 <a href="leetcode-228-Summary-Ranges.html">228. Summary Ranges</a>
 
 <a href="leetcode-229-Majority-ElementII.html">229. Majority Element II</a>
+
+<a href="leetcode-230-Kth-Smallest-Element-in-a-BST.html">230. Kth Smallest Element in a BST</a>
