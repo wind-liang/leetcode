@@ -59,3 +59,5 @@
 <a href="leetcode-229-Majority-ElementII.html">229. Majority Element II</a>
 
 <a href="leetcode-230-Kth-Smallest-Element-in-a-BST.html">230. Kth Smallest Element in a BST</a>
+
+<a href="leetcode-231-Power-of-Two.html">231. Power of Two</a>
