@@ -352,7 +352,7 @@ public boolean isPowerOfTwo(int n) {
 
 # 解法七
 
-超级暴力打表法，因为 `int` 范围内 `2` 的幂次也只有 `32` 个数。
+超级暴力打表法，因为 `int` 范围内 `2` 的幂次也只有 `31` 个数。
 
 ```java
 public boolean isPowerOfTwo(int n) {
