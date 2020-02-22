@@ -212,4 +212,5 @@
     * [230. Kth Smallest Element in a BST](leetcode-230-Kth-Smallest-Element-in-a-BST.md)
     * [231*. Power of Two](leetcode-231-Power-of-Two.md)
     * [232. Implement Queue using Stacks](leetcode-232-Implement-Queue-using-Stacks.md)
+    * [233. Number of Digit One](leetcode-233-Number-of-Digit-One.md)
     * [更多](more.md)

@@ -63,3 +63,5 @@
 <a href="leetcode-231-Power-of-Two.html">231. Power of Two</a>
 
 <a href="leetcode-232-Implement-Queue-using-Stacks.html">232. Implement Queue using Stacks</a>
+
+<a href="leetcode-233-Number-of-Digit-One.html">233. Number of Digit One</a>
