@@ -42,6 +42,9 @@
             }
             
         },
+        "styles":{
+            "website":"websiteStyle.css"
+        },
         "pdf": {
             "fontSize": 16
         },   
