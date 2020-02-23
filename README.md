@@ -1,6 +1,6 @@
 # 介绍
 
-题解预览地址：https://leetcode.wang，推荐电脑端打开，手机打开的话将页面滑到最上边，左上角是菜单
+题解预览地址：[https://leetcode.wang](https://leetcode.wang)，推荐电脑端打开，手机打开的话将页面滑到最上边，左上角是菜单
 
 leetcode 题目地址 https://leetcode.com/problemset/all/
 
