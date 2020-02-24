@@ -67,3 +67,5 @@
 <a href="leetcode-233-Number-of-Digit-One.html">233. Number of Digit One</a>
 
 <a href="leetcode-234-Palindrome-Linked-List.html">234. Palindrome Linked List</a>
+
+<a href="leetcode-235-Lowest-Common-Ancestor-of-a-Binary-Search-Tree.html">235. Lowest Common Ancestor of a Binary Search Tree</a>
