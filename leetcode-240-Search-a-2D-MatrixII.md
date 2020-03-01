@@ -135,6 +135,95 @@ public boolean searchMatrix(int[][] matrix, int target) {
 
 时间复杂度就是每个节点最多遍历一遍了，`O(m + n)`。
 
+# 解法三
+
+参考 [这里](https://leetcode.com/problems/search-a-2d-matrix-ii/discuss/66147/*Java*-an-easy-to-understand-divide-and-conquer-method) ，还有一种解法。
+
+我的理解的话，算是一种变形的二分法。
+
+二分法的思想就是，目标值和中点值进行比较，然后可以丢弃一半的元素。
+
+这道题的话是矩阵，如果我们找到矩阵的中心，然后和目标值比较看能不能丢弃一些元素。
+
+```java
+如下图，中心位置是 9
+[1,   4,  7, 11, 15],
+[2,   5,  8, 12, 19],
+[3,   6, /9/,16, 22],
+[10, 13, 14, 17, 24],
+[18, 21, 23, 26, 30]
+
+通过中心位置, 我们可以把原矩形分成四个矩形, 左上, 右上, 左下, 右下
+[1,   4,  7   [11, 15  
+ 2,   5,  8    12, 19  
+ 3,   6, /9/]  16, 22] 
+ 
+[10, 13, 14   [17, 24
+[18, 21, 23]   26, 30]
+
+如果 target = 10,
+此时中心值小于目标值，左上角矩形中所有的数都小于目标值，我们可以丢弃左上角的矩形，继续从剩下三个矩形中寻找
+
+如果 target = 5,
+此时中心值大于目标值，右下角矩形中所有的数都大于目标值，那么我们可以丢弃右下角的矩形，继续从剩下三个矩形中寻找 
+```
+
+我们找到了丢弃元素的原则，可以写代码了。
+
+这里的话，矩形我们用左上角和右下角坐标的形式表示，下图是分割后矩形的坐标情况。
+
+![](https://windliang.oss-cn-beijing.aliyuncs.com/240_2.jpg)
+
+我们可以用递归的形式去写，递归出口的话，当矩阵中只有一个元素，直接判断当前元素是不是目标值即可。
+
+还有就是分割的时候可能越界，比如原矩阵只有一行，左下角和右下角的矩阵其实是不存在的，按照上边的坐标公式计算出来后，我们要判断一下是否越界。
+
+```java
+public boolean searchMatrix(int[][] matrix, int target) {
+    if (matrix.length == 0 || matrix[0].length == 0) {
+        return false;
+    }
+    return searchMatrixHelper(matrix, 0, 0, matrix[0].length - 1, matrix.length - 1, matrix[0].length - 1, matrix.length - 1, target);
+}
+
+private boolean searchMatrixHelper(int[][] matrix, int x1, int y1, int x2, int y2, int xMax, int yMax, int target) {
+    //只需要判断左上角坐标即可
+    if (x1 > xMax || y1 > yMax) {
+        return false;
+    }
+    
+    //x 轴代表的是列，y 轴代表的是行
+    if(x1 == x2 && y1 == y2){
+        return matrix[y1][x1] == target;
+    }
+    int m1 = (x1 + x2) >>> 1;
+    int m2 = (y1 + y2) >>> 1;
+    if (matrix[m2][m1] == target) {
+        return true;
+    }
+    if (matrix[m2][m1] < target) {
+        // 右上矩阵
+        return searchMatrixHelper(matrix, m1 + 1, y1, x2, m2, x2, y2, target) ||
+            // 左下矩阵
+            searchMatrixHelper(matrix, x1, m2 + 1, m1, y2, x2, y2, target) ||
+            // 右下矩阵
+            searchMatrixHelper(matrix, m1 + 1, m2 + 1, x2, y2, x2, y2, target);
+
+    } else {
+        // 右上矩阵
+        return searchMatrixHelper(matrix, m1 + 1, y1, x2, m2, x2, y2, target) ||
+            // 左下矩阵
+            searchMatrixHelper(matrix, x1, m2 + 1, m1, y2, x2, y2, target) ||
+            // 左上矩阵
+            searchMatrixHelper(matrix, x1, y1, m1, m2, x2, y2, target);
+    }
+}
+```
+
 # 总
 
-看到有序数组第一反应就是二分了，也就是解法一。解法二的话，从右上角开始遍历的想法很妙。
+看到有序数组第一反应就是二分了，也就是解法一。
+
+解法二的话，从右上角开始遍历的想法很妙。
+
+解法三的话思想很简单，就是变形的二分法，每次抛弃一部分元素，但代码的话其实写出来不是很容易，相对于解法一和解法二来说是有些复杂度的。
