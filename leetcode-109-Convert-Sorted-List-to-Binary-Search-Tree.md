@@ -36,7 +36,7 @@ private TreeNode sortedArrayToBST(ArrayList<Integer> nums, int start, int end) {
 }
 ```
 
-时间复杂度：`O(log(n))`。
+时间复杂度：`O(n)`。
 
 空间复杂度：数组进行辅助，`O(n)`。
 
