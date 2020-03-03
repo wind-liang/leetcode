@@ -12,6 +12,8 @@
 
 这里的话就有两种思路，一种需要遍历两边链表，一种只需要遍历一遍。
 
+> 2020.3.3 更新，leetcode 增加了样例，之前没有重复的数字所以 `key` 存的  `val` ，现在有了重复数字，将 `key` 修改为 `Node`。此外 `Node` 的无参的构造函数也被去掉了，也需要修改。
+
 # 解法一
 
 首先利用 `HashMap` 来一个不用思考的代码。
@@ -25,27 +27,24 @@ public Node copyRandomList(Node head) {
     if (head == null) {
         return null;
     }
-    HashMap<Integer, Node> map = new HashMap<>();
+    HashMap<Node, Node> map = new HashMap<>();
     Node h = head;
-    //生成所有节点
     while (h != null) {
-        Node t = new Node();
-        t.val = h.val;
-        map.put(t.val, t);
+        Node t = new Node(h.val); 
+        map.put(h, t);
         h = h.next;
     }
     h = head;
-    //更新 next 和 random
     while (h != null) {
         if (h.next != null) {
-            map.get(h.val).next = map.get(h.next.val);
+            map.get(h).next = map.get(h.next);
         }
         if (h.random != null) {
-            map.get(h.val).random = map.get(h.random.val);
+            map.get(h).random = map.get(h.random);
         }
         h = h.next;
     }
-    return map.get(head.val);
+    return map.get(head);
 }
 ```
 
@@ -80,26 +79,24 @@ public Node copyRandomList(Node head) {
     if (head == null) {
         return null;
     }
-    HashMap<Integer, Node> map = new HashMap<>();
+    HashMap<Node, Node> map = new HashMap<>();
     Node h = head;
-    Node cur = new Node(); //空结点，dummy 节点，为了方便头结点计算
+    Node cur = new Node(-1); //空结点，dummy 节点，为了方便头结点计算
     while (h != null) {
         //判断当前节点是否已经产生过
-        if (!map.containsKey(h.val)) {
-            Node t = new Node();
-            t.val = h.val;
-            map.put(t.val, t);
+        if (!map.containsKey(h)) {
+            Node t = new Node(h.val);
+            map.put(h, t);
         }
         //得到当前节点去更新它的 random 指针
-        Node next = map.get(h.val);
+        Node next = map.get(h);
         if (h.random != null) {
             //判断当前节点是否已经产生过
-            if (!map.containsKey(h.random.val)) {
-                next.random = new Node();
-                next.random.val = h.random.val;
-                map.put(next.random.val, next.random);
+            if (!map.containsKey(h.random)) {
+                next.random = new Node(h.random.val);
+                map.put(h.random, next.random);
             } else {
-                next.random = map.get(h.random.val);
+                next.random = map.get(h.random);
             }
 
         }
@@ -108,7 +105,7 @@ public Node copyRandomList(Node head) {
         cur = cur.next;
         h = h.next;
     }
-    return map.get(head.val);
+    return map.get(head);
 }
 ```
 
@@ -139,8 +136,7 @@ public Node copyRandomList(Node head) {
     Node l2 = null;
     //生成所有的节点，并且分别插入到原有节点的后边
     while (l1 != null) {
-        l2 = new Node();
-        l2.val = l1.val;
+        l2 = new Node(l1.val);
         l2.next = l1.next;
         l1.next = l2;
         l1 = l1.next.next;
@@ -197,8 +193,7 @@ public Node copyRandomList(Node head) {
     //生成所有的节点，讲它们保存到原链表的 random 域，
     //同时利用新生成的节点的 next 域保存原链表的 random。
     while (l1 != null) {
-        l2 = new Node();
-        l2.val = l1.val;
+        l2 = new Node(l1.val);
         l2.next = l1.random;
         l1.random = l2;
         l1 = l1.next;
@@ -227,3 +222,4 @@ public Node copyRandomList(Node head) {
 # 总
 
 解法一、解法二是比较直接的想法，直接利用 `HashMap` 存储之前的节点。解法三、解法四利用原有链表的指针，通过指来指去完成了赋值。链表操作的核心思想就是，在改变某一个节点的指针域的时候，一定要把该节点的指针指向的节点用另一个指针保存起来，以免造成丢失。
+
