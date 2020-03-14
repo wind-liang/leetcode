@@ -229,4 +229,5 @@
     * [264. Ugly Number II](leetcode-264-Ugly-NumberII.md)
     * [268. Missing Number](leetcode-268-Missing-Number.md)
     * [273. Integer to English Words](leetcode-273-Intege-to-English-Words.md)
+    * [274. H-Index](leetcode-274-H-Index.md)
     * [更多](more.md)
