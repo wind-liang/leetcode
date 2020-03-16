@@ -230,4 +230,5 @@
     * [268. Missing Number](leetcode-268-Missing-Number.md)
     * [273. Integer to English Words](leetcode-273-Intege-to-English-Words.md)
     * [274. H-Index](leetcode-274-H-Index.md)
+    * [275. H-Index II](leetcode-275-H-IndexII.md)
     * [更多](more.md)
