@@ -376,7 +376,7 @@ https://articles.leetcode.com/longest-palindromic-substring-part-ii/
 
 接下来是算法的关键了，它充分利用了回文串的对称性。
 
-我们用 C 表示回文串的中心，用 R 表示回文串的右边半径。所以 R = C + P[ i ] 。C 和 R 所对应的回文串是当前循环中 R 最靠右的回文串。
+我们用 C 表示回文串的中心，用 R 表示回文串的右边半径坐标，所以 R = C + P[ C ] 。C 和 R 所对应的回文串是当前循环中 R 最靠右的回文串。
 
 让我们考虑求 P [ i ] 的时候，如下图。
 
