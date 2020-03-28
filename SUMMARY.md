@@ -233,4 +233,5 @@
     * [275. H-Index II](leetcode-275-H-IndexII.md)
     * [278. First Bad Version](leetcode-278-First-Bad-Version.md)
     * [279. Perfect Squares](leetcode-279-Perfect-Squares.md)
+    * [282. Expression Add Operators](leetcode-282-Expression-Add-Operators.md)
     * [更多](more.md)
