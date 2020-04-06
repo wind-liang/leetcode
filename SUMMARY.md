@@ -237,4 +237,5 @@
     * [283. Move Zeroes](leetcode-283-Move-Zeroes.md)
     * [284. Peeking Iterator](leetcode-284-Peeking-Iterator.md)
     * [287*. Find the Duplicate Number](leetcode-287-Find-the-Duplicate-Number.md)
+    * [289*. Game of Life](leetcode-289-Game-of-Life.md)
     * [更多](more.md)
