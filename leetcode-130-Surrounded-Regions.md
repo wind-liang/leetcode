@@ -69,10 +69,10 @@ private boolean solveHelper(int row, int col, char[][] board, HashSet<String> vi
     }
     
     //分别尝试四个方向
-    if (solveHelper(row - 1, col, board, visited, memoization)
-        || solveHelper(row, col - 1, board, visited, memoization)
-        || solveHelper(row + 1, col, board, visited, memoization)
-        || solveHelper(row, col + 1, board, visited, memoization)) {
+    if (solveHelper(row - 1, col, board, visited)
+        || solveHelper(row, col - 1, board, visited)
+        || solveHelper(row + 1, col, board, visited)
+        || solveHelper(row, col + 1, board, visited)) {
         return true;
     } else {
         return false;
@@ -167,7 +167,6 @@ public void solve(char[][] board) {
     if (rows == 0) {
         return;
     }
-    HashSet<String> memoization = new HashSet<>();
     int cols = board[0].length;
     boolean[][] visited = new boolean[rows][cols];
     for (int i = 0; i < cols; i++) {
@@ -230,7 +229,6 @@ public void solve(char[][] board) {
     if (rows == 0) {
         return;
     }
-    HashSet<String> memoization = new HashSet<>();
     int cols = board[0].length;
     for (int i = 0; i < cols; i++) {
         //最上边一行的所有 O 做 DFS
