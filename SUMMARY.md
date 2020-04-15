@@ -240,4 +240,5 @@
     * [289*. Game of Life](leetcode-289-Game-of-Life.md)
     * [290. Word Pattern](leetcode-290-Word-Pattern.md)
     * [292*. Nim Game](leetcode-292-Nim-Game.md)
+    * [295*. Find Median from Data Stream](leetcode-295-Find-Median-from-Data-Stream.md)
     * [更多](more.md)
