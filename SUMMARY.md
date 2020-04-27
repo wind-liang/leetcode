@@ -243,4 +243,5 @@
     * [295*. Find Median from Data Stream](leetcode-295-Find-Median-from-Data-Stream.md)
     * [297. Serialize and Deserialize Binary Tree](leetcode-297-Serialize-and-Deserialize-Binary-Tree.md)
     * [299. Bulls and Cows](leetcode-299-Bulls-and-Cows.md)
-    * [更多](more.md)
+    * [300. Longest Increasing Subsequence](leetcode-300-Longest-Increasing-Subsequence.md)
+* [更多](more.md)
