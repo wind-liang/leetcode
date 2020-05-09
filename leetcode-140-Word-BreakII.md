@@ -22,7 +22,7 @@
 >     dp[0] = true;
 >     for (int i = 1; i <= s.length(); i++) {
 >         for (int j = 0; j < i; j++) {
->             dp[i] = dp[j] && wordDict.contains(s.substring(j, i));
+>             dp[i] = dp[j] && set.contains(s.substring(j, i));
 >             if (dp[i]) {
 >                 break;
 >             }
@@ -60,7 +60,7 @@ public List<String> wordBreak(String s, List<String> wordDict) {
     for (int i = 1; i <= s.length(); i++) {
         temp = new ArrayList<>();
         for (int j = 0; j < i; j++) {
-            if (wordDict.contains(s.substring(j, i))) {
+            if (set.contains(s.substring(j, i))) {
                 //得到前半部分的所有情况然后和当前单词相加
                 for (int k = 0; k < dp.get(j).size(); k++) {
                     String t = dp.get(j).get(k);
@@ -116,7 +116,7 @@ public List<String> wordBreak(String s, List<String> wordDict) {
     for (int i = 1; i <= s.length(); i++) {
         temp = new ArrayList<>();
         for (int j = 0; j < i; j++) {
-            if (wordDict.contains(s.substring(j, i))) {
+            if (set.contains(s.substring(j, i))) {
                 for (int k = 0; k < dp.get(j).size(); k++) {
                     String t = dp.get(j).get(k);
                     if (t.equals("")) {
