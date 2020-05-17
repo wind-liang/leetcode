@@ -22,7 +22,7 @@
 
 第二个的话，可以对不同的算法之间的联系有更深的体会，从递归，到递归加 `memoization`，再到动态规划，最后进行动态规划空间复杂度的优化，用到的分治、回溯、动态规划会发现它们本质上其实是一样的，现在都对 [115 题](https://leetcode.wang/leetcode-115-Distinct-Subsequences.html) 印象深刻。
 
-一些常见的问题也会帮助自己查漏补缺，比如二叉树的中序遍历，在 [94 题](https://leetcode.wang/leetCode-94-Binary-Tree-Inorder-Traversal.html) 我才知道原来还有 `Morris Traversal`，可以使得中序遍历的时间复杂度降为 `O(1)`。还有一些大神们的解法，印象最深刻的就属 [第 5 题](https://leetcode.wang/leetCode-5-Longest-Palindromic-Substring.html) 的马拉车算法了。
+一些常见的问题也会帮助自己查漏补缺，比如二叉树的中序遍历，在 [94 题](https://leetcode.wang/leetCode-94-Binary-Tree-Inorder-Traversal.html) 我才知道原来还有 `Morris Traversal`，可以使得中序遍历的空间复杂度降为 `O(1)`。还有一些大神们的解法，印象最深刻的就属 [第 5 题](https://leetcode.wang/leetCode-5-Longest-Palindromic-Substring.html) 的马拉车算法了。
 
 第三个的话，因为你想让别人明白你的想法，你会不停的去思考自己的解法，力求每一步都是清晰的，有时候虽然已经是 `AC` 的解法，总结着总结着会发现自己的思路其实是错的，只是 `LeetCode` 的 `test cases` 没有覆盖而已。
 
