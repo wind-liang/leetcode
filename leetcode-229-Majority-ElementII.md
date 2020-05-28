@@ -110,6 +110,60 @@ public List<Integer> majorityElement(int[] nums) {
 
 当然，不用上边的技巧也是可以的，我们可以先在 `nums` 里找到两个不同的值分别赋值给 `group1` 和 `group2` 中即可，只不过代码上不会有上边的简洁。
 
+`2020.5.27` 更新，[@Frankie](http://yaoyichen.cn/algorithm/2020/05/27/leetcode-229.html) 提醒，其实不用上边分析的那么麻烦，只需要给 `group1` 和 `group2` 随便赋两个不相等的值即可。
+
+因为如果数组中前两个数有和 `group1` 或者 `group2` 相等的元素，就进入前两个 `if` 语句中的某一个，逻辑上也没问题。
+
+如果数组中前两个数没有和 `group1` 或者 `group2` 相等的元素，那么就和使用 `long` 一个性质了。
+
+```java
+public List<Integer> majorityElement(int[] nums) {
+    int n = nums.length;
+    int group1 = 0;
+    int count1 = 0;
+    int group2 = 1;
+    int count2 = 0;
+    for (int i = 0; i < n; i++) {
+        if (nums[i] == group1) {
+            count1++;
+        } else if (nums[i] == group2) {
+            count2++;
+        } else if (count1 == 0) {
+            group1 = nums[i];
+            count1 = 1;
+        } else if (count2 == 0) {
+            group2 = nums[i];
+            count2 = 1;
+        } else {
+            count1--;
+            count2--;
+        }
+    }
+
+    //计算两个队伍的数量,因为可能只存在一个数字的数量超过了 n/3
+    count1 = 0;
+    count2 = 0;
+    for (int i = 0; i < n; i++) {
+        if (nums[i] == group1) {
+            count1++;
+        }
+        if (nums[i] == group2) {
+            count2++;
+        }
+    }
+    //只保存数量大于 n/3 的队伍
+    List<Integer> res = new ArrayList<>();
+    if (count1 > n / 3) {
+        res.add( group1);
+    }
+
+    if (count2 > n / 3) {
+        res.add(group2);
+    }
+    return res;
+}
+```
+
 # 总
 
 解法一算是通用的解法，解法二的话看起来比较容易，但如果只看上边的解析，然后自己写代码的话还是会遇到很多问题的，其中 `if` 分支的顺序很重要。
