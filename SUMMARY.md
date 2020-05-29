@@ -248,4 +248,5 @@
 * [301 题到 400 题](leetcode-301-400.md)    
     * [301. Remove Invalid Parentheses](leetcode-301-Remove-Invalid-Parentheses.md)
     * [303. Range Sum Query - Immutable](leetcode-303-Range-Sum-Query-Immutable.md)
+    * [304. Range Sum Query 2D - Immutable](leetcode-304-Range-Sum-Query-2D-Immutable.md)
 * [更多](more.md)
