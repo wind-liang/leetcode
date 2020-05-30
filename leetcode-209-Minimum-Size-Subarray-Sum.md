@@ -236,6 +236,67 @@ private int binarySearch(int start, int end, int[] sums, int target) {
 
 时间复杂度：`O(nlog(n))`。
 
+`2020.5.30` 更新，感谢 @Yolo 指出，上边的代码虽然 `AC` 了，但二分查找是有瑕疵的。
+
+当 `sums[mid] > target` 我们不能直接更新 `end = mid - 1` ，因为此时的 `mid` 可能是我们要找的解，所以应该改成 `end = mid` 。
+
+自己构造了一个反例
+
+```java
+59
+[10, 50, 5]
+```
+
+这个 `case` 在 `leetcode` 是过不了的。
+
+![](https://windliang.oss-cn-beijing.aliyuncs.com/209_2.jpg)
+
+代码改成下边的样子就可以了。
+
+```java
+public int minSubArrayLen(int s, int[] nums) {
+    int n = nums.length;
+    if (n == 0) {
+        return 0;
+    }
+    int[] sums = new int[n];
+    sums[0] = nums[0];
+    for (int i = 1; i < n; i++) {
+        sums[i] = nums[i] + sums[i - 1];
+    }
+    int min = Integer.MAX_VALUE;
+    for (int i = 0; i < n; i++) {
+        int s2 = s - nums[i];
+        //二分查找，目标值是 s2 + sums[i]
+        int k = binarySearch(i, n - 1, sums, s2 + sums[i]);
+        if (k != -1) {
+            min = Math.min(min, k - i + 1);
+        }
+
+    }
+    return min == Integer.MAX_VALUE ? 0 : min;
+}
+
+//寻求刚好大于 target 的 sums 的下标，也就是大于等于 target 所有 sums 中最小的那个
+private int binarySearch(int start, int end, int[] sums, int target) {
+    int mid = -1;
+    while (start < end) {
+        mid = (start + end) >>> 1;
+        if (sums[mid] >= target) {
+            end = mid;
+        } else {
+            start = mid + 1;
+        }
+    }
+    //是否找到，没有找到返回 -1
+    return sums[start] >= target ? start : -1;
+}
+```
+
+上边还要注意的一点是，我们要找的是大于等于 `target` 中**最小**的下标，所以当 `sums[mid] == target` 的时候不能立刻停止，需要继续查找。
+
+当然这里其实不用管，因为这里的数组是累和数组，并且都是整数，是严格递增的，当找到相等的时候，前一个一定是小于 `target` 的。
+
 # 解法四 二分查找
 
 解法三的二分查找的关键在于 `sums` 数组的定义，一般情况下也不会往那方面想。还是在  [这里](https://leetcode.com/problems/minimum-size-subarray-sum/discuss/59123/O(N)O(NLogN)-solutions-both-O(1)-space)  看到的解法，另外一种二分的思路，蛮有意思，分享一下。
