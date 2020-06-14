@@ -215,7 +215,6 @@ public class Solution {
         Set<String> beginSet = new HashSet<String>(), endSet = new HashSet<String>();
 
         int len = 1;
-        int strLen = beginWord.length();
         HashSet<String> visited = new HashSet<String>();
 
         beginSet.add(beginWord);
