@@ -210,13 +210,12 @@ private boolean bfsHelper(Set<String> set1, Set<String> set2, Set<String> wordSe
 
 ```C++
 public class Solution {
-
-    public int ladderLength(String beginWord, String endWord, Set<String> wordList) {
+    public int ladderLength(String beginWord, String endWord, List<String> wordList) {
+        if(!wordList.contains(endWord)) return 0;
         Set<String> beginSet = new HashSet<String>(), endSet = new HashSet<String>();
-
         int len = 1;
         HashSet<String> visited = new HashSet<String>();
-
+        HashSet<String> dict = new HashSet<String>(wordList);
         beginSet.add(beginWord);
         endSet.add(endWord);
         while (!beginSet.isEmpty() && !endSet.isEmpty()) {
@@ -240,7 +239,7 @@ public class Solution {
                             return len + 1;
                         }
 
-                        if (!visited.contains(target) && wordList.contains(target)) {
+                        if (!visited.contains(target) && dict.contains(target)) {
                             temp.add(target);
                             visited.add(target);
                         }
@@ -248,11 +247,9 @@ public class Solution {
                     }
                 }
             }
-
             beginSet = temp;
             len++;
         }
-
         return 0;
     }
 }

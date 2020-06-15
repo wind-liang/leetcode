@@ -160,7 +160,7 @@ public int[] maxSlidingWindow(int[] nums, int k) {
 
 参考 [这里](https://leetcode.com/problems/sliding-window-maximum/discuss/65881/O(n)-solution-in-Java-with-two-simple-pass-in-the-array) ，一种神奇的解法，有点 [238 题](https://leetcode.wang/leetcode-238-Product-of-Array-Except-Self.html) 解法二的影子。
 
-我们把数组 `k` 个一组就行分组。
+我们把数组 `k` 个一组进行分组。
 
 ``` java
 nums = [1,3,-1,-3,5,3,6,7], and k = 3
@@ -187,13 +187,13 @@ i 到 j 范围内的数字被分割线分成了两部分
 int rightMax[] = new int[n];
 max = Integer.MIN_VALUE;
 for (int i = n - 1; i >= 0; i--) {
-    if (i % k == 0) {
-        max = Integer.MIN_VALUE;
-    }
     if (max < nums[i]) {
         max = nums[i];
     }
     rightMax[i] = Math.max(nums[i], max);
+    if (i % k == 0) {
+        max = Integer.MIN_VALUE;
+    }
 }
 ```
 
@@ -249,13 +249,13 @@ public int[] maxSlidingWindow(int[] nums, int k) {
     int rightMax[] = new int[n];
     max = Integer.MIN_VALUE;
     for (int i = n - 1; i >= 0; i--) {
-        if (i % k == 0) {
-            max = Integer.MIN_VALUE;
-        }
         if (max < nums[i]) {
             max = nums[i];
         }
         rightMax[i] = Math.max(nums[i], max);
+        if (i % k == 0) {
+            max = Integer.MIN_VALUE;
+        }
     }
     
     int result[] = new int[n - k + 1];
