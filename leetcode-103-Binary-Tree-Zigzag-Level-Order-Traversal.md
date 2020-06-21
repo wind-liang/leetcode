@@ -102,10 +102,10 @@ public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
     if (root == null)
         return ans;
     queue.offer(root);
+    int level = 0;
     while (!queue.isEmpty()) {
         int levelNum = queue.size(); // 当前层元素的个数
         List<Integer> subList = new LinkedList<Integer>();
-        int level = 0;
         for (int i = 0; i < levelNum; i++) {
             TreeNode curNode = queue.poll();
             if (curNode != null) {
