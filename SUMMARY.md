@@ -251,4 +251,5 @@
     * [303. Range Sum Query - Immutable](leetcode-303-Range-Sum-Query-Immutable.md)
     * [304. Range Sum Query 2D - Immutable](leetcode-304-Range-Sum-Query-2D-Immutable.md)
     * [306. Additive Number](leetcode-306-Additive-Number.md)
+    * [307. Range Sum Query - Mutable](leetcode-307-Range-Sum-Query-Mutable.md)
 * [更多](more.md)
