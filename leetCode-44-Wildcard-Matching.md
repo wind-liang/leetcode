@@ -125,6 +125,168 @@ boolean isMatch(String str, String pattern) {
 
 如果非要用递归的话，可以按照动态规划那个思路，先压栈，然后出栈过程其实就是动态规划那样了。所以其实不如直接动态规划。
 
+# 更新
+
+`2021.7.7` 日更新。（太久没写 `java` 代码了，由于换了电脑 `eclipes` 也没有，在 `vscode` 里写 `java` 竟然不会写了，习惯了写 `js` ，分号不加，类型不管，写 `java` 有点不适应了，哈哈）
+
+上边说到当时按 [第 10 题](https://leetcode.wang/leetCode-10-Regular-Expression-Matching.html) 的递归思路超时了，代码如下：
+
+```java
+class Solution {
+  public boolean isMatch(String text, String pattern) {
+    if (pattern.isEmpty())
+      return text.isEmpty();
+    if (text.isEmpty())
+      return pattern.isEmpty() || isStars(pattern);
+
+    boolean first_match = (!text.isEmpty() && (pattern.charAt(0) == text.charAt(0) || pattern.charAt(0) == '?'));
+    if (pattern.charAt(0) == '*') {
+      return (isMatch(text.substring(1), pattern) || (isMatch(text.substring(1), pattern.substring(1))))
+        || (isMatch(text, pattern.substring(1)));
+    } else {
+      return first_match && isMatch(text.substring(1), pattern.substring(1));
+    }
+  }
+
+  private boolean isStars(String pattern) {
+    // TODO Auto-generated method stub
+    for (int i = 0; i < pattern.length(); i++) {
+      if (pattern.charAt(i) != '*') {
+        return false;
+      }
+    }
+    return true;
+  }
+}
+```
+
+代码很好理解，这里就不多说了，可以参考 [第 10 题](https://leetcode.wang/leetCode-10-Regular-Expression-Matching.html)  的分析，但有个问题就是会超时。
+
+![](https://windliang.oss-cn-beijing.aliyuncs.com/leetcode44n1.jpg)
+
+前几天 [@xuyuntian](https://xuyuntian.gitee.io/) 加了微信告诉我他写出了一个递归的写法，[代码](https://gitee.com/xuyuntian/leetcode/blob/master/src/_44.java) 如下：
+
+```java
+class Solution {
+  public boolean isMatch(String s, String p) {
+    return dfs(new Boolean[s.length()][p.length()], s.toCharArray(), p.toCharArray(), 0, 0);
+  }
+  private boolean dfs(Boolean[][] dp, char[] s, char[] p, int i, int j) {
+    if (i == s.length && j == p.length) return true;
+    if (i > s.length || (i < s.length && j == p.length)) return false;
+    if (i < s.length) {
+      if (dp[i][j] != null) return dp[i][j];
+      if (p[j] == '?' || p[j] == s[i]) {
+        return dp[i][j] = dfs(dp, s, p, i + 1, j + 1);
+      }
+    }
+    boolean res = false;
+    if (p[j] == '*') {
+      res = dfs(dp, s, p, i + 1, j + 1) || dfs(dp, s, p, i + 1, j) || dfs(dp, s, p, i, j + 1);
+    }
+    if (i < s.length) dp[i][j] = res;
+    return res;
+  }
+}
+```
+
+看完以后突然就悟了，对啊，`memoization` 技术啊，把递归过程中的结果存起来呀！
+
+于是我把自己的递归代码用 `HashMap` 改良了一版，把所有结果都用 `HashMap` 存起来。
+
+```java
+class Solution {
+  public boolean isMatch(String text, String pattern) {
+    HashMap<String,Boolean> map=new HashMap<>();
+    return isMatchHelper(text, pattern, map);
+  }
+  public boolean isMatchHelper(String text, String pattern, HashMap<String,Boolean> map) {
+    if (pattern.isEmpty())
+      return text.isEmpty();
+    if (text.isEmpty())
+      return pattern.isEmpty() || isStars(pattern);
+    String key = text + '@' + pattern;
+    if(map.containsKey(key)) {
+      return map.get(key);
+    }
+    boolean first_match = (!text.isEmpty() && (pattern.charAt(0) == text.charAt(0) || pattern.charAt(0) == '?'));
+    if (pattern.charAt(0) == '*') {
+      boolean res = (isMatchHelper(text.substring(1), pattern, map) || (isMatchHelper(text.substring(1), pattern.substring(1), map)))
+        || (isMatchHelper(text, pattern.substring(1), map));
+      map.put(key, res);
+      return res;
+    } else {
+      boolean res = first_match && isMatchHelper(text.substring(1), pattern.substring(1), map);
+      map.put(key, res);
+      return res;
+    }
+  }
+
+  private boolean isStars(String pattern) {
+    // TODO Auto-generated method stub
+    for (int i = 0; i < pattern.length(); i++) {
+      if (pattern.charAt(i) != '*') {
+        return false;
+      }
+    }
+    return true;
+  }
+}
+```
+
+遗憾的是竟然超内存了。
+
+![](https://windliang.oss-cn-beijing.aliyuncs.com/leetcode44n2.jpg)
+
+又看了下  [@xuyuntian](https://xuyuntian.gitee.io/)  的代码，原因只能是 `HashMap` 太占内存了，于是我也改成了用数组缓存结果。同样的，需要将下标在递归中传递。
+
+```java
+class Solution {
+  public boolean isMatch(String text, String pattern) {
+    boolean res = isMatchHelper(text, 0, pattern, 0, new Boolean[text.length()][pattern.length()]);
+    return res;
+  }
+
+  public boolean isMatchHelper(String textOrigin, int textStart, String patternOrigin, int patternStart, Boolean[][] map) {
+    String text = textOrigin.substring(textStart);
+    String pattern = patternOrigin.substring(patternStart);
+    if (pattern.isEmpty())
+      return text.isEmpty();
+    if (text.isEmpty())
+      return pattern.isEmpty() || isStars(pattern);
+    if(map[textStart][patternStart] != null) {
+      return map[textStart][patternStart] ;
+    }
+    boolean first_match = (!text.isEmpty() && (pattern.charAt(0) == text.charAt(0) || pattern.charAt(0) == '?'));
+    if (pattern.charAt(0) == '*') {
+      boolean res = (isMatchHelper(textOrigin, textStart + 1,patternOrigin, patternStart, map) || (isMatchHelper(textOrigin, textStart + 1 ,patternOrigin, patternStart + 1, map)))
+        || (isMatchHelper(textOrigin, textStart, patternOrigin, patternStart + 1, map));
+      map[textStart][patternStart] = res;
+      return res;
+    } else {
+      boolean res = first_match && isMatchHelper(textOrigin, textStart + 1 ,patternOrigin, patternStart + 1,  map);
+      map[textStart][patternStart] = res;
+      return res;
+    }
+  }
+
+  private boolean isStars(String pattern) {
+    // TODO Auto-generated method stub
+    for (int i = 0; i < pattern.length(); i++) {
+      if (pattern.charAt(i) != '*') {
+        return false;
+      }
+    }
+    return true;
+  }
+}
+```
+
+终于 `AC` 了！
+
+![](https://windliang.oss-cn-beijing.aliyuncs.com/leetcode44n3.jpg)
+
 # 总
 
 动态规划的应用，理清递推的公式就可以。另外迭代的方法，也让人眼前一亮。
+
