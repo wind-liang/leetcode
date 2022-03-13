@@ -5,7 +5,8 @@
   "language": "zh-hans",
   "links": {
     "sidebar": {
-      "Home": "https://windliang.wang"
+      "个人博客": "https://windliang.wang",
+      "前端的设计模式系列": "https://pattern.windliang.wang/"
     },
     "gitbook": true
   },
